@@ -1,0 +1,52 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Tal y como te hemos comentado por teléfono, te ofrecemos
+<strong>PRESTO</strong>, una nueva forma de obtener el dinero que necesitas cuando lo necesitas.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Te recordamos que las principales <strong>ventajas</strong> de la línea de crédito PRESTO son que:
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+<ul>
+    <li>
+        Podrás obtener <b>hasta 2.000€</b>.
+        <br>
+    </li>
+    <li>
+        Su <b>interés</b> mensual es del <b>8,5%</b>.
+        <br>
+    </li>
+    <li>
+        Pagas en cómodas cuotas mensuales.
+    </li>
+    <li>
+        Solicitas el crédito una vez y retiras más dinero siempre que quieras.
+    </li>
+    <li>
+        Es totalmente flexible. Tú decides cuánto dinero quieres y cuándo deseas recibirlo.
+    </li>
+    <li>
+        Solo pagas por el dinero del que dispones, aunque se te conceda más crédito.
+    </li>
+</ul>
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Cuentas con <a href="{{ company.webBaseUrl }}/login" target="_blank" style="color:#00b46d;">más
+    información</a> en tu Área de Usuario. ¡Y ya sabes que puedes preguntarnos cualquier duda que tengas!
+{% include "_email_p_begin" %}
+Solicítalo de forma gratuita y sin compromiso. ¿Qué te parece?
+{% include "_email_p_end" %}{% include "_email_p_begin" %}
+{{ button(title="¡Lo quiero!", url=company.webBaseUrl + "/sl/" + specialLink.token) }}
+{% include "_email_p_end" %}
+
+{% include "_cs_email_signature" %}
+
+{% endblock %}}

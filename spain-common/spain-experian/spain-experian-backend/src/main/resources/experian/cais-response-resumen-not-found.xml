@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:InformeResumen xmlns:ns2="http://experian.servicios.CAIS.V2">
+    <ns2:IdSuscriptor>07453676</ns2:IdSuscriptor>
+    <ns2:ReferenciaConsulta>20170721133436cMKJE4</ns2:ReferenciaConsulta>
+    <ns2:Error>
+        <ns2:Codigo>4030</ns2:Codigo>
+        <ns2:Descripcion>No se ha encontrado en la base de datos el elemento consultado</ns2:Descripcion>
+    </ns2:Error>
+    <ns2:Documento>
+        <ns2:TipoDocumento>
+            <ns2:Codigo>01</ns2:Codigo>
+            <ns2:Descripcion>NIF</ns2:Descripcion>
+        </ns2:TipoDocumento>
+        <ns2:NumeroDocumento>51444375E</ns2:NumeroDocumento>
+        <ns2:PaisDocumento>
+            <ns2:Codigo>724</ns2:Codigo>
+            <ns2:Descripcion>ESPAÑA</ns2:Descripcion>
+        </ns2:PaisDocumento>
+    </ns2:Documento>
+</ns2:InformeResumen>

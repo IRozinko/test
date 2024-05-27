@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Line of credit</title>
+    <style type="text/css">
+      html,
+      body {
+        font-family: "OpenSans-Regular", sans-serif;
+        line-height: 1.4;
+        font-size: 12px;
+        text-align: justify;
+      }
+      table {
+        width: 100%;
+        border: 1px solid #fff;
+        border-collapse: collapse;
+      }
+      .bold {
+        font-family: "OpenSans-Bold", sans-serif;
+      }
+      .under {
+        text-decoration: underline;
+      }
+      .properties td {
+          width: 33%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <span class="bold">Response #1</span>
+      <span>{{instantor.dateTime | ldatetime("yyyy-MM-dd HH:mm")}}</span>
+      <span>{{instantor.result}}</span>
+      <span>{{instantor.requestId}}</span>
+    </p>
+    <br />
+    <table class="properties">
+      <tr>
+        <td>&nbsp;</td>
+        <td><span class="bold under">Registration</span></td>
+        <td><span class="bold under">Instantor</span></td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>{{instantor.client.clientName}}</td>
+        <td>{{instantor.instantor.clientName}}</td>
+      </tr>
+      <tr>
+        <td>Personal code:</td>
+        <td>{{instantor.client.personalCode}}</td>
+        <td>{{instantor.instantor.personalCode}}</td>
+      </tr>
+      <tr>
+        <td>Phone:</td>
+        <td>{{instantor.client.phoneNumber}}</td>
+        <td>{{instantor.instantor.phoneNumber}}</td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td>{{instantor.client.email}}</td>
+        <td>{{instantor.instantor.email}}</td>
+      </tr>
+      <tr>
+        <td>Address:</td>
+        <td>{{instantor.client.address}}</td>
+        <td>{{instantor.instantor.address}}</td>
+      </tr>
+      <tr>
+        <td>Bank name:</td>
+        <td>&nbsp;</td>
+        <td>{{instantor.instantor.bankName}}</td>
+      </tr>
+      <tr>
+        <td>Report time:</td>
+        <td>&nbsp;</td>
+        <td>{{instantor.instantor.reportTime | ldatetime("yyyy-MM-dd HH:mm")}}</td>
+      </tr>
+      <tr>
+        <td>Report period:</td>
+        <td>&nbsp;</td>
+        <td>{{instantor.instantor.periodFrom | ldate(dateFormat)}} - {{instantor.instantor.periodTo | ldate(dateFormat)}}</td>
+      </tr>
+    </table>
+    {% for account in instantor.instantor.accounts %}
+      <p>
+        <span class="bold">Account (number)</span>: {{account.number}}<br />
+        <span class="bold">Account (IBAN)</span>: {{account.iban}}<br />
+        <span class="bold">Account holder</span>: {{account.holder}}<br />
+        <span class="bold">Account kind</span>: {{account.type}}<br />
+        <span class="bold">Account balance</span>: {{account.balance}}<br />
+        <span class="bold under">Transactions</span>: {{account.transactionCount}}<br />
+        <span>No matching keywords found!</span>
+      </p>
+    {% endfor %}
+  </body>
+</html>

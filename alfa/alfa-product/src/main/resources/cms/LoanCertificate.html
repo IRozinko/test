@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Line of credit</title>
+    <style type="text/css">
+      html,
+      body {
+        font-family: "OpenSans-Regular", sans-serif;
+        line-height: 1.4;
+        font-size: 12px;
+        text-align: justify;
+      }
+      table {
+        width: 100%;
+        border: 1px solid #fff;
+        border-collapse: collapse;
+      }
+      .bold {
+        font-family: "OpenSans-Bold", sans-serif;
+      }
+      .right {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <br />
+    <table style="width: 100%">
+      <tr>
+        <td>
+          {% include "_alfa_logo" %}
+        </td>
+        <td class="right">
+          <p class="bold">{{ company.name }}</p>
+          <p>{{ company.addressLine1 }}</p>
+          <p>{{ company.addressLine2 }}</p>
+        </td>
+      </tr>
+    </table>
+    <p class="right">En Barcelona, {{ dates.today | ldate(dateFormat)}}</p>
+    <p>
+      <span class="bold">{{ company.name }}.</span>, {{ company.addressLine1 }}
+      {{ company.addressLine2 }}, CIF: B98378201
+      <span class="bold">CERTIFICA</span>, que en relación al contrato de
+      prestamo {{ loan.number }}:
+    </p>
+    <p>
+      De acuerdo con los datos que figuran en nuestra Base de Datos, el
+      cliente/a Sr./a {{ client.firstName }} {{ client.lastName }}
+      {{client.secondLastName}} ofreció su aceptación electrónica de:
+    </p>
+    <ul>
+      <li>
+        Nuestra Política de Privacidad el pasado día {{application.date | ldate(dateFormat)}},
+        a las {{application.date | ldate(dateFormat)}} a las desde la IP {{client.registrationIpAddress}}.
+      </li>
+      <li>
+        Nuestros Términos y Condiciones del contrato de préstamo el pasado día
+        {{application.date | ldate(dateFormat)}}, a las
+        {{application.date | ldate(dateFormat)}} desde la IP {{client.registrationIpAddress}}.
+      </li>
+    </ul>
+    <p>
+      De acuerdo con los datos que figuran en nuestra Base de Datos, se han
+      realizado las siguientes transferencias a la cuenta {{client.iban}} del
+      cliente Sr./a. {{client.lastName}}:
+    </p>
+    <table class="no-border">
+      <tr>
+        <td style="width: 50%"><span class="bold">Importe</span></td>
+        <td style="width: 50%"><span class="bold">Fecha</span></td>
+      </tr>
+      {% for val in loan.withdrawals %}
+        <tr>
+          <td style="width: 50%">{{val.amount | numberformat(currencyFormat)}}</td>
+          <td style="width: 50%">{{val.date | ldate(dateformat)}}</td>
+        </tr>
+      {% endfor %}
+    </table>
+    <p>Así lo firmo para que conste y surja los efectos oportunos,</p>
+    <br />
+    <br />
+    <br />
+    <br />
+    <p>Atentamente,</p>
+    {% include "_certificate_signature" %}
+  </body>
+</html>

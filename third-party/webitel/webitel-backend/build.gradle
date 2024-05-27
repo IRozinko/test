@@ -1,0 +1,11 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile project(":platform:common:utils")
+    compile project(":third-party:webitel:webitel-shared")
+
+    compile "org.apache.httpcomponents:httpclient"
+    compile "org.apache.httpcomponents:httpmime"
+
+    testCompile project(":platform:common:integration-test")
+}

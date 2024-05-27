@@ -1,0 +1,11 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+configurations {
+    compile.exclude module: "spring-boot-starter-tomcat"
+}
+
+dependencies {
+    compile project(":platform:backoffice:bo-components")
+    compile project(':platform:marketing:marketing-bo-model')
+    compile project(":platform:common:utils")
+}

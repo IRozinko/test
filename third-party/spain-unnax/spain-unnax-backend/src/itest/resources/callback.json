@@ -1,0 +1,13 @@
+{
+  "data": {
+    "customer_account": "ES1521047047332490142917"
+  },
+  "triggered_event": "event_payment_transfer_auto_created",
+  "environment": "unnax_integration_aws",
+  "signature": "e8f88f223f7a6269966a74f404fa24ae039302e8",
+  "trace_identifier": "b9f174fc-7763-4853-96f1-ab8bfdbc66a4",
+  "date": "2018-09-25 11:01:20",
+  "service": "payment_transfer_auto",
+  "response_id": "b9f174fc-7763-4853-96f1-ab8bfdbc66a4"
+}
+

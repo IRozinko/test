@@ -1,0 +1,15 @@
+{
+      "applicants": {
+        
+        "primaryConsumer": {
+          "personalInformation": {
+             "idCountryCode": "724",
+              "idType": "ID",
+              "idCode": "100P"
+              
+          }
+        }
+      }
+}
+
+

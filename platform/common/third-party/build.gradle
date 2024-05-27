@@ -1,0 +1,6 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile project(":third-party:instantor:instantor-backend")
+    compile project(":third-party:nordigen:nordigen-backend")
+}

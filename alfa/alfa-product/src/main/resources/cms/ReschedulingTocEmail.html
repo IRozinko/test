@@ -1,0 +1,21 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Estimado cliente,
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Ya tiene disponible la factura del próximo vencimiento.
+<br>
+Tiene hasta el <strong>{{installment.dueDate | ldate(dateFormat)}}</strong> para abonar su factura.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Muchas gracias por confiar en Presto.
+{% include "_email_p_end" %}
+
+{% include "_email_signature" %}
+
+{% endblock %}}

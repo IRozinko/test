@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<InterConnectResponse xmlns="http://xml.equifax.com/XMLSchema/InterConnect">
+    <SchemaVersion></SchemaVersion>
+    <InteractionControl>
+        <MessageId>9000</MessageId>
+        <Timestamp>2017-08-17T09:40:02.353+02:00</Timestamp>
+        <InterConnectInteractionId>0008170000293802</InterConnectInteractionId>
+    </InteractionControl>
+    <Errors>
+        <Error>
+            <Code>10001</Code>
+            <Message>Authorization failed</Message>
+        </Error>
+    </Errors>
+</InterConnectResponse>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://xml.equifax.com/XMLSchema/InterConnect"
+                  xmlns:ic="http://xml.equifax.com/XMLSchema/InterConnect"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/"
+>
+    <wsdl:types>
+        <schema elementFormDefault="qualified" targetNamespace="http://xml.equifax.com/XMLSchema/InterConnect"
+                xmlns="http://www.w3.org/2001/XMLSchema" xmlns:ic="http://xml.equifax.com/XMLSchema/InterConnect">
+            <include schemaLocation="InterConnectRequestImpl1-0.xsd"/>
+            <include schemaLocation="InterConnectResponseImpl1-0.xsd"/>
+        </schema>
+    </wsdl:types>
+    <wsdl:message name="submitRequest">
+        <wsdl:part element="ic:InterConnectRequest" name="interConnectRequest"/>
+    </wsdl:message>
+    <wsdl:message name="submitResponse">
+        <wsdl:part element="ic:InterConnectResponse" name="submitReturn"/>
+    </wsdl:message>
+    <wsdl:portType name="IcTransactionService">
+        <wsdl:operation name="submit" parameterOrder="interConnectRequest">
+            <wsdl:input message="ic:submitRequest" name="submitRequest"/>
+            <wsdl:output message="ic:submitResponse" name="submitResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="IcTransactionServiceSoapBinding" type="ic:IcTransactionService">
+        <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="submit">
+            <wsdlsoap:operation soapAction=""/>
+            <wsdl:input name="submitRequest">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="submitResponse">
+                <wsdlsoap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="IcTransactionServiceService">
+        <wsdl:port binding="ic:IcTransactionServiceSoapBinding" name="IcTransactionService">
+            <wsdlsoap:address location="http://www2.equifax.es/icmultitenant/services/IcTransactionService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

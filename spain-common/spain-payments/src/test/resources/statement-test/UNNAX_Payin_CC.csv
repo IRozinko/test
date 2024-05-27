@@ -1,0 +1,3 @@
+"Método de pago","Fecha y hora","Código de orden","Internal code","Concepto","Importe","Estado","Código de Error","Titular","PAN","Cuenta destino","Cuenta de origen","ID banco destino","Nombre banco destino"
+"Credit Card","19/03/2020 13:29","acezw","","39917607A -  CUSTOM - 19/03/2020 13:29:31","100","3","None - ","orders_status.ADA TOLL NAVARRO","0843","","","",""
+""

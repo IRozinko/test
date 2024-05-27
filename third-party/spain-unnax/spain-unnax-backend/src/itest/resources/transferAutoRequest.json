@@ -1,0 +1,10 @@
+{
+  "amount": 15500,
+  "currency": "EUR",
+  "customer_code": "1",
+  "customer_names": "Jon Doe",
+  "concept": "Unnax test transaction",
+  "order_code": "111",
+  "bank_order_code": "222",
+  "destination_account": "ES1521047047332490142917"
+}

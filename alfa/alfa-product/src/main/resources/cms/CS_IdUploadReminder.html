@@ -1,0 +1,28 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Tu solicitud ha sido preaprobada. Verifica tu identidad enviándonos <b>fotografías de tu DNI o NIE</b> para recibir tu oferta de préstamo.  
+<br>
+<br>
+Haz clic en el siguiente botón y sube una fotografía de cada cara de tu documento de identidad antes de que caduque tu solicitud.
+<br>
+<br>
+Por favor, revisa que se puedan leer bien los datos y que el DNI o NIE no esté caducado antes de subir la fotografía. 
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+{{ button(title="Subir mi DNI", url=company.webBaseUrl + "/login/") }}
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Si no te resulta posible subir las dos fotografías a nuestra web, mándanoslas al mail: <a href="mailto:info@alfa.es" style="color:#00b46d;">info@alfa.es</a> con el asunto: "Documento + tu número de DNI o NIE".
+{% include "_email_p_end" %}
+{% include "_cs_email_signature" %}
+
+{% endblock %}}

@@ -1,0 +1,44 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+
+sourceSets {
+    generated {
+        java {
+            srcDirs = ["src/main/generated"]
+        }
+    }
+    test {
+        java {
+            srcDir 'src/test/java'
+            srcDir 'src/itest/java'
+        }
+        groovy {
+            srcDir 'src/test/groovy'
+            srcDir 'src/itest/groovy'
+        }
+        resources {
+            srcDir 'src/test/resources'
+            srcDir 'src/itest/resources'
+        }
+    }
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+task dist {
+    dependsOn 'build'
+}
+
+dependencies {
+    compileOnly libs.lombok
+    annotationProcessor libs.lombok
+
+    compile "com.google.guava:guava"
+    compile "org.codehaus.groovy:groovy-all"
+
+    testCompile libs.unitTest
+}
+
+apply from: "${rootDir}/gradle/dep-management.gradle"
+

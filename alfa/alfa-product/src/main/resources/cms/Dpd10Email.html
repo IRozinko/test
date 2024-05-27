@@ -1,0 +1,41 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Estimado/a Sr./Sra. {{client.lastName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Su adeudo con nuestra compañia no ha sido resuelto pasados ya 10 dias de la fecha de pago marcada en contrato y el importe del mismo asciende ya a {{debt.totalDue | numberformat(currencyFormat)}}€.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Por ello nos hemos visto obligados a informar en listados de morosidad tales como ASNEF de la deuda activa y pendiente con nosotros.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Esta situación no anula en absoluto las opciones de pago que aún mantiene y le permitirán salir de los listados:
+{% include "_email_p_end" %}
+
+
+{% include "_email_p_begin" %}
+<li> Pagar:</li>
+Elija el método de pago que más le convenga para liquidar el total de su deuda en su <a href="http://bit.ly/2yy9Jpy" target="_blank" style="color:#00b46d;">Área de Usuario.
+
+    <li> Prorrogar:</li>
+    Aplace 30 o 45 días la fecha de vencimiento de su préstamo pagando una pequeña cantidad. El coste de la prórroga varía según la cantidad prestada y el número de días. Revise la tarifa que se le aplicaría en su <a href="http://bit.ly/2yy9Jpy" target="_blank" style="color:#00b46d;">Área de Usuario. Si prorroga podrá:
+
+        <li>Eliminar los intereses de demora. Incluyendo los que ya se habían generado hasta hoy.</li>
+        <li>Obtener tiempo para reunir el dinero a devolver y pagar cómodamente más adelante.</li>
+        <li>Desaparecer de listados de morosidad como ASNEF.</li>
+        {{ button(title="Pague  o prorrogue ahora", url=company.webBaseUrl + "/sl/" + debt.specialLink.token) }}
+
+
+        **Recuerde que podemos informarle con más detalle de todas las opciones y buscar la solución más adecuada para usted LLAMANDO AL 933035223 y hablando con su gestor personal
+
+{% include "_email_p_end" %}
+        Reciba un cordial saludo
+        {% include "_email_signature" %}
+
+        {% endblock %}}

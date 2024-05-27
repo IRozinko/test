@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Line of credit</title>
+    <style type="text/css">
+        html, body {
+            font-family: 'OpenSans-Regular', sans-serif;
+            line-height: 1.4;
+            font-size: 12px;
+            text-align: justify;
+        }
+        table {
+            width: 100%;
+            border: 1px solid #fff;
+            border-collapse: collapse;
+        }
+        p {
+            font-family: "OpenSans-Bold", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<h3>Información de pago</h3>
+<p>{{ dates.today | ldate(dateFormat)}}</p>
+<br/>
+<table>
+  <tr>
+    <td style="width: 50%">Pago #{{disbursement.reference}}:</td>
+    <td style="width: 50%">{{disbursement.status}}</td>
+  </tr>
+  <tr>
+    <td style="width: 50%">Acción de pago:</td>
+    <td style="width: 50%">Transferencia</td>
+  </tr>
+  <tr>
+    <td style="width: 50%">Fecha/Hora de transacción:</td>
+    <td style="width: 50%">{{disbursement.createdAt | ldatetime("dd.MM.yyyy HH:mm")}}</td>
+  </tr>
+  <tr>
+    <td style="width: 50%">ID de transacción:</td>
+    <td style="width: 50%">{{disbursement.disbursementId}}</td>
+  </tr>
+  <tr>
+    <td style="width: 50%">Número de contrato:</td>
+    <td style="width: 50%">{{disbursement.loanNumber}}</td>
+  </tr>
+  <tr>
+    <td style="width: 50%">Origen del pago:</td>
+    <td style="width: 50%">{{disbursement.paymentOrigin}}</td>
+  </tr>
+  <tr>
+    <td style="width: 50%">Nombre del destinatario:</td>
+    <td style="width: 50%">{{disbursement.recipient}}</td>
+  </tr>
+  <tr>
+    <td style="width: 50%">IBAN:</td>
+    <td style="width: 50%">{{disbursement.iban}}</td>
+  </tr>
+  <tr>
+    <td style="width: 50%">Total:</td>
+    <td style="width: 50%">-{{disbursement.amount | numberformat(currencyFormat)}} €</td>
+  </tr>
+  <tr>
+    <td style="width: 50%">Explicación:</td>
+    <td style="width: 50%">Pago del préstamo de {{disbursement.amount | numberformat(currencyFormat)}} €,
+      según el contrato de préstamo número {{disbursement.loanNumber}}</td>
+  </tr>
+  <tr>
+    <td style="width: 50%">Creado en:</td>
+    <td style="width: 50%">{{disbursement.createdAt | ldatetime("dd.MM.yyyy HH:mm")}}</td>
+  </tr>
+  <tr>
+    <td style="width: 50%">Actualizado en:</td>
+    <td style="width: 50%">{{disbursement.updatedAt | ldatetime("dd.MM.yyyy HH:mm")}}</td>
+  </tr>
+</table>
+</body>
+</html>

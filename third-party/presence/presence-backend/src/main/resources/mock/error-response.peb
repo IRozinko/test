@@ -1,0 +1,5 @@
+{
+    "Code": {{ errorCode }},
+    "ErrorMessage": "{{ errorMessage }}",
+    "Data": null
+}

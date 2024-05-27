@@ -1,0 +1,18 @@
+apply from: "${rootDir}/gradle/java.gradle"
+apply from: "${rootDir}/gradle/querydsl.gradle"
+
+dependencies {
+    compile project(":platform:common:utils")
+    compile project(":platform:common:db")
+    compile project(":platform:settings")
+    compile project(":third-party:spain-unnax:spain-unnax-backend")
+    compile project(":platform:crm")
+    compile project(":platform:transactions")
+    compile project(":platform:file-storage-core")
+    
+    compile libs.vavr
+
+    testCompile project(":platform:common:integration-test")
+
+    compile group: 'net.sf.opencsv', name: 'opencsv', version: '2.3'
+}

@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by EQUIFAX, INC. (EQUIFAX, INC.) -->
+<!--
+	File: InterConnectRequest2-0.xsd
+	Description: Common Entities, used by Request Implementation.
+	Copyright 2005, Equifax, Inc., Atlanta, GA. All Rights Reserved
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://xml.equifax.com/XMLSchema/InterConnect"
+	targetNamespace="http://xml.equifax.com/XMLSchema/InterConnect" elementFormDefault="qualified"
+	attributeFormDefault="unqualified" version="2.0">
+	<xs:include schemaLocation="InterConnectCommonDefinition2-0.xsd"/>
+	<xs:complexType name="InteractionControlRequestType">
+		<xs:complexContent>
+			<xs:extension base="InteractionControlType">
+				<xs:sequence>
+					<xs:element name="Authentication" type="AuthenticationType"/>
+					<xs:element name="InterConnectTransactionId"
+						type="InterConnectTransactionIdType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">
+								This is a unique ID assigned by an InterConnect system to a transaction. The client can send the original InterConnect transaction ID in the XML request for further processing of the same transaction of types such as search, resubmit, redecision and override
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="Locale" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">
+								The customer can send their locale preference for InterConnect to pull data source products and return decision in a supported international language (English, Canadian French and US Spanish). A locale other than US version of English makes sense only when a data source supported in a customer solution does support the requested language or country
+							</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value="en_US"/>
+								<xs:enumeration value="es_US"/>
+								<xs:enumeration value="en_CA"/>
+								<xs:enumeration value="fr_CA"/>
+								<xs:enumeration value="en_GB"/>
+								<xs:enumeration value="es_ES"/>
+								<xs:enumeration value="es_CL"/>
+								<xs:enumeration value="es_UY"/>
+								<xs:enumeration value="es_PE"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="Simulator" type="SimulatorType" minOccurs="0"/>
+					<xs:element name="Auditing" type="AuditType" minOccurs="0"/>
+					<xs:element name="Operator" type="OperatorType" minOccurs="0"/>
+					<xs:element name="AuditControl" type="AuditControlType" minOccurs="0"/>
+					<xs:element name="Organization" type="OrganizationType" minOccurs="0"/>
+					<xs:element name="Orchestration" type="OrchestrationType" minOccurs="0"/>
+					<xs:element name="Channel" type="ChannelType" minOccurs="0" maxOccurs="1"/>
+					<xs:element minOccurs="0" name="Geography">
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value="LATAM"/>
+								<xs:enumeration value="UK"/>
+								<xs:enumeration value="SPAIN"/>
+								<xs:enumeration value="CANADA"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="AutoReferFlag" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value="Yes"/>
+								<xs:enumeration value="No"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:simpleType name="PermissiblePurposeCodeType">
+		<xs:restriction base="string1-2"/>
+	</xs:simpleType>
+	<xs:simpleType name="EndUserNameType">
+		<xs:restriction base="string1-20"/>
+	</xs:simpleType>
+	<xs:complexType name="PersonSubjectRequestBasicType">
+		<xs:complexContent>
+			<xs:extension base="PersonType">
+				<xs:sequence>
+					<xs:element name="CustomerReferenceNumber" type="CustomerReferenceNumberType"
+						minOccurs="0">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">
+								The CustomerReferenceNumber is assigned
+								by the customer to identify the subject
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+
+					<xs:element name="Accounts" type="CreditCardAccountsType" minOccurs="0"
+						maxOccurs="1"/>
+					<xs:element name="AdditionalInputData" type="AdditionalDataType" minOccurs="0"/>
+					<xs:element name="BankAccount" type="xs:boolean" maxOccurs="1" minOccurs="0"/>
+
+					<xs:element name="BankAccountSortCode" type="string1-20" maxOccurs="1"
+						minOccurs="0"> </xs:element>
+					<xs:element name="BankAccountNumber" type="string1-20" maxOccurs="1"
+						minOccurs="0"> </xs:element>
+					<xs:element name="TimeAtBank" type="xs:duration" minOccurs="0"/>
+
+					<xs:element name="NumberOfFamilyMembers" type="digit1-2" maxOccurs="1"
+						minOccurs="0"> </xs:element>
+
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="BusinessSubjectRequestBasicType">
+		<xs:sequence>
+			<xs:group ref="BusinessSubjectBasicDataGroup"/>
+			<xs:element name="BusinessType" type="string1-20" minOccurs="0"/>
+			<xs:element name="BusinessStartDate" minOccurs="0" type="xs:date"/>
+			<xs:element name="Addresses" type="AddressesType" minOccurs="0"/>
+			<xs:element name="PhoneNumber" type="PhoneNumberType" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="BusinessEmail" minOccurs="0" type="string1-255"/>
+			<xs:element name="AdditionalInputData" type="AdditionalDataType" minOccurs="0"/>
+			<xs:element maxOccurs="unbounded" minOccurs="0" name="UKBusinessBank"
+				type="UKBusinessBankType"/>
+			<xs:element name="UKBusinessType" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="Limited"/>
+						<xs:enumeration value="Non-Limited"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+
+
+			<xs:element minOccurs="0" name="YearEstablished" type="digit1-4"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UtilityAccountType">
+		<xs:sequence>
+			<xs:element name="ConnectDate" type="DateType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Is deprecated and should be used only for Schema Version 1.0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ConnectionDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Should be used only in Mercury for Schema Version 2.0 and later</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DisconnectDate" type="DateType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Is deprecated and should be used only for Schema Version 1.0</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DateOfDisconnect" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Should be used only in Mercury for Schema Version 2.0 and later</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Contact" type="PersonNameType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						Send the business contact information through this section
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BusinessGuarantorType">
+		<xs:sequence>
+			<xs:group ref="BusinessSubjectBasicDataGroup"/>
+			<xs:element name="Addresses" type="AddressesType" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="GuarantorIdentifierAttributeGroup"/>
+	</xs:complexType>
+	<!-- Begin consumer REQUEST additional data types -->
+	<xs:complexType name="ConsumerCreditReportAdditionalInputType">
+		<xs:sequence>
+			<xs:element name="PermissiblePurposeCode" type="PermissiblePurposeCodeType"
+				minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is for sending information regarding the permissible purpose code when the customer's implementation needs access to TransUnion's consumer credit report
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EquifaxCreditReportAdditionalInputType">
+		<xs:complexContent>
+			<xs:extension base="EquifaxCommonInputType">
+				<xs:sequence>
+					<xs:element name="Version" default="5" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value="5"/>
+								<xs:enumeration value="6"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="PlainLanguageFormat" default="Plain" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value="Plain"/>
+								<xs:enumeration value="Traditional"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="PermissiblePurposeCode" type="PermissiblePurposeCodeType"
+						minOccurs="0">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">
+								Refer ACRO STS 5.0 manual to get acceptable permissible code by ACRO
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="OptionalFeaturesSelected" type="OptionalFeaturesSelectedType"
+						minOccurs="0"/>
+					<xs:element name="EquifaxModelSetUp" type="YNFlagType" minOccurs="0"/>
+					<xs:element name="IdScoreSelected" type="YNFlagType" minOccurs="0"/>
+					<xs:element name="RiskWiseProductCode" type="string1-2" minOccurs="0"/>
+					<xs:element name="VendorIdentificationCode" type="string1-2" minOccurs="0"/>
+					<xs:element name="AccountType" type="string1-2" minOccurs="0"/>
+					<xs:element name="Models" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">
+								The models section is used to send model number and values of custom fields if needed for any custom model. Model number is same as model number supported by ACRO. Please ensure that your member number is setup in ACRO?s provisioning system to return the requested model. Beacon and EDAS model requests must be included under OptionalFeaturesSelected / Beacon and OptionalFeaturesSelected / EDAS. This section is used for all other models.
+							</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="Model" type="EquifaxRequestModelType"
+									maxOccurs="10"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Prescreen" type="YNFlagType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">
+								This section tells whether the transaction is prescreen and is optional. Send it only if your system is doing prescreening using ACRO.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="RiskBasedPriceValuesOn" type="RiskBasedPriceValuesOnType"
+						minOccurs="0">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">
+								This is to request for Risk Based Pricing information
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DicomSubjectAdditionalDataType">
+		<xs:sequence>
+			<xs:element name="CurrentAccount" type="xs:boolean" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EquifaxLATAMUycdiAdditionalDataType">
+		<xs:choice>
+			<xs:element minOccurs="0" name="ProfileNumber" type="xs:string"/>
+			<xs:element minOccurs="0" name="CreateCreditFile"/>
+		</xs:choice>
+	</xs:complexType>
+
+	<xs:complexType name="EquifaxSpainD360AdditionalDataType">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="PersonType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="EquifaxSpainSPIAdditionalDataType">
+		<xs:sequence>
+			<xs:element minOccurs="0" name="Telephone" type="string0-9"/>
+			<xs:element minOccurs="0" name="CCC" type="string0-20"/>
+			<xs:element minOccurs="0" name="SS" type="string0-12"/>
+			<xs:element minOccurs="0" name="Company" type="string0-10"/>
+			<xs:element minOccurs="0" name="Observations" type="string0-240"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- End consumer REQUEST additional data types -->
+	<!-- Begin business REQUEST additional data types -->
+
+	<xs:simpleType name="RiskBasedPriceValuesOnType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Beacon model only"/>
+			<xs:enumeration value="Beacon and other Models"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="CDCAdditionalInputType">
+		<xs:sequence>
+			<xs:element name="BranchAccountNumber" type="string1-16" minOccurs="0"/>
+			<xs:element name="MemberFirmCode" type="string1-4" minOccurs="0"/>
+			<xs:element name="TransactionType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>S = Standard Inquiry – Derogatory only
+O = OFAC only (non-brokerage customers)</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="string1">
+						<xs:enumeration value="S"/>
+						<xs:enumeration value="O"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="AccountType" type="string1" default="I" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>I= Initial transmission to CDC</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CustomerName" type="string1-50" minOccurs="0"/>
+			<xs:element name="FromAddress" type="string1-50" minOccurs="0"/>
+			<xs:element name="EmailAddress" type="string1-50" minOccurs="0" maxOccurs="5"/>
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:complexType name="EquifaxSmallBusinessAdditionalInputType">
+		<xs:sequence>
+			<xs:element name="CustomerNumber" type="string1-10" minOccurs="0"/>
+			<xs:element name="SecurityCode" type="string1-3" minOccurs="0"/>
+			<xs:element name="BillingCustomerNumber" type="string1-10" minOccurs="0"/>
+			<xs:element name="BillingSecurityCode" type="string1-3" minOccurs="0"/>
+			<xs:element name="TransactionId" type="string1-4" minOccurs="0"/>
+			<xs:element name="Version" type="string1-3" minOccurs="0"/>
+			<xs:element name="ProductCode" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:token">
+							<xs:attribute name="name" use="required">
+								<xs:simpleType>
+									<xs:restriction base="xs:token">
+										<xs:enumeration value="SCR"/>
+										<xs:enumeration value="RPT"/>
+										<xs:enumeration value="SBMA"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+							<xs:attribute name="code" type="xs:string" use="required">
+								<xs:annotation>
+									<xs:documentation>Supply only valid codes as supported by SBE. Currently they are four digit codes like 0001, 0002, 0003, 0004, 2010, 2002, 2011, 3003 etc</xs:documentation>
+								</xs:annotation>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="DataSubmissionNumber" type="string1-10" minOccurs="0"
+				maxOccurs="unbounded"/>
+			<xs:element name="EndUserName" type="EndUserNameType" minOccurs="0"/>
+			<xs:element name="PermissiblePurposeCode" type="PermissiblePurposeCodeType"
+				minOccurs="0"/>
+			<xs:element name="EFXID" type="string1-10" minOccurs="0"/>
+			<xs:element name="Candid" type="string1-30" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+
+
+
+
+
+	<xs:complexType name="CanadaCommercialAdditionalInputType">
+		<xs:sequence>
+			<xs:element name="CustomerNumber" type="string1-10" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						Needed for similars pull
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SecurityCode" type="string1-3" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						Needed for similars pull
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CustomerCode" type="string1-4" minOccurs="0"/>
+			<xs:element name="Language" default="E" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>E = English
+F = French</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="E"/>
+						<xs:enumeration value="F"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="SearchType" default="General" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="string1-15">
+						<xs:enumeration value="General"/>
+						<xs:enumeration value="Phone"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="IsSearch" type="YNFlagType" minOccurs="0"/>
+			<xs:element name="CompanyNumber" type="string1-10" minOccurs="0"/>
+			<xs:element name="SubjectNumber" type="string1-6" minOccurs="0"/>
+			<xs:element name="ScoringProductsRequest" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Productype" minOccurs="1">
+							<xs:simpleType>
+								<xs:restriction base="string1-4">
+									<xs:enumeration value="MODL"/>
+									<xs:enumeration value="RISK"/>
+									<xs:enumeration value="CARD"/>
+									<xs:enumeration value="MDAD"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="ScoringNumber" type="string1-8" minOccurs="1"/>
+						<xs:element name="ReportAttribute" type="string1" minOccurs="0"/>
+						<xs:element name="Parameter" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Type" minOccurs="0">
+										<xs:simpleType>
+											<xs:restriction base="string1-8">
+												<xs:enumeration value="NUMERIC"/>
+												<xs:enumeration value="STRING"/>
+												<xs:enumeration value="DATE"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="Id" type="string1-8" minOccurs="0"/>
+									<xs:element name="Value" type="string1-8" minOccurs="1"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AccountVerificationAdditionalInputType">
+		<xs:sequence>
+			<xs:element name="CustomerNumber" type="string1-10" minOccurs="0"/>
+			<xs:element name="SecurityCode" type="string1-3" minOccurs="0"/>
+			<xs:element name="OptionalFeatureCodes" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="AlertContact" type="YNFlagType" minOccurs="0"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="PermissiblePurposeCode" type="PermissiblePurposeCodeType"
+				minOccurs="0"/>
+			<xs:element name="VendorIdentificationCode" type="string1-2" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="AsnefType">
+		<xs:sequence>
+			<xs:element name="SpecificMonthDetails" type="xs:string" minOccurs="0"/>
+			<xs:element name="SpecificCreditOperationDetails" type="xs:string" minOccurs="0"/>
+			<xs:element name="CreditOperationsHistory" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EquifaxUKSMEInsightsAdditionalDataType">
+		<xs:choice>
+			<xs:element name="CompanySearch">
+				<xs:complexType>
+					<xs:choice>
+						<xs:element name="company" type="companynumber"/>
+						<xs:element name="word" type="companyname"/>
+						<xs:element name="alpha" type="companyname"/>
+						<xs:element name="postcode" type="postcodedissolved"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="CompanyReport">
+
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="company" type="companynumber"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+	</xs:complexType>
+
+	<!-- End business REQUEST additional data types -->
+	<!-- Begin consumer SUBJECT additional data types -->
+	<xs:complexType name="EquifaxSubjectAdditionalDataType">
+		<xs:sequence>
+			<xs:element name="AccessPin" type="string1-4" minOccurs="0"/>
+			<xs:element name="NcplusAccessPin" type="string1-4" maxOccurs="1" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TransUnionSubjectAdditionalDataType">
+		<xs:sequence>
+			<xs:element name="AccessPin" type="string1-8" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ExchangeSubjectAdditionalDataType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				This data is used to build the request for Exchange data sources. ServiceTypes can be used to send the code for the service type that a consumer subject is requesting.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ServiceTypes" minOccurs="0" maxOccurs="10">
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="A"/>
+						<xs:enumeration value="C"/>
+						<xs:enumeration value="D"/>
+						<xs:enumeration value="E"/>
+						<xs:enumeration value="F"/>
+						<xs:enumeration value="G"/>
+						<xs:enumeration value="H"/>
+						<xs:enumeration value="I"/>
+						<xs:enumeration value="L"/>
+						<xs:enumeration value="N"/>
+						<xs:enumeration value="O"/>
+						<xs:enumeration value="P"/>
+						<xs:enumeration value="S"/>
+						<xs:enumeration value="U"/>
+						<xs:enumeration value="W"/>
+						<xs:enumeration value="Z"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:simpleType name="EidAnswerType">
+		<xs:restriction base="xs:positiveInteger">
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="5"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="eIDVerifierSubjectAdditionalDataType">
+		<xs:sequence>
+			<xs:element name="AnswerForQuestion" minOccurs="0" maxOccurs="6">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is used to send answers for an eIDverifier transaction. There are up to six questions and six answers for eIDverifier.
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="EidAnswerType">
+							<xs:attribute name="questionNumber" use="required">
+								<xs:simpleType>
+									<xs:restriction base="xs:positiveInteger">
+										<xs:enumeration value="1"/>
+										<xs:enumeration value="2"/>
+										<xs:enumeration value="3"/>
+										<xs:enumeration value="4"/>
+										<xs:enumeration value="5"/>
+										<xs:enumeration value="6"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:attribute>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="questionInteraction" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:positiveInteger">
+					<xs:minInclusive value="1"/>
+					<xs:maxInclusive value="99"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+
+
+
+	<!-- End consumer SUBJECT additional data types -->
+	<!-- Begin business SUBJECT additional data types -->
+
+	<xs:complexType name="SimulatorType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				A simulator is used to mimic a data source response instead of going to a data source when enable = true
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DataSource" type="DataSourceSimulatorType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DataSourceSimulatorType">
+		<xs:sequence>
+			<xs:element name="Scenario" minOccurs="0">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="id" type="xs:string" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="enable" type="xs:boolean" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="AuditType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				The optional Auditing element allows the customer to enable Decisioning, Attributes, and Scores for audit purposes.
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Decisioning" minOccurs="0">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="enable" type="xs:boolean" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Attributes" minOccurs="0">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="enable" type="xs:boolean" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Scores" minOccurs="0">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="enable" type="xs:boolean" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OperatorType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				This is used for sending the name (or ID) of an operator who is initiating a transaction submission. 
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- End business SUBJECT additional data types -->
+	<xs:complexType name="EquifaxRequestModelType">
+		<xs:sequence>
+			<xs:element name="ModelIdentifier" type="string1-6">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						Model Identifiers is model number or model name (if model number is not available and accepted by ACRO). Model numbers must be same as what is set in ACRO?s provisioning system (CAT /MAT table).
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Attributes" minOccurs="0" maxOccurs="20">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is used for sending attribute values if required for any custom/standard model. 
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:attribute name="name" type="string1-50" use="required">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">
+								It is the name of the attribute. Note: This data is not passed to ACRO.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+					<xs:attribute name="value" type="string1-20" use="required">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">
+								It is the value of the attribute. It is passed to ACRO.
+							</xs:documentation>
+						</xs:annotation>
+					</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OptionalFeaturesSelectedType">
+		<xs:sequence>
+			<xs:element name="ConsumerReferralLocation" type="YNFlagType" minOccurs="0"/>
+			<xs:element name="OnlineDirectory" type="YNFlagType" minOccurs="0"/>
+			<xs:element name="AlertContact" type="YNFlagType" minOccurs="0"/>
+			<xs:element name="Beacon" type="YNFlagType" minOccurs="0"/>
+			<xs:element name="EDAS" type="YNFlagType" minOccurs="0"/>
+			<xs:element name="TwentyFourMonthPaymentHistory" type="YNFlagType" minOccurs="0"/>
+			<xs:element name="RiskBasedPricingEnabled" type="RiskBasedPricingFlagType" minOccurs="0"
+			/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EquifaxCommonInputType">
+		<xs:complexContent>
+			<xs:extension base="EquifaxCommonSimpleInputType">
+				<xs:sequence>
+					<xs:element name="OutputFormat" type="string1-2" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">
+								Identifies ACRO 5.0 or ACRO 6.0. valid values are '5' and'6'
+							</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="MonthsToCountInquiries" minOccurs="0">
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value="3"/>
+								<xs:enumeration value="6"/>
+								<xs:enumeration value="9"/>
+								<xs:enumeration value="12"/>
+								<xs:enumeration value="24"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="MonthsToCountDelinquencies" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">
+								Used for building DIAL segment for Canada ACRO only. It is not needed for US Equifax credit report.
+							</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value="3"/>
+								<xs:enumeration value="6"/>
+								<xs:enumeration value="9"/>
+								<xs:enumeration value="12"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CanadaConsumerAdditionalInputType">
+		<xs:complexContent>
+			<xs:extension base="EquifaxCommonInputType">
+				<xs:sequence>
+					<xs:element name="Language" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>E = English
+F = French</xs:documentation>
+						</xs:annotation>
+						<xs:simpleType>
+							<xs:restriction base="xs:token">
+								<xs:enumeration value="E"/>
+								<xs:enumeration value="F"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="CreditFileRequest" type="YNFlagType" minOccurs="0"/>
+					<xs:element name="CardData" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="VersionNumber" type="string1-5" minOccurs="0"/>
+								<xs:element name="ExtendedNarrativeIndicator" type="string1"
+									minOccurs="0"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="ServiceData" minOccurs="0">
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="VersionNumber" type="string1-5" minOccurs="0"/>
+								<xs:element name="NumberOfReports" type="string1-10" minOccurs="0"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Models" type="CanadaConsumerModelsType" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="CanadaConsumerModelType">
+		<xs:sequence>
+			<xs:element name="ModelNumber" type="string1-5" minOccurs="0"/>
+			<xs:element name="ExtendedNarrativeIndicator" type="string1" minOccurs="0"/>
+			<xs:element name="CustomerIdentifier" type="digit1-25" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CanadaConsumerModelsType">
+		<xs:sequence>
+			<xs:element name="Model" type="CanadaConsumerModelType" minOccurs="0"
+				maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EquifaxCommonSimpleInputType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				Credential information for Equifax datasources like acro50,acro60
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CustomerNumber" type="string1-10" minOccurs="0"/>
+			<xs:element name="SecurityCode" type="string1-3" minOccurs="0"/>
+			<xs:element name="CustomerCode" type="string1-4" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:annotation>
+		<xs:documentation>Complex types for Equifax UK CPU Link Services</xs:documentation>
+	</xs:annotation>
+	<xs:complexType name="EquifaxUKCpuLinkAdditionalInputType">
+		<xs:sequence>
+			<xs:element name="OptInOutFlag" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="OptIn"/>
+						<xs:enumeration value="OptOut"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="AssociateJointAppFlag" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="Associate"/>
+						<xs:enumeration value="Joint"/>
+						<xs:enumeration value="TransientAssociate"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LoanInformation" type="EquifaxUKCpuLinkLoanInformationType"
+				minOccurs="0"/>
+			<xs:element name="StoreIdentityBranchNumber" type="string1-25" minOccurs="0"/>
+			<xs:element name="SolicitorInformation" type="EquifaxUKSolicitorInformationType"
+				minOccurs="0"/>
+			<xs:element name="IntroducerInformation" type="EquifaxUKIntroducerInformationType"
+				minOccurs="0"/>
+			<xs:element minOccurs="0" name="ChannelId">
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="Online"/>
+						<xs:enumeration value="ExistingCustomer"/>
+						<xs:enumeration value="FieldSales"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EquifaxUKCpuLinkAdditionalDataType">
+		<xs:sequence>
+			<xs:element name="ElectoralRollTimeCurrentAddress" type="xs:duration" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EquifaxUKCpuLinkLoanInformationType">
+		<xs:sequence>
+			<xs:element name="Purpose" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:token">
+						<xs:enumeration value="Holiday"/>
+						<xs:enumeration value="Car"/>
+						<xs:enumeration value="Home Improvement"/>
+						<xs:enumeration value="Furniture"/>
+						<xs:enumeration value="Debt Consolidation"/>
+						<xs:enumeration value="Other"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Value" minOccurs="0">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:whiteSpace value="collapse"/>
+						<xs:totalDigits value="7"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EquifaxUKSolicitorInformationType">
+		<xs:sequence>
+			<xs:element name="Name" type="string1-50"/>
+			<xs:element name="HouseNumberOrName" type="string1-10" minOccurs="0"/>
+			<xs:element name="Street" type="string1-30" minOccurs="0"/>
+			<xs:element name="District" type="string1-30" minOccurs="0"/>
+			<xs:element name="PostTown" type="string1-10" minOccurs="0"/>
+			<xs:element name="Postcode" type="string1-10" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="EquifaxUKIntroducerInformationType">
+		<xs:sequence>
+			<xs:element name="OrganisationName" type="string1-50" minOccurs="0"/>
+			<xs:element name="Title" type="string1-15" minOccurs="0"/>
+			<xs:element name="Forename" type="string1-15" minOccurs="0"/>
+			<xs:element name="SecondName" type="string1-15" minOccurs="0"/>
+			<xs:element name="Surname" type="string1-20" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:annotation>
+		<xs:documentation>Complex Types for First Search</xs:documentation>
+	</xs:annotation>
+
+	<xs:simpleType name="RiskBasedPricingFlagType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="M"/>
+			<xs:enumeration value="Q"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="RRBothType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Print Image with tradeline format 1"/>
+			<xs:enumeration value="Print Image with tradeline format 2"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+
+
+	<xs:complexType name="RRKeywordsType">
+		<xs:sequence>
+			<xs:element name="RRKeywordType" type="string1-10" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TransunionAdditionalInputType">
+		<xs:complexContent>
+			<xs:extension base="ConsumerCreditReportAdditionalInputType">
+				<xs:sequence>
+					<xs:element name="MemberCode" type="string1-8" minOccurs="0"/>
+					<xs:element name="MemberPassword" type="string1-4" minOccurs="0"/>
+					<xs:element name="VersionSwitch" type="string1-2" minOccurs="0"/>
+					<xs:element name="SpecialRoutingIndicator" type="string1-2" minOccurs="0"/>
+					<xs:element name="LanguageCode" type="string1-2" minOccurs="0"/>
+					<xs:element name="UserReferenceNumber" type="string1-26" minOccurs="0"/>
+					<xs:element name="BureauMarket" type="string1-2" minOccurs="0"/>
+					<xs:element name="BureauSubmarket" type="string1-2" minOccurs="0"/>
+					<xs:element name="IndustryCode" type="string1-2" minOccurs="0"/>
+					<xs:element name="ContractualIndicator" type="string1-2" minOccurs="0"/>
+					<xs:element name="PointOfSaleIndicator" type="string1-2" minOccurs="0"/>
+					<xs:element name="ProductCode" type="string1-2" minOccurs="0"/>
+					<xs:element name="SpecialityCode" type="string1-2" minOccurs="0"/>
+					<xs:element name="ProcessingRequest" type="string1-2" minOccurs="0"/>
+					<xs:element name="ErrorTextSegment" type="string1-2" minOccurs="0"/>
+					<xs:element name="EditResponseSegment" type="string1-2" minOccurs="0"/>
+					<xs:element name="TradeMOPTotalsSegment" type="string1-2" minOccurs="0"/>
+					<xs:element name="SummarySegment" type="string1-2" minOccurs="0"/>
+					<xs:element name="TransunionAddProduct" type="TransunionAddonProductType"
+						minOccurs="0" maxOccurs="unbounded"/>
+					<xs:element name="ChargeOffDate" type="xs:date" minOccurs="0"/>
+					<xs:element name="PlacementBalance" type="string1-10" minOccurs="0"/>
+					<xs:element name="PlacementDate" type="xs:date" minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="TransunionAddonProductType">
+		<xs:sequence>
+			<xs:element name="AddonProductCode" type="string1-5" minOccurs="0"/>
+			<xs:element name="ProcessingRequest" type="string1-2" minOccurs="0"/>
+			<xs:element name="ProductType" type="string1-2" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Audit flag -->
+	<xs:complexType name="AuditControlType">
+		<xs:sequence>
+			<xs:element name="AuditMode" type="AuditModeType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AuditModeType">
+		<xs:sequence>
+			<xs:element name="Audit" type="AuditFlagType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AuditFlagType">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="0"/>
+			<xs:element name="value" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- UYCDI Profile Number-->
+
+	<xs:complexType name="ExperianSpainType">
+		<xs:sequence>
+			<xs:element name="product" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="companyname">
+		<xs:simpleContent>
+			<xs:extension base="postcodedissolved">
+				<xs:attribute name="postcode" type="namestring"/>
+				<xs:attribute name="sources" use="required">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="corp"/>
+							<xs:enumeration value="noli"/>
+							<xs:enumeration value="prev"/>
+							<xs:enumeration value="corp_noli"/>
+							<xs:enumeration value="corp_prev"/>
+							<xs:enumeration value="prev_noli"/>
+							<xs:enumeration value="all"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="namestring">
+		<xs:restriction base="xs:token">
+			<xs:minLength value="3"/>
+			<xs:pattern value="[\w\s]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="postcodedissolved">
+		<xs:simpleContent>
+			<xs:extension base="namestring">
+				<xs:attribute name="dissolved" type="xs:boolean"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:simpleType name="companynumber">
+		<xs:restriction base="xs:token">
+			<xs:maxLength value="8"/>
+			<xs:minLength value="1"/>
+			<xs:pattern value="(\d|[A-Z]{2}|[A-Z][0-9])\d*"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+
+</xs:schema>

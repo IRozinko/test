@@ -1,0 +1,180 @@
+AF,Afghanistan                     ,Afganistán                  ,Afghani         ,Afgano           ,FALSE
+AL,Albania                         ,Albania                     ,Albanian        ,Albano           ,FALSE
+DZ,Algeria                         ,Argelia                     ,Algerian        ,Argelino         ,FALSE
+AD,Andorra                         ,Andorra                     ,Andorran        ,Andorrano        ,FALSE
+AO,Angola                          ,Angola                      ,Angolan         ,Angolano         ,FALSE
+AG,Antigua and Barbuda             ,Antigua y Barbuda           ,Antiguan        ,Antiguano        ,FALSE
+AR,Argentina                       ,Argentina                   ,Argentinian     ,Argentino        ,FALSE
+AM,Armenia                         ,Armenia                     ,Armenian        ,Armenio          ,FALSE
+AU,Australia                       ,Australia                   ,Australian      ,Australiano      ,FALSE
+AT,Austria                         ,Austria                     ,Austrian        ,Austriaco        ,FALSE
+AZ,Azerbaijan                      ,Azerbaiyán                  ,Azerbaijani     ,Azerbaiyano      ,FALSE
+BS,Bahamas                         ,Bahamas                     ,Bahamian        ,Bahameño         ,FALSE
+BH,Bahrain                         ,Bahréin                     ,Barhraini       ,Bareiní          ,FALSE
+BD,Bangladesh                      ,Bangladesh                  ,Bangladeshi     ,Bangladesí       ,FALSE
+BB,Barbados                        ,Barbados                    ,Barbadian       ,Barbadense       ,FALSE
+BY,Belarus                         ,Bielorrusia                 ,Belorussian     ,Bieloruso        ,FALSE
+BE,Belgium                         ,Bélgica                     ,Belgian         ,Belga            ,FALSE
+BZ,Belize                          ,Belice                      ,Belizean        ,Beliceño         ,FALSE
+BJ,Benin                           ,Benín                       ,Beninese        ,Beninés          ,FALSE
+BO,Bolivia                         ,Bolivia                     ,Bolivian        ,Boliviano        ,FALSE
+BA,Bosnia-Herzegovina              ,Bosnia-Herzegovina          ,Bosnian         ,Bosnio           ,FALSE
+BW,Botswana                        ,Botsuana                    ,Botswanian      ,Botsuano         ,FALSE
+BR,Brazil                          ,Brasil                      ,Brazilian       ,Brasileño        ,FALSE
+BN,Brunei Darussalam               ,Brunéi Darussalam           ,Bruneian        ,Bruneano         ,FALSE
+BG,Bulgaria                        ,Bulgaria                    ,Bulgarian       ,Búlgaro          ,FALSE
+BF,Burkina Faso                    ,Burkina Faso                ,Burquinese      ,Burkinés         ,FALSE
+BI,Burundi                         ,Burundi                     ,Burundese       ,Burundés         ,FALSE
+KH,Cambodia                        ,Camboya                     ,Cambodian       ,Camboyano        ,FALSE
+CM,Cameroon                        ,Camerún                     ,Cameroonian     ,Camerunés        ,FALSE
+CA,Canada                          ,Canadá                      ,Canadian        ,Canadiense       ,FALSE
+CV,Cape Verde                      ,Cabo Verde                  ,Cape Verdean    ,Caboverdiano     ,FALSE
+CF,Central African Republic        ,República Centroafricana    ,Central African ,Centroafricano   ,FALSE
+TD,Chad                            ,Chad                        ,Chadian         ,Chadiano         ,FALSE
+CL,Chile                           ,Chile                       ,Chilean         ,Chileno          ,FALSE
+CN,China (Peoples Republic of)     ,China (República popular)   ,Chinese         ,Chino            ,FALSE
+CO,Colombia                        ,Colombia                    ,Colombian       ,Colombiano       ,FALSE
+KM,Comoros                         ,Comoras                     ,Comorian        ,Comorense        ,FALSE
+CD,Congo (Republic of the)         ,Congo (República del)       ,Congolese       ,Congoleño        ,FALSE
+CR,Costa Rica                      ,Costa Rica                  ,Costa Rican     ,Costarricense    ,FALSE
+HR,Croatia                         ,Croacia                     ,Croatian        ,Croata           ,FALSE
+CU,Cuba                            ,Cuba                        ,Cuban           ,Cubano           ,FALSE
+CY,Cyprus                          ,Chipre                      ,Cypriot         ,Chipriota        ,FALSE
+CZ,Czech Republic                  ,República Checa             ,Czech           ,Checo            ,FALSE
+DK,Denmark                         ,Dinamarca                   ,Danish          ,Danés            ,FALSE
+DM,Dominica                        ,Dominica                    ,Dominican       ,Dominiqués       ,FALSE
+DO,Dominican Republic              ,República Dominicana        ,Dominican       ,Dominicano       ,FALSE
+TL,East Timor                      ,Timor oriental              ,Timorense       ,Timorense        ,FALSE
+EC,Ecuador                         ,Ecuador                     ,Ecuadorian      ,Ecuatoriano      ,FALSE
+EG,Egypt                           ,Egipto                      ,Egyptian        ,Egipcio          ,FALSE
+SV,El Salvador                     ,El Salvador                 ,Salvadoran      ,Salvadoreño      ,FALSE
+GQ,Equatorial Guinea               ,Guinea Ecuatorial           ,Guinean         ,Guineano         ,FALSE
+ER,Eritrea                         ,Eritrea                     ,Eritrean        ,Eritreo          ,FALSE
+EE,Estonia                         ,Estonia                     ,Estonian        ,Estonio          ,FALSE
+ET,Ethiopia                        ,Etiopía                     ,Ethiopian       ,Etíope           ,FALSE
+FI,Finland                         ,Finlandia                   ,Finnish         ,Finés            ,FALSE
+FR,France                          ,Francia                     ,French          ,Francés          ,FALSE
+GF,French Guiana                   ,Guayana Francesa            ,Guianese        ,Guayanés         ,FALSE
+GA,Gabon                           ,Gabón                       ,Gabonese        ,Gabonés          ,FALSE
+GM,Gambia (The)                    ,Gambia                      ,Gambian         ,Gambiano         ,FALSE
+GE,Georgia                         ,Georgia                     ,Georgian        ,Georgiano        ,FALSE
+DE,Germany                         ,Alemania                    ,German          ,Alemán           ,FALSE
+GH,Ghana                           ,Ghana                       ,Ghanaian        ,Ghanés           ,FALSE
+GR,Greece                          ,Grecia                      ,Greek           ,Griego           ,FALSE
+GL,Greenland                       ,Groenlandia                 ,Greenlandian    ,Groenlandés      ,FALSE
+GD,Grenada                         ,Granada                     ,Grenadian       ,Granadino        ,FALSE
+GT,Guatemala                       ,Guatemala                   ,Guatemalan      ,Guatemalteco     ,FALSE
+GN,Guinea                          ,Guinea                      ,Guinean         ,Guineano         ,FALSE
+GW,Guinea-Bissau                   ,Guinea-Bissau               ,Guinean         ,Guineano         ,FALSE
+HT,Haiti                           ,Haití                       ,Haitian         ,Haitiano         ,FALSE
+HN,Honduras                        ,Honduras                    ,Honduran        ,Hondureño        ,FALSE
+HU,Hungary                         ,Hungría                     ,Hungarian       ,Húngaro          ,FALSE
+IS,Iceland                         ,Islandia                    ,Icelandic       ,Islandés         ,FALSE
+IN,India                           ,India                       ,Indian          ,Indio            ,FALSE
+ID,Indonesia                       ,Indonesia                   ,Indonesian      ,Indionisio       ,FALSE
+IQ,Irak                            ,Irak                        ,Iraqi           ,Iraquí           ,FALSE
+IR,Iran                            ,Irán                        ,Iranian         ,Iraní            ,FALSE
+IE,Ireland                         ,Irlanda                     ,Irish           ,Irlandés         ,FALSE
+IL,Israel                          ,Israel                      ,Israeli         ,Israelí          ,FALSE
+IT,Italy                           ,Italia                      ,Italian         ,Italiano         ,FALSE
+CI,Ivory Coast                     ,Costa de Marfil             ,Ivorian         ,Marfileño        ,FALSE
+JM,Jamaica                         ,Jamaica                     ,Jamaican        ,Jamaicano        ,FALSE
+JP,Japan                           ,Japón                       ,Japanese        ,Japonés          ,FALSE
+JO,Jordan                          ,Jordania                    ,Jordanian       ,Jordano          ,FALSE
+KZ,Kazakhstan                      ,Kazajistán                  ,Kazakh          ,Kazajo           ,FALSE
+KE,Kenya                           ,Kenia                       ,Kenyan          ,Keniata          ,FALSE
+KI,Kiribati                        ,Kiribati                    ,Kiribati        ,Kiribatiano      ,FALSE
+KP,Korea (North)                   ,Corea (del Norte)           ,North Korean    ,Norcoreano       ,FALSE
+KR,Korea (South)                   ,Corea (del Sur)             ,South Korean    ,Surcoreano       ,FALSE
+KW,Kuwait                          ,Kuwait                      ,Kuwaiti         ,Kuwaití          ,FALSE
+KG,Kyrgyzstan                      ,Kirguistán                  ,Kyrgyz          ,Kirguís          ,FALSE
+LA,Laos                            ,Laos                        ,Laotian         ,Laosiano         ,FALSE
+LV,Latvia                          ,Letonia                     ,Latvian         ,Letonio          ,FALSE
+LB,Lebanon                         ,Líbano                      ,Lebanese        ,Libanés          ,FALSE
+LS,Lesotho                         ,Lesoto                      ,Basotho         ,Lesotense        ,FALSE
+LR,Liberia                         ,Liberia                     ,Liberian        ,Liberiano        ,FALSE
+LY,Libya                           ,Libia                       ,Lybian          ,Libio            ,FALSE
+LI,Liechtenstein                   ,Liechtenstein               ,Liechtensteinian,Liechtensteiniano,FALSE
+LT,Lithuania                       ,Lituania                    ,Lithuanian      ,Lituano          ,FALSE
+LU,Luxembourg                      ,Luxemburgo                  ,Luxembourgish   ,Luxemburgés      ,FALSE
+MK,Macedonia (Republic of)         ,Macedonia (República de)    ,Macedonian      ,Macedonio        ,FALSE
+MG,Madagascar                      ,Madagascar                  ,Magadascan      ,Malgache         ,FALSE
+MW,Malawi                          ,Malaui                      ,Malawian        ,Malauí           ,FALSE
+MY,Malaysia                        ,Malasia                     ,Malayan         ,Malayo           ,FALSE
+MV,Maldives                        ,Maldivas                    ,Maldivian       ,Maldivo          ,FALSE
+ML,Mali                            ,Malí                        ,Malian          ,Maliense         ,FALSE
+MT,Malta                           ,Malta                       ,Maltese         ,Maltés           ,FALSE
+MH,Marshall Islands                ,Islas Marshall              ,Marshallese     ,Marshalés        ,FALSE
+MR,Mauritania                      ,Mauritania                  ,Mauritanian     ,Mauritano        ,FALSE
+MU,Mauritius                       ,Mauricio                    ,Mauritian       ,Mauriciano       ,FALSE
+MX,Mexico                          ,México                      ,Mexican         ,Mexicano         ,FALSE
+MD,Moldova                         ,Moldavia                    ,Moldovan        ,Moldavo          ,FALSE
+MC,Monaco                          ,Mónaco                      ,Monegasque      ,Monaqués         ,FALSE
+MN,Mongolia                        ,Mongolia                    ,Mongolian       ,Mongól           ,FALSE
+ME,Montenegro                      ,Montenegro                  ,Montenegrino    ,Montenegrino     ,FALSE
+MA,Morocco                         ,Marruecos                   ,Moroccan        ,Marroquí         ,FALSE
+MZ,Mozambique                      ,Mozambique                  ,Mozambican      ,Mozambiqueño     ,FALSE
+MM,Myanmar                         ,Myanmar (Birmania)          ,Burmese         ,Birmano          ,FALSE
+NA,Namibia                         ,Namibia                     ,Namibian        ,Namibio          ,FALSE
+NR,Nauru                           ,Nauru                       ,Nauruan         ,Nauruano         ,FALSE
+NL,Netherlands (Holland)           ,Países Bajos (Holanda)      ,Dutch           ,Holandés         ,FALSE
+NZ,New Zealand                     ,Nueva Zelanda               ,New Zealander   ,Neozelandés      ,FALSE
+NI,Nicaragua                       ,Nicaragua                   ,Nicaraguan      ,Nicaraguense     ,FALSE
+NE,Niger                           ,Níger                       ,Nigerian        ,Nigeriano        ,FALSE
+NU,Niue                            ,Niue                        ,Niuean          ,Niuano           ,FALSE
+NO,Norway                          ,Noruega                     ,Norwegian       ,Noruego          ,FALSE
+OM,Oman                            ,Omán                        ,Omani           ,Omanés           ,FALSE
+PK,Pakistan                        ,Pakistán                    ,Pakistani       ,Pakistaní        ,FALSE
+PA,Panama                          ,Panamá                      ,Panamanian      ,Panameño         ,FALSE
+PG,Papua New Guinea                ,Papúa nueva Guinea          ,Papuan          ,Papú             ,FALSE
+PY,Paraguay                        ,Paraguay                    ,Paraguayan      ,Paraguayo        ,FALSE
+PE,Peru                            ,Perú                        ,Peruvian        ,Peruano          ,FALSE
+PH,Philippines                     ,Filipinas                   ,Philippine      ,Filipino         ,FALSE
+PL,Poland                          ,Polonia                     ,Polish          ,Polaco           ,FALSE
+PT,Portugal                        ,Portugal                    ,Portuguese      ,Portugués        ,FALSE
+QA,Qatar                           ,Qatar                       ,Qatari          ,Catarí           ,FALSE
+RO,Romania                         ,Rumania                     ,Romanian        ,Rumano           ,FALSE
+RU,Russia                          ,Rusia                       ,Russian         ,Ruso             ,FALSE
+RW,Rwanda                          ,Ruanda                      ,Rwandan         ,Ruandés          ,FALSE
+VC,Saint Vincent and the Grenadines,San Vicente y las Granadinas,Sanvicentin     ,Sanvicentino     ,FALSE
+WS,Samoa                           ,Samoa                       ,Samoan          ,Samoano          ,FALSE
+SM,San Marino                      ,San Marino                  ,San Marinese    ,Sanmarinense     ,FALSE
+SA,Saudi Arabia                    ,Arabia Saudí                ,Saudi           ,Saudí            ,FALSE
+SN,Senegal                         ,Senegal                     ,Senegalese      ,Senegalés        ,FALSE
+RS,Serbia                          ,Serbia                      ,Serbian         ,Serbio           ,FALSE
+SC,Seychelles                      ,Seychelles                  ,Seychellois     ,Seychelense      ,FALSE
+SL,Sierra Leone                    ,Sierra Leona                ,Sierra Leonean  ,Sierraleonés     ,FALSE
+SG,Singapore                       ,Singapur                    ,Singaporean     ,Singapurense     ,FALSE
+SK,Slovakia                        ,Eslovaquia                  ,Slovak          ,Eslovaco         ,FALSE
+SI,Slovenia                        ,Eslovenia                   ,Slovenian       ,Esloveno         ,FALSE
+SB,Solomon Islands                 ,Islas Salomón               ,Solomon         ,Salomonense      ,FALSE
+SO,Somalia                         ,Somalia                     ,Somalian        ,Somalí           ,FALSE
+ZA,South Africa                    ,Sudáfrica                   ,South African   ,Sudafricano      ,FALSE
+ES,Spain                           ,España                      ,Spanish         ,Español          ,TRUE
+LK,Sri Lanka                       ,Sri Lanka                   ,Ceylonese       ,Ceilandés        ,FALSE
+SD,Sudan                           ,Sudán                       ,Sudanese        ,Sudanés          ,FALSE
+SR,Suriname                        ,Surinam                     ,Surinamese      ,Surinamés        ,FALSE
+SZ,Swaziland                       ,Suazilandia                 ,Swazi           ,Suazi            ,FALSE
+SE,Sweden                          ,Suecia                      ,Swedish         ,Sueco            ,FALSE
+CH,Switzerland                     ,Suiza                       ,Swiss           ,Suizo            ,FALSE
+SY,Syria                           ,Siria                       ,Syrian          ,Sirio            ,FALSE
+TZ,Tanzania                        ,Tanzania                    ,Tanzanian       ,Tanzano          ,FALSE
+TH,Thailand                        ,Tailandia                   ,Thai            ,Tailandés        ,FALSE
+TG,Togo                            ,Togo                        ,Togolese        ,Togolés          ,FALSE
+TO,Tonga                           ,Tonga                       ,Tongan          ,Tongano          ,FALSE
+TN,Tunisia                         ,Túnez                       ,Tunisian        ,Tunecino         ,FALSE
+TR,Turkey                          ,Turquía                     ,Turkish         ,Turco            ,FALSE
+TV,Tuvalu                          ,Tuvalu                      ,Tuvaluan        ,Tuvaluano        ,FALSE
+UG,Uganda                          ,Uganda                      ,Ugandan         ,Ugandés          ,FALSE
+UA,Ukraine                         ,Ucrania                     ,Ukranian        ,Ucraniano        ,FALSE
+GB,United Kingdom (UK)             ,Reino Unido                 ,British         ,Británico        ,FALSE
+US,United States of America (USA)  ,Estados Unidos (EEUU)       ,American        ,Americano        ,FALSE
+UY,Uruguay                         ,Uruguay                     ,Uruguayan       ,Uruguayo         ,FALSE
+UZ,Uzbekistan                      ,Uzbekistán                  ,Uzbek           ,Uzbeco           ,FALSE
+VU,Vanuatu                         ,Vanuatu                     ,Vanuatuense     ,Vanuatuense      ,FALSE
+VA,Vatican                         ,Vaticano                    ,Vanticanien     ,Vaticano         ,FALSE
+VE,Venezuela                       ,Venezuela                   ,Venezuelan      ,Venezolano       ,FALSE
+VN,Vietnam                         ,Vietnam                     ,Vietnamese      ,Vietnamita       ,FALSE
+YE,Yemen                           ,Yemen                       ,Yemeni          ,Yemení           ,FALSE
+ZM,Zambia                          ,Zambia                      ,Zambian         ,Zambiano         ,FALSE
+ZW,Zimbabwe                        ,Zimbabue                    ,Zimbabwean      ,Zimbabuense      ,FALSE

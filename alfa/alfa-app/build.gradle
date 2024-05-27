@@ -1,0 +1,24 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+apply plugin: 'org.springframework.boot'
+apply plugin: 'maven'
+
+archivesBaseName = 'crm-alfa-backend'
+apply from: "${rootDir}/gradle/artifactory.gradle"
+
+dependencies {
+    compile project(":alfa:alfa-web-api")
+    compile project(":alfa:alfa-bo-api")
+    compile project(":alfa:alfa-product")
+
+    compile project(":platform:quartz")
+    compile project(":spain-common:spain-schedulers")
+
+    compile libs.logbackGelf                    // graylog for logging
+
+    compile libs.sentry                         // sentry.io integration for logging
+
+    compile libs.springFox
+
+    testCompile project(":platform:common:integration-test")
+}

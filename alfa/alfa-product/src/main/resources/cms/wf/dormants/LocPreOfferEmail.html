@@ -1,0 +1,57 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Con clientes como tú, da gusto trabajar en ALFA. Por eso, pensando en vosotros, creamos
+<strong>PRESTO</strong>, una nueva forma de obtener el dinero que necesitas cuando lo necesitas.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Nuestro objetivo es adaptarnos a ti y ofrecerte <b>más dinero pagando menos intereses</b>. ¿Cómo te suena?
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Las principales <strong>ventajas</strong> de la línea de crédito PRESTO son que:
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+<ul>
+    <li>
+        Podrás obtener <b>hasta 2.000€</b>.
+        <br>
+    </li>
+    <li>
+        Su <b>interés</b> mensual es del <b>8,5%</b>.
+        <br>
+    </li>
+    <li>
+        Pagas en cómodas cuotas mensuales.
+    </li>
+    <li>
+    <li>
+        Solicitas el crédito una vez y retiras más dinero siempre que quieras.
+    </li>
+    <li>
+        Es totalmente flexible. Tú decides cuánto dinero quieres y cuándo deseas recibirlo.
+    </li>
+    <li>
+        Solo pagas por el dinero del que dispones, aunque se te conceda más crédito.
+    </li>
+</ul>
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Encontrarás <a href="{{ company.webBaseUrl }}/login" target="_blank" style="color:#00b46d;">más información</a> en tu
+Área de Usuario y, si tienes preguntas, contacta con nosotros.
+{% include "_email_p_begin" %}
+Solicítalo de forma gratuita y sin compromiso. ¿Te animas?
+{% include "_email_p_end" %}{% include "_email_p_begin" %}
+{{ button(title="¡Lo quiero!", url=company.webBaseUrl + "/sl/" + specialLink.token) }}
+{% include "_email_p_end" %}
+
+{% include "_cs_email_signature" %}
+
+{% endblock %}}

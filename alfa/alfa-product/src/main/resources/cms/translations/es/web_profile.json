@@ -1,0 +1,297 @@
+{
+    "PROFILE": {
+        "OVERVIEW": {
+            "TOTAL_PENDING": "Total Pendiente",
+            "DELAYED_PAYMENT": "Pago retrasado",
+            "DAYS_AGO": "Hace {{ dueDays }} días",
+            "AMOUNT_TO_PAY": "Cantidad a pagar",
+            "NEXT_PAYMENT": "Próximo pago",
+            "CTA_PAYMENT": "Pagar ahora",
+            "LOAN_RESUME": "Balance del préstamo",
+            "STATUS": "Estado",
+            "STATUS_NOT_AVAILABLE": "Procesando información",
+            "PRINCIPAL_OUTSTANDING": "Capital pendiente",
+            "INTEREST_OUTSTANDING": "Capital pendiente",
+            "PENALTY_OUTSTANDING": "Comisión pendiente",
+            "DOCUMENTS": "Penalizaciones pendientes",
+            "ISSUE_DATE": "Fecha de emisión",
+            "DOCUMENT": "Documento",
+            "LOAN_AGREEMENT": "Contrato de préstamo",
+            "LOAN_AGREEMENT_FILENAME": "Contrato de préstamo",
+            "RESCHEDULING_AGREEMENT": "Contrato de préstamo",
+            "RESCHEDULING_AGREEMENT_FILENAME": "Acuerdo de fraccionamiento",
+            "UPSELL_AGREEMENT": "Contrato de préstamo",
+            "UPSELL_AGREEMENT_FILENAME": "Anexo al Contrato de préstamo - Aumento de capital",
+            "INVOICE_NUMBER": "Factura № "
+        },
+        "HISTORY": {
+            "TITLE": "Operaciones históricas",
+            "HEADLINE": "Histórico de préstamos",
+            "CONTRACT_NUMBER": "Nº Contrato:",
+            "STATUS": "Estado",
+            "PRINCIPAL_DISBURSED": "Cantidad solicitada",
+            "ISSUE_DATE": "Fecha de formalización",
+            "MATURITY_DATE": "Fecha de vencimiento",
+            "DOCUMENTS": "Documentos asociados",
+            "LOAN_AGREEMENT": "Contrato de préstamo",
+            "LOAN_AGREEMENT_FILENAME": "Contrato de préstamo",
+            "RESCHEDULING_AGREEMENT": "Contrato de préstamo",
+            "RESCHEDULING_AGREEMENT_FILENAME": "Acuerdo de fraccionamiento",
+            "UPSELL_AGREEMENT": "Contrato de préstamo",
+            "UPSELL_AGREEMENT_FILENAME": "Anexo al Contrato de préstamo - Aumento de capital",
+            "INVOICE_NUMBER": "Factura № ",
+            "NO_LOANS": "No tienes historial de préstamos."
+        },
+        "PAYMENT_PAGE": {
+            "TITLE": "Realizar un pago",
+            "HEADLINE": "Introduce el tipo de pago, la cantidad y elige el método de pago."
+        },
+        "PAYMENT_CALLBACK_PAGE": {
+            "TITLE": "Resultado de tu pago",
+            "HEADLINE": "Gracias por realizar un pago.",
+            "TEXT_SUCCESS": "El pago se ha realizado con éxito. En las próximas horas procesaremos tu pago y quedará reflejado en tu área de usuario.",
+            "TEXT_ERROR": "El pago fue denegado. Por favor comprueba que dispones de fondos suficientes y vuelve a intentarlo.",
+            "BACK_BUTTON": "Volver a mis pagos"
+        },
+        "PAYMENT_LIST": {
+            "TITLE": "Realizar un pago",
+            "NO_PENDING_PAYMENTS": "No tienes ningún pago pendiente en estos momentos",
+            "STATUS": "Estado",
+            "PENDING": "Pendiente",
+            "CONTRACT_NUMBER": "Nº de contrato",
+            "MATURITY_DATE": "Fecha de vencimiento",
+            "PAY": "Pagar"
+        },
+        "INSTALLMENT_STATUS": {
+            "DISBURSING": "En proceso",
+            "CLOSED": "Cerrado",
+            "OPEN": "Abierto",
+            "PENDING": "Pendiente",
+            "BROKEN": "Cancelado",
+            "CANCELLED": "Cancelado",
+            "PAID": "Pagado",
+            "ACTIVE": "Activo",
+            "RENOUNCED": "Anulado por desistimiento",
+            "DELAYED": "En demora"
+        },
+        "SETTINGS": {
+            "TITLE": "Configuración",
+            "HEADLINE": "Detalles de su cuenta",
+            "TAB_PERSONAL_DATA": "Datos personales",
+            "TAB_ACCOUNT_DATA": "Datos de la cuenta",
+            "TAB_CHANGE_PASSWORD": "Cambia tu contraseña",
+            "IBAN": "Número IBAN",
+            "CHANGE_PASSWORD_TEXT": "La contraseña debe tener una longitud mínima de <strong>6 caracteres</strong> y contener: <strong>letras mayúsculas, letras minúsculas y números.</strong>.",
+            "CHANGE_PASSWORD_SUCCESS": "¡La contraseña se ha cambiado!",
+            "CHANGE_PASSWORD_CURRENT": "Contraseña actual",
+            "CHANGE_PASSWORD_NEW": "Nueva contraseña",
+            "SUBMIT": "Guardar cambios",
+            "CLIENT_ID": "ID Cliente",
+            "NAME": "Nombre",
+            "SURNAME": "Apellidos",
+            "ADDRESS": "Dirección",
+            "PHONE_NUMBER": "Teléfono móvil",
+            "EMAIL": "Correo electronico",
+            "MARKETING_CONSENT": "Envío de comunicaciones comerciales",
+            "ACCEPT": "Acepto",
+            "DENY": "No acepto",
+            "HELP": "<p>Si deseas modificar alguno de tus datos personales debes enviar un correo electrónico a <a href=\"mailto:{{ GLOBALS.COMPANY_EMAIL_LEGAL }}\">{{ GLOBALS.COMPANY_EMAIL_LEGAL }}</a> indicando en el asunto \"Rectificación de datos\" + DNI o NIE del titular del préstamo.</p><p>Para hacer efectivo el cambio debe aportar:</p><ol><li>DNI o NIE escaneado o fotografiado por ambas caras (para tu correcta identificación).</li><li>Documento que acredite la veracidad de los datos que quieres modificar. Éste dependerá de la información que quieras cambiar. Puede ser, por ejemplo: un recibo, una factura, un certificado de empadronamiento, un contrato de arrendamiento, un certificado de titularidad... Si dudas sobre cuál es el adecuado, pregúntanos.</li></ol><p> Si tienes cualquier duda, ponte en contacto con nosotros en el teléfono <a href=\"tel:+34 {{ GLOBALS.COMPANY_PHONE }}\">{{ GLOBALS.COMPANY_PHONE }}</a> o el mail <a href=\"mailto:{{ GLOBALS.COMPANY_EMAIL_LEGAL }}\">{{ GLOBALS.COMPANY_EMAIL_LEGAL }}</a>.</p>"
+        },
+        "SL_PAYMENT_PAGE": {
+            "TITLE": "Realizar un pago",
+            "HEADLINE": "Introduce el tipo de pago, la cantidad y elige el método de pago.",
+            "EXPIRED": "Enlace caducado",
+            "EXPIRED_TEXT": "El enlace que intentas visitar ha caducado o ya has saldado tu deuda. Si quieres acceder a tu Área de usuario, haz click ",
+            "HERE": "aquí"
+        }
+    },
+    "HEADER": {
+        "LOGO_ALT": "Créditos Online, Préstamos Rápidos y Mini Préstamos con {{value}}",
+        "LOGO_IMG_ALT": "{{value}} préstamo rápido",
+        "HOW_IT_WORKS": "¿Cómo funciona?",
+        "HELP": "Ayuda",
+        "BLOG": "Blog",
+        "CONTACT": "Contacto",
+        "USER_AREA": "ÁREA DE USUARIO",
+        "FAQ": "Preguntas más frecuentes",
+        "HELLO": "Hola",
+        "CS_TIMES": "Horario de atención",
+        "WORKING_DAYS": "Días hábiles",
+        "SATURDAYS": "Sábados",
+        "BACK_TO_APPLICATION": "Volver a la solicitud",
+        "OVERVIEW": "Resumen",
+        "PAYMENTS": "Pagos",
+        "HISTORY": "Operaciones históricas",
+        "SETTINGS": "Configuración",
+        "EXIT": "Salir"
+    },
+    "COOKIE_POLICY_MESSAGE": {
+        "STR1": "Utilizamos cookies propias y de terceros para mejorar nuestros servicios. Más información",
+        "STR2": "aquí",
+        "STR3": "Utilizamos cookies propias y de terceros para mejorar nuestros servicios y mostrarle publicidad relacionada con sus preferencias mediante el análisis de sus hábitos de navegación.<br>Si continua navegando, consideramos que acepta su uso. ",
+        "STR4": "Puede cambiar la configuración",
+        "STR5": "u obtenes más información",
+        "STR6": "aquí",
+        "CLOSE": "Aceptar y cerrar"
+    },
+    "FOOTER": {
+        "AT_SOCIAL_NETWORKS": "{{value}} en las redes sociales",
+        "FACEBOOK": " {{value}} en Facebook",
+        "TWITTER": " {{value}} en Twitter",
+        "INSTAGRAM": " {{value}} en Instagram",
+        "LINKEDIN": " {{value}} en LinkedIn",
+        "YOUTUBE": " {{value}} en Youtube",
+        "LEGAL": "Aviso legal",
+        "PRIVACY": "Política de privacidad",
+        "CONTRACT": "Contrato",
+        "COOKIE_POLICY": "Política de cookies",
+        "MORE_INFORMATION": "Más información sobre",
+        "WORKING_HOURS": "Horario de Atención al Cliente",
+        "WORKING_DAYS": "Días hábiles",
+        "SATURDAYS": "Sábados",
+        "ALL_RIGHTS": "Todos los derechos reservados",
+        "LEGAL_1": "La sociedad {{ GLOBALS.COMPANY_NAME_FULL }}, sociedad de nacionalidad española, con domicilio social en {{ GLOBALS.COMPANY_ADDRESS }} {{ GLOBALS.COMPANY_ADDRESS_ZIP }}, {{ GLOBALS.COMPANY_ADDRESS_CITY }}, con teléfono de contacto número<a href='tel: +34 {{ GLOBALS.COMPANY_PHONE }}'>{{ GLOBALS.COMPANY_PHONE }}</a> y Número de Identificación Fiscal (N.I.F.) {{ GLOBALS.COMPANY_NIF }}, inscrita en el Registro Mercantil de Barcelona con el número de documento 266/31141284 en el asiento 2275 del Diario 1123 con fecha 28/11/2011 TOMO 42869, FOLIO 23, HOJA B 416727, INSCRIPCIÓN 2. Las Condiciones Generales y las Condiciones Particulares, la información detallada en los artículos 7 y 8 de la Ley 22/2007, de 11 de julio, de Comercialización a Distancia de Servicios Financieros Destinados a los Consumidores, así como la prevista en los artículos 10 y 12 de la Ley 16/2011, de 24 de junio, de Contratos de Créditos al Consumo, serán puestas a disposición del Prestatario con antelación suficiente y, en todo caso, con anterioridad a la Solicitud de mini Préstamo, para el caso que por razón del importe del préstamo, ésta fuese aplicable.",
+        "LEGAL_2": "Ejemplo representativo: importe del préstamo online: 300€, TIN mensual: 35.00%, TAE: 3752% , de duración: 30 días, dependiendo de nuestro análisis de solvencia crediticia, los intereses y la comisión del préstamo puede variar."
+    },
+    "PAYMENT_OPTIONS": {
+        "EXTENSION_TITLE": "Ampliación del plazo",
+        "EXTENSION_NOT_AVAILABLE": "No tiene ninguna opción de ampliación disponible.",
+        "EXTENSION_DURATION": "Prórroga de {{value}} días",
+        "PAYMENT_TITLE": "Devolución del préstamo",
+        "PAYMENT_TOTAL": "Pago total",
+        "PAYMENT_CUSTOM": "Otra cantidad"
+    },
+    "PAYMENT_GATEWAY": {
+        "ERROR": "Este pago no puede ser procesado. Pulsa aquí para volver a sus <a routerLink=\"/usuario/pagos\"><b>Pagos</b></a> y vuelva a intentarlo.",
+        "ERROR_AMOUNT": "El importe seleccionado no es correcto. Por favor, elije una de las siguientes opciones:",
+        "CONCEPT": "Concepto",
+        "CONCEPT_COPY": "Copiar concepto",
+        "DEPOSIT": "Ingreso",
+        "DEPOSIT_INFO": "Puedes realizar una transferencia de tu cuenta habitual a una de las cuentas que nosotros te facilitamos o a través de un cajero o por ventanilla en cualquier sucursal de los bancos indicados.",
+        "CARD": "Con tarjeta",
+        "CARD_INFO": "Puedes realizarlo desde aquí, o llamándonos al <a href=\"tel:+34 {{ GLOBALS.COMPANY_PHONE }}\">{{ GLOBALS.COMPANY_PHONE }}</a> dentro de nuestro horario laboral. La tarjeta con la que efectúes el pago deberá tener activado el pago seguro para comercio electrónico.",
+        "PROCEED": "Continuar",
+        "PAYMENT_MESSAGE": "Estás a punto de hacer una transferencia del importe siguiente: <b> {{ amount }} </b> con el concepto: <b>{{ concept }}</b>.<br /> Si deseas cambiar los detalles o el método de pago haz click <a href=\"/usuario/pagos/{{ loanId }}\"><b class=\"hlp--underlined\">aqui</b>.",
+        "PAYMENT_WARNING_1": "En caso de que no aparezca el formulario de pago, por favor haz click en",
+        "PAYMENT_WARNING_2": "este enlace"
+    },
+    "LOC_ACCEPTANCE_CALL": {
+        "TITLE": "¡Enhorabuena!",
+        "HEADLINE": "Tu línea de crédito está aprobada",
+        "AGENT_ONLINE": "En unos minutos, uno de nuestros operadores se pondrá en contacto contigo por teléfono para explicarte las condiciones y términos del servicio que te ofrecemos con nuestra línea de crédito.",
+        "AGENT_OFFLINE": "Uno de nuestros operadores se pondrá en contacto contigo por teléfono para explicarte las condiciones y términos del servicio que te ofrecemos con nuestra línea de crédito. Nuestro horario de oficina es de Lunes a Viernes de {{ GLOBALS.WORKING_HOURS.WEEKDAYS_START }} a {{ GLOBALS.WORKING_HOURS.WEEKDAYS_END }} y los Sábados de {{ GLOBALS.WORKING_HOURS.SATURDAYS_START }} a {{ GLOBALS.WORKING_HOURS.SATURDAYS_END }}.",
+        "CLOSED": "{{ closedMessage }}. Será entonces cuando uno de nuestros operadores se pondrá en contacto contigo por teléfono para explicarte las condiciones y términos del servicio que te ofrecemos con nuestra línea de crédito.",
+        "CALL_US": "O si lo prefieres, puedes llamar tú al:"
+    },
+    "LOC_REJECTED": {
+        "TITLE": "Lo sentimos",
+        "HEADLINE": "Tu línea de crédito no ha sido aprobada",
+        "TEXT": "Se ha rechazado tu solicitud por no habernos podido proporcionar una cuenta bancaria válida",
+        "SUBMIT": "Regresar a mi área de usuario"
+    },
+    "DPD_NOTIFICATION": {
+        "TITLE": "Deuda pendiente",
+        "PENDING_PAYMENT": "Tienes un pago pendiente de:",
+        "SINCE": "Desde hace:",
+        "DAYS": "Días",
+        "PROPOSALS": "Tenemos tres soluciones para ti:",
+        "ITEM1": "Pagar lo debido en la pestaña “Pagos”.",
+        "ITEM2": "Obtener una prórroga en la pestaña “Pagos”",
+        "ITEM3": "Contactar con nuestro nuestro departamento de recobros en <a href=\"mailto:cobros@alfa.es\"><b class=\"hlp--underlined\">cobros@alfa.es</b></a> o el <a href=\"tel: +34 {{ GLOBALS.COMPANY_DC_PHONE }}\">{{ GLOBALS.COMPANY_DC_PHONE }}</a> para comentar otras opciones.",
+        "SUBMIT": "Pagar ahora"
+    },
+    "REFERRAL_NOTIFICATION": {
+        "TITLE": "Solicitud denegada",
+        "TEXT": "Lo sentimos, pero no podemos ofrecerte el préstamo en esta ocasión.",
+        "CTA": "Visita {{referralName}} para obtener más opciones de financiación.",
+        "SUBMIT": "Solicitar a {{referralName}}"
+    },
+    "RESCHEDULE_NOTIFICATION": {
+        "TITLE": "Activa tu pago a plazos",
+        "TEXT": "Para activar el fraccionamiento de tu deuda debes realizar durante el día de hoy el pago de tu primera cuota por un valor de:",
+        "SUBMIT": "Pagar ahora"
+    },
+    "RESOLUTION_NOTIFICATION": {
+        "CANCELLED": "Tu solicitud ha sido cancelada. Puedes volver a solicitar un préstamo cuando quieras.",
+        "REJECTED": "Lo sentimos, pero se ha denegado tu solicitud. Disculpa las molestias. Si lo deseas, puedes volver a intentarlo en un tiempo.",
+        "ACCEPTED_TITLE": "¡Has completado con éxito tu solicitud!",
+        "ACCEPTED_STEP1": "Contactaremos contigo por email en unos minutos.",
+        "ACCEPTED_STEP2": "Si dentro de 30 minutos no tienes una respuesta, consulta la carpeta de Spam de tu cuenta de correo.",
+        "ACCEPTED_STEP3": "<span class=\"base-ntfy__list-item\">Si tampoco has recibido el email en Spam, ponte en contacto con nosotros en el <a href=\"tel:+34 {{ GLOBALS.COMPANY_PHONE }}\"><b class=\"hlp--underlined\">{{ GLOBALS.COMPANY_PHONE }}</b></a></span>",
+        "THANK_YOU": "¡Gracias por elegir ALFA!",
+        "SUBMIT": "Entendido, ir a mi zona de usuario"
+    },
+    "WIDGETS": {
+        "CALCULATOR": {
+            "PROMOCODE_TITLE": "Canjear un código promocional",
+            "PROMOCODE_REDEEM": "Canjear",
+            "PROMOCODE_NOT_VALID": "El código promocional introducido no es válido",
+            "PROMOCODE_SUCCESS": "¡Enhorabuena! Tienes un descuento promocional del <b>{{ interestDiscountAmount | alfaPercentage: '0' }}</b>",
+            "PROMOCODE_CANCEL": "Cancelar descuento promocional",
+            "DISCOUNT": "Te has ganado un descuento del <b>{{ offer.interestDiscountRatePercent | alfaPercentage }}</b>. La oferta ya está aplicada en la calculadora. ¡Aprovéchala!",
+            "TITLE_REPEATER": "¿Te gustaría pedir otro préstamo?",
+            "TITLE_PUBLIC": "Calcula tu préstamo online",
+            "AMOUNT_QUESTION": "¿Cuánto necesitas?",
+            "TERM_QUESTION": "¿Cuántos días?",
+            "MAXIMUM": "Máximo",
+            "DAYS": "días",
+            "CTA_REPEATER": "Solicitar ahora",
+            "CTA_PUBLIC": "Solicitar ahora",
+            "MATURITY_DATE": "Fecha de devolución:",
+            "DISCOUNT_CODE": "Código descuento:",
+            "INTEREST": "Comisión:",
+            "MONTLY_INTEREST": "TIN mensual:",
+            "MONTLY_INTEREST_TOOLTIP": "Corresponde con un {{ value }}% TIN mensual",
+            "APR_PERCENT": "TAE:",
+            "TOTAL_AMOUNT": "Total a devolver:",
+            "CREDIT_INFORMATION": "Información básica del crédito"
+        },
+        "CALCULATOR_PILL": {
+            "TITLE": "Ellos ya han aprovechado su préstamo. Ahora te toca a ti, solícitalo online"
+        },
+        "CTA_LOC": {
+            "TITLE": "¿Necesitas dinero?",
+            "TEXT_1": "Recuerda que tienes una línea de crédito activa en",
+            "TEXT_2": "Donde puedes disponer ahora mismo y sin preguntas de hasta:",
+            "TEXT_3": "Donde puedes disponer ahora mismo y sin preguntas de tu crédito.",
+            "SUBMIT": "Ir a mi línea de crédito"
+        },
+        "CTA_PAYMENT": {
+            "TITLE": "Realizar pago",
+            "SUBMIT": "Pagar ahora"
+        },
+        "CTA_CUSTOMER_SUPPORT": {
+            "TITLE": "Horario de atención al Cliente",
+            "WORKING_DAYS": "Días hábiles",
+            "SATURDAYS": "Sábados",
+            "EMAIL": "E-mail",
+            "CTA": "¿Tienes dudas? Llámanos",
+            "FAQ": "Preguntas más frecuentes",
+            "FAQ_TITLE": "Consulta las preguntas más frecuentes"
+        },
+        "EKOMI": {
+            "TITLE": "En Alfa pedimos a nuestros clientes que compartan su experiencia con nosotros",
+            "RATING": "Valoración <span itemprop=\"ratingValue\"> {{ rating.average }} </span> / <span itemprop=\"bestRating\">10</span> calculo de <span itemprop=\"reviewCount\">{{ rating.count }}</span> opiniones en <a href=\"https://www.ekomi.es/testimonios-alfa.html\" rel=\"external nofollow noopener\" target=\"_blank\">Ekomi</a>",
+            "RATING_SHORT": "Valoración <b>{{ rating.average }}</b> / <b>10</b>. Cálculo de <b>{{ rating.count }}</b> opiniones en <a href=\"https://www.ekomi.es/testimonios-alfa.html\" rel=\"external nofollow noopener\" target=\"_blank\">Ekomi</a>"
+        }
+    },
+    "ERROR_404_PAGE": {
+        "TITLE": "No se ha podido encontrar esta página.",
+        "HEADLINE": "Lo sentimos, pero la página que busca no existe o no se puede encontrar."
+    },
+    "GLOBALS": {
+        "MONTHS": ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+        "PAYMENT_TYPES": {
+            "TOTAL": "Pago total",
+            "CUSTOM": "Pago",
+            "EXTENSION7": "Prorroga 7",
+            "EXTENSION14": "Prorroga 14",
+            "EXTENSION30": "Prorroga 30",
+            "EXTENSION45": "Prorroga 45"
+        }
+    },
+    "OVERVIEW_PAGE": {
+        "TITLE": "Área de usuario",
+        "HEADLINE": "Estado de tu último préstamo"
+    }
+}

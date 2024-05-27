@@ -1,0 +1,45 @@
+ext {
+    javaGeneratedSources = file("src/main/generated")
+}
+
+compileJava {
+    doFirst {
+        javaGeneratedSources.mkdirs()
+    }
+    options.compilerArgs += [
+            '-parameters', '-s', javaGeneratedSources
+    ]
+}
+
+dependencies {
+    compileOnly(
+            [group: "com.querydsl", name: "querydsl-apt", classifier: "jpa"],
+            libs.lombok
+    )
+    annotationProcessor(
+            [group: "com.querydsl", name: "querydsl-apt", classifier: "jpa"],
+            libs.lombok,
+            "javax.persistence:javax.persistence-api:2.2"
+    )
+}
+
+sourceSets {
+    generated {
+        java {
+            srcDir "${projectDir}/src/main/generated"
+        }
+        compileClasspath += sourceSets.main.output + configurations.compileOnly + configurations.compile
+    }
+}
+
+idea {
+    module {
+        sourceDirs += file(javaGeneratedSources)
+        generatedSourceDirs += file(javaGeneratedSources)
+    }
+}
+
+clean.doLast {
+    file('src/main/generated').deleteDir()
+    file('src/main/groovy/src/main/generated').deleteDir()
+}

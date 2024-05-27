@@ -1,0 +1,59 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+apply plugin: 'org.springframework.boot'
+apply plugin: 'maven'
+
+ext.vaadinRecompile = false
+if (vaadinRecompile) {
+    apply plugin: "com.devsoap.plugin.vaadin"
+    vaadin {
+        version "${vaadinVersion}"
+        manageDependencies true
+        manageRepositories false
+    }
+
+    vaadinCompile {
+        outputDirectory 'src/main/resources'
+    }
+}
+
+archivesBaseName = 'crm-alfa-backoffice'
+apply from: "${rootDir}/gradle/artifactory.gradle"
+
+configurations {
+    compile.exclude module: "spring-boot-starter-tomcat"
+}
+
+dependencies {
+    compile project(":platform:backoffice:bo-components")
+    compile project(":platform:strategy:strategy-bo")
+    compile project(":platform:marketing:marketing-bo")
+    compile project(":platform:common:utils")
+
+    compile project(":alfa:alfa-bo-model")
+    compile project(":alfa:alfa-strategies")
+
+    compile project(":third-party:spain-unnax:spain-unnax-bo")
+    compile project(":spain-common:spain-experian:spain-experian-bo")
+    compile project(":spain-common:spain-equifax:spain-equifax-bo")
+    compile project(":spain-common:spain-scoring:spain-scoring-bo")
+    compile project(":spain-common:spain-asnef:spain-asnef-bo")
+    compile project(":spain-common:spain-callcenter:spain-callcenter-bo")
+
+    compile project(":third-party:instantor:instantor-bo")
+    compile project(":third-party:iovation:iovation-bo")
+    compile project(":third-party:nordigen:nordigen-bo")
+    compile project(":third-party:webitel:webitel-bo")
+    compile project(":third-party:dowjones:dowjones-bo")
+    
+    compile "org.vaadin.addons:autocomplete:${autocompleteVaadinVersion}"
+
+    compile libs.logbackGelf                    // graylog for logging
+    compile libs.googleCloudLogging             // google cloud logging logback integration
+    compile libs.sentry                         // sentry.io integration for logging
+
+    // using Undertow instead of Tomcat to fight with "Cookies disabled" error in Vaadin
+    compile("org.springframework.boot:spring-boot-starter-undertow")
+
+    compile "org.springframework.boot:spring-boot-starter-actuator"
+}

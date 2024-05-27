@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="search-results" type="search-resultsType"/>
+  <xs:complexType name="headType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="total-hits"/>
+      <xs:element type="xs:string" name="hits-from"/>
+      <xs:element type="xs:string" name="hits-to"/>
+      <xs:element type="xs:string" name="truncated"/>
+      <xs:element type="xs:string" name="cached-results-id"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="match-typeType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="linguistic-variation" use="optional"/>
+        <xs:attribute type="xs:string" name="non-linguistic-variation" use="optional"/>
+        <xs:attribute type="xs:string" name="structural-variation" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="risk-iconsType">
+    <xs:sequence>
+      <xs:element name="risk-icon">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="SAN"/>
+            <xs:enumeration value="RCA"/>
+            <xs:enumeration value="PEP"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="matched-nameType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute type="xs:string" name="name-type" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="date-of-birthType">
+    <xs:sequence>
+      <xs:element name="year">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="1983"/>
+            <xs:enumeration value="1991"/>
+            <xs:enumeration value="1960"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="month" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="7"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="day" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="22"/>
+            <xs:enumeration value="2"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="dates-of-birthType" mixed="true">
+    <xs:sequence>
+      <xs:element type="date-of-birthType" name="date-of-birth" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="countryType">
+    <xs:sequence>
+      <xs:element name="country-type">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Citizenship"/>
+            <xs:enumeration value="Resident of"/>
+            <xs:enumeration value="Jurisdiction"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="country-code">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="RUSS"/>
+            <xs:enumeration value="NOTK"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="countriesType">
+    <xs:sequence>
+      <xs:element type="countryType" name="country" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="payloadType">
+    <xs:sequence>
+      <xs:element type="risk-iconsType" name="risk-icons"/>
+      <xs:element name="primary-name">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Medvedev, Ablyalim Ametovich"/>
+            <xs:enumeration value="Medvedev, Aleksandr Aleksandrovich"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="country-code"/>
+      <xs:element name="title">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Federal Financial Monitoring Services (Russia) Domestic Sanctions List"/>
+            <xs:enumeration value=""/>
+            <xs:enumeration value="See Previous Roles"/>
+            <xs:enumeration value="Judge, Federal Arbitration Court"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="subsidiary"/>
+      <xs:element type="matched-nameType" name="matched-name"/>
+      <xs:element type="dates-of-birthType" name="dates-of-birth"/>
+      <xs:element type="countriesType" name="countries"/>
+      <xs:element type="xs:string" name="gender"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="matchType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="score"/>
+      <xs:element type="match-typeType" name="match-type"/>
+      <xs:element type="payloadType" name="payload"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="peid" use="optional"/>
+    <xs:attribute type="xs:string" name="revision" use="optional"/>
+    <xs:attribute type="xs:string" name="record-type" use="optional"/>
+  </xs:complexType>
+  <xs:complexType name="bodyType">
+    <xs:sequence>
+      <xs:element type="matchType" name="match" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="search-resultsType">
+    <xs:sequence>
+      <xs:element type="headType" name="head"/>
+      <xs:element type="bodyType" name="body"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

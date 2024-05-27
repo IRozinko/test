@@ -1,0 +1,8 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile libs.springBoot
+    compile libs.retrofit
+
+    testCompile project(":platform:common:integration-test")
+}

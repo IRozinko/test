@@ -1,0 +1,42 @@
+{
+  "transactions": [
+    {
+      "date": 1515682286827,
+      "amount": 100,
+      "paymentType": "CreditCard",
+      "paymentMeanInfo": {
+        "cardNumber": "411111XXXXXX1111",
+        "cardExpireYear": "2024",
+        "cardExpireMonth": "10",
+        "cardHolderName": "John Smith",
+        "cardBrand": "VISA",
+        "is3DSecure": false,
+        "statementDescriptor": "Internet Sales"
+      },
+      "shopper": {
+        "name": "NA",
+        "address": "NA",
+        "zipcode": "NA",
+        "city": "NA",
+        "state": "NA",
+        "countryCode": "ZZ",
+        "phone": "NA",
+        "email": "NA",
+        "ipAddress": "109.73.96.2"
+      },
+      "operation": "authorize",
+      "resultCode": "000",
+      "resultMessage": "Transaction successfully completed",
+      "status": "Authorized",
+      "transactionID": "39711469"
+    }
+  ],
+  "status": "Authorized",
+  "merchantToken": "XA0iyWshUcDfCwma8WkBDA",
+  "operation": "authorize",
+  "errorCode": "000",
+  "errorMessage": "Transaction successfully completed",
+  "orderID": "#orderId#",
+  "currency": "EUR",
+  "amount": 100
+}

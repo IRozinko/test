@@ -1,0 +1,77 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Estimado/a Sr/a. {{client.lastName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Su préstamo ha vencido y todavía no hemos recibido su pago de <b>{{debt.totalDue | numberformat(currencyFormat)}}€</b>, incluyendo intereses.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+<b>Pague o prorrogue</b> el préstamo en su <a href="{{ company.webBaseUrl }}/login" target="_blank" style="color:#00b46d;">Área de Usuario</a>, haciendo una <b>transferencia o llamando</b> al <a href="tel:+34{{ company.phone }}" style="color:#00b46d;">{{company.phone}}</a>.
+<br></br>
+Si quiere <b>porrogar</b>, éstas son las tarifas según los días en que aplace su fecha de vencimiento:
+<ul>
+  <li>
+    <b>7 días</b>: {{loan.extensions['extension7Days'].price | numberformat(currencyFormat)}}€
+    <br>
+  </li>
+  <li>
+    <b>14 días</b>: {{loan.extensions['extension14Days'].price | numberformat(currencyFormat)}}€
+    <br>
+  </li>
+  <li>
+    <b>30 días</b>: {{loan.extensions['extension30Days'].price | numberformat(currencyFormat)}}€
+  </li>
+  <li>
+    <b>45 días</b>: {{loan.extensions['extension45Days'].price | numberformat(currencyFormat)}}€
+  </li>
+</ul>
+{% include "_email_penalty_strategy" %}
+
+
+{% include "_email_p_begin" %}
+<br>
+{{ button(title="Pague  o porrogue ahora", url=company.webBaseUrl + "/sl/" + debt.specialLink.token) }}
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+<B>Devolución por transferencia</B>
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Puede pagar haciendo una transferencia a una de las siguientes cuentas indicando su DNI o NIE en el concepto:
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+<tr>
+  <td bgcolor="#f5f5f5">
+    <table width="536" border="0" cellspacing="0" cellpadding="0" style="margin-left: 32px; margin-right: 32px;" >
+      <tr>
+        <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-left: 15px; border-bottom: 2px solid #eaeaea; text-align:left; font-weight: bold; line-height: 1.5;">Bankia:</td>
+        <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-right: 15px; border-bottom: 2px solid #eaeaea; text-align:right; font-weight: bold">ES98 2038 9261 9960 0025 3613</td>
+      </tr>
+      <tr>
+        <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-left: 15px; border-bottom: 2px solid #eaeaea; text-align:left; font-weight: bold; line-height: 1.5;">La Caixa:</td>
+        <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-right: 15px; border-bottom: 2px solid #eaeaea; text-align:right; font-weight: bold">ES68 2100 0844 2402 0065 7804</td>
+      </tr>
+      <tr>
+        <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-left: 15px; border-bottom: 2px solid #eaeaea; text-align:left; font-weight: bold; line-height: 1.5;">Banco Sabadell:</td>
+        <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-right: 15px; border-bottom: 2px solid #eaeaea; text-align:right; font-weight: bold">ES25 0081 5029 1400 0245 7055</td>
+      </tr>
+    </table>
+  </td>
+</tr>
+
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+<p style="font-size:14px;padding:0 0 32px 0;margin:0;"><b>Si ya ha pagado</b>, cuando enviamos este mail aún no estaba contabilizado. En caso de que no le notifiquemos que hemos recibido el pago próximamente, envíenos un comprobante de pago al email <a href="mailto:cobros@alfa.es" style="color:#00b46d;"> cobros@alfa.es</a> o
+  llámenos al <a href="tel:+34 933 035 223" style="color:#00b46d;">933 03 52 23</a>. </p>
+{% include "_email_p_end" %}
+
+{% include "_cs_email_signature" %}
+
+
+{% endblock %}}

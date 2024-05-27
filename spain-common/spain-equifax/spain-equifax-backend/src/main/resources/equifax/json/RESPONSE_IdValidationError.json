@@ -1,0 +1,30 @@
+{
+  "interactionId": "ID-01722210217-39400-1518598240597-0-93",
+  "applicants": {
+    "primaryConsumer": {
+      "personalInformation": {
+        "idCountryCode": "724",
+        "idType": "ID",
+        "idCode": "10A",
+        "addresses": [
+          {
+            "postalCode": "21001"
+          }
+        ],
+        "dateOfBirth": "19900101"
+      }
+    }
+  },
+
+  "errors": [
+    {
+      "code": "ICESD004",
+      "message": "Invalid id",
+      "category": "A"
+    }
+  ],
+
+  "timestamp": "2018-02-15 11:54:24:106",
+  "transactionState": "ERROR",
+  "transactionId": 10669
+}

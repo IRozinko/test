@@ -1,0 +1,22 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Tu <b>solicitud de préstamo caducará</b> pronto <b>si no seleccionas tu cuenta</b> bancaria. Hazlo ahora para <b>obtener hasta 800 euros</b> rápidamente. 
+{% include "_email_p_begin" %}
+{{ button(title="Acabar solicitud", url=company.webBaseUrl + "/login?utm_source=email&utm_medium=CRM&utm_campaign=instantr2") }}
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Si experimentas cualquier dificultad o tienes dudas, contacta con nosotros en el teléfono <a href="tel:+34{{ company.phone }}" style="color:#00b46d;">{{company.phone}}</a>
+o el mail <a href="mailto:info@alfa.es" style="color:#00b46d;">info@alfa.es</a>.
+{% include "_email_p_end" %}
+
+{% include "_cs_email_signature" %}
+
+{% endblock %}}

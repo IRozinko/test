@@ -1,0 +1,4597 @@
+{
+  "instantorRequestId": "96e6cba4-f6dd-4d29-81cd-479fc0ac337c",
+  "processFinishedTime": "2018-11-21T17:30:45.892+01:00",
+  "processStartTime": "2018-11-21T16:46:45.503+01:00",
+  "processStatus": "ok",
+  "reportNumber": 0,
+  "miscParams": [
+    {
+      "name": "lastName",
+      "value": "Martínez Smart"
+    },
+    {
+      "name": "clientId",
+      "value": "#clientId#"
+    },
+    {
+      "name": "firstName",
+      "value": "Grisel"
+    },
+    {
+      "name": "applicationUuid",
+      "value": "dcc989cf-175c-424e-bbdf-67283ad18908"
+    },
+    {
+      "name": "instantor_request_id",
+      "value": "96e6cba4-f6dd-4d29-81cd-479fc0ac337c"
+    }
+  ],
+  "accountReportList": [
+    {
+      "number": "#account#",
+      "totalNumberOfTransactions": 336,
+      "wholeMonthsAvailable": 11,
+      "averageNumberOfTransactionsWholeMonth": 29.636363636363637,
+      "averageAmountOfIncomingTransactionsWholeMonth": #averageAmountOfIncomingTransactionsMonth#,
+      "averageAmountOfOutgoingTransactionsWholeMonth": #averageAmountOfOutgoingTransactionsMonth#,
+      "averageMinimumBalanceWholeMonth": 1.47,
+      "cashFlow": [
+        {
+          "calendarMonth": "2018-11-01",
+          "incoming": 300,
+          "outgoing": -426.5,
+          "minBalance": 0.77,
+          "maxBalance": 127.27,
+          "avgBalance": 28.15,
+          "isWholeMonth": false
+        },
+        {
+          "calendarMonth": "2018-10-01",
+          "incoming": 1335.75,
+          "outgoing": -1394.46,
+          "minBalance": 1.59,
+          "maxBalance": 212.49,
+          "avgBalance": 39.79,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-09-01",
+          "incoming": 2667.26,
+          "outgoing": -2593.4,
+          "minBalance": 0.44,
+          "maxBalance": 466.91,
+          "avgBalance": 55.69,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-08-01",
+          "incoming": 1611.58,
+          "outgoing": -1627.31,
+          "minBalance": 2.03,
+          "maxBalance": 374.2,
+          "avgBalance": 45.46,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-07-01",
+          "incoming": 1073.82,
+          "outgoing": -1075.24,
+          "minBalance": 15.09,
+          "maxBalance": 341.61,
+          "avgBalance": 88,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-06-01",
+          "incoming": 2088.94,
+          "outgoing": -2021.56,
+          "minBalance": 7.59,
+          "maxBalance": 489.74,
+          "avgBalance": 184.25,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-05-01",
+          "incoming": 750,
+          "outgoing": -2555.17,
+          "minBalance": 0,
+          "maxBalance": 1867.06,
+          "avgBalance": 475.07,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-04-01",
+          "incoming": 3097.57,
+          "outgoing": -1235.02,
+          "minBalance": 0.6,
+          "maxBalance": 1867.06,
+          "avgBalance": 235.72,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-03-01",
+          "incoming": 750,
+          "outgoing": -745.49,
+          "minBalance": 0,
+          "maxBalance": 737.55,
+          "avgBalance": 120.61,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-02-01",
+          "incoming": 950,
+          "outgoing": -950.96,
+          "minBalance": 0,
+          "maxBalance": 950.96,
+          "avgBalance": 190.1,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-01-01",
+          "incoming": 1322.98,
+          "outgoing": -1323.98,
+          "minBalance": -13.07,
+          "maxBalance": 534.91,
+          "avgBalance": 27.73,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2017-12-01",
+          "incoming": 222.1,
+          "outgoing": -223.59,
+          "minBalance": 1.86,
+          "maxBalance": 81.96,
+          "avgBalance": 9.89,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2017-11-01",
+          "incoming": 0,
+          "outgoing": -5,
+          "minBalance": 3.45,
+          "maxBalance": 3.45,
+          "avgBalance": 3.45,
+          "isWholeMonth": false
+        }
+      ]
+    },
+    {
+      "number": "#account2#",
+      "totalNumberOfTransactions": 82,
+      "wholeMonthsAvailable": 9,
+      "averageNumberOfTransactionsWholeMonth": 7.666666666666667,
+      "averageAmountOfIncomingTransactionsWholeMonth": 549.5,
+      "averageAmountOfOutgoingTransactionsWholeMonth": -521.78,
+      "averageMinimumBalanceWholeMonth": 45.67,
+      "cashFlow": [
+        {
+          "calendarMonth": "2018-11-01",
+          "incoming": 0,
+          "outgoing": -250,
+          "minBalance": 0,
+          "maxBalance": 250,
+          "avgBalance": 218.75,
+          "isWholeMonth": false
+        },
+        {
+          "calendarMonth": "2018-10-01",
+          "incoming": 550,
+          "outgoing": -300,
+          "minBalance": 0,
+          "maxBalance": 300,
+          "avgBalance": 41.94,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-09-01",
+          "incoming": 1100,
+          "outgoing": -1100,
+          "minBalance": 0,
+          "maxBalance": 700,
+          "avgBalance": 72,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-08-01",
+          "incoming": 550,
+          "outgoing": -650,
+          "minBalance": 0,
+          "maxBalance": 550,
+          "avgBalance": 123.23,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-07-01",
+          "incoming": 445.5,
+          "outgoing": -445.5,
+          "minBalance": 50,
+          "maxBalance": 495.5,
+          "avgBalance": 310.66,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-06-01",
+          "incoming": 450,
+          "outgoing": -1050,
+          "minBalance": 100,
+          "maxBalance": 550,
+          "avgBalance": 367.67,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-05-01",
+          "incoming": 1100,
+          "outgoing": -750,
+          "minBalance": 260,
+          "maxBalance": 1360,
+          "avgBalance": 898.71,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-04-01",
+          "incoming": 750,
+          "outgoing": -400.5,
+          "minBalance": 0,
+          "maxBalance": 450,
+          "avgBalance": 146.17,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-03-01",
+          "incoming": 0,
+          "outgoing": 0,
+          "minBalance": 0.5,
+          "maxBalance": 0.5,
+          "avgBalance": 0.5,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-02-01",
+          "incoming": 0,
+          "outgoing": 0,
+          "minBalance": 0.5,
+          "maxBalance": 0.5,
+          "avgBalance": 0.5,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-01-01",
+          "incoming": 445.5,
+          "outgoing": -445,
+          "minBalance": 0,
+          "maxBalance": 300,
+          "avgBalance": 65.79,
+          "isWholeMonth": false
+        }
+      ]
+    },
+    {
+      "number": "#account3#",
+      "totalNumberOfTransactions": 0,
+      "wholeMonthsAvailable": 9,
+      "averageNumberOfTransactionsWholeMonth": 0.0,
+      "averageAmountOfIncomingTransactionsWholeMonth": 0.0,
+      "averageAmountOfOutgoingTransactionsWholeMonth": 0.0,
+      "averageMinimumBalanceWholeMonth": 0.0,
+      "cashFlow": [
+        {
+          "calendarMonth": "2018-11-01",
+          "incoming": 0,
+          "outgoing": 0,
+          "minBalance": 0,
+          "maxBalance": 0,
+          "avgBalance": 0,
+          "isWholeMonth": false
+        },
+        {
+          "calendarMonth": "2018-10-01",
+          "incoming": 0,
+          "outgoing": 0,
+          "minBalance": 0,
+          "maxBalance": 0,
+          "avgBalance": 0,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-09-01",
+          "incoming": 0,
+          "outgoing": 0,
+          "minBalance": 0,
+          "maxBalance": 0,
+          "avgBalance": 0,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-08-01",
+          "incoming": 0,
+          "outgoing": 0,
+          "minBalance": 0,
+          "maxBalance": 0,
+          "avgBalance": 0,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-07-01",
+          "incoming": 0,
+          "outgoing": 0,
+          "minBalance": 0,
+          "maxBalance": 0,
+          "avgBalance": 0,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-06-01",
+          "incoming": 0,
+          "outgoing": 0,
+          "minBalance": 0,
+          "maxBalance": 0,
+          "avgBalance": 0,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-05-01",
+          "incoming": 0,
+          "outgoing": 0,
+          "minBalance": 0,
+          "maxBalance": 0,
+          "avgBalance": 0,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-04-01",
+          "incoming": 0,
+          "outgoing": 0,
+          "minBalance": 0,
+          "maxBalance": 0,
+          "avgBalance": 0,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-03-01",
+          "incoming": 0,
+          "outgoing": 0,
+          "minBalance": 0,
+          "maxBalance": 0,
+          "avgBalance": 0,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-02-01",
+          "incoming": 0,
+          "outgoing": 0,
+          "minBalance": 0.0,
+          "maxBalance": 0.0,
+          "avgBalance": 0.0,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-01-01",
+          "incoming": 0.0,
+          "outgoing": 0.0,
+          "minBalance": 0,
+          "maxBalance": 0,
+          "avgBalance": 0.0,
+          "isWholeMonth": false
+        }
+      ]
+    }
+  ],
+  "userDetails": {
+    "name": "GRISEL VALERIA MARTINEZ SMART",
+    "address": [
+      "DE LA PEÑA 7, 28192 EL BERRUECO, ESPAÑA"
+    ],
+    "phone": [
+      "Teléfono móvil: +34 6*****092; Teléfono móvil principal: +34 6*****401"
+    ],
+    "email": [
+      "g*********in@hotmail.com"
+    ],
+    "personalIdentifier": [
+      {
+        "name": "dni",
+        "value": "#dni#"
+      }
+    ]
+  },
+  "bankInfo": {
+    "name": "CaixaBank",
+    "country": "es",
+    "id": "7fdd83e7-0e29-4b45-888e-5da1fb28e892"
+  },
+  "accountList": [
+    {
+      "number": "#account#",
+      "type": "LIBRETA ESTRELLA",
+      "balance": 200.00,
+      "currency": "EUR",
+      "iban": "#iban#",
+      "holderName": "#name#",
+      "transactionList": [
+        {
+          "onDate": "2018-11-20",
+          "valueDate": "2018-11-20",
+          "bookingDate": "2018-11-20",
+          "description": "Description: FARMACIA ELENA BE",
+          "amount": -4.45,
+          "balance": 0.77,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-08",
+          "valueDate": "2018-11-08",
+          "bookingDate": "2018-11-08",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -45.79,
+          "balance": 5.22,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-08",
+          "valueDate": "2018-11-08",
+          "bookingDate": "2018-11-08",
+          "description": "Description: INGRESO CAJERO",
+          "amount": 50,
+          "balance": 51.01,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-08",
+          "valueDate": "2018-11-08",
+          "bookingDate": "2018-11-08",
+          "description": "Description: REINT.CAJERO",
+          "amount": -250,
+          "balance": 1.01,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-08",
+          "valueDate": "2018-11-08",
+          "bookingDate": "2018-11-08",
+          "description": "Description: TRASPASO",
+          "amount": 250,
+          "balance": 251.01,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-07",
+          "valueDate": "2018-11-07",
+          "bookingDate": "2018-11-07",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -10.2,
+          "balance": 1.01,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-05",
+          "valueDate": "2018-11-05",
+          "bookingDate": "2018-11-05",
+          "description": "Description: HELVETIA COMP. - Recibo entidad de previsión",
+          "amount": -13.67,
+          "balance": 11.21,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-05",
+          "valueDate": "2018-11-05",
+          "bookingDate": "2018-11-05",
+          "description": "Description: FIJO918440675.NOV - Recibo de teléfono",
+          "amount": -91.4,
+          "balance": 24.88,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-02",
+          "valueDate": "2018-11-02",
+          "bookingDate": "2018-11-02",
+          "description": "Description: NETFLIX",
+          "amount": -10.99,
+          "balance": 116.28,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-31",
+          "valueDate": "2018-10-31",
+          "bookingDate": "2018-10-31",
+          "description": "Description: TRASPASO",
+          "amount": 100,
+          "balance": 127.27,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-28",
+          "valueDate": "2018-10-28",
+          "bookingDate": "2018-10-28",
+          "description": "Description: BAR ESTANCO ALI",
+          "amount": -50,
+          "balance": 27.27,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-28",
+          "valueDate": "2018-10-28",
+          "bookingDate": "2018-10-28",
+          "description": "Description: TRASPASO",
+          "amount": 50,
+          "balance": 77.27,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-28",
+          "valueDate": "2018-10-28",
+          "bookingDate": "2018-10-28",
+          "description": "Description: BAR ESTANCO ALI",
+          "amount": -14.6,
+          "balance": 27.27,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-27",
+          "valueDate": "2018-10-27",
+          "bookingDate": "2018-10-27",
+          "description": "Description: 99bill*Crownenerg",
+          "amount": -57.17,
+          "balance": 41.87,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-27",
+          "valueDate": "2018-10-27",
+          "bookingDate": "2018-10-27",
+          "description": "Description: CARREFOUR ANGEL",
+          "amount": -88.3,
+          "balance": 99.04,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-27",
+          "valueDate": "2018-10-27",
+          "bookingDate": "2018-10-27",
+          "description": "Description: TRASPASO",
+          "amount": 100,
+          "balance": 187.34,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-27",
+          "valueDate": "2018-10-27",
+          "bookingDate": "2018-10-27",
+          "description": "Description: REINT.CAJERO",
+          "amount": -150,
+          "balance": 87.34,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-27",
+          "valueDate": "2018-10-27",
+          "bookingDate": "2018-10-27",
+          "description": "Description: TRASPASO",
+          "amount": 150,
+          "balance": 237.34,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-27",
+          "valueDate": "2018-10-27",
+          "bookingDate": "2018-10-27",
+          "description": "Description: WIZINK BANK SA",
+          "amount": -150,
+          "balance": 87.34,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-27",
+          "valueDate": "2018-10-27",
+          "bookingDate": "2018-10-27",
+          "description": "Description: TRASPASO",
+          "amount": -550,
+          "balance": 237.34,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-27",
+          "valueDate": "2018-10-29",
+          "bookingDate": "2018-10-27",
+          "description": "Description: TRANSF. A SU FAVOR - 00751586-FREMAP MUTUA COLABORADO",
+          "amount": 785.4,
+          "balance": 787.34,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-14",
+          "valueDate": "2018-10-04",
+          "bookingDate": "2018-10-14",
+          "description": "Description: SUPERAWESOME",
+          "amount": 0.35,
+          "balance": 1.94,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-12",
+          "valueDate": "2018-10-12",
+          "bookingDate": "2018-10-12",
+          "description": "Description: REINT.CAJERO",
+          "amount": -30,
+          "balance": 1.59,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-06",
+          "valueDate": "2018-10-06",
+          "bookingDate": "2018-10-06",
+          "description": "Description: BURGUER KING",
+          "amount": -22.49,
+          "balance": 31.59,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-05",
+          "valueDate": "2018-10-05",
+          "bookingDate": "2018-10-05",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -44.43,
+          "balance": 54.08,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-04",
+          "valueDate": "2018-10-04",
+          "bookingDate": "2018-10-04",
+          "description": "Description: SUPERAWESOME",
+          "amount": -0.35,
+          "balance": 98.51,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-04",
+          "valueDate": "2018-10-04",
+          "bookingDate": "2018-10-04",
+          "description": "Description: CAN CAN SUFER S L",
+          "amount": -32.9,
+          "balance": 98.86,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-04",
+          "valueDate": "2018-10-04",
+          "bookingDate": "2018-10-04",
+          "description": "Description: FIJO918440675.OCT - Recibo de teléfono",
+          "amount": -80.73,
+          "balance": 131.76,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-02",
+          "valueDate": "2018-10-02",
+          "bookingDate": "2018-10-02",
+          "description": "Description: INGRESO CAJERO",
+          "amount": 50,
+          "balance": 212.49,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-02",
+          "valueDate": "2018-10-02",
+          "bookingDate": "2018-10-02",
+          "description": "Description: NETFLIX",
+          "amount": -10.99,
+          "balance": 162.49,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-02",
+          "valueDate": "2018-10-02",
+          "bookingDate": "2018-10-02",
+          "description": "Description: HELVETIA COMP. - Recibo entidad de previsión",
+          "amount": -13.67,
+          "balance": 173.48,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-01",
+          "valueDate": "2018-10-01",
+          "bookingDate": "2018-10-01",
+          "description": "Description: PRECIO REINT.CODIGO",
+          "amount": -2,
+          "balance": 187.15,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-01",
+          "valueDate": "2018-10-01",
+          "bookingDate": "2018-10-01",
+          "description": "Description: REINTEGRO CON CODIG",
+          "amount": -80,
+          "balance": 189.15,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-01",
+          "valueDate": "2018-10-01",
+          "bookingDate": "2018-10-01",
+          "description": "Description: INGRESO CAJERO",
+          "amount": 100,
+          "balance": 269.15,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-01",
+          "valueDate": "2018-10-01",
+          "bookingDate": "2018-10-01",
+          "description": "Description: ADMINISTRACIÓN DEP.",
+          "amount": -1.8,
+          "balance": 169.15,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-01",
+          "valueDate": "2018-10-01",
+          "bookingDate": "2018-10-01",
+          "description": "Description: MANTENIMIENTO",
+          "amount": -12,
+          "balance": 170.95,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-01",
+          "valueDate": "2018-10-01",
+          "bookingDate": "2018-10-01",
+          "description": "Description: INTERES.DESCUBIERTO",
+          "amount": -3.03,
+          "balance": 182.95,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-29",
+          "valueDate": "2018-09-29",
+          "bookingDate": "2018-09-29",
+          "description": "Description: TRASPASO",
+          "amount": 100,
+          "balance": 185.98,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-29",
+          "valueDate": "2018-09-29",
+          "bookingDate": "2018-09-29",
+          "description": "Description: REINT.CAJERO",
+          "amount": -450,
+          "balance": 85.98,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-29",
+          "valueDate": "2018-09-29",
+          "bookingDate": "2018-09-29",
+          "description": "Description: TRASPASO",
+          "amount": 100,
+          "balance": 535.98,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-29",
+          "valueDate": "2018-09-29",
+          "bookingDate": "2018-09-29",
+          "description": "Description: TRASPASO",
+          "amount": 200,
+          "balance": 435.98,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-29",
+          "valueDate": "2018-09-29",
+          "bookingDate": "2018-09-29",
+          "description": "Description: WIZINK BANK SA",
+          "amount": -100,
+          "balance": 235.98,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-29",
+          "valueDate": "2018-09-29",
+          "bookingDate": "2018-09-29",
+          "description": "Description: TRASPASO",
+          "amount": -400,
+          "balance": 335.98,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-29",
+          "valueDate": "2018-10-01",
+          "bookingDate": "2018-09-29",
+          "description": "Description: TRANSF. A SU FAVOR - 00751586-FREMAP MUTUA COLABORADO",
+          "amount": 733.04,
+          "balance": 735.98,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-23",
+          "valueDate": "2018-09-23",
+          "bookingDate": "2018-09-23",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -16.31,
+          "balance": 2.94,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-22",
+          "valueDate": "2018-09-22",
+          "bookingDate": "2018-09-22",
+          "description": "Description: MERCADONA AV AUGU",
+          "amount": -6.19,
+          "balance": 19.25,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-22",
+          "valueDate": "2018-09-24",
+          "bookingDate": "2018-09-22",
+          "description": "Description: TRASPASO",
+          "amount": 20,
+          "balance": 25.44,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-19",
+          "valueDate": "2018-09-19",
+          "bookingDate": "2018-09-19",
+          "description": "Description: REINT.CAJERO",
+          "amount": -20,
+          "balance": 5.44,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-16",
+          "valueDate": "2018-09-17",
+          "bookingDate": "2018-09-16",
+          "description": "Description: TRASPASO CAJERO",
+          "amount": 25,
+          "balance": 25.44,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-13",
+          "valueDate": "2018-09-13",
+          "bookingDate": "2018-09-13",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -80,
+          "balance": 0.44,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-13",
+          "valueDate": "2018-09-13",
+          "bookingDate": "2018-09-13",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 30,
+          "balance": 80.44,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-13",
+          "valueDate": "2018-09-13",
+          "bookingDate": "2018-09-13",
+          "description": "Description: TRASPASO",
+          "amount": 50,
+          "balance": 50.44,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-12",
+          "valueDate": "2018-09-12",
+          "bookingDate": "2018-09-12",
+          "description": "Description: REINT.CAJERO",
+          "amount": -20,
+          "balance": 0.44,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-12",
+          "valueDate": "2018-09-12",
+          "bookingDate": "2018-09-12",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 10,
+          "balance": 20.44,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-11",
+          "valueDate": "2018-09-11",
+          "bookingDate": "2018-09-11",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -11.1,
+          "balance": 10.44,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-11",
+          "valueDate": "2018-09-11",
+          "bookingDate": "2018-09-11",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 20,
+          "balance": 21.54,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-10",
+          "valueDate": "2018-09-10",
+          "bookingDate": "2018-09-10",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -20.4,
+          "balance": 1.54,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-07",
+          "valueDate": "2018-09-07",
+          "bookingDate": "2018-09-07",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 20,
+          "balance": 21.94,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-06",
+          "valueDate": "2018-09-06",
+          "bookingDate": "2018-09-06",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -30.91,
+          "balance": 1.94,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-04",
+          "valueDate": "2018-09-04",
+          "bookingDate": "2018-09-04",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -35.04,
+          "balance": 32.85,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-04",
+          "valueDate": "2018-09-04",
+          "bookingDate": "2018-09-04",
+          "description": "Description: REINT.CAJERO",
+          "amount": -400,
+          "balance": 67.89,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-04",
+          "valueDate": "2018-09-04",
+          "bookingDate": "2018-09-04",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 100,
+          "balance": 467.89,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-04",
+          "valueDate": "2018-09-04",
+          "bookingDate": "2018-09-04",
+          "description": "Description: HELVETIA COMP. - Recibo entidad de previsión",
+          "amount": -13.67,
+          "balance": 367.89,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-04",
+          "valueDate": "2018-09-04",
+          "bookingDate": "2018-09-04",
+          "description": "Description: FIJO918440675.SEP - Recibo de teléfono",
+          "amount": -85.35,
+          "balance": 381.56,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-03",
+          "valueDate": "2018-09-03",
+          "bookingDate": "2018-09-03",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 150,
+          "balance": 466.91,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-03",
+          "valueDate": "2018-09-03",
+          "bookingDate": "2018-09-03",
+          "description": "Description: Nike Madrid SSRR",
+          "amount": -15,
+          "balance": 316.91,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-03",
+          "valueDate": "2018-09-03",
+          "bookingDate": "2018-09-03",
+          "description": "Description: ALEGRA",
+          "amount": -26.73,
+          "balance": 331.91,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-03",
+          "valueDate": "2018-09-03",
+          "bookingDate": "2018-09-03",
+          "description": "Description: AMICHI",
+          "amount": -14.98,
+          "balance": 358.64,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-03",
+          "valueDate": "2018-09-03",
+          "bookingDate": "2018-09-03",
+          "description": "Description: DECATHLON DEHESA",
+          "amount": -70.44,
+          "balance": 373.62,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-02",
+          "valueDate": "2018-09-02",
+          "bookingDate": "2018-09-02",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 350,
+          "balance": 444.06,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-02",
+          "valueDate": "2018-09-01",
+          "bookingDate": "2018-09-02",
+          "description": "Description: CTA.FAMILY",
+          "amount": -6,
+          "balance": 94.06,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-02",
+          "valueDate": "2018-09-02",
+          "bookingDate": "2018-09-02",
+          "description": "Description: NETFLIX",
+          "amount": -10.99,
+          "balance": 100.06,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-01",
+          "valueDate": "2018-09-01",
+          "bookingDate": "2018-09-01",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -60.29,
+          "balance": 111.05,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-01",
+          "valueDate": "2018-09-01",
+          "bookingDate": "2018-09-01",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -700,
+          "balance": 171.34,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-01",
+          "valueDate": "2018-09-03",
+          "bookingDate": "2018-09-01",
+          "description": "Description: TRANSF. A SU FAVOR - 00751586-FREMAP MUTUA COLABORADO",
+          "amount": 759.22,
+          "balance": 871.34,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-31",
+          "valueDate": "2018-08-31",
+          "bookingDate": "2018-08-31",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -39.91,
+          "balance": 112.12,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-31",
+          "valueDate": "2018-08-31",
+          "bookingDate": "2018-08-31",
+          "description": "Description: TRASPASO",
+          "amount": 150,
+          "balance": 152.03,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-19",
+          "valueDate": "2018-08-19",
+          "bookingDate": "2018-08-19",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -30.6,
+          "balance": 2.03,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-19",
+          "valueDate": "2018-08-19",
+          "bookingDate": "2018-08-19",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 10,
+          "balance": 32.63,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-18",
+          "valueDate": "2018-08-18",
+          "bookingDate": "2018-08-18",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 20,
+          "balance": 22.63,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-17",
+          "valueDate": "2018-08-17",
+          "bookingDate": "2018-08-17",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -23.64,
+          "balance": 2.63,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-17",
+          "valueDate": "2018-08-17",
+          "bookingDate": "2018-08-17",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 20,
+          "balance": 26.27,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-16",
+          "valueDate": "2018-08-16",
+          "bookingDate": "2018-08-16",
+          "description": "Description: REINT.CAJERO",
+          "amount": -20,
+          "balance": 6.27,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-16",
+          "valueDate": "2018-08-16",
+          "bookingDate": "2018-08-16",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 20,
+          "balance": 26.27,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-13",
+          "valueDate": "2018-08-13",
+          "bookingDate": "2018-08-13",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -40.6,
+          "balance": 6.27,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-13",
+          "valueDate": "2018-08-13",
+          "bookingDate": "2018-08-13",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 30,
+          "balance": 46.87,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-12",
+          "valueDate": "2018-08-12",
+          "bookingDate": "2018-08-12",
+          "description": "Description: MEDIA MARKT VILLA",
+          "amount": -189,
+          "balance": 16.87,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-12",
+          "valueDate": "2018-08-12",
+          "bookingDate": "2018-08-12",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 100,
+          "balance": 205.87,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-11",
+          "valueDate": "2018-08-11",
+          "bookingDate": "2018-08-11",
+          "description": "Description: ANAIS HERMANOS PU",
+          "amount": -15,
+          "balance": 105.87,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-11",
+          "valueDate": "2018-08-11",
+          "bookingDate": "2018-08-11",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 100,
+          "balance": 120.87,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-10",
+          "valueDate": "2018-08-10",
+          "bookingDate": "2018-08-10",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -40.71,
+          "balance": 20.87,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-10",
+          "valueDate": "2018-08-10",
+          "bookingDate": "2018-08-10",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 50,
+          "balance": 61.58,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-09",
+          "valueDate": "2018-08-09",
+          "bookingDate": "2018-08-09",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -9.96,
+          "balance": 11.58,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-09",
+          "valueDate": "2018-08-09",
+          "bookingDate": "2018-08-09",
+          "description": "Description: FARMACIA ELENA BE",
+          "amount": -6.18,
+          "balance": 21.54,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-09",
+          "valueDate": "2018-08-09",
+          "bookingDate": "2018-08-09",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -66.76,
+          "balance": 27.72,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-09",
+          "valueDate": "2018-08-09",
+          "bookingDate": "2018-08-09",
+          "description": "Description: FARMACIA ELENA BE",
+          "amount": -3.7,
+          "balance": 94.48,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-09",
+          "valueDate": "2018-08-09",
+          "bookingDate": "2018-08-09",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 50,
+          "balance": 98.18,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-08",
+          "valueDate": "2018-08-08",
+          "bookingDate": "2018-08-08",
+          "description": "Description: ESTANCO LA VIãA",
+          "amount": -50.8,
+          "balance": 48.18,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-08",
+          "valueDate": "2018-08-08",
+          "bookingDate": "2018-08-08",
+          "description": "Description: MERCADONA",
+          "amount": -20.79,
+          "balance": 98.98,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-07",
+          "valueDate": "2018-08-07",
+          "bookingDate": "2018-08-07",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 100,
+          "balance": 119.77,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-07",
+          "valueDate": "2018-08-07",
+          "bookingDate": "2018-08-07",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -71.4,
+          "balance": 19.77,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-07",
+          "valueDate": "2018-08-07",
+          "bookingDate": "2018-08-07",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 50,
+          "balance": 91.17,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-06",
+          "valueDate": "2018-08-06",
+          "bookingDate": "2018-08-06",
+          "description": "Description: FIJO918440675.AGO - Recibo de teléfono",
+          "amount": -83.03,
+          "balance": 41.17,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-05",
+          "valueDate": "2018-08-05",
+          "bookingDate": "2018-08-05",
+          "description": "Description: REINT.CAJERO",
+          "amount": -250,
+          "balance": 124.2,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-04",
+          "valueDate": "2018-08-04",
+          "bookingDate": "2018-08-04",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -550,
+          "balance": 374.2,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-04",
+          "valueDate": "2018-08-06",
+          "bookingDate": "2018-08-04",
+          "description": "Description: TRANSF. A SU FAVOR - 00751586-FREMAP MUTUA COLABORADO",
+          "amount": 811.58,
+          "balance": 924.2,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-03",
+          "valueDate": "2018-08-03",
+          "bookingDate": "2018-08-03",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 30,
+          "balance": 112.62,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-03",
+          "valueDate": "2018-08-01",
+          "bookingDate": "2018-08-03",
+          "description": "Description: CTA.FAMILY",
+          "amount": -6,
+          "balance": 82.62,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-03",
+          "valueDate": "2018-08-03",
+          "bookingDate": "2018-08-03",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -52.68,
+          "balance": 88.62,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-03",
+          "valueDate": "2018-08-03",
+          "bookingDate": "2018-08-03",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 30,
+          "balance": 141.3,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-02",
+          "valueDate": "2018-08-02",
+          "bookingDate": "2018-08-02",
+          "description": "Description: NETFLIX.COM",
+          "amount": -10.99,
+          "balance": 111.3,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-02",
+          "valueDate": "2018-08-02",
+          "bookingDate": "2018-08-02",
+          "description": "Description: HELVETIA COMP. - Recibo entidad de previsión",
+          "amount": -13.67,
+          "balance": 122.29,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-01",
+          "valueDate": "2018-08-01",
+          "bookingDate": "2018-08-01",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 40,
+          "balance": 135.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-01",
+          "valueDate": "2018-08-01",
+          "bookingDate": "2018-08-01",
+          "description": "Description: J Y J SUP DIA LA",
+          "amount": -31.89,
+          "balance": 95.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-31",
+          "valueDate": "2018-07-30",
+          "bookingDate": "2018-07-31",
+          "description": "Description: COSTE USO CAJERO",
+          "amount": -1.5,
+          "balance": 127.85,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-30",
+          "valueDate": "2018-07-30",
+          "bookingDate": "2018-07-30",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 80,
+          "balance": 129.35,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-30",
+          "valueDate": "2018-07-30",
+          "bookingDate": "2018-07-30",
+          "description": "Description: J Y J SUP DIA LA",
+          "amount": -36.31,
+          "balance": 49.35,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-30",
+          "valueDate": "2018-07-30",
+          "bookingDate": "2018-07-30",
+          "description": "Description: CAJERO AJENO",
+          "amount": -40,
+          "balance": 85.66,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-29",
+          "valueDate": "2018-07-29",
+          "bookingDate": "2018-07-29",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 120,
+          "balance": 125.66,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-29",
+          "valueDate": "2018-07-29",
+          "bookingDate": "2018-07-29",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -19.7,
+          "balance": 5.66,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-29",
+          "valueDate": "2018-07-29",
+          "bookingDate": "2018-07-29",
+          "description": "Description: BAR ESTANCO ALI",
+          "amount": -16.9,
+          "balance": 25.36,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-28",
+          "valueDate": "2018-07-28",
+          "bookingDate": "2018-07-28",
+          "description": "Description: REINT.CAJERO",
+          "amount": -100,
+          "balance": 42.26,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-27",
+          "valueDate": "2018-07-27",
+          "bookingDate": "2018-07-27",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 95.5,
+          "balance": 142.26,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-24",
+          "valueDate": "2018-07-24",
+          "bookingDate": "2018-07-24",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -11.13,
+          "balance": 46.76,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-24",
+          "valueDate": "2018-07-24",
+          "bookingDate": "2018-07-24",
+          "description": "Description: CAN CAN SUFER S L",
+          "amount": -25,
+          "balance": 57.89,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-24",
+          "valueDate": "2018-07-24",
+          "bookingDate": "2018-07-24",
+          "description": "Description: INTERCAMBIADOR TR",
+          "amount": -37.4,
+          "balance": 82.89,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-24",
+          "valueDate": "2018-07-24",
+          "bookingDate": "2018-07-24",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 100,
+          "balance": 120.29,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-23",
+          "valueDate": "2018-07-23",
+          "bookingDate": "2018-07-23",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -29.32,
+          "balance": 20.29,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-13",
+          "valueDate": "2018-07-13",
+          "bookingDate": "2018-07-13",
+          "description": "Description: REINT.CAJERO",
+          "amount": -40,
+          "balance": 49.61,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-10",
+          "valueDate": "2018-07-10",
+          "bookingDate": "2018-07-10",
+          "description": "Description: CTA.FAMILY",
+          "amount": -2,
+          "balance": 89.61,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-09",
+          "valueDate": "2018-07-09",
+          "bookingDate": "2018-07-09",
+          "description": "Description: REINTEGRO",
+          "amount": -250,
+          "balance": 91.61,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-07",
+          "valueDate": "2018-07-07",
+          "bookingDate": "2018-07-07",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -300,
+          "balance": 341.61,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-07",
+          "valueDate": "2018-07-06",
+          "bookingDate": "2018-07-07",
+          "description": "Description: COSTE USO CAJERO",
+          "amount": -1.8,
+          "balance": 641.61,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-07",
+          "valueDate": "2018-07-09",
+          "bookingDate": "2018-07-07",
+          "description": "Description: TRANSF. A SU FAVOR - 00751586-FREMAP MUTUA COLABORADO",
+          "amount": 628.32,
+          "balance": 643.41,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-06",
+          "valueDate": "2018-07-06",
+          "bookingDate": "2018-07-06",
+          "description": "Description: CAJERO SERVIRED",
+          "amount": -50,
+          "balance": 15.09,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-04",
+          "valueDate": "2018-07-04",
+          "bookingDate": "2018-07-04",
+          "description": "Description: FIJO918440675.JUL - Recibo de teléfono",
+          "amount": -18.43,
+          "balance": 65.09,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-03",
+          "valueDate": "2018-07-01",
+          "bookingDate": "2018-07-03",
+          "description": "Description: CTA.FAMILY",
+          "amount": -6,
+          "balance": 83.52,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-03",
+          "valueDate": "2018-07-03",
+          "bookingDate": "2018-07-03",
+          "description": "Description: HELVETIA COMP. - Recibo entidad de previsión",
+          "amount": -13.67,
+          "balance": 89.52,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-02",
+          "valueDate": "2018-07-02",
+          "bookingDate": "2018-07-02",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 50,
+          "balance": 103.19,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-02",
+          "valueDate": "2018-07-02",
+          "bookingDate": "2018-07-02",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -20.4,
+          "balance": 53.19,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-02",
+          "valueDate": "2018-07-02",
+          "bookingDate": "2018-07-02",
+          "description": "Description: NETFLIX.COM",
+          "amount": -10.99,
+          "balance": 73.59,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-02",
+          "valueDate": "2018-07-02",
+          "bookingDate": "2018-07-02",
+          "description": "Description: TELEFONICA MOV - Recibo de teléfono",
+          "amount": -20.89,
+          "balance": 84.58,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-02",
+          "valueDate": "2018-07-02",
+          "bookingDate": "2018-07-02",
+          "description": "Description: MOV.695782401.JUL - Recibo de teléfono",
+          "amount": -20.65,
+          "balance": 105.47,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-02",
+          "valueDate": "2018-07-02",
+          "bookingDate": "2018-07-02",
+          "description": "Description: MOV.695782401.JUL - Recibo de teléfono",
+          "amount": -1.1,
+          "balance": 126.12,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-02",
+          "valueDate": "2018-07-02",
+          "bookingDate": "2018-07-02",
+          "description": "Description: MOV.695782401.JUL - Recibo de teléfono",
+          "amount": -1.03,
+          "balance": 127.22,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-01",
+          "valueDate": "2018-07-01",
+          "bookingDate": "2018-07-01",
+          "description": "Description: INTERES.DESCUBIERTO",
+          "amount": -1.02,
+          "balance": 128.25,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-30",
+          "valueDate": "2018-06-29",
+          "bookingDate": "2018-06-30",
+          "description": "Description: COSTE USO CAJERO",
+          "amount": -1.5,
+          "balance": 129.27,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-30",
+          "valueDate": "2018-06-30",
+          "bookingDate": "2018-06-30",
+          "description": "Description: PRECIO REINT.CODIGO",
+          "amount": -2,
+          "balance": 130.77,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-30",
+          "valueDate": "2018-06-30",
+          "bookingDate": "2018-06-30",
+          "description": "Description: REINTEGRO CON CODIG",
+          "amount": -20,
+          "balance": 132.77,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-30",
+          "valueDate": "2018-07-02",
+          "bookingDate": "2018-06-30",
+          "description": "Description: TRASPASO",
+          "amount": 50,
+          "balance": 152.77,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-29",
+          "valueDate": "2018-06-29",
+          "bookingDate": "2018-06-29",
+          "description": "Description: CAJERO AJENO",
+          "amount": -50,
+          "balance": 102.77,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-29",
+          "valueDate": "2018-06-29",
+          "bookingDate": "2018-06-29",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 20,
+          "balance": 152.77,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-28",
+          "valueDate": "2018-06-28",
+          "bookingDate": "2018-06-28",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 100,
+          "balance": 132.77,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-28",
+          "valueDate": "2018-06-28",
+          "bookingDate": "2018-06-28",
+          "description": "Description: FARMACIA ELENA BE",
+          "amount": -11.6,
+          "balance": 32.77,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-28",
+          "valueDate": "2018-06-28",
+          "bookingDate": "2018-06-28",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -73.79,
+          "balance": 44.37,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-27",
+          "valueDate": "2018-06-27",
+          "bookingDate": "2018-06-27",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -11.64,
+          "balance": 118.16,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-26",
+          "valueDate": "2018-06-26",
+          "bookingDate": "2018-06-26",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -62.13,
+          "balance": 129.8,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-25",
+          "valueDate": "2018-06-25",
+          "bookingDate": "2018-06-25",
+          "description": "Description: PRECIO REINT.CODIGO",
+          "amount": -2,
+          "balance": 191.93,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-25",
+          "valueDate": "2018-06-25",
+          "bookingDate": "2018-06-25",
+          "description": "Description: REINTEGRO CON CODIG",
+          "amount": -20,
+          "balance": 193.93,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-25",
+          "valueDate": "2018-06-25",
+          "bookingDate": "2018-06-25",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 130,
+          "balance": 213.93,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-22",
+          "valueDate": "2018-06-22",
+          "bookingDate": "2018-06-22",
+          "description": "Description: MCDONALDS LA PAZ",
+          "amount": -5.8,
+          "balance": 83.93,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-20",
+          "valueDate": "2018-06-20",
+          "bookingDate": "2018-06-20",
+          "description": "Description: RESTAURANTE EL AL",
+          "amount": -43,
+          "balance": 89.73,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-20",
+          "valueDate": "2018-06-20",
+          "bookingDate": "2018-06-20",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 100,
+          "balance": 132.73,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-20",
+          "valueDate": "2018-06-20",
+          "bookingDate": "2018-06-20",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -21.7,
+          "balance": 32.73,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-19",
+          "valueDate": "2018-06-19",
+          "bookingDate": "2018-06-19",
+          "description": "Description: DECATHLON DEHESA",
+          "amount": -48.98,
+          "balance": 54.43,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-17",
+          "valueDate": "2018-06-17",
+          "bookingDate": "2018-06-17",
+          "description": "Description: BAR ESTANCO ALI",
+          "amount": -18.15,
+          "balance": 103.41,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-17",
+          "valueDate": "2018-06-17",
+          "bookingDate": "2018-06-17",
+          "description": "Description: RESTAURANTE EL AL",
+          "amount": -22.6,
+          "balance": 121.56,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-17",
+          "valueDate": "2018-06-17",
+          "bookingDate": "2018-06-17",
+          "description": "Description: REINT.CAJERO",
+          "amount": -100,
+          "balance": 144.16,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-17",
+          "valueDate": "2018-06-17",
+          "bookingDate": "2018-06-17",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 50,
+          "balance": 244.16,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-15",
+          "valueDate": "2018-06-14",
+          "bookingDate": "2018-06-15",
+          "description": "Description: COSTE USO CAJERO",
+          "amount": -1.5,
+          "balance": 194.16,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-15",
+          "valueDate": "2018-06-15",
+          "bookingDate": "2018-06-15",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -12.25,
+          "balance": 195.66,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-14",
+          "valueDate": "2018-06-14",
+          "bookingDate": "2018-06-14",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -14.51,
+          "balance": 207.91,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-14",
+          "valueDate": "2018-06-14",
+          "bookingDate": "2018-06-14",
+          "description": "Description: LIBRERIA LA TEJON",
+          "amount": -11,
+          "balance": 222.42,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-14",
+          "valueDate": "2018-06-14",
+          "bookingDate": "2018-06-14",
+          "description": "Description: CAJERO AJENO",
+          "amount": -50,
+          "balance": 233.42,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-13",
+          "valueDate": "2018-06-13",
+          "bookingDate": "2018-06-13",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -16.11,
+          "balance": 283.42,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-12",
+          "valueDate": "2018-06-12",
+          "bookingDate": "2018-06-12",
+          "description": "Description: J Y J SUP DIA LA",
+          "amount": -23.82,
+          "balance": 299.53,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-10",
+          "valueDate": "2018-06-10",
+          "bookingDate": "2018-06-10",
+          "description": "Description: REINT.CAJERO",
+          "amount": -100,
+          "balance": 323.35,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-09",
+          "valueDate": "2018-06-09",
+          "bookingDate": "2018-06-09",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -450,
+          "balance": 423.35,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-09",
+          "valueDate": "2018-06-11",
+          "bookingDate": "2018-06-09",
+          "description": "Description: TRANSF. A SU FAVOR - 00751586-FREMAP MUTUA COLABORADO",
+          "amount": 837.76,
+          "balance": 873.35,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-08",
+          "valueDate": "2018-06-08",
+          "bookingDate": "2018-06-08",
+          "description": "Description: PRECIO REINT.CODIGO",
+          "amount": -2,
+          "balance": 35.59,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-08",
+          "valueDate": "2018-06-08",
+          "bookingDate": "2018-06-08",
+          "description": "Description: REINTEGRO CON CODIG",
+          "amount": -20,
+          "balance": 37.59,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-07",
+          "valueDate": "2018-06-07",
+          "bookingDate": "2018-06-07",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 50,
+          "balance": 57.59,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-06",
+          "valueDate": "2018-06-05",
+          "bookingDate": "2018-06-06",
+          "description": "Description: COSTE USO CAJERO",
+          "amount": -1.75,
+          "balance": 7.59,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-05",
+          "valueDate": "2018-06-05",
+          "bookingDate": "2018-06-05",
+          "description": "Description: S.S. REYES DEHESA",
+          "amount": -32.98,
+          "balance": 9.34,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-05",
+          "valueDate": "2018-06-05",
+          "bookingDate": "2018-06-05",
+          "description": "Description: CAJERO SERVIRED",
+          "amount": -400,
+          "balance": 42.32,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-05",
+          "valueDate": "2018-06-05",
+          "bookingDate": "2018-06-05",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 50,
+          "balance": 442.32,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-05",
+          "valueDate": "2018-06-05",
+          "bookingDate": "2018-06-05",
+          "description": "Description: Nike Madrid SSRR",
+          "amount": -67.9,
+          "balance": 392.32,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-05",
+          "valueDate": "2018-06-05",
+          "bookingDate": "2018-06-05",
+          "description": "Description: SKECHERS",
+          "amount": -24.99,
+          "balance": 460.22,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-05",
+          "valueDate": "2018-06-05",
+          "bookingDate": "2018-06-05",
+          "description": "Description: DECATHLON DEHESA",
+          "amount": -72.56,
+          "balance": 485.21,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-05",
+          "valueDate": "2018-06-05",
+          "bookingDate": "2018-06-05",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 150,
+          "balance": 557.77,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-04",
+          "valueDate": "2018-06-04",
+          "bookingDate": "2018-06-04",
+          "description": "Description: HELVETIA COMP. - Recibo entidad de previsión",
+          "amount": -14.29,
+          "balance": 407.77,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-03",
+          "valueDate": "2018-06-03",
+          "bookingDate": "2018-06-03",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -67.68,
+          "balance": 422.06,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-02",
+          "valueDate": "2018-06-02",
+          "bookingDate": "2018-06-02",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -38.42,
+          "balance": 489.74,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-02",
+          "valueDate": "2018-06-02",
+          "bookingDate": "2018-06-02",
+          "description": "Description: FARMACIA ELENA BE",
+          "amount": -13.41,
+          "balance": 528.16,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-02",
+          "valueDate": "2018-06-02",
+          "bookingDate": "2018-06-02",
+          "description": "Description: NETFLIX.COM",
+          "amount": -10.99,
+          "balance": 541.57,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-02",
+          "valueDate": "2018-06-04",
+          "bookingDate": "2018-06-02",
+          "description": "Description: TRANSF. A SU FAVOR - 00751586-FREMAP MUTUA COLABORADO",
+          "amount": 201.18,
+          "balance": 552.56,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-01",
+          "valueDate": "2018-06-01",
+          "bookingDate": "2018-06-01",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -27.72,
+          "balance": 351.38,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-01",
+          "valueDate": "2018-06-01",
+          "bookingDate": "2018-06-01",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 350,
+          "balance": 379.1,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-01",
+          "valueDate": "2018-06-01",
+          "bookingDate": "2018-06-01",
+          "description": "Description: MOV.695782401.JUN - Recibo de teléfono",
+          "amount": -32.79,
+          "balance": 29.1,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-31",
+          "valueDate": "2018-05-31",
+          "bookingDate": "2018-05-31",
+          "description": "Description: BAR ESTANCO ALI",
+          "amount": -28.8,
+          "balance": 61.89,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-31",
+          "valueDate": "2018-05-31",
+          "bookingDate": "2018-05-31",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -51,
+          "balance": 90.69,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-31",
+          "valueDate": "2018-05-31",
+          "bookingDate": "2018-05-31",
+          "description": "Description: VILLAVERDE 2",
+          "amount": -34.07,
+          "balance": 141.69,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-29",
+          "valueDate": "2018-05-29",
+          "bookingDate": "2018-05-29",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 100,
+          "balance": 175.76,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-27",
+          "valueDate": "2018-05-27",
+          "bookingDate": "2018-05-27",
+          "description": "Description: LLAMAYA MOVIL",
+          "amount": -10,
+          "balance": 75.76,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-26",
+          "valueDate": "2018-05-26",
+          "bookingDate": "2018-05-26",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -17.68,
+          "balance": 85.76,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-25",
+          "valueDate": "2018-05-25",
+          "bookingDate": "2018-05-25",
+          "description": "Description: GONGO",
+          "amount": -39.95,
+          "balance": 103.44,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-24",
+          "valueDate": "2018-05-24",
+          "bookingDate": "2018-05-24",
+          "description": "Description: ASEVIME S.L.",
+          "amount": -32.4,
+          "balance": 143.39,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-23",
+          "valueDate": "2018-05-19",
+          "bookingDate": "2018-05-23",
+          "description": "Description: CUOTA T. Visa Ele",
+          "amount": -24.21,
+          "balance": 175.79,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-22",
+          "valueDate": "2018-05-22",
+          "bookingDate": "2018-05-22",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 200,
+          "balance": 200,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-20",
+          "valueDate": "2018-05-19",
+          "bookingDate": "2018-05-20",
+          "description": "Description: CUOTA T. Visa E-P",
+          "amount": -3.79,
+          "balance": 0,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-20",
+          "valueDate": "2018-05-20",
+          "bookingDate": "2018-05-20",
+          "description": "Description: REINT.CAJERO",
+          "amount": -250,
+          "balance": 3.79,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-20",
+          "valueDate": "2018-05-20",
+          "bookingDate": "2018-05-20",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 250,
+          "balance": 253.79,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-18",
+          "valueDate": "2018-05-18",
+          "bookingDate": "2018-05-18",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -61.2,
+          "balance": 3.79,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-18",
+          "valueDate": "2018-05-18",
+          "bookingDate": "2018-05-18",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 50,
+          "balance": 64.99,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-17",
+          "valueDate": "2018-05-17",
+          "bookingDate": "2018-05-17",
+          "description": "Description: J Y J SUP DIA LA",
+          "amount": -35.05,
+          "balance": 14.99,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-17",
+          "valueDate": "2018-05-17",
+          "bookingDate": "2018-05-17",
+          "description": "Description: ALOJAMIENTOS BOTI",
+          "amount": -12.78,
+          "balance": 50.04,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-17",
+          "valueDate": "2018-05-17",
+          "bookingDate": "2018-05-17",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 60,
+          "balance": 62.82,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-12",
+          "valueDate": "2018-05-12",
+          "bookingDate": "2018-05-12",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -25.64,
+          "balance": 2.82,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-09",
+          "valueDate": "2018-05-09",
+          "bookingDate": "2018-05-09",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -20.4,
+          "balance": 28.46,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-09",
+          "valueDate": "2018-05-09",
+          "bookingDate": "2018-05-09",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -16.56,
+          "balance": 48.86,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-09",
+          "valueDate": "2018-05-09",
+          "bookingDate": "2018-05-09",
+          "description": "Description: REINT.CAJERO",
+          "amount": -600,
+          "balance": 65.42,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-09",
+          "valueDate": "2018-05-09",
+          "bookingDate": "2018-05-09",
+          "description": "Description: ALCAMPO GETAFE",
+          "amount": -17.28,
+          "balance": 665.42,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-08",
+          "valueDate": "2018-05-08",
+          "bookingDate": "2018-05-08",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -1100,
+          "balance": 682.7,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-06",
+          "valueDate": "2018-05-06",
+          "bookingDate": "2018-05-06",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -40.8,
+          "balance": 1782.7,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-06",
+          "valueDate": "2018-05-06",
+          "bookingDate": "2018-05-06",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 40,
+          "balance": 1823.5,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-04",
+          "valueDate": "2018-05-04",
+          "bookingDate": "2018-05-04",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -43.86,
+          "balance": 1783.5,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-03",
+          "valueDate": "2018-05-03",
+          "bookingDate": "2018-05-03",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -44.92,
+          "balance": 1827.36,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-03",
+          "valueDate": "2018-05-03",
+          "bookingDate": "2018-05-03",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 50,
+          "balance": 1872.28,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-02",
+          "valueDate": "2018-05-02",
+          "bookingDate": "2018-05-02",
+          "description": "Description: NETFLIX.COM",
+          "amount": -10.99,
+          "balance": 1822.28,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-02",
+          "valueDate": "2018-05-02",
+          "bookingDate": "2018-05-02",
+          "description": "Description: MOV.695782401.MAY - Recibo de teléfono",
+          "amount": -33.79,
+          "balance": 1833.27,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-30",
+          "valueDate": "2018-05-02",
+          "bookingDate": "2018-04-30",
+          "description": "Description: ING. CHEQUE AJENO",
+          "amount": 684.99,
+          "balance": 1867.06,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-30",
+          "valueDate": "2018-05-02",
+          "bookingDate": "2018-04-30",
+          "description": "Description: ING. CHEQUE AJENO",
+          "amount": 1092.83,
+          "balance": 1182.07,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-29",
+          "valueDate": "2018-04-29",
+          "bookingDate": "2018-04-29",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 50,
+          "balance": 89.24,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-27",
+          "valueDate": "2018-04-27",
+          "bookingDate": "2018-04-27",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -48.44,
+          "balance": 39.24,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-27",
+          "valueDate": "2018-04-27",
+          "bookingDate": "2018-04-27",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 50,
+          "balance": 87.68,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-25",
+          "valueDate": "2018-04-25",
+          "bookingDate": "2018-04-25",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -51.68,
+          "balance": 37.68,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-25",
+          "valueDate": "2018-04-25",
+          "bookingDate": "2018-04-25",
+          "description": "Description: FARMACIA ELENA BE",
+          "amount": -11.25,
+          "balance": 89.36,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-25",
+          "valueDate": "2018-04-25",
+          "bookingDate": "2018-04-25",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -300,
+          "balance": 100.61,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-21",
+          "valueDate": "2018-04-21",
+          "bookingDate": "2018-04-21",
+          "description": "Description: CASH MERCA",
+          "amount": -83.96,
+          "balance": 400.61,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-21",
+          "valueDate": "2018-04-21",
+          "bookingDate": "2018-04-21",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 150,
+          "balance": 484.57,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-20",
+          "valueDate": "2018-04-20",
+          "bookingDate": "2018-04-20",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -42.26,
+          "balance": 334.57,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-20",
+          "valueDate": "2018-04-20",
+          "bookingDate": "2018-04-20",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -300,
+          "balance": 376.83,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-18",
+          "valueDate": "2018-04-18",
+          "bookingDate": "2018-04-18",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -25.5,
+          "balance": 676.83,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-18",
+          "valueDate": "2018-04-18",
+          "bookingDate": "2018-04-18",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 20,
+          "balance": 702.33,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-17",
+          "valueDate": "2018-04-17",
+          "bookingDate": "2018-04-17",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -30.6,
+          "balance": 682.33,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-17",
+          "valueDate": "2018-04-17",
+          "bookingDate": "2018-04-17",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 30,
+          "balance": 712.93,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-16",
+          "valueDate": "2018-04-18",
+          "bookingDate": "2018-04-16",
+          "description": "Description: INGR. CHEQUE CAJERO - NOMINA",
+          "amount": 673.85,
+          "balance": 682.93,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-13",
+          "valueDate": "2018-04-13",
+          "bookingDate": "2018-04-13",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -40.8,
+          "balance": 9.08,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-13",
+          "valueDate": "2018-04-13",
+          "bookingDate": "2018-04-13",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 30,
+          "balance": 49.88,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-13",
+          "valueDate": "2018-04-13",
+          "bookingDate": "2018-04-13",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -30.82,
+          "balance": 19.88,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-13",
+          "valueDate": "2018-04-13",
+          "bookingDate": "2018-04-13",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 50,
+          "balance": 50.7,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-11",
+          "valueDate": "2018-04-11",
+          "bookingDate": "2018-04-11",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -20.4,
+          "balance": 0.7,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-11",
+          "valueDate": "2018-04-11",
+          "bookingDate": "2018-04-11",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 20.5,
+          "balance": 21.1,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-10",
+          "valueDate": "2018-04-10",
+          "bookingDate": "2018-04-10",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -40.8,
+          "balance": 0.6,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-07",
+          "valueDate": "2018-04-07",
+          "bookingDate": "2018-04-07",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -150,
+          "balance": 41.4,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-07",
+          "valueDate": "2018-04-09",
+          "bookingDate": "2018-04-07",
+          "description": "Description: DEVOLUCION HACIENDA - 90000001-A.E.A.T. DEVOLUCIONES T",
+          "amount": 175.4,
+          "balance": 191.4,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-03",
+          "valueDate": "2018-04-03",
+          "bookingDate": "2018-04-03",
+          "description": "Description: MOV.695782401.ABR - Recibo de teléfono",
+          "amount": -32.5,
+          "balance": 16,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-02",
+          "valueDate": "2018-04-02",
+          "bookingDate": "2018-04-02",
+          "description": "Description: INGRESO CAJERO",
+          "amount": 20,
+          "balance": 48.5,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-02",
+          "valueDate": "2018-04-02",
+          "bookingDate": "2018-04-02",
+          "description": "Description: NETFLIX",
+          "amount": -10.99,
+          "balance": 28.5,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-01",
+          "valueDate": "2018-04-02",
+          "bookingDate": "2018-04-01",
+          "description": "Description: INGRESO CAJERO",
+          "amount": 50,
+          "balance": 39.49,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-01",
+          "valueDate": "2018-04-01",
+          "bookingDate": "2018-04-01",
+          "description": "Description: SERV.APERT. DESCUB.",
+          "amount": -15,
+          "balance": -10.51,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-01",
+          "valueDate": "2018-04-01",
+          "bookingDate": "2018-04-01",
+          "description": "Description: INTERES.DESCUBIERTO",
+          "amount": -0.02,
+          "balance": 4.49,
+          "params": []
+        },
+        {
+          "onDate": "2018-03-26",
+          "valueDate": "2018-03-25",
+          "bookingDate": "2018-03-26",
+          "description": "Description: COSTE USO CAJERO",
+          "amount": -1.75,
+          "balance": 4.51,
+          "params": []
+        },
+        {
+          "onDate": "2018-03-25",
+          "valueDate": "2018-03-25",
+          "bookingDate": "2018-03-25",
+          "description": "Description: CAJERO SERVIRED",
+          "amount": -30,
+          "balance": 6.26,
+          "params": []
+        },
+        {
+          "onDate": "2018-03-23",
+          "valueDate": "2018-03-21",
+          "bookingDate": "2018-03-23",
+          "description": "Description: CONSUL.CAJERO AJENO",
+          "amount": -1,
+          "balance": 36.26,
+          "params": []
+        },
+        {
+          "onDate": "2018-03-22",
+          "valueDate": "2018-03-21",
+          "bookingDate": "2018-03-22",
+          "description": "Description: COSTE USO CAJERO",
+          "amount": -1.75,
+          "balance": 37.26,
+          "params": []
+        },
+        {
+          "onDate": "2018-03-21",
+          "valueDate": "2018-03-21",
+          "bookingDate": "2018-03-21",
+          "description": "Description: CAJERO SERVIRED",
+          "amount": -40,
+          "balance": 39.01,
+          "params": []
+        },
+        {
+          "onDate": "2018-03-14",
+          "valueDate": "2018-03-14",
+          "bookingDate": "2018-03-14",
+          "description": "Description: PAYPAL *PLAYSTATI",
+          "amount": -5.64,
+          "balance": 79.01,
+          "params": []
+        },
+        {
+          "onDate": "2018-03-11",
+          "valueDate": "2018-03-10",
+          "bookingDate": "2018-03-11",
+          "description": "Description: COSTE USO CAJERO",
+          "amount": -1.8,
+          "balance": 84.65,
+          "params": []
+        },
+        {
+          "onDate": "2018-03-10",
+          "valueDate": "2018-03-10",
+          "bookingDate": "2018-03-10",
+          "description": "Description: CAJERO SERVIRED",
+          "amount": -100,
+          "balance": 86.45,
+          "params": []
+        },
+        {
+          "onDate": "2018-03-10",
+          "valueDate": "2018-03-10",
+          "bookingDate": "2018-03-10",
+          "description": "Description: RENFE",
+          "amount": -82,
+          "balance": 186.45,
+          "params": []
+        },
+        {
+          "onDate": "2018-03-09",
+          "valueDate": "2018-03-09",
+          "bookingDate": "2018-03-09",
+          "description": "Description: AHORRAMAS VILLAJO",
+          "amount": -7.75,
+          "balance": 268.45,
+          "params": []
+        },
+        {
+          "onDate": "2018-03-03",
+          "valueDate": "2018-03-03",
+          "bookingDate": "2018-03-03",
+          "description": "Description: REINT.CAJERO",
+          "amount": -450,
+          "balance": 276.2,
+          "params": []
+        },
+        {
+          "onDate": "2018-03-03",
+          "valueDate": "2018-03-03",
+          "bookingDate": "2018-03-03",
+          "description": "Description: MOV.695782401.MAR - Recibo de teléfono",
+          "amount": -11.35,
+          "balance": 726.2,
+          "params": []
+        },
+        {
+          "onDate": "2018-03-02",
+          "valueDate": "2018-02-23",
+          "bookingDate": "2018-03-02",
+          "description": "Description: COSTE USO CAJERO",
+          "amount": -1.46,
+          "balance": 737.55,
+          "params": []
+        },
+        {
+          "onDate": "2018-03-02",
+          "valueDate": "2018-03-02",
+          "bookingDate": "2018-03-02",
+          "description": "Description: NETFLIX.COM",
+          "amount": -10.99,
+          "balance": 739.01,
+          "params": []
+        },
+        {
+          "onDate": "2018-03-02",
+          "valueDate": "2018-03-02",
+          "bookingDate": "2018-03-02",
+          "description": "Description: INGRESO CAJERO",
+          "amount": 750,
+          "balance": 750,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-24",
+          "valueDate": "2018-02-23",
+          "bookingDate": "2018-02-24",
+          "description": "Description: COSTE USO CAJERO",
+          "amount": -0.39,
+          "balance": 0,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-23",
+          "valueDate": "2018-02-23",
+          "bookingDate": "2018-02-23",
+          "description": "Description: CAJERO AJENO",
+          "amount": -20,
+          "balance": 0.39,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-20",
+          "valueDate": "2018-02-20",
+          "bookingDate": "2018-02-20",
+          "description": "Description: REINT.CAJERO",
+          "amount": -30,
+          "balance": 20.39,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-14",
+          "valueDate": "2018-02-14",
+          "bookingDate": "2018-02-14",
+          "description": "Description: AHORRAMAS VILLAJO",
+          "amount": -5.98,
+          "balance": 50.39,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-14",
+          "valueDate": "2018-02-14",
+          "bookingDate": "2018-02-14",
+          "description": "Description: REINT.CAJERO",
+          "amount": -40,
+          "balance": 56.37,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-12",
+          "valueDate": "2018-02-11",
+          "bookingDate": "2018-02-12",
+          "description": "Description: COSTE USO CAJERO",
+          "amount": -0.98,
+          "balance": 96.37,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-12",
+          "valueDate": "2018-02-12",
+          "bookingDate": "2018-02-12",
+          "description": "Description: CM CDPNU COLEG - Recibo de centro docente",
+          "amount": -100,
+          "balance": 97.35,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-11",
+          "valueDate": "2018-02-11",
+          "bookingDate": "2018-02-11",
+          "description": "Description: CARREFOUR ANGEL",
+          "amount": -12.44,
+          "balance": 197.35,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-11",
+          "valueDate": "2018-02-11",
+          "bookingDate": "2018-02-11",
+          "description": "Description: TRESAS RESTAURANT",
+          "amount": -6.25,
+          "balance": 209.79,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-11",
+          "valueDate": "2018-02-11",
+          "bookingDate": "2018-02-11",
+          "description": "Description: CAJERO SERVIRED",
+          "amount": -50,
+          "balance": 216.04,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-10",
+          "valueDate": "2018-02-09",
+          "bookingDate": "2018-02-10",
+          "description": "Description: COSTE USO CAJERO",
+          "amount": -1.85,
+          "balance": 266.04,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-10",
+          "valueDate": "2018-02-10",
+          "bookingDate": "2018-02-10",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -36.18,
+          "balance": 267.89,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-09",
+          "valueDate": "2018-02-09",
+          "bookingDate": "2018-02-09",
+          "description": "Description: MC DONALDS PLAZA",
+          "amount": -3.9,
+          "balance": 304.07,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-09",
+          "valueDate": "2018-02-09",
+          "bookingDate": "2018-02-09",
+          "description": "Description: CAJERO AJENO",
+          "amount": -40,
+          "balance": 307.97,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-08",
+          "valueDate": "2018-02-08",
+          "bookingDate": "2018-02-08",
+          "description": "Description: RENFE",
+          "amount": -82,
+          "balance": 347.97,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-05",
+          "valueDate": "2018-02-05",
+          "bookingDate": "2018-02-05",
+          "description": "Description: TRASPASO",
+          "amount": -40,
+          "balance": 429.97,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-02",
+          "valueDate": "2018-02-02",
+          "bookingDate": "2018-02-02",
+          "description": "Description: REINT.CAJERO",
+          "amount": -450,
+          "balance": 469.97,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-02",
+          "valueDate": "2018-02-02",
+          "bookingDate": "2018-02-02",
+          "description": "Description: NETFLIX",
+          "amount": -10.99,
+          "balance": 919.97,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-02",
+          "valueDate": "2018-02-02",
+          "bookingDate": "2018-02-02",
+          "description": "Description: ORANGE RECARGAS",
+          "amount": -20,
+          "balance": 930.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-02-01",
+          "valueDate": "2018-02-01",
+          "bookingDate": "2018-02-01",
+          "description": "Description: INGRESO CAJERO - NOMINA",
+          "amount": 950,
+          "balance": 950.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-26",
+          "valueDate": "2018-01-26",
+          "bookingDate": "2018-01-26",
+          "description": "Description: ORANGE RECARGAS",
+          "amount": -5,
+          "balance": 0.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-26",
+          "valueDate": "2018-01-26",
+          "bookingDate": "2018-01-26",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 5,
+          "balance": 5.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-20",
+          "valueDate": "2018-01-20",
+          "bookingDate": "2018-01-20",
+          "description": "Description: REINT.CAJERO",
+          "amount": -110,
+          "balance": 0.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-20",
+          "valueDate": "2018-01-20",
+          "bookingDate": "2018-01-20",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 110,
+          "balance": 110.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-16",
+          "valueDate": "2018-01-16",
+          "bookingDate": "2018-01-16",
+          "description": "Description: REINT.CAJERO",
+          "amount": -50,
+          "balance": 0.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-16",
+          "valueDate": "2018-01-16",
+          "bookingDate": "2018-01-16",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 30,
+          "balance": 50.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-15",
+          "valueDate": "2018-01-15",
+          "bookingDate": "2018-01-15",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 20,
+          "balance": 20.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-12",
+          "valueDate": "2018-01-12",
+          "bookingDate": "2018-01-12",
+          "description": "Description: REINT.CAJERO",
+          "amount": -50,
+          "balance": 0.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-12",
+          "valueDate": "2018-01-12",
+          "bookingDate": "2018-01-12",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 10,
+          "balance": 50.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-12",
+          "valueDate": "2018-01-12",
+          "bookingDate": "2018-01-12",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 10,
+          "balance": 40.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-11",
+          "valueDate": "2018-01-11",
+          "bookingDate": "2018-01-11",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 30,
+          "balance": 30.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-08",
+          "valueDate": "2018-01-08",
+          "bookingDate": "2018-01-08",
+          "description": "Description: REINT.CAJERO",
+          "amount": -50,
+          "balance": 0.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-08",
+          "valueDate": "2018-01-08",
+          "bookingDate": "2018-01-08",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 30,
+          "balance": 50.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-08",
+          "valueDate": "2018-01-08",
+          "bookingDate": "2018-01-08",
+          "description": "Description: RENFE",
+          "amount": -82,
+          "balance": 20.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-08",
+          "valueDate": "2018-01-08",
+          "bookingDate": "2018-01-08",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 100,
+          "balance": 102.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-08",
+          "valueDate": "2018-01-08",
+          "bookingDate": "2018-01-08",
+          "description": "Description: REINT.CAJERO",
+          "amount": -30,
+          "balance": 2.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-07",
+          "valueDate": "2018-01-07",
+          "bookingDate": "2018-01-07",
+          "description": "Description: botelleria la esq",
+          "amount": -18,
+          "balance": 32.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-06",
+          "valueDate": "2018-01-06",
+          "bookingDate": "2018-01-06",
+          "description": "Description: SUPER NORTE, S.L.",
+          "amount": -45.95,
+          "balance": 50.96,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-04",
+          "valueDate": "2018-01-04",
+          "bookingDate": "2018-01-04",
+          "description": "Description: REINT.CAJERO",
+          "amount": -450,
+          "balance": 96.91,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-04",
+          "valueDate": "2018-01-04",
+          "bookingDate": "2018-01-04",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 100,
+          "balance": 546.91,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-04",
+          "valueDate": "2018-01-04",
+          "bookingDate": "2018-01-04",
+          "description": "Description: CARREFOUR FUENL",
+          "amount": -26.1,
+          "balance": 446.91,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-04",
+          "valueDate": "2018-01-04",
+          "bookingDate": "2018-01-04",
+          "description": "Description: CARREFOUR FUENL",
+          "amount": -49.9,
+          "balance": 473.01,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-04",
+          "valueDate": "2018-01-04",
+          "bookingDate": "2018-01-04",
+          "description": "Description: COBRO PENDIENTE",
+          "amount": -12,
+          "balance": 522.91,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-03",
+          "valueDate": "2018-01-03",
+          "bookingDate": "2018-01-03",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": -300,
+          "balance": 534.91,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-03",
+          "valueDate": "2018-01-03",
+          "bookingDate": "2018-01-03",
+          "description": "Description: ORANGE RECARGAS",
+          "amount": -30,
+          "balance": 834.91,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-03",
+          "valueDate": "2018-01-03",
+          "bookingDate": "2018-01-03",
+          "description": "Description: TRANSF. A SU FAVOR - 01826379-CARLOS PIZARRO DE DIEGO",
+          "amount": 877.98,
+          "balance": 864.91,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-01",
+          "valueDate": "2018-01-01",
+          "bookingDate": "2018-01-01",
+          "description": "Description: SERV.APERT. DESCUB.",
+          "amount": -15,
+          "balance": -13.07,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-01",
+          "valueDate": "2018-01-01",
+          "bookingDate": "2018-01-01",
+          "description": "Description: INTERES.DESCUBIERTO",
+          "amount": -0.03,
+          "balance": 1.93,
+          "params": []
+        },
+        {
+          "onDate": "2017-12-18",
+          "valueDate": "2017-12-18",
+          "bookingDate": "2017-12-18",
+          "description": "Description: ORANGE RECARGAS",
+          "amount": -5,
+          "balance": 1.96,
+          "params": []
+        },
+        {
+          "onDate": "2017-12-13",
+          "valueDate": "2017-12-13",
+          "bookingDate": "2017-12-13",
+          "description": "Description: REINT.CAJERO",
+          "amount": -50,
+          "balance": 6.96,
+          "params": []
+        },
+        {
+          "onDate": "2017-12-12",
+          "valueDate": "2017-12-12",
+          "bookingDate": "2017-12-12",
+          "description": "Description: ORANGE RECARGAS",
+          "amount": -5,
+          "balance": 56.96,
+          "params": []
+        },
+        {
+          "onDate": "2017-12-11",
+          "valueDate": "2017-12-11",
+          "bookingDate": "2017-12-11",
+          "description": "Description: REINT.CAJERO",
+          "amount": -20,
+          "balance": 61.96,
+          "params": []
+        },
+        {
+          "onDate": "2017-12-10",
+          "valueDate": "2017-12-10",
+          "bookingDate": "2017-12-10",
+          "description": "Description: RENFE",
+          "amount": -82,
+          "balance": 81.96,
+          "params": []
+        },
+        {
+          "onDate": "2017-12-10",
+          "valueDate": "2017-12-10",
+          "bookingDate": "2017-12-10",
+          "description": "Description: ORANGE RECARGAS",
+          "amount": -10,
+          "balance": 163.96,
+          "params": []
+        },
+        {
+          "onDate": "2017-12-10",
+          "valueDate": "2017-12-10",
+          "bookingDate": "2017-12-10",
+          "description": "Description: PREST. DESEMPLEO - T.G.S.S. POR CUENTA SPEE",
+          "amount": 172.1,
+          "balance": 173.96,
+          "params": []
+        },
+        {
+          "onDate": "2017-12-02",
+          "valueDate": "2017-12-02",
+          "bookingDate": "2017-12-02",
+          "description": "Description: FNAC CALLAO",
+          "amount": -26.59,
+          "balance": 1.86,
+          "params": []
+        },
+        {
+          "onDate": "2017-12-01",
+          "valueDate": "2017-12-01",
+          "bookingDate": "2017-12-01",
+          "description": "Description: ORANGE RECARGAS",
+          "amount": -25,
+          "balance": 28.45,
+          "params": []
+        },
+        {
+          "onDate": "2017-12-01",
+          "valueDate": "2017-12-01",
+          "bookingDate": "2017-12-01",
+          "description": "Description: INGRESO CAJERO",
+          "amount": 50,
+          "balance": 53.45,
+          "params": []
+        },
+        {
+          "onDate": "2017-11-23",
+          "valueDate": "2017-11-23",
+          "bookingDate": "2017-11-23",
+          "description": "Description: ORANGE RECARGAS",
+          "amount": -5,
+          "balance": 3.45,
+          "params": []
+        }
+      ]
+    },
+    {
+      "number": "#account2#",
+      "type": "LIBRETA ESTRELLA",
+      "balance": 150.00,
+      "currency": "EUR",
+      "iban": "#iban2#",
+      "holderName": "#name#",
+      "transactionList": [
+        {
+          "onDate": "2018-11-08",
+          "valueDate": "2018-11-08",
+          "bookingDate": "2018-11-08",
+          "description": "Description: TRASPASO",
+          "amount": -250,
+          "balance": 0,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-28",
+          "valueDate": "2018-10-28",
+          "bookingDate": "2018-10-28",
+          "description": "Description: TRASPASO",
+          "amount": -50,
+          "balance": 250,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-27",
+          "valueDate": "2018-10-27",
+          "bookingDate": "2018-10-27",
+          "description": "Description: TRASPASO",
+          "amount": -100,
+          "balance": 300,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-27",
+          "valueDate": "2018-10-27",
+          "bookingDate": "2018-10-27",
+          "description": "Description: TRASPASO",
+          "amount": -150,
+          "balance": 400,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-27",
+          "valueDate": "2018-10-27",
+          "bookingDate": "2018-10-27",
+          "description": "Description: TRASPASO",
+          "amount": 550,
+          "balance": 550,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-29",
+          "valueDate": "2018-09-29",
+          "bookingDate": "2018-09-29",
+          "description": "Description: TRASPASO",
+          "amount": -100,
+          "balance": 0,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-29",
+          "valueDate": "2018-09-29",
+          "bookingDate": "2018-09-29",
+          "description": "Description: TRASPASO",
+          "amount": -100,
+          "balance": 100,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-29",
+          "valueDate": "2018-09-29",
+          "bookingDate": "2018-09-29",
+          "description": "Description: TRASPASO",
+          "amount": -200,
+          "balance": 200,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-29",
+          "valueDate": "2018-09-29",
+          "bookingDate": "2018-09-29",
+          "description": "Description: TRASPASO",
+          "amount": 400,
+          "balance": 400,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-22",
+          "valueDate": "2018-09-22",
+          "bookingDate": "2018-09-22",
+          "description": "Description: TRASPASO",
+          "amount": -20,
+          "balance": 0,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-13",
+          "valueDate": "2018-09-13",
+          "bookingDate": "2018-09-13",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -30,
+          "balance": 20,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-12",
+          "valueDate": "2018-09-12",
+          "bookingDate": "2018-09-12",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -10,
+          "balance": 50,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-11",
+          "valueDate": "2018-09-11",
+          "bookingDate": "2018-09-11",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -20,
+          "balance": 60,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-07",
+          "valueDate": "2018-09-07",
+          "bookingDate": "2018-09-07",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -20,
+          "balance": 80,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-04",
+          "valueDate": "2018-09-04",
+          "bookingDate": "2018-09-04",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -100,
+          "balance": 100,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-03",
+          "valueDate": "2018-09-03",
+          "bookingDate": "2018-09-03",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -150,
+          "balance": 200,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-02",
+          "valueDate": "2018-09-02",
+          "bookingDate": "2018-09-02",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -350,
+          "balance": 350,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-01",
+          "valueDate": "2018-09-01",
+          "bookingDate": "2018-09-01",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 700,
+          "balance": 700,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-19",
+          "valueDate": "2018-08-19",
+          "bookingDate": "2018-08-19",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -10,
+          "balance": 0,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-18",
+          "valueDate": "2018-08-18",
+          "bookingDate": "2018-08-18",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -20,
+          "balance": 10,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-17",
+          "valueDate": "2018-08-17",
+          "bookingDate": "2018-08-17",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -20,
+          "balance": 30,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-16",
+          "valueDate": "2018-08-16",
+          "bookingDate": "2018-08-16",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -20,
+          "balance": 50,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-13",
+          "valueDate": "2018-08-13",
+          "bookingDate": "2018-08-13",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -30,
+          "balance": 70,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-12",
+          "valueDate": "2018-08-12",
+          "bookingDate": "2018-08-12",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": -100,
+          "balance": 100,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-11",
+          "valueDate": "2018-08-11",
+          "bookingDate": "2018-08-11",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -100,
+          "balance": 200,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-10",
+          "valueDate": "2018-08-10",
+          "bookingDate": "2018-08-10",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": -50,
+          "balance": 300,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-09",
+          "valueDate": "2018-08-09",
+          "bookingDate": "2018-08-09",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -50,
+          "balance": 350,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-07",
+          "valueDate": "2018-08-07",
+          "bookingDate": "2018-08-07",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -100,
+          "balance": 400,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-07",
+          "valueDate": "2018-08-07",
+          "bookingDate": "2018-08-07",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -50,
+          "balance": 500,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-04",
+          "valueDate": "2018-08-04",
+          "bookingDate": "2018-08-04",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 550,
+          "balance": 550,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-03",
+          "valueDate": "2018-08-03",
+          "bookingDate": "2018-08-03",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -30,
+          "balance": 0,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-03",
+          "valueDate": "2018-08-03",
+          "bookingDate": "2018-08-03",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -30,
+          "balance": 30,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-01",
+          "valueDate": "2018-08-01",
+          "bookingDate": "2018-08-01",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -40,
+          "balance": 60,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-30",
+          "valueDate": "2018-07-30",
+          "bookingDate": "2018-07-30",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -80,
+          "balance": 100,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-29",
+          "valueDate": "2018-07-29",
+          "bookingDate": "2018-07-29",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -120,
+          "balance": 180,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-27",
+          "valueDate": "2018-07-27",
+          "bookingDate": "2018-07-27",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -95.5,
+          "balance": 300,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-24",
+          "valueDate": "2018-07-24",
+          "bookingDate": "2018-07-24",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -100,
+          "balance": 395.5,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-16",
+          "valueDate": "2018-07-16",
+          "bookingDate": "2018-07-16",
+          "description": "Description: PENSION PROTEC.FAM. - MARTINEZ SMART GRISEL VALERIA",
+          "amount": 145.5,
+          "balance": 495.5,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-07",
+          "valueDate": "2018-07-07",
+          "bookingDate": "2018-07-07",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 300,
+          "balance": 350,
+          "params": []
+        },
+        {
+          "onDate": "2018-07-02",
+          "valueDate": "2018-07-02",
+          "bookingDate": "2018-07-02",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -50,
+          "balance": 50,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-30",
+          "valueDate": "2018-06-30",
+          "bookingDate": "2018-06-30",
+          "description": "Description: TRASPASO - 2441-01003760-XX",
+          "amount": -50,
+          "balance": 100,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-29",
+          "valueDate": "2018-06-29",
+          "bookingDate": "2018-06-29",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -20,
+          "balance": 150,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-28",
+          "valueDate": "2018-06-28",
+          "bookingDate": "2018-06-28",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -100,
+          "balance": 170,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-25",
+          "valueDate": "2018-06-25",
+          "bookingDate": "2018-06-25",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -130,
+          "balance": 270,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-20",
+          "valueDate": "2018-06-20",
+          "bookingDate": "2018-06-20",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -100,
+          "balance": 400,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-17",
+          "valueDate": "2018-06-17",
+          "bookingDate": "2018-06-17",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -50,
+          "balance": 500,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-09",
+          "valueDate": "2018-06-09",
+          "bookingDate": "2018-06-09",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 450,
+          "balance": 550,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-07",
+          "valueDate": "2018-06-07",
+          "bookingDate": "2018-06-07",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -50,
+          "balance": 100,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-05",
+          "valueDate": "2018-06-05",
+          "bookingDate": "2018-06-05",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -50,
+          "balance": 150,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-05",
+          "valueDate": "2018-06-05",
+          "bookingDate": "2018-06-05",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -150,
+          "balance": 200,
+          "params": []
+        },
+        {
+          "onDate": "2018-06-01",
+          "valueDate": "2018-06-01",
+          "bookingDate": "2018-06-01",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -350,
+          "balance": 350,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-29",
+          "valueDate": "2018-05-29",
+          "bookingDate": "2018-05-29",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -100,
+          "balance": 700,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-22",
+          "valueDate": "2018-05-22",
+          "bookingDate": "2018-05-22",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -200,
+          "balance": 800,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-20",
+          "valueDate": "2018-05-20",
+          "bookingDate": "2018-05-20",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -250,
+          "balance": 1000,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-18",
+          "valueDate": "2018-05-18",
+          "bookingDate": "2018-05-18",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -50,
+          "balance": 1250,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-17",
+          "valueDate": "2018-05-17",
+          "bookingDate": "2018-05-17",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -60,
+          "balance": 1300,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-08",
+          "valueDate": "2018-05-08",
+          "bookingDate": "2018-05-08",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 1100,
+          "balance": 1360,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-06",
+          "valueDate": "2018-05-06",
+          "bookingDate": "2018-05-06",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -40,
+          "balance": 260,
+          "params": []
+        },
+        {
+          "onDate": "2018-05-03",
+          "valueDate": "2018-05-03",
+          "bookingDate": "2018-05-03",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -50,
+          "balance": 300,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-29",
+          "valueDate": "2018-04-29",
+          "bookingDate": "2018-04-29",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -50,
+          "balance": 350,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-27",
+          "valueDate": "2018-04-27",
+          "bookingDate": "2018-04-27",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -50,
+          "balance": 400,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-25",
+          "valueDate": "2018-04-25",
+          "bookingDate": "2018-04-25",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 300,
+          "balance": 450,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-21",
+          "valueDate": "2018-04-21",
+          "bookingDate": "2018-04-21",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -150,
+          "balance": 150,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-20",
+          "valueDate": "2018-04-20",
+          "bookingDate": "2018-04-20",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 300,
+          "balance": 300,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-18",
+          "valueDate": "2018-04-18",
+          "bookingDate": "2018-04-18",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -20,
+          "balance": 0,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-17",
+          "valueDate": "2018-04-17",
+          "bookingDate": "2018-04-17",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -30,
+          "balance": 20,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-13",
+          "valueDate": "2018-04-13",
+          "bookingDate": "2018-04-13",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -30,
+          "balance": 50,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-13",
+          "valueDate": "2018-04-13",
+          "bookingDate": "2018-04-13",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -50,
+          "balance": 80,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-11",
+          "valueDate": "2018-04-11",
+          "bookingDate": "2018-04-11",
+          "description": "Description: TRASP. PROPIO MOVIL - GRISEL VALERIA MARTINEZ SMART",
+          "amount": -20.5,
+          "balance": 130,
+          "params": []
+        },
+        {
+          "onDate": "2018-04-07",
+          "valueDate": "2018-04-07",
+          "bookingDate": "2018-04-07",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 150,
+          "balance": 150.5,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-26",
+          "valueDate": "2018-01-26",
+          "bookingDate": "2018-01-26",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": -5,
+          "balance": 0.5,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-20",
+          "valueDate": "2018-01-20",
+          "bookingDate": "2018-01-20",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": -110,
+          "balance": 5.5,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-16",
+          "valueDate": "2018-01-16",
+          "bookingDate": "2018-01-16",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": -30,
+          "balance": 115.5,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-16",
+          "valueDate": "2018-01-16",
+          "bookingDate": "2018-01-16",
+          "description": "Description: PENSION PROTEC.FAM. - MARTINEZ SMART GRISEL VALERIA",
+          "amount": 145.5,
+          "balance": 145.5,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-15",
+          "valueDate": "2018-01-15",
+          "bookingDate": "2018-01-15",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": -20,
+          "balance": 0,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-12",
+          "valueDate": "2018-01-12",
+          "bookingDate": "2018-01-12",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": -10,
+          "balance": 20,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-12",
+          "valueDate": "2018-01-12",
+          "bookingDate": "2018-01-12",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": -10,
+          "balance": 30,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-11",
+          "valueDate": "2018-01-11",
+          "bookingDate": "2018-01-11",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": -30,
+          "balance": 40,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-08",
+          "valueDate": "2018-01-08",
+          "bookingDate": "2018-01-08",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": -30,
+          "balance": 70,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-08",
+          "valueDate": "2018-01-08",
+          "bookingDate": "2018-01-08",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": -100,
+          "balance": 100,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-04",
+          "valueDate": "2018-01-04",
+          "bookingDate": "2018-01-04",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": -100,
+          "balance": 200,
+          "params": []
+        },
+        {
+          "onDate": "2018-01-03",
+          "valueDate": "2018-01-03",
+          "bookingDate": "2018-01-03",
+          "description": "Description: TRASP. PROPIO MOVIL",
+          "amount": 300,
+          "balance": 300,
+          "params": []
+        }
+      ]
+    },
+    {
+      "number": "#account3#",
+      "type": "LIBRETA ESTRELLA",
+      "balance": 0.00,
+      "currency": "EUR",
+      "iban": "#iban3#",
+      "holderName": "#name#",
+      "transactionList": []
+    }
+  ],
+  "incomeVerification": {
+    "primaryIncome": {
+      "meanAmountPayment": 1,
+      "last45dFound": 2,
+      "avg6m": 3,
+      "avg3m": 4,
+      "meanTimeBetweenPayments": 5,
+      "trend3m": 6,
+      "daysAgoLastPayment": 7,
+      "trend6m": 8,
+      "amountLastPayment": 9,
+      "spanMonths": 10,
+      "trend12m": 11,
+      "avg12m": 12,
+      "numPayments": 13,
+      "descriptions": [
+        "14"
+      ]
+    },
+    "secondaryIncomes": {
+      "meanAmountPayment": 15,
+      "last45dFound": 16,
+      "avg6m": 17,
+      "avg3m": 18,
+      "meanTimeBetweenPayments": 19,
+      "trend3m": 20,
+      "daysAgoLastPayment": 21,
+      "trend6m": 22,
+      "amountLastPayment": 23,
+      "spanMonths": 24,
+      "trend12m": 25,
+      "avg12m": 26,
+      "numPayments": 27,
+      "descriptions": [
+        "28"
+      ]
+    },
+    "otherRecurIncome": {
+      "meanAmountPayment": 29,
+      "last45dFound": 30,
+      "avg6m": 31,
+      "avg3m": 32,
+      "meanTimeBetweenPayments": 33,
+      "trend3m": 34,
+      "daysAgoLastPayment": 35,
+      "trend6m": 36,
+      "amountLastPayment": 37,
+      "spanMonths": 38,
+      "trend12m": 39,
+      "avg12m": 40,
+      "numPayments": 41,
+      "descriptions": [
+        "42"
+      ]
+    },
+    "version": "1.0"
+  },
+  "insightsRiskFeatures": {
+    "savings": {
+      "sumSavings1W": 1,
+      "numSavings6M": 2,
+      "numSavingsTotal": 3,
+      "sumSavingsTotal": 4,
+      "sumSavings1M": 5,
+      "sumSavings3M": 6,
+      "sumSavings12M": 7,
+      "version": "1.0",
+      "numSavings12M": 8,
+      "numSavings3M": 9,
+      "numSavings1W": 10,
+      "sumSavings6M": 11,
+      "numSavings1M": 12
+    },
+    "incomeTrends": {
+      "avg30dRollingRecent": 1,
+      "avg30dRollingPast": 2,
+      "version": "1.0",
+      "avgRollingTrend": 3,
+      "avgRollingDiff": 4
+    },
+    "cashFlow": {
+      "positiveCashflow1M": 1,
+      "positiveCashflow1W": 2,
+      "negativeCashflow3M": 3,
+      "positiveCashflowTotal": 4,
+      "positiveCashflow3M": 5,
+      "negativeCashflowTotal": 6,
+      "positiveNegativeRatio6M": 7,
+      "positiveNegativeRatioTotal": 8,
+      "negativeCashflow1W": 9,
+      "positiveNegativeRatio3M": 10,
+      "negativeCashflow12M": 11,
+      "negativeCashflow1M": 12,
+      "positiveNegativeRatio1W": 13,
+      "positiveNegativeRatio1M": 14,
+      "version": "1.0",
+      "positiveCashflow6M": 15,
+      "positiveCashflow12M": 16,
+      "positiveNegativeRatio12M": 17,
+      "negativeCashflow6M": 18
+    },
+    "accountActivity": {
+      "activityIncTotal": 0.14,
+      "activity12M": 0.16,
+      "activityInc1W": 0.5,
+      "activity1W": 0.5,
+      "activity3M": 0.3,
+      "activity1M": 0.39,
+      "trnsPerDay": 0.56,
+      "activityInc12M": 0.1,
+      "daysSinceLastTrn": 0,
+      "activityOut12M": 0.14,
+      "activityInc1M": 0.32,
+      "activityOut3M": 0.27,
+      "version": "1.0",
+      "daysOfOutTrns": 52,
+      "activityInc3M": 0.19,
+      "activityInc6M": 0.18,
+      "daysOfTrns": 57,
+      "activityOut6M": 0.24,
+      "activityOut1W": 0.5,
+      "activityOut1M": 0.35,
+      "daysSinceFirstTrn": 246,
+      "activityOutTotal": 0.21,
+      "activityTotal": 0.23,
+      "activity6M": 0.25,
+      "daysOfIncTrns": 35
+    },
+    "collections": {
+      "sumCollections3M": 1,
+      "numCollectionsTotal": 2,
+      "sumCollections6M": 3,
+      "numCollections1W": 4,
+      "sumCollections12M": 5,
+      "sumCollectionsTotal": 6,
+      "numCollections1M": 7,
+      "version": "1.0",
+      "numCollections6M": 8,
+      "sumCollections1M": 9,
+      "sumCollections1W": 10,
+      "numCollections12M": 11,
+      "numCollections3M": 12
+    },
+    "overdrafts": {
+      "numDaysInOverdraft1W": 0.0,
+      "numDaysInOverdraft1M": 0.0,
+      "numOverdraft3M": 4,
+      "numOverdraft6M": 8,
+      "numDaysInOverdraft3M": 30.0,
+      "numDaysInOverdraftTotal": 165.0,
+      "numOverdraftTotal": 10,
+      "numOverdraft12M": 10,
+      "version": "1.0",
+      "numOverdraft1W": 0,
+      "numOverdraft1M": 0,
+      "numDaysInOverdraft12M": 165.0,
+      "numDaysInOverdraft6M": 95.0
+    },
+    "lowBalances": {
+      "daysBalanceBelow7_3M": 1,
+      "daysBalanceBelow0_1W": 2,
+      "daysBalanceBelow0_3M": 3,
+      "daysBalanceBelow7_1W": 4,
+      "daysBalanceBelow0_12M": 5,
+      "version": "1.0",
+      "daysBalanceBelow0_6M": 6,
+      "daysBalanceBelow7_1M": 7,
+      "daysBalanceBelow7_Total": 8,
+      "daysBalanceBelow0_Total": 9,
+      "daysBalanceBelow0_1M": 10,
+      "daysBalanceBelow7_12M": 11,
+      "daysBalanceBelow7_6M": 12
+    },
+    "loans": {
+      "repaymentLoanRatio3M": 1,
+      "sumRepayments12M": 2,
+      "repaymentLoanRatioTotal": 3,
+      "sumRepaymentsTotal": 4,
+      "sumRepayments1W": 5,
+      "repaymentLoanRatio1W": 6,
+      "sumLoansTotal": 7,
+      "sumLoans3M": 8,
+      "sumLoans1W": 9,
+      "version": "1.0",
+      "sumRepayments3M": 10,
+      "repaymentLoanRatio6M": 11,
+      "sumLoans1M": 12,
+      "repaymentLoanRatio12M": 13,
+      "repaymentLoanRatio1M": 14,
+      "sumLoans12M": 15,
+      "sumRepayments1M": 16,
+      "sumRepayments6M": 17,
+      "sumLoans6M": 18
+    },
+    "spendingDistribution": {
+      "lastMonthSum(1000 to 2000)": 1,
+      "trend(0 to 5)": 2,
+      "lastMonthSum(50 to 100)": 3,
+      "lastMonthSum(-5 to 0)": 4,
+      "trend(20 to 50)": 5,
+      "trend(-200 to -100)": 6,
+      "lastMonthSum(2000 to inf)": 7,
+      "trend(500 to 1000)": 8,
+      "lastMonthSum(500 to 1000)": 9,
+      "lastMonthSum(0 to 5)": 10,
+      "lastMonthSum(20 to 50)": 11,
+      "lastMonthSum(-50 to -20)": 12,
+      "trend(-inf to -2000)": 13,
+      "trend(200 to 500)": 14,
+      "version": "1.0",
+      "trend(-1000 to -500)": 15,
+      "trend(-100 to -50)": 16,
+      "trend(-10 to -5)": 17,
+      "trend(10 to 20)": 18,
+      "trend(-2000 to -1000)": 19,
+      "lastMonthSum(10 to 20)": 20,
+      "lastMonthSum(-200 to -100)": 21,
+      "lastMonthSum(-2000 to -1000)": 22,
+      "lastMonthSum(200 to 500)": 23,
+      "lastMonthSum(-inf to -2000)": 24,
+      "trend(5 to 10)": 25,
+      "trend(-50 to -20)": 26,
+      "trend(100 to 200)": 27,
+      "lastMonthSum(5 to 10)": 28,
+      "lastMonthSum(100 to 200)": 29,
+      "trend(1000 to 2000)": 30,
+      "trend(50 to 100)": 31,
+      "trend(-500 to -200)": 32,
+      "lastMonthSum(-1000 to -500)": 33,
+      "trend(-20 to -10)": 34,
+      "lastMonthSum(-20 to -10)": 35,
+      "lastMonthSum(-500 to -200)": 36,
+      "trend(-5 to 0)": 37,
+      "lastMonthSum(-10 to -5)": 38,
+      "trend(2000 to inf)": 39,
+      "lastMonthSum(-100 to -50)": 40
+    },
+    "accountOverview": {
+      "numAccounts": 1,
+      "numAccountTypes": 1,
+      "numAccountHolders": 1,
+      "numCurrencies": 1,
+      "version": "1.0"
+    },
+    "gamblingVsIncome": {
+      "gamblingIncomeRatio3M": 1,
+      "gamblingIncomeRatio1W": 2,
+      "sumGambling1W": 3,
+      "gamblingIncomeRatioTotal": 4,
+      "gamblingIncomeRatio12M": 5,
+      "sumGamblingTotal": 6,
+      "version": "1.0",
+      "gamblingIncomeRatio1M": 7,
+      "sumGambling6M": 8,
+      "sumGambling12M": 9,
+      "gamblingIncomeRatio6M": 10,
+      "sumGambling3M": 11,
+      "sumGambling1M": 12
+    },
+    "atmWithdrawals": {
+      "atmExpensesRatioTotal": 1,
+      "sumAtmWithdrawals6M": 2,
+      "atmExpensesRatio1W": 3,
+      "atmExpensesRatio1M": 4,
+      "atmExpensesRatio6M": 5,
+      "sumAtmWithdrawals3M": 6,
+      "sumAtmWithdrawalsTotal": 7,
+      "atmExpensesRatio3M": 8,
+      "version": "1.0",
+      "sumAtmWithdrawals1W": 9,
+      "sumAtmWithdrawals1M": 10,
+      "sumAtmWithdrawals12M": 11,
+      "atmExpensesRatio12M": 12
+    },
+    "monthlyPaymentVariance": {
+      "numMonthlyExpenseStreams": 1,
+      "maxNormStdMonthlyExpenseStreams":2,
+      "maxStdMonthlyExpenseStreams": 3,
+      "avgNormStdMonthlyExpenseStreams": 4,
+      "avgStdMonthlyExpenseStreams": 5,
+      "avgStdTiming": 6,
+      "version": "1.0",
+      "maxStdTiming": 7
+    },
+    "balances": {
+      "stdBalance3M": 437.14,
+      "meanBalance1W": 189.63,
+      "maxBalance12M": 2370.41,
+      "minBalance1M": 0.88,
+      "meanBalance6M": 40.8,
+      "minBalance3M": -236.96,
+      "maxBalance1M": 905.88,
+      "lastBalance": 0,
+      "maxBalance6M": 2370.41,
+      "changeInFirstLastBalance": 177.22,
+      "stdBalance1W": 189.77,
+      "meanBalance12M": -9.75,
+      "meanBalance1M": 115.07,
+      "meanBalance3M": 179.1,
+      "maxBalance3M": 1963.29,
+      "maxBalance1W": 405.88,
+      "version": "1.0",
+      "firstBalance": -177.22,
+      "meanBalanceTotal": -9.75,
+      "stdBalance1M": 198.62,
+      "stdBalance6M": 431.3,
+      "maxBalanceTotal": 2370.41,
+      "minBalance6M": -237.17,
+      "minBalance12M": -237.22,
+      "stdBalance12M": 377.97,
+      "stdBalanceTotal": 377.97,
+      "minBalanceTotal": -237.22,
+      "minBalance1W": 0.88
+    },
+    "transactionStats": {
+      "numIncTrns12M": 53.0,
+      "numUniqueIncTrns1W": 2,
+      "numTrnsTotal": 137,
+      "numUniqueTrns1W": 4,
+      "numUniqueIncTrns1M": 3,
+      "meanIncAmount1W": 282.0,
+      "sumAmounts12M": 358.1,
+      "numUniqueOutTrnsTotal": 12,
+      "meanAmount1M": -7.19,
+      "meanIncAmount1M": 302.69,
+      "numUniqueTrns3M": 10,
+      "sumAmounts3M": 354.84,
+      "maxIncAmount1M": 900.0,
+      "numUniqueOutTrns1W": 2,
+      "meanAmount1W": 7.92,
+      "meanOutAmount3M": 234.07,
+      "numOutTrns12M": 84.0,
+      "meanAmountTotal": 2.61,
+      "numOutTrns6M": 75.0,
+      "sumIncAmounts1M": 3935.0,
+      "sumOutAmounts3M": 10065.16,
+      "meanOutAmount6M": 230.33,
+      "maxIncAmount1W": 400.0,
+      "sumOutAmountsTotal": 18564.48,
+      "numTrns3M": 68,
+      "sumOutAmounts12M": 18564.48,
+      "numTrns12M": 137,
+      "sumIncAmountsTotal": 18922.58,
+      "maxOutAmount1M": 800.0,
+      "maxIncAmount3M": 1020.0,
+      "sumIncAmounts12M": 18922.58,
+      "sumAmountsTotal": 358.1,
+      "meanAmount12M": 2.61,
+      "numIncTrns3M": 25.0,
+      "numUniqueOutTrns12M": 12,
+      "numTrns6M": 125,
+      "meanOutAmount1W": 187.86,
+      "numIncTrnsTotal": 53.0,
+      "meanOutAmount12M": 221.01,
+      "numIncTrns1M": 13.0,
+      "version": "1.0",
+      "numUniqueOutTrns3M": 6,
+      "meanAmount6M": 2.86,
+      "meanOutAmountTotal": 221.01,
+      "numOutTrns1M": 19.0,
+      "numIncTrns1W": 5.0,
+      "numTrns1W": 12,
+      "maxOutAmount1W": 400.0,
+      "maxOutAmount12M": 2599.0,
+      "numUniqueOutTrns6M": 9,
+      "sumIncAmounts3M": 10420.0,
+      "numOutTrns1W": 7.0,
+      "meanIncAmount6M": 352.65,
+      "meanOutAmount1M": 219.21,
+      "sumIncAmounts1W": 1410.0,
+      "numUniqueTrns12M": 21,
+      "numOutTrns3M": 43.0,
+      "numUniqueTrns6M": 18,
+      "meanIncAmount12M": 357.03,
+      "maxIncAmount12M": 2607.58,
+      "numUniqueIncTrns3M": 4,
+      "sumOutAmounts6M": 17274.53,
+      "sumAmounts1M": -230.0,
+      "sumAmounts6M": 358.05,
+      "maxIncAmount6M": 2607.58,
+      "numUniqueTrns1M": 5,
+      "meanIncAmount3M": 416.8,
+      "numOutTrnsTotal": 84.0,
+      "sumIncAmounts6M": 17632.58,
+      "numUniqueOutTrns1M": 2,
+      "meanIncAmountTotal": 357.03,
+      "sumOutAmounts1M": 4165.0,
+      "maxOutAmount3M": 1000.0,
+      "maxOutAmount6M": 2599.0,
+      "sumAmounts1W": 95.0,
+      "numUniqueTrnsTotal": 21,
+      "maxIncAmountTotal": 2607.58,
+      "numUniqueIncTrns6M": 9,
+      "numIncTrns6M": 50.0,
+      "sumOutAmounts1W": 1315.0,
+      "maxOutAmountTotal": 2599.0,
+      "numUniqueIncTrns12M": 9,
+      "meanAmount3M": 5.22,
+      "numUniqueIncTrnsTotal": 9,
+      "numTrns1M": 32
+    }
+  }
+}

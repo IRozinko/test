@@ -1,0 +1,14 @@
+{
+  "order_code": "orderCode1",
+  "bank_order_code": "bankOrderCode1",
+  "amount": 10,
+  "currency": "EUR",
+  "concept": "concept",
+  "source_ip": "127.0.0.1",
+  "customer_code": "1",
+  "customer_names": "Name Surname",
+  "source_account": "ES0800490766712312546987",
+  "destination_account": "ES9220389232143123456790",
+  "callback_url": null,
+  "state": "3"
+}

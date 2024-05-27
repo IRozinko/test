@@ -1,0 +1,19 @@
+{% if calculationStrategy.penaltyStrategy == calculationStrategy.PENALTY_STRATEGY_AV %}
+
+<p>
+  {% for val in calculationStrategy.penaltyStrategyAVProperties.strategies %}
+  {% if loop.first %}
+  <br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - El día {{val.from}} de demora se aplicará un {{val.rate | numberformat(currencyFormat)}}% sobre el importe adeudado.
+  {% else %}
+  <br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - A partir del día {{val.from}} de demora se aplicará un {{val.rate | numberformat(currencyFormat)}}% diario sobre el importe adeudado.
+  {% endif %}
+  {% endfor %}
+</p>
+
+{% elseif calculationStrategy.penaltyStrategy == calculationStrategy.PENALTY_STRATEGY_A %}
+
+{{calculationStrategy.penaltyStrategyAProperties.penaltyRate | numberformat(currencyFormat)}}%
+
+{% endif %}

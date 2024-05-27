@@ -1,0 +1,10 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile libs.springBoot
+    compile libs.jooq
+
+    compile project(":platform:common:utils")
+}
+
+

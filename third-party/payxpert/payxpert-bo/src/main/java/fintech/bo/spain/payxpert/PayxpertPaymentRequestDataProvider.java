@@ -1,0 +1,38 @@
+package fintech.bo.spain.payxpert;
+
+import com.vaadin.data.provider.Query;
+import fintech.bo.components.JooqDataProvider;
+import fintech.bo.components.views.BoComponentContext;
+import fintech.bo.components.views.StandardScopes;
+import lombok.Setter;
+import lombok.experimental.Accessors;
+import org.jooq.DSLContext;
+import org.jooq.Record;
+import org.jooq.SelectWhereStep;
+
+import static fintech.bo.spain.db.jooq.payxpert.Tables.PAYMENT_REQUEST;
+
+@Setter
+@Accessors(chain = true)
+public class PayxpertPaymentRequestDataProvider extends JooqDataProvider<Record> {
+
+    private BoComponentContext componentContext = new BoComponentContext();
+
+    public PayxpertPaymentRequestDataProvider(DSLContext db) {
+        super(db);
+    }
+
+    @Override
+    protected SelectWhereStep<Record> buildSelect(Query<Record, String> query) {
+        SelectWhereStep<Record> select = db
+            .select(fields(PAYMENT_REQUEST.fields()))
+            .from(PAYMENT_REQUEST);
+        componentContext.scope(StandardScopes.SCOPE_CLIENT).ifPresent(id -> select.where(PAYMENT_REQUEST.CLIENT_ID.eq(id)));
+        return select;
+    }
+
+    @Override
+    protected Object id(Record item) {
+        return item.get(PAYMENT_REQUEST.ID);
+    }
+}

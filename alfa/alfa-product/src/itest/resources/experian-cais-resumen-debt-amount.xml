@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:InformeResumen xmlns:ns2="http://experian.servicios.CAIS.V2">
+    <ns2:IdSuscriptor>07453376</ns2:IdSuscriptor>
+    <ns2:ReferenciaConsulta>20170721161415tukjLy</ns2:ReferenciaConsulta>
+    <ns2:Error>
+        <ns2:Codigo>0000</ns2:Codigo>
+        <ns2:Descripcion>OK</ns2:Descripcion>
+    </ns2:Error>
+    <ns2:Documento>
+        <ns2:TipoDocumento>
+            <ns2:Codigo>01</ns2:Codigo>
+            <ns2:Descripcion>NIF</ns2:Descripcion>
+        </ns2:TipoDocumento>
+        <ns2:NumeroDocumento>77404869W</ns2:NumeroDocumento>
+        <ns2:PaisDocumento>
+            <ns2:Codigo>724</ns2:Codigo>
+            <ns2:Descripcion>ESPAÑA</ns2:Descripcion>
+        </ns2:PaisDocumento>
+    </ns2:Documento>
+    <ns2:Resumen>
+        <ns2:Nombre>
+            <ns2:Nombre1>FERNANDEZ</ns2:Nombre1>
+            <ns2:Nombre2></ns2:Nombre2>
+            <ns2:ApellidosRazonSocial>MANUEL CALVO</ns2:ApellidosRazonSocial>
+        </ns2:Nombre>
+        <ns2:Direccion>
+            <ns2:Direccion>SANTO ANTONIÑO 16 1 A</ns2:Direccion>
+            <ns2:NombreLocalidad>BARRO</ns2:NombreLocalidad>
+            <ns2:CodigoLocalidad></ns2:CodigoLocalidad>
+            <ns2:Provincia>
+                <ns2:Codigo>08</ns2:Codigo>
+                <ns2:Descripcion>Pontevedra</ns2:Descripcion>
+            </ns2:Provincia>
+            <ns2:CodigoPostal>36191</ns2:CodigoPostal>
+        </ns2:Direccion>
+        <ns2:NumeroTotalOperacionesImpagadas>0</ns2:NumeroTotalOperacionesImpagadas>
+        <ns2:NumeroTotalCuotasImpagadas>0</ns2:NumeroTotalCuotasImpagadas>
+        <ns2:PeorSituacionPago>
+            <ns2:Codigo>6</ns2:Codigo>
+            <ns2:Descripcion>Mayor de 180 días</ns2:Descripcion>
+        </ns2:PeorSituacionPago>
+        <ns2:PeorSituacionPagoHistorica>
+            <ns2:Codigo>6</ns2:Codigo>
+            <ns2:Descripcion>Mayor de 180 días</ns2:Descripcion>
+        </ns2:PeorSituacionPagoHistorica>
+        <ns2:ImporteTotalImpagado>101.0</ns2:ImporteTotalImpagado>
+        <ns2:MaximoImporteImpagado>966.4</ns2:MaximoImporteImpagado>
+        <ns2:FechaMaximoImporteImpagado>
+            <ns2:DD>17</ns2:DD>
+            <ns2:MM>01</ns2:MM>
+            <ns2:AAAA>2016</ns2:AAAA>
+        </ns2:FechaMaximoImporteImpagado>
+        <ns2:FechaPeorSituaiconPagoHistorica>
+            <ns2:DD>16</ns2:DD>
+            <ns2:MM>07</ns2:MM>
+            <ns2:AAAA>2017</ns2:AAAA>
+        </ns2:FechaPeorSituaiconPagoHistorica>
+        <ns2:FechaAltaOperacionMasAntigua>
+            <ns2:DD>08</ns2:DD>
+            <ns2:MM>02</ns2:MM>
+            <ns2:AAAA>2015</ns2:AAAA>
+        </ns2:FechaAltaOperacionMasAntigua>
+        <ns2:FechaUltimaActualizacion>
+            <ns2:DD>16</ns2:DD>
+            <ns2:MM>07</ns2:MM>
+            <ns2:AAAA>2017</ns2:AAAA>
+        </ns2:FechaUltimaActualizacion>
+    </ns2:Resumen>
+</ns2:InformeResumen>

@@ -1,0 +1,7 @@
+ALTER TABLE lending.loan
+  ADD COLUMN period_count BIGINT NOT NULL DEFAULT 0,
+  ADD COLUMN period_unit TEXT NOT NULL DEFAULT 'NA';
+
+ALTER TABLE lending.loan_audit
+  ADD COLUMN period_count BIGINT NOT NULL DEFAULT 0,
+  ADD COLUMN period_unit TEXT NOT NULL DEFAULT 'NA';

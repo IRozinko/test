@@ -1,0 +1,16 @@
+{
+   "interactionId": "ID-uicu1lc9a039-44705-1515982175908-1-954",
+   "applicants": {"primaryConsumer": {"personalInformation":    {
+      "idCountryCode": "724",
+      "idType": "ID",
+      "idCodee": "10X"
+   }}},
+   "transactionState": "ERROR",
+   "errors": [   {
+      "code": "ICDAS004",
+      "message": "Errors present in [EIPG] response: [code: REQUESTERROR, description: The request sent by the client was syntactically incorrect]",
+      "category": "C"
+   }],
+   "transactionId": 8531,
+   "timestamp": "2018-01-29 09:37:44:814"
+}

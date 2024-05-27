@@ -1,0 +1,10 @@
+--------------------------------------------------------------
+test
+--------------------------------------------------------------
+{{test.title}}
+{% for val in test.children %}
+	{{val.field}}
+{% endfor %}
+{{test.map['child1Day'].field}}
+{{test.map['child2Days'].field}}
+{{test.child.field}}

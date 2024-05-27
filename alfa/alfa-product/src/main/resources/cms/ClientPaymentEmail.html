@@ -1,0 +1,26 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+<br>
+<br>
+Hemos recibido su pago de {{clientIncomingPayment.amount | numberformat(currencyFormat)}}€ y queda contabilizado en nuestro sistema.
+<br>
+Adjuntamos la correspondiente factura. Recuerda que siempre que quieras, también la podrás descargar de tu área de usuario en {{ company.webBaseUrl}}
+<br>
+<p>
+    Un cordial saludo,
+    <br>
+    <span style="font-weight: bold">El equipo de Alfa</span>
+</p>
+{% include "_email_p_end" %}
+
+<td style="padding:64px 32px 32px 32px;" align="left">
+    {% include "_email_contact_details" %}
+    {% include "_email_footer" %}
+</td>
+
+
+{% endblock %}}

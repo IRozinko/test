@@ -1,0 +1,5 @@
+Extensions: <br></br>
+{% for val in calculationStrategy.extensionStrategyDProperties.extensions %}
+{{val.rate | numberformat(currencyFormat)}} %  <br></br>
+{{val.term}}  <br></br>
+{% endfor %}

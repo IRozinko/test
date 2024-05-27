@@ -1,0 +1,38 @@
+{
+  "Code": 0,
+  "ErrorMessage": "",
+  "Data": [
+    {
+      "LoadId": 1,
+      "ServiceId": {{ serviceId }},
+      "Date": "2019-03-19T11:41:15",
+      "Enabled": true,
+      "Description": "Test1",
+      "PriorityValue": "1"
+    },
+    {
+      "LoadId": 2,
+      "ServiceId": {{ serviceId }},
+      "Date": "2019-03-19T15:47:00",
+      "Enabled": false,
+      "Description": "Test2",
+      "PriorityValue": "1"
+    },
+    {
+      "LoadId": 3,
+      "ServiceId": {{ serviceId }},
+      "Date": "2019-03-19T15:49:50",
+      "Enabled": false,
+      "Description": "Test3",
+      "PriorityValue": "1"
+    },
+    {
+      "LoadId": {{ loadId }},
+      "ServiceId": {{ serviceId }},
+      "Date": "2019-03-20T18:27:34",
+      "Enabled": {{ loadEnabled }},
+      "Description": "Test",
+      "PriorityValue": "100"
+    }
+  ]
+}

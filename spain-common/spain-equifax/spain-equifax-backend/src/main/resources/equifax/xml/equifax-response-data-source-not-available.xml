@@ -1,0 +1,35 @@
+<InterConnectResponse xmlns="http://xml.equifax.com/XMLSchema/InterConnect">
+    <InteractionControl>
+        <MessageId>5050</MessageId>
+        <InterConnectTransactionId>10002000000581870</InterConnectTransactionId>
+        <InterConnectInteractionId>0006150000673803</InterConnectInteractionId>
+        <ConfigurationVersionNumber>0</ConfigurationVersionNumber>
+        <Organization>
+            <Code>alfa</Code>
+        </Organization>
+        <Orchestration>
+            <Code>equifax-ara-alfa</Code>
+        </Orchestration>
+    </InteractionControl>
+    <TransactionStatus>completed</TransactionStatus>
+    <WorkItem>N</WorkItem>
+    <ConsumerSubjects>
+        <ConsumerSubject subjectIdentifier="PRIMARY">
+            <DataSourceResponses>
+                <EquifaxProducts>
+                    <Asnef>
+                        <SeverityScore>
+                            <Errors>
+                                <Error>
+                                    <ErrorSource>Asnef</ErrorSource>
+                                    <Code>10040</Code>
+                                    <Message>Datasource unavailable</Message>
+                                </Error>
+                            </Errors>
+                        </SeverityScore>
+                    </Asnef>
+                </EquifaxProducts>
+            </DataSourceResponses>
+        </ConsumerSubject>
+    </ConsumerSubjects>
+</InterConnectResponse>

@@ -1,0 +1,15 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Estimado cliente,
+<br>
+Su solicitud está siendo procesada. Pero antes, para poder finalizar debemos confimar unos datos con usted.
+<br>
+Nos pondremos en contacto con usted, lo antes posible (trabajamos de 9am a 7pm los días laborales).
+{% include "_email_p_end" %}
+
+{% include "_email_signature" %}
+
+{% endblock %}}

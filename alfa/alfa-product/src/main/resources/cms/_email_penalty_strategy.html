@@ -1,0 +1,23 @@
+{% if calculationStrategy.penaltyStrategy == calculationStrategy.PENALTY_STRATEGY_AV %}
+
+<p>Si paga hoy no tendrá que abonar intereses de demora. Liquide su deuda ahora y evitará las siguientes penalizaciones:</p>
+<ul>
+  {% for val in calculationStrategy.penaltyStrategyAVProperties.strategies %}
+
+  {% if loop.first %}
+  <li>El día {{val.from}} de demora se aplicará un {{val.rate | numberformat(currencyFormat)}}% sobre el importe adeudado.</li>
+  {% else %}
+  <li>A partir del día {{val.from}} de demora se aplicará un {{val.rate | numberformat(currencyFormat)}}% diario sobre el importe adeudado.<br/></li>
+  {% endif %}
+  {% endfor %}
+</ul>
+
+{% elseif calculationStrategy.penaltyStrategy == calculationStrategy.PENALTY_STRATEGY_A %}
+
+<p>
+  Si paga hoy no tendrá que abonar intereses de demora, hágalo antes de que acumule un
+  {{ calculationStrategy.penaltyStrategyAProperties.penaltyRate | numberformat(currencyFormat) }}%
+  de interés diario sobre el importe adeudado.
+</p>
+
+{% endif %}

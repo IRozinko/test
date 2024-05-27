@@ -1,0 +1,38 @@
+.log
+*.log
+.checkstyle
+*.*~
+*.retry
+*.cache
+
+generated/
+generated-wsdl/
+out/
+classes/
+
+# gradle
+.gradle
+build/
+dist/
+target/
+.gradletasknamecache
+
+# idea
+*.iml
+*.ipr
+*.iws
+.idea/
+.ideaDataSources
+dataSources
+
+# eclipse
+.classpath
+.project
+.settings
+bin/
+
+# nodejs
+node_modules/
+bower_components/
+yarn.lock
+package-lock.json

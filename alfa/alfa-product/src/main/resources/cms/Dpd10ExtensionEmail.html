@@ -1,0 +1,27 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Estimado/a Sr./Sra. {{client.lastName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Su adeudo con nuestra compañia no ha sido resuelto pasados ya 10 dias de la fecha de pago marcada en contrato y el importe del mismo asciende ya a {{debt.totalDue | numberformat(currencyFormat)}}€.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Por ello nos hemos visto obligados a informar en listados de morosidad tales como ASNEF de la deuda activa y pendiente con nosotros.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Puede acceder a su Área de Usuario en www.alfa.es/login  o podemos informarle con más detalle de todas las opciones y buscar la solución más adecuada para usted LLAMANDO AL 933035223 y hablando con su gestor personal
+{% include "_email_p_end" %}
+
+
+{% include "_email_p_begin" %}
+Reciba un cordial saludo
+{% include "_email_p_end" %}
+
+{% include "_email_signature" %}
+{% endblock %}}

@@ -1,0 +1,23 @@
+{% if calculationStrategy.penaltyStrategy == calculationStrategy.PENALTY_STRATEGY_AV %}
+
+<p>El cálculo variará en función de los días de demora devengados.</p>
+<ul>
+  {% for val in calculationStrategy.penaltyStrategyAVProperties.strategies %}
+  <li>{% if loop.first %}
+    El día {{val.from}} de demora se aplicará un {{val.rate | numberformat(currencyFormat)}}% sobre el importe adeudado.
+    {% else %}
+    A partir del día {{val.from}} de demora se aplicará un {{val.rate | numberformat(currencyFormat)}}% diario sobre el importe adeudado.
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
+{% elseif calculationStrategy.penaltyStrategy == calculationStrategy.PENALTY_STRATEGY_A %}
+
+<p>
+  El importe acordado en contrato más un interés de demora diario del
+  {{ calculationStrategy.penaltyStrategyAProperties.penaltyRate | numberformat(currencyFormat) }}%
+  hasta llegar al 150% del principal prestado.
+</p>
+
+{% endif %}

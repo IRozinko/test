@@ -1,0 +1,165 @@
+{
+  "basicInfo": {
+    "scrapeReport": {
+      "scrapeDate": "2016-02-24T00:00:00",
+      "status": "ok",
+      "comment": "Process finished successfully",
+      "reportNumber": 0,
+      "isFinal": true
+    },
+    "bank": {
+      "country": "ES",
+      "abbreviation": "es-abanca",
+      "name": "ABANCA"
+    },
+    "source": "lineofcredit.es",
+    "username": "DEMO DEMOSSON DEMOSSOVICH",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "miscEntryList": [
+      {
+        "provider": "es-abanca",
+        "key": "person.isFake",
+        "value": "true"
+      },
+      {
+        "provider": "instantor",
+        "key": "instantor_request_id",
+        "value": "e66614c3-ac37-44ef-9f57-69eaec41eedd"
+      },
+      {
+        "provider": "lineofcredit.es",
+        "key": "account",
+        "value": "1234-1234-1234-1234"
+      },
+      {
+        "provider": "lineofcredit.es",
+        "key": "personal_number",
+        "value": "1234567890"
+      },
+      {
+        "provider": "lineofcredit.es",
+        "key": "name",
+        "value": "John Doe"
+      },
+      {
+        "provider": "lineofcredit.es",
+        "key": "clientId",
+        "value": "#clientId#"
+      }
+    ]
+  },
+  "reportTime": "2016-02-24T12:39:23.235+01:00",
+  "scrapeTime": "2016-02-24T12:39:19.000+01:00",
+  "successfulLogin": true,
+  "accountNumbersForVerification": [
+    "1234123412341234"
+  ],
+  "nameForVerification": "John Doe",
+  "personalNumberForVerification": "1234567890",
+  "bankReport": {
+    "bank": {
+      "country": "ES",
+      "abbreviation": "es-abanca",
+      "name": "ABANCA"
+    },
+    "owner": "DEMO DEMOSSON DEMOSSOVICH",
+    "scrapeStatus": "Process finished successfully",
+    "monthsAvailable": 4,
+    "numberOfAccounts": 1,
+    "accountNumbersVerified": [
+      {
+        "accountNumber": "1234123412341234",
+        "verified": false
+      }
+    ],
+    "nameVerified": false,
+    "personalNumberVerified": null,
+    "totalNumberOfTransactions": 20,
+    "averageNumberOfTransactionsMonth": 5,
+    "averageAmountOfIncomingTransactionsMonth": 57.72,
+    "averageAmountOfOutgoingTransactionsMonth": -92.68,
+    "averageMinimumBalanceMonth": 817.79,
+    "numberOfLoans": 2,
+    "amountOfLoans": 200,
+    "cashFlow": [
+      {
+        "month": 0,
+        "incoming": 11,
+        "outgoing": -22,
+        "minBalance": 817.79,
+        "numberOfLoans": 1,
+        "amountOfLoans": 100
+      },
+      {
+        "month": -1,
+        "incoming": 0,
+        "outgoing": 0,
+        "minBalance": 817.79,
+        "numberOfLoans": 0,
+        "amountOfLoans": 0
+      },
+      {
+        "month": -2,
+        "incoming": 0,
+        "outgoing": 0,
+        "minBalance": 817.79,
+        "numberOfLoans": 0,
+        "amountOfLoans": 0
+      },
+      {
+        "month": -3,
+        "incoming": 230.89,
+        "outgoing": -370.7,
+        "minBalance": 810.79,
+        "numberOfLoans": 0,
+        "amountOfLoans": 0
+      }
+    ]
+  },
+  "scrape": {
+    "scrapeReport": {
+      "scrapeDate": "2016-02-24T00:00:00",
+      "status": "ok",
+      "comment": "Process finished successfully",
+      "reportNumber": 0,
+      "isFinal": true
+    },
+    "bank": {
+      "country": "ES",
+      "abbreviation": "es-abanca",
+      "name": "ABANCA"
+    },
+    "userDetails": {
+      "name": "DEMO DEMOSSON DEMOSSOVICH",
+      "address": null,
+      "phone": null,
+      "email": null
+    },
+    "companyDetails": null,
+    "accountList": [
+      {
+        "number": "ES 77 0128 0500 13 0100138902",
+        "balance": 860.2,
+        "currency": "EUR",
+        "iban": "ES 77 0128 0500 13 0100138902",
+        "holderName": "DEMO DEMOSSON DEMOSSOVICH",
+        "transactionList": [
+          {
+            "onDate": "2015-11-22T00:00:00",
+            "description": "Fake money transfer from\/to:",
+            "amount": -38.7,
+            "balance": 860.2
+          },
+          {
+            "onDate": "2015-11-22T00:00:00",
+            "description": "Fake money transfer from\/to:",
+            "amount": 31.95,
+            "balance": 898.91
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile project(":platform:payments")
+    compile project(":platform:crm")
+    compile project(":platform:lending:lending-core")
+
+    compile "com.mitchellbosecke:pebble:${pebbleVersion}"
+    compile libs.apachePoi
+    compile "org.iban4j:iban4j:${iban4jVersion}"
+}
+

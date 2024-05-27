@@ -1,0 +1,10 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile project(':platform:marketing:marketing-core')
+    compile project(':platform:common:models')
+    compile project(':platform:common:utils')
+
+    compile project(":spain-common:spain-web")
+    testCompile project(":platform:common:integration-test")
+}

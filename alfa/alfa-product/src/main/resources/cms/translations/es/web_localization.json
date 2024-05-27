@@ -1,0 +1,30 @@
+{
+  "HEADER": {
+    "LOGO_ALT": "Créditos Online, Préstamos Rápidos y Mini Préstamos con {{value}}",
+    "LOGO_IMG_ALT": "{{value}} préstamo rápido",
+    "HOW_IT_WORKS": "¿Cómo funciona?",
+    "HELP": "Ayuda",
+    "BLOG": "Blog",
+    "CONTACT": "Contacto",
+    "USER_AREA": "ÁREA DE USUARIO",
+    "FAQ": "Preguntas más frecuentes",
+    "HELLO": "Hola",
+    "CS_TIMES": "Horario de atención",
+    "WORKING_DAYS": "Días hábiles",
+    "SATURDAYS": "Sábados",
+    "BACK_TO_APPLICATION": "Volver a la solicitud",
+    "OVERVIEW": "Resumen",
+    "PAYMENTS": "Pagos",
+    "HISTORY": "Operaciones históricas",
+    "SETTINGS": "Configuración",
+    "EXIT": "Salir"
+  },
+  "AFFILIATE_PASSWORD": {
+    "TITLE": "Elige tu contraseña",
+    "SUCCESS": "¡Tu contraseña se ha establecido correctamente!",
+    "INFO": "La contraseña debe tener una longitud mínima de <strong>6 caracteres</strong> y contener: <strong>letras mayúsculas, letras minúsculas y números</strong>.",
+    "NEW_PASSWORD": "Nueva contraseña",
+    "PLACEHOLDER": "Introduce tu contraseña",
+    "CONFIRM": "Confirmar contraseña"
+  }
+}

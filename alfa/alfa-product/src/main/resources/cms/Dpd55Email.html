@@ -1,0 +1,32 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Estimado/a Sr./Sra. {{client.lastName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Como ya les comunicamos previamente, su expediente está siendo tramitado por el Departamento Judicial, y disponemos de un breve plazo para encontrar una solución previa a la tramitación judicial del expediente ante el juzgado competente.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Los listados de morosidad, tales como ASNEF, están actualizando semanalmente su deuda hace semanas, y cualquier compañia de finanzas puede informarse sobre ello.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+¡USTED TODAVÍA ESTÁ A TIEMPO DE SOLUCIONARLO! Actualmente su deuda acumulada es de:{{debt.totalDue | numberformat(currencyFormat)}}€ De manera inmediata debe llamarnos al 933035223 y acordar con su gestor un plan de pagos e informarle de la situación en la que se encuentra.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Puede entrar en www.alfa.es/login para revisar o consultar todos los datos que necesite y realizar el pago desde alli.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Reciba un cordial saludo
+{% include "_email_p_end" %}
+
+{% include "_email_signature" %}
+
+{% endblock %}}
+

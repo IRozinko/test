@@ -1,0 +1,23 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Agradecemos tu interés en PRESTO pero, ahora mismo, no podemos concederte una línea de crédito. Por razones de seguridad no es posible indicarte el motivo, disculpa las molestias.
+<br>
+<br>
+Aunque, por supuesto, nos encantará que sigas contando con
+<a href="{{ company.webBaseUrl}}/solicitud?AFFILIATE_NAME=presto&calculator=true">Alfa</a>.
+<br>
+<br>
+para obtener tu dinero extra de forma rápida, cómoda y segura.
+Si tienes cualquier pregunta, ponte en contacto con nosotros. Saludos,
+{% include "_email_p_end" %}
+
+{% include "_cs_email_signature" %}
+
+{% endblock %}}

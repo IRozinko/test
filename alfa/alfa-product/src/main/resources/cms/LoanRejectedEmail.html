@@ -1,0 +1,42 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Gracias por tu interés en Alfa. Lamentablemente, tras revisar tu solicitud, no podemos ofrecerte un préstamo en esta ocasión.
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Compartimos contigo otra opción para obtener el dinero que necesitas: solicitar financiación a Credy. 
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+{{ button(title="Encuentra tu préstamo", url="http://tracking.adcredy.com/SHiN?aff_sub=" + application.number) }}
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Saludos,
+{% include "_email_p_end" %}
+<td style="padding:32px 32px 32px 32px;" align="left">
+    <table cellpadding="0" cellspacing="0" width="100%" class="footer-logo">
+        <tbody>
+            <tr>
+                <td align="left" style="padding:0 0 0 0;font-size:14px;">
+                    <b>Atención al cliente</b><br>
+                    <b style="color:#00b46d;"> ALFA S.L.</b><br><a href="tel:+34{{ company.phone }}" style="color:#111;">{{ company.phone }}</a><br><a
+                    href="mailto:info@alfa.es" style="color:#020202;">info@alfa.es</a>
+                </td>
+                <td align="right">
+                    Días hábiles: 9:00-19:00<br>
+                    Sábados: 9:00-17:00
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    &nbsp;
+    <br>
+    {% include "_email_footer" %}
+</td>
+
+
+{% endblock %}}

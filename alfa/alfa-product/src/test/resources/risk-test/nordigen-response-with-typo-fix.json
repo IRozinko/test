@@ -1,0 +1,64 @@
+{
+  "account_list": [
+    {
+      "account_number": "ES 77 0128 0500 13 0100138902",
+      "holder_name": "DEMO DEMOSSON DEMOSSOVICH",
+      "bank_name": "ABANCA",
+      "currency": "EUR",
+      "period_start": "2015-11-22",
+      "period_end": "2015-11-22",
+      "transaction_list": [
+        {
+          "date": "2015-11-22",
+          "partner": "",
+          "info": "Fake money transfer from\/to:",
+          "sum": -38.7,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2015-11-22",
+          "partner": "",
+          "info": "Fake money transfer from\/to:",
+          "sum": 31.95,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        }
+      ],
+      "red_flags": [
+        "Statement does not contain account balances"
+      ],
+      "pink_flags": [],
+      "factors": {
+        "group_food": 0.57592711160827,
+        "group_utilities": 0.77755724426107968,
+        "group_loans": 0.60200005270528,
+        "group_account_usage": 0.56790577537655,
+        "group_luxury": 0.56450499858003,
+        "group_all": 0,
+        "group_transfers": 0.65902647202728,
+        "group_other": 0.60840912602219,
+        "group_health": 0.55399612610821,
+        "group_financial_behaviour": 0.66648894710591876,
+        "group_income": 0.54326559903994,
+        "group_cash": 0.24799310209662
+      }
+    }
+  ]
+}

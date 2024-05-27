@@ -1,0 +1,11 @@
+{
+  "destination_account": "ES9220389232143123456790",
+  "bank_order_code": "asasdfdf",
+  "currency": "EUR",
+  "time": "08:31:07",
+  "amount": 400,
+  "customer_code": "1",
+  "order_code": "123",
+  "source_account": "ES0800490766712312546987",
+  "date": "2017-08-18"
+}

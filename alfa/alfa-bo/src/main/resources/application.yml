@@ -1,0 +1,39 @@
+server:
+  contextPath: /
+  port: 8090
+  session:
+    timeout: 7200
+    cookie:
+      max-age: 72000
+
+vaadin:
+  servlet:
+    productionMode: false
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5433/loc?readOnly=true
+    driver-class-name: org.postgresql.Driver
+    username: fintech
+    password: fintech
+    hikari:
+      idle-timeout: 60000
+      max-lifetime: 300000
+      minimum-idle: 1
+      maximum-pool-size: 40
+      connection-test-query: "select 1"
+      read-only: true
+
+# to make sure bo doesn't depend on commons/db and use different data source config
+db.user: should-fail
+
+management:
+  context-path: /management
+  address: 127.0.0.1
+  port: 8098
+  security.enabled: false
+
+endpoints:
+  enabled: false
+  health.enabled: true

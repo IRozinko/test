@@ -1,0 +1,1395 @@
+{
+  "instantorRequestId": "128784b4-d6bd-43f6-a186-3b06e59b228b",
+  "processFinishedTime": "2018-11-21T17:31:10.821+01:00",
+  "processStartTime": "2018-11-21T16:30:10.189+01:00",
+  "processStatus": "ok",
+  "reportNumber": 0,
+  "miscParams": [
+    {
+      "name": "clientId",
+      "value": "#clientId#"
+    },
+    {
+      "name": "lastName",
+      "value": "arica"
+    },
+    {
+      "name": "firstName",
+      "value": "cristhian carlos"
+    },
+    {
+      "name": "instantor_request_id",
+      "value": "128784b4-d6bd-43f6-a186-3b06e59b228b"
+    }
+  ],
+  "accountReportList": [
+    {
+      "number": "#iban#",
+      "totalNumberOfTransactions": 100,
+      "wholeMonthsAvailable": 5,
+      "averageNumberOfTransactionsWholeMonth": 27,
+      "averageAmountOfIncomingTransactionsWholeMonth": #averageAmountOfIncomingTransactionsMonth#,
+      "averageAmountOfOutgoingTransactionsWholeMonth": #averageAmountOfOutgoingTransactionsMonth#,
+      "averageMinimumBalanceWholeMonth": 0.65,
+      "cashFlow": [
+        {
+          "calendarMonth": "2018-11-01",
+          "incoming": 2841.22,
+          "outgoing": -2829.36,
+          "minBalance": -14.23,
+          "maxBalance": 571.32,
+          "avgBalance": 65.12,
+          "isWholeMonth": false
+        },
+        {
+          "calendarMonth": "2018-10-01",
+          "incoming": 3223.02,
+          "outgoing": -3223.33,
+          "minBalance": 0,
+          "maxBalance": 478.54,
+          "avgBalance": 71.83,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-09-01",
+          "incoming": 300.1,
+          "outgoing": -452.76,
+          "minBalance": 1.31,
+          "maxBalance": 153.97,
+          "avgBalance": 22.59,
+          "isWholeMonth": true
+        },
+        {
+          "calendarMonth": "2018-08-01",
+          "incoming": 1332.55,
+          "outgoing": -1178.58,
+          "minBalance": 0,
+          "maxBalance": 513.97,
+          "avgBalance": 22.26,
+          "isWholeMonth": false
+        }
+      ]
+    }
+  ],
+  "userDetails": {
+    "name": "D. Cristhian Carlos Arica Soto",
+    "address": [
+      "CL.TEMBLEQUE, 30 3 D 28024 MADRID MADRID"
+    ],
+    "phone": [
+      "MOBILE: *****2284; -"
+    ],
+    "email": [
+      "C*************A@YAHOO.COM"
+    ],
+    "personalIdentifier": [
+      {
+        "name": "dni",
+        "value": "#dni#"
+      }
+    ]
+  },
+  "bankInfo": {
+    "name": "Abanca",
+    "country": "es",
+    "id": "97971add-297a-45ea-ac3b-ba5dea50f8c3"
+  },
+  "accountList": [
+    {
+      "number": "#iban#",
+      "type": "Cuenta Clara Ii",
+      "balance": 250.00,
+      "currency": "EUR",
+      "iban": "#iban#",
+      "holderName": "#name#",
+      "availableAmount": 12.86,
+      "transactionList": [
+        {
+          "onDate": "2018-11-21",
+          "valueDate": "2018-11-21",
+          "bookingDate": "2018-11-21",
+          "description": "Description: 434001007271 SAVSO \\MADRID\\ES1811211200",
+          "amount": -35.93,
+          "balance": 12.86,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-21",
+          "valueDate": "2018-11-21",
+          "bookingDate": "2018-11-21",
+          "description": "Description: 029001220004 ABONO ADEUDO DVTO.",
+          "amount": 20.55,
+          "balance": 48.79,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-21",
+          "valueDate": "2018-11-21",
+          "bookingDate": "2018-11-21",
+          "description": "Description: 029001220004 ABONO ADEUDO DVTO.",
+          "amount": 20.55,
+          "balance": 28.24,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-20",
+          "valueDate": "2018-11-20",
+          "bookingDate": "2018-11-20",
+          "description": "Description: 00398061716 ABONO ADEUDO DVTO.",
+          "amount": 7.57,
+          "balance": 7.69,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-15",
+          "valueDate": "2018-11-20",
+          "bookingDate": "2018-11-15",
+          "description": "Description: 434001007271 UBER TRIP 5YTFS HELP.U help.uber.com 265",
+          "amount": -1,
+          "balance": 0.12,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-15",
+          "valueDate": "2018-11-20",
+          "bookingDate": "2018-11-15",
+          "description": "Description: 434001007271 UBER TRIP 5YTFS HELP.U help.uber.com 265",
+          "amount": -8.59,
+          "balance": 1.12,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-15",
+          "valueDate": "2018-11-20",
+          "bookingDate": "2018-11-15",
+          "description": "Description: 434001007271 UBER TRIP SHR7H HELP.U help.uber.com 265",
+          "amount": -0.5,
+          "balance": 9.71,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-15",
+          "valueDate": "2018-11-20",
+          "bookingDate": "2018-11-15",
+          "description": "Description: 434001007271 MARKET ALUCHE MADRID 870000000",
+          "amount": -27.28,
+          "balance": 10.21,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-16",
+          "valueDate": "2018-11-20",
+          "bookingDate": "2018-11-16",
+          "description": "Description: 434001007271 UBER TRIP SHR7H HELP.U help.uber.com 265",
+          "amount": -9.11,
+          "balance": 37.49,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-17",
+          "valueDate": "2018-11-19",
+          "bookingDate": "2018-11-17",
+          "description": "Description: PAGO",
+          "amount": -16,
+          "balance": 46.6,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-16",
+          "valueDate": "2018-11-16",
+          "bookingDate": "2018-11-16",
+          "description": "Description: 434001007271 COM.EFECT. SISTEMA 4B \\MADRID\\E",
+          "amount": -1.85,
+          "balance": 62.6,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-16",
+          "valueDate": "2018-11-16",
+          "bookingDate": "2018-11-16",
+          "description": "Description: 434001007271 SISTEMA 4B \\MADRID\\ES1811160927",
+          "amount": -310,
+          "balance": 64.45,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-16",
+          "valueDate": "2018-11-16",
+          "bookingDate": "2018-11-16",
+          "description": "Description: YAMIRA SULEIKA DUVAL SAMAME,PAGO",
+          "amount": 50,
+          "balance": 374.45,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-16",
+          "valueDate": "2018-11-16",
+          "bookingDate": "2018-11-16",
+          "description": "Description: YAMIRA SULEIKA DUVAL SAMAME,PAGO",
+          "amount": 160,
+          "balance": 324.45,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-15",
+          "valueDate": "2018-11-16",
+          "bookingDate": "2018-11-15",
+          "description": "Description: 434001007271 KUTXABANK \\MADRID\\ES1811152227",
+          "amount": -120,
+          "balance": 164.45,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-15",
+          "valueDate": "2018-11-15",
+          "bookingDate": "2018-11-15",
+          "description": "Description: Y6011221R IBERCREDITO RAPIDO SL",
+          "amount": 100,
+          "balance": 284.45,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-15",
+          "valueDate": "2018-11-15",
+          "bookingDate": "2018-11-15",
+          "description": "Description: 434001007271 WOK GARDEN, S.L. \\MADRID\\ES1811151637",
+          "amount": -27,
+          "balance": 184.45,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-15",
+          "valueDate": "2018-11-15",
+          "bookingDate": "2018-11-15",
+          "description": "Description: PAGO",
+          "amount": -200,
+          "balance": 211.45,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-15",
+          "valueDate": "2018-11-15",
+          "bookingDate": "2018-11-15",
+          "description": "Description: 9901832392 LOWI.ES",
+          "amount": -9.62,
+          "balance": 411.45,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-15",
+          "valueDate": "2018-11-15",
+          "bookingDate": "2018-11-15",
+          "description": "Description: Y6011221R SAVSO SPAIN, S.L.",
+          "amount": 300,
+          "balance": 421.07,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-14",
+          "valueDate": "2018-11-14",
+          "bookingDate": "2018-11-14",
+          "description": "Description: 434001007271 MERCADONA AV LOS POB\\MADRID\\ES1811141645",
+          "amount": -52.83,
+          "balance": 121.07,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-08",
+          "valueDate": "2018-11-14",
+          "bookingDate": "2018-11-08",
+          "description": "Description: 434001007271 INTERBANK PERU LIMA 000000000",
+          "amount": -44.25,
+          "balance": 173.9,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-13",
+          "valueDate": "2018-11-13",
+          "bookingDate": "2018-11-13",
+          "description": "Description: 434001007271 COM.EFECT. SISTEMA 4B \\MADRID\\E",
+          "amount": -1.85,
+          "balance": 218.15,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-13",
+          "valueDate": "2018-11-13",
+          "bookingDate": "2018-11-13",
+          "description": "Description: 434001007271 SISTEMA 4B \\MADRID\\ES1811130957",
+          "amount": -380,
+          "balance": 220,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-13",
+          "valueDate": "2018-11-13",
+          "bookingDate": "2018-11-13",
+          "description": "Description: Y6011221R ZAPIDO SOFTWARE S.L.",
+          "amount": 500,
+          "balance": 600,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-06",
+          "valueDate": "2018-11-09",
+          "bookingDate": "2018-11-06",
+          "description": "Description: 434001007271 PPI-MoneyMan Madrid 000000000",
+          "amount": -448.4,
+          "balance": 100,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-08",
+          "valueDate": "2018-11-08",
+          "bookingDate": "2018-11-08",
+          "description": "Description: Y6011221R WANDOO FINANCE S.L.",
+          "amount": 100,
+          "balance": 548.4,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-06",
+          "valueDate": "2018-11-06",
+          "bookingDate": "2018-11-06",
+          "description": "Description: pago",
+          "amount": -122.92,
+          "balance": 448.4,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-02",
+          "valueDate": "2018-11-05",
+          "bookingDate": "2018-11-02",
+          "description": "Description: 707119522100 AMORTIZACION DEUDA 44070-1009",
+          "amount": -7.66,
+          "balance": 571.32,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-05",
+          "valueDate": "2018-11-05",
+          "bookingDate": "2018-11-05",
+          "description": "Description: Y6011221R 4FINANCE SPAIN FINANCIAL SERVICES S",
+          "amount": 500,
+          "balance": 578.98,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-05",
+          "valueDate": "2018-11-05",
+          "bookingDate": "2018-11-05",
+          "description": "Description: pago",
+          "amount": -247,
+          "balance": 78.98,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-05",
+          "valueDate": "2018-11-05",
+          "bookingDate": "2018-11-05",
+          "description": "Description: 434001007271 VIVUS \\MADRID\\ES1811050259",
+          "amount": -650,
+          "balance": 325.98,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-05",
+          "valueDate": "2018-11-05",
+          "bookingDate": "2018-11-05",
+          "description": "Description: Y6011221R WANDOO FINANCE S.L.",
+          "amount": 100,
+          "balance": 975.98,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-05",
+          "valueDate": "2018-11-05",
+          "bookingDate": "2018-11-05",
+          "description": "Description: Y6011221R LML INSTALACIONES Y MANTENIMIENTO C B",
+          "amount": 882.55,
+          "balance": 875.98,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-02",
+          "valueDate": "2018-11-02",
+          "bookingDate": "2018-11-02",
+          "description": "Description: 00398061716 OCU EDICIONES, S.A.",
+          "amount": -7.57,
+          "balance": -6.57,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-02",
+          "valueDate": "2018-11-02",
+          "bookingDate": "2018-11-02",
+          "description": "Description: 434001007271 WANDOO FINANCE \\ALCOBENDAS\\ES1811020001",
+          "amount": -100,
+          "balance": 1,
+          "params": []
+        },
+        {
+          "onDate": "2018-11-01",
+          "valueDate": "2018-11-02",
+          "bookingDate": "2018-11-01",
+          "description": "Description: YAMIRA SULEIKA DUVAL SAMAME,PAGO",
+          "amount": 100,
+          "balance": 101,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-26",
+          "valueDate": "2018-10-31",
+          "bookingDate": "2018-10-26",
+          "description": "Description: 434001007271 PPI-MoneyMan Madrid 000000000",
+          "amount": -300,
+          "balance": 1,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-26",
+          "valueDate": "2018-10-31",
+          "bookingDate": "2018-10-26",
+          "description": "Description: 434001007271 -KIWI.COM- 99 BRNO 000000000",
+          "amount": -28,
+          "balance": 301,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-29",
+          "valueDate": "2018-10-29",
+          "bookingDate": "2018-10-29",
+          "description": "Description: Pago",
+          "amount": -40.1,
+          "balance": 329,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-29",
+          "valueDate": "2018-10-29",
+          "bookingDate": "2018-10-29",
+          "description": "Description: 434001007271 COM.EFECT. SERVIRED \\MADRID\\E",
+          "amount": -1.87,
+          "balance": 369.1,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-29",
+          "valueDate": "2018-10-29",
+          "bookingDate": "2018-10-29",
+          "description": "Description: 434001007271 SERVIRED \\MADRID\\ES1810291011",
+          "amount": -380,
+          "balance": 370.97,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-29",
+          "valueDate": "2018-10-29",
+          "bookingDate": "2018-10-29",
+          "description": "Description: Y6011221R NIKE RETAIL B.V.",
+          "amount": 20.97,
+          "balance": 750.97,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-29",
+          "valueDate": "2018-10-29",
+          "bookingDate": "2018-10-29",
+          "description": "Description: Y6011221R ZAPIDO SOFTWARE S.L.",
+          "amount": 400,
+          "balance": 730,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-26",
+          "valueDate": "2018-10-26",
+          "bookingDate": "2018-10-26",
+          "description": "Description: YAMIRA SULEIKA DUVAL SAMAME,PAGO",
+          "amount": 10,
+          "balance": 330,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-25",
+          "valueDate": "2018-10-25",
+          "bookingDate": "2018-10-25",
+          "description": "Description: YAMIRA SULEIKA DUVAL SAMAME,PAGO",
+          "amount": 200,
+          "balance": 320,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-25",
+          "valueDate": "2018-10-25",
+          "bookingDate": "2018-10-25",
+          "description": "Description: Y6011221R ARICA SOTO*CRISTHIAN CARLO",
+          "amount": 120,
+          "balance": 120,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-24",
+          "valueDate": "2018-10-24",
+          "bookingDate": "2018-10-24",
+          "description": "Description: .",
+          "amount": -2.52,
+          "balance": 0,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-22",
+          "valueDate": "2018-10-22",
+          "bookingDate": "2018-10-22",
+          "description": "Description: YAMIRA SULEIKA DUVAL SAMAME,PAGO",
+          "amount": 17,
+          "balance": 2.52,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-22",
+          "valueDate": "2018-10-22",
+          "bookingDate": "2018-10-22",
+          "description": "Description: HCESIGL13092 EDP ENERGIA SA",
+          "amount": -16.15,
+          "balance": -14.48,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-19",
+          "valueDate": "2018-10-19",
+          "bookingDate": "2018-10-19",
+          "description": "Description: YAMIRA SULEIKA DUVAL SAMAME,PAGO",
+          "amount": 39.5,
+          "balance": 1.67,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-19",
+          "valueDate": "2018-10-19",
+          "bookingDate": "2018-10-19",
+          "description": "Description: 029001220004 COMUNIDAD PROPIETARIOS C/ TEMBLEQUE 30",
+          "amount": -20.55,
+          "balance": -37.83,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-19",
+          "valueDate": "2018-10-19",
+          "bookingDate": "2018-10-19",
+          "description": "Description: 029001220004 COMUNIDAD PROPIETARIOS C/ TEMBLEQUE 30",
+          "amount": -20.55,
+          "balance": -17.28,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-18",
+          "valueDate": "2018-10-18",
+          "bookingDate": "2018-10-18",
+          "description": "Description: .",
+          "amount": -10,
+          "balance": 3.27,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-16",
+          "valueDate": "2018-10-16",
+          "bookingDate": "2018-10-16",
+          "description": "Description: .",
+          "amount": -12.5,
+          "balance": 13.27,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-16",
+          "valueDate": "2018-10-16",
+          "bookingDate": "2018-10-16",
+          "description": "Description: 9901832392 LOWI.ES",
+          "amount": -11.47,
+          "balance": 25.77,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-15",
+          "valueDate": "2018-10-15",
+          "bookingDate": "2018-10-15",
+          "description": "Description: PAGO",
+          "amount": -50,
+          "balance": 37.24,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-13",
+          "valueDate": "2018-10-15",
+          "bookingDate": "2018-10-13",
+          "description": "Description: 434001007271 TELEPIZZA CONCEJAL \\MADRID\\ES1810132132",
+          "amount": -11.95,
+          "balance": 87.24,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-13",
+          "valueDate": "2018-10-15",
+          "bookingDate": "2018-10-13",
+          "description": "Description: 434001007271 TELEPIZZA CONCEJAL \\MADRID\\ES1810131809",
+          "amount": -11.4,
+          "balance": 99.19,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-10",
+          "valueDate": "2018-10-10",
+          "bookingDate": "2018-10-10",
+          "description": "Description: 434001007271 TELEPIZZA CONCEJAL \\MADRID\\ES1810101334",
+          "amount": -7.95,
+          "balance": 110.59,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-10",
+          "valueDate": "2018-10-10",
+          "bookingDate": "2018-10-10",
+          "description": "Description: 434001007 REINTEGRO MADRID-P.PIQUE 52743-2716",
+          "amount": -90,
+          "balance": 118.54,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-09",
+          "valueDate": "2018-10-09",
+          "bookingDate": "2018-10-09",
+          "description": "Description: PAGO",
+          "amount": -270,
+          "balance": 208.54,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-08",
+          "valueDate": "2018-10-08",
+          "bookingDate": "2018-10-08",
+          "description": "Description: YAMIRA SULEIKA DUVAL SAMAME,PAGO",
+          "amount": 300,
+          "balance": 478.54,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-02",
+          "valueDate": "2018-10-08",
+          "bookingDate": "2018-10-02",
+          "description": "Description: 434000989376 KIABI.ES MADRID 000000000",
+          "amount": -66,
+          "balance": 178.54,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-05",
+          "valueDate": "2018-10-05",
+          "bookingDate": "2018-10-05",
+          "description": "Description: PAGO",
+          "amount": -250,
+          "balance": 244.54,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-05",
+          "valueDate": "2018-10-05",
+          "bookingDate": "2018-10-05",
+          "description": "Description: .",
+          "amount": 250,
+          "balance": 494.54,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-05",
+          "valueDate": "2018-10-05",
+          "bookingDate": "2018-10-05",
+          "description": "Description: pago",
+          "amount": -100,
+          "balance": 244.54,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-05",
+          "valueDate": "2018-10-05",
+          "bookingDate": "2018-10-05",
+          "description": "Description: pago",
+          "amount": -215.13,
+          "balance": 344.54,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-05",
+          "valueDate": "2018-10-05",
+          "bookingDate": "2018-10-05",
+          "description": "Description: PAGO Y6011221R 611132284",
+          "amount": -6.34,
+          "balance": 559.67,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-05",
+          "valueDate": "2018-10-05",
+          "bookingDate": "2018-10-05",
+          "description": "Description: Y6011221R 4FINANCE SPAIN FINANCIAL SERVICES S",
+          "amount": 500,
+          "balance": 566.01,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-04",
+          "valueDate": "2018-10-04",
+          "bookingDate": "2018-10-04",
+          "description": "Description: pago",
+          "amount": -97.07,
+          "balance": 66.01,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-04",
+          "valueDate": "2018-10-04",
+          "bookingDate": "2018-10-04",
+          "description": "Description: SLMP00762232 Pagamastarde SLU",
+          "amount": -16.83,
+          "balance": 163.08,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-04",
+          "valueDate": "2018-10-04",
+          "bookingDate": "2018-10-04",
+          "description": "Description: Y6011221R WANDOO FINANCE S.L.",
+          "amount": 100,
+          "balance": 179.91,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-03",
+          "valueDate": "2018-10-03",
+          "bookingDate": "2018-10-03",
+          "description": "Description: 434000989376 WWW.TU-CREDITO-RAPID\\MADRID\\ES1810030606",
+          "amount": -34.9,
+          "balance": 79.91,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-03",
+          "valueDate": "2018-10-03",
+          "bookingDate": "2018-10-03",
+          "description": "Description: 434000989376 DEPOR.CANEDA\\SANTIAGO DE CO\\ES1810030135",
+          "amount": -27.67,
+          "balance": 114.81,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-02",
+          "valueDate": "2018-10-02",
+          "bookingDate": "2018-10-02",
+          "description": "Description: 434000989376 TELEPIZZA CONCEJAL \\MADRID\\ES1810021500",
+          "amount": -27.55,
+          "balance": 142.48,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-02",
+          "valueDate": "2018-10-02",
+          "bookingDate": "2018-10-02",
+          "description": "Description: YAMIRA SULEIKA DUVAL SAMAME,PAGO",
+          "amount": 83,
+          "balance": 170.03,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-02",
+          "valueDate": "2018-10-02",
+          "bookingDate": "2018-10-02",
+          "description": "Description: PAGO",
+          "amount": -780,
+          "balance": 87.03,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-02",
+          "valueDate": "2018-10-02",
+          "bookingDate": "2018-10-02",
+          "description": "Description: Pago",
+          "amount": -316.83,
+          "balance": 867.03,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-02",
+          "valueDate": "2018-10-02",
+          "bookingDate": "2018-10-02",
+          "description": "Description: Y6011221R ZAPIDO SOFTWARE S.L.",
+          "amount": 300,
+          "balance": 1183.86,
+          "params": []
+        },
+        {
+          "onDate": "2018-10-02",
+          "valueDate": "2018-10-02",
+          "bookingDate": "2018-10-02",
+          "description": "Description: Y6011221R LML INSTALACIONES Y MANTENIMIENTO C B",
+          "amount": 882.55,
+          "balance": 883.86,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-29",
+          "valueDate": "2018-10-01",
+          "bookingDate": "2018-09-29",
+          "description": "Description: 434000989376 WWW.TU-CREDITO-RAPID\\MADRID\\ES1809292145",
+          "amount": -0.1,
+          "balance": 1.31,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-29",
+          "valueDate": "2018-10-01",
+          "bookingDate": "2018-09-29",
+          "description": "Description: 434000989376 WWW.TUS-DESCUENTOS.E\\MADRID\\ES1809291003",
+          "amount": 0.1,
+          "balance": 1.41,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-29",
+          "valueDate": "2018-10-01",
+          "bookingDate": "2018-09-29",
+          "description": "Description: 434000989376 WWW.TUS-DESCUENTOS.E\\MADRID\\ES1809291003",
+          "amount": -0.1,
+          "balance": 1.31,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-07",
+          "valueDate": "2018-09-07",
+          "bookingDate": "2018-09-07",
+          "description": "Description: 434000989376 WWW.JUST-EAT.ES \\MADRID\\ES1809072041",
+          "amount": -12.9,
+          "balance": 1.41,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-07",
+          "valueDate": "2018-09-07",
+          "bookingDate": "2018-09-07",
+          "description": "Description: PAGO",
+          "amount": -50,
+          "balance": 14.31,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-07",
+          "valueDate": "2018-09-07",
+          "bookingDate": "2018-09-07",
+          "description": "Description: Y6011221R 4FINANCE SPAIN FINANCIAL SERVICES S.A.",
+          "amount": 50,
+          "balance": 64.31,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-06",
+          "valueDate": "2018-09-06",
+          "bookingDate": "2018-09-06",
+          "description": "Description: PAGO",
+          "amount": -200,
+          "balance": 14.31,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-06",
+          "valueDate": "2018-09-06",
+          "bookingDate": "2018-09-06",
+          "description": "Description: 434000989376 SEQURA WORLDWIDE \\BARCELONA\\ES1809061311",
+          "amount": -49.66,
+          "balance": 214.31,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-06",
+          "valueDate": "2018-09-06",
+          "bookingDate": "2018-09-06",
+          "description": "Description: Y6011221R 4FINANCE SPAIN FINANCIAL SERVICES S.A.",
+          "amount": 250,
+          "balance": 263.97,
+          "params": []
+        },
+        {
+          "onDate": "2018-09-05",
+          "valueDate": "2018-09-05",
+          "bookingDate": "2018-09-05",
+          "description": "Description: PAGO",
+          "amount": -140,
+          "balance": 13.97,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-30",
+          "valueDate": "2018-09-05",
+          "bookingDate": "2018-08-30",
+          "description": "Description: BONIFICACION CAMPA?A FIDELIZACION",
+          "amount": 150,
+          "balance": 153.97,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-31",
+          "valueDate": "2018-08-31",
+          "bookingDate": "2018-08-31",
+          "description": "Description: 434000989 REINTEGRO MADRID-P.PIQUE 52743-3767",
+          "amount": -360,
+          "balance": 3.97,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-30",
+          "valueDate": "2018-08-30",
+          "bookingDate": "2018-08-30",
+          "description": "Description: 434000989376 IBERCAJA \\MADRID 24\\ES1808301828",
+          "amount": -500,
+          "balance": 363.97,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-30",
+          "valueDate": "2018-08-30",
+          "bookingDate": "2018-08-30",
+          "description": "Description: pago",
+          "amount": -12,
+          "balance": 863.97,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-30",
+          "valueDate": "2018-08-30",
+          "bookingDate": "2018-08-30",
+          "description": "Description: pagos",
+          "amount": 300,
+          "balance": 875.97,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-30",
+          "valueDate": "2018-08-30",
+          "bookingDate": "2018-08-30",
+          "description": "Description: 434000989376 MINGLIANG TANG SL \\MADRID\\ES1808301349",
+          "amount": -7.79,
+          "balance": 575.97,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-30",
+          "valueDate": "2018-08-30",
+          "bookingDate": "2018-08-30",
+          "description": "Description: Pago",
+          "amount": -298.79,
+          "balance": 583.76,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-30",
+          "valueDate": "2018-08-30",
+          "bookingDate": "2018-08-30",
+          "description": "Description: Y6011221R LML INSTALACIONES Y MANTENIMIENTO C B",
+          "amount": 882.55,
+          "balance": 882.55,
+          "params": []
+        },
+        {
+          "onDate": "2018-08-02",
+          "valueDate": "2018-08-02",
+          "bookingDate": "2018-08-02",
+          "description": "Description: APERTURA CUENTA",
+          "amount": 0,
+          "balance": 0,
+          "params": []
+        }
+      ]
+    }
+  ],
+  "incomeVerification": {
+    "primaryIncome": {
+      "meanAmountPayment": 500,
+      "last45dFound": 1,
+      "avg6m": 166.67,
+      "avg3m": 333.33,
+      "meanTimeBetweenPayments": 31,
+      "trend3m": 1,
+      "daysAgoLastPayment": 16,
+      "trend6m": 2,
+      "amountLastPayment": 500,
+      "spanMonths": 1.03,
+      "trend12m": 4,
+      "avg12m": 83.33,
+      "numPayments": 2,
+      "descriptions": [
+        "Description: Y#######R #FINANCE SPAIN FINANCIAL SERVICES S"
+      ]
+    },
+    "secondaryIncomes": null,
+    "otherRecurIncome": {
+      "meanAmountPayment": 148.83,
+      "last45dFound": 1,
+      "avg6m": 148.83,
+      "avg3m": 297.67,
+      "meanTimeBetweenPayments": 9,
+      "trend3m": 1.81,
+      "daysAgoLastPayment": 5,
+      "trend6m": 3.63,
+      "amountLastPayment": 50,
+      "spanMonths": 1.5,
+      "trend12m": 7.26,
+      "avg12m": 74.42,
+      "numPayments": 6,
+      "descriptions": [
+        "Description: YAMIRA SULEIKA DUVAL SAMAME,PAGO"
+      ]
+    },
+    "version": "1.0"
+  },
+  "insightsRiskFeatures": {
+    "savings": {
+      "sumSavings1W": 0,
+      "numSavings6M": 0,
+      "numSavingsTotal": 0,
+      "sumSavingsTotal": 0,
+      "sumSavings1M": 0,
+      "sumSavings3M": 0,
+      "sumSavings12M": 0,
+      "version": "1.0",
+      "numSavings12M": 0,
+      "numSavings3M": 0,
+      "numSavings1W": 0,
+      "sumSavings6M": 0,
+      "numSavings1M": 0
+    },
+    "incomeTrends": {
+      "avg30dRollingRecent": 2723.79,
+      "avg30dRollingPast": 1971.09,
+      "version": "1.0",
+      "avgRollingTrend": 1.38,
+      "avgRollingDiff": 752.7
+    },
+    "cashFlow": {
+      "positiveCashflow1M": 2809.19,
+      "positiveCashflow1W": 358.67,
+      "negativeCashflow3M": 6285.63,
+      "positiveCashflowTotal": 6096.89,
+      "positiveCashflow3M": 6096.89,
+      "negativeCashflowTotal": 6285.63,
+      "positiveNegativeRatio6M": 0.97,
+      "positiveNegativeRatioTotal": 0.97,
+      "negativeCashflow1W": 819.71,
+      "positiveNegativeRatio3M": 0.97,
+      "negativeCashflow12M": 6285.63,
+      "negativeCashflow1M": 2199.6,
+      "positiveNegativeRatio1W": 0.44,
+      "positiveNegativeRatio1M": 1.28,
+      "version": "1.0",
+      "positiveCashflow6M": 6096.89,
+      "positiveCashflow12M": 6096.89,
+      "positiveNegativeRatio12M": 0.97,
+      "negativeCashflow6M": 6285.63
+    },
+    "accountActivity": {
+      "activityIncTotal": 0.14,
+      "activity12M": 0.16,
+      "activityInc1W": 0.5,
+      "activity1W": 0.5,
+      "activity3M": 0.3,
+      "activity1M": 0.39,
+      "trnsPerDay": 0.56,
+      "activityInc12M": 0.1,
+      "daysSinceLastTrn": 0,
+      "activityOut12M": 0.14,
+      "activityInc1M": 0.32,
+      "activityOut3M": 0.27,
+      "version": "1.0",
+      "daysOfOutTrns": 52,
+      "activityInc3M": 0.19,
+      "activityInc6M": 0.18,
+      "daysOfTrns": 57,
+      "activityOut6M": 0.24,
+      "activityOut1W": 0.5,
+      "activityOut1M": 0.35,
+      "daysSinceFirstTrn": 246,
+      "activityOutTotal": 0.21,
+      "activityTotal": 0.23,
+      "activity6M": 0.25,
+      "daysOfIncTrns": 35
+    },
+    "collections": {
+      "sumCollections3M": 7.66,
+      "numCollectionsTotal": 1,
+      "sumCollections6M": 7.66,
+      "numCollections1W": 0,
+      "sumCollections12M": 7.66,
+      "sumCollectionsTotal": 7.66,
+      "numCollections1M": 1,
+      "version": "1.0",
+      "numCollections6M": 1,
+      "sumCollections1M": 7.66,
+      "sumCollections1W": 0,
+      "numCollections12M": 1,
+      "numCollections3M": 1
+    },
+    "overdrafts": {
+      "numDaysInOverdraft1W": 0.0,
+      "numDaysInOverdraft1M": 0.0,
+      "numOverdraft3M": 4,
+      "numOverdraft6M": 8,
+      "numDaysInOverdraft3M": 30.0,
+      "numDaysInOverdraftTotal": 165.0,
+      "numOverdraftTotal": 10,
+      "numOverdraft12M": 10,
+      "version": "1.0",
+      "numOverdraft1W": 0,
+      "numOverdraft1M": 0,
+      "numDaysInOverdraft12M": 165.0,
+      "numDaysInOverdraft6M": 95.0
+    },
+    "lowBalances": {
+      "daysBalanceBelow7_3M": 10,
+      "daysBalanceBelow0_1W": 0,
+      "daysBalanceBelow0_3M": 4,
+      "daysBalanceBelow7_1W": 1,
+      "daysBalanceBelow0_12M": 5,
+      "version": "1.0",
+      "daysBalanceBelow0_6M": 5,
+      "daysBalanceBelow7_1M": 5,
+      "daysBalanceBelow7_Total": 11,
+      "daysBalanceBelow0_Total": 5,
+      "daysBalanceBelow0_1M": 3,
+      "daysBalanceBelow7_12M": 11,
+      "daysBalanceBelow7_6M": 11
+    },
+    "loans": {
+      "repaymentLoanRatio3M": 0.87,
+      "sumRepayments12M": 1398.4,
+      "repaymentLoanRatioTotal": 0.87,
+      "sumRepaymentsTotal": 1398.4,
+      "sumRepayments1W": 0,
+      "repaymentLoanRatio1W": 0,
+      "sumLoansTotal": 1600,
+      "sumLoans3M": 1600,
+      "sumLoans1W": 300,
+      "version": "1.0",
+      "sumRepayments3M": 1398.4,
+      "repaymentLoanRatio6M": 0.87,
+      "sumLoans1M": 800,
+      "repaymentLoanRatio12M": 0.87,
+      "repaymentLoanRatio1M": 1.75,
+      "sumLoans12M": 1600,
+      "sumRepayments1M": 1398.4,
+      "sumRepayments6M": 1398.4,
+      "sumLoans6M": 1600
+    },
+    "spendingDistribution": {
+      "lastMonthSum(1000 to 2000)": 0,
+      "trend(0 to 5)": 0,
+      "lastMonthSum(50 to 100)": 0,
+      "lastMonthSum(-5 to 0)": -9.59,
+      "trend(20 to 50)": 0.53,
+      "trend(-200 to -100)": null,
+      "lastMonthSum(2000 to inf)": 0,
+      "trend(500 to 1000)": 1,
+      "lastMonthSum(500 to 1000)": 882.55,
+      "lastMonthSum(0 to 5)": 0,
+      "lastMonthSum(20 to 50)": 20.97,
+      "lastMonthSum(-50 to -20)": -166.63,
+      "trend(-inf to -2000)": null,
+      "trend(200 to 500)": 0.82,
+      "version": "1.0",
+      "trend(-1000 to -500)": 0.83,
+      "trend(-100 to -50)": 0.21,
+      "trend(-10 to -5)": 2.98,
+      "trend(10 to 20)": null,
+      "trend(-2000 to -1000)": null,
+      "lastMonthSum(10 to 20)": 0,
+      "lastMonthSum(-200 to -100)": -242.92,
+      "lastMonthSum(-2000 to -1000)": 0,
+      "lastMonthSum(200 to 500)": 700,
+      "lastMonthSum(-inf to -2000)": 0,
+      "trend(5 to 10)": null,
+      "trend(-50 to -20)": 1.27,
+      "trend(100 to 200)": null,
+      "lastMonthSum(5 to 10)": 7.57,
+      "lastMonthSum(100 to 200)": 280,
+      "trend(1000 to 2000)": null,
+      "trend(50 to 100)": 0,
+      "trend(-500 to -200)": 1.96,
+      "lastMonthSum(-1000 to -500)": -650,
+      "trend(-20 to -10)": 0.25,
+      "lastMonthSum(-20 to -10)": -16,
+      "lastMonthSum(-500 to -200)": -2065.4,
+      "trend(-5 to 0)": 47.95,
+      "lastMonthSum(-10 to -5)": -42.55,
+      "trend(2000 to inf)": null,
+      "lastMonthSum(-100 to -50)": -52.83
+    },
+    "accountOverview": {
+      "numAccounts": 1,
+      "numAccountTypes": 1,
+      "numAccountHolders": 1,
+      "numCurrencies": 1,
+      "version": "1.0"
+    },
+    "gamblingVsIncome": {
+      "gamblingIncomeRatio3M": 0,
+      "gamblingIncomeRatio1W": 0,
+      "sumGambling1W": 0,
+      "gamblingIncomeRatioTotal": 0,
+      "gamblingIncomeRatio12M": 0,
+      "sumGamblingTotal": 0,
+      "version": "1.0",
+      "gamblingIncomeRatio1M": 0,
+      "sumGambling6M": 0,
+      "sumGambling12M": 0,
+      "gamblingIncomeRatio6M": 0,
+      "sumGambling3M": 0,
+      "sumGambling1M": 0
+    },
+    "atmWithdrawals": {
+      "atmExpensesRatioTotal": 0,
+      "sumAtmWithdrawals6M": 0,
+      "atmExpensesRatio1W": 0,
+      "atmExpensesRatio1M": 0,
+      "atmExpensesRatio6M": 0,
+      "sumAtmWithdrawals3M": 0,
+      "sumAtmWithdrawalsTotal": 0,
+      "atmExpensesRatio3M": 0,
+      "version": "1.0",
+      "sumAtmWithdrawals1W": 0,
+      "sumAtmWithdrawals1M": 0,
+      "sumAtmWithdrawals12M": 0,
+      "atmExpensesRatio12M": 0
+    },
+    "monthlyPaymentVariance": {
+      "numMonthlyExpenseStreams": 1,
+      "maxNormStdMonthlyExpenseStreams": 0.71,
+      "maxStdMonthlyExpenseStreams": 154.83,
+      "avgNormStdMonthlyExpenseStreams": 0.71,
+      "avgStdMonthlyExpenseStreams": 154.83,
+      "avgStdTiming": 0.31,
+      "version": "1.0",
+      "maxStdTiming": 0.31
+    },
+    "balances": {
+      "stdBalance3M": 437.14,
+      "meanBalance1W": 189.63,
+      "maxBalance12M": 2370.41,
+      "minBalance1M": 0.88,
+      "meanBalance6M": 40.8,
+      "minBalance3M": -236.96,
+      "maxBalance1M": 905.88,
+      "lastBalance": 0,
+      "maxBalance6M": 2370.41,
+      "changeInFirstLastBalance": 177.22,
+      "stdBalance1W": 189.77,
+      "meanBalance12M": -9.75,
+      "meanBalance1M": 115.07,
+      "meanBalance3M": 179.1,
+      "maxBalance3M": 1963.29,
+      "maxBalance1W": 405.88,
+      "version": "1.0",
+      "firstBalance": -177.22,
+      "meanBalanceTotal": -9.75,
+      "stdBalance1M": 198.62,
+      "stdBalance6M": 431.3,
+      "maxBalanceTotal": 2370.41,
+      "minBalance6M": -237.17,
+      "minBalance12M": -237.22,
+      "stdBalance12M": 377.97,
+      "stdBalanceTotal": 377.97,
+      "minBalanceTotal": -237.22,
+      "minBalance1W": 0.88
+    },
+    "transactionStats": {
+      "numIncTrns12M": 53.0,
+      "numUniqueIncTrns1W": 2,
+      "numTrnsTotal": 137,
+      "numUniqueTrns1W": 4,
+      "numUniqueIncTrns1M": 3,
+      "meanIncAmount1W": 282.0,
+      "sumAmounts12M": 358.1,
+      "numUniqueOutTrnsTotal": 12,
+      "meanAmount1M": -7.19,
+      "meanIncAmount1M": 302.69,
+      "numUniqueTrns3M": 10,
+      "sumAmounts3M": 354.84,
+      "maxIncAmount1M": 900.0,
+      "numUniqueOutTrns1W": 2,
+      "meanAmount1W": 7.92,
+      "meanOutAmount3M": 234.07,
+      "numOutTrns12M": 84.0,
+      "meanAmountTotal": 2.61,
+      "numOutTrns6M": 75.0,
+      "sumIncAmounts1M": 3935.0,
+      "sumOutAmounts3M": 10065.16,
+      "meanOutAmount6M": 230.33,
+      "maxIncAmount1W": 400.0,
+      "sumOutAmountsTotal": 18564.48,
+      "numTrns3M": 68,
+      "sumOutAmounts12M": 18564.48,
+      "numTrns12M": 137,
+      "sumIncAmountsTotal": 18922.58,
+      "maxOutAmount1M": 800.0,
+      "maxIncAmount3M": 1020.0,
+      "sumIncAmounts12M": 18922.58,
+      "sumAmountsTotal": 358.1,
+      "meanAmount12M": 2.61,
+      "numIncTrns3M": 25.0,
+      "numUniqueOutTrns12M": 12,
+      "numTrns6M": 125,
+      "meanOutAmount1W": 187.86,
+      "numIncTrnsTotal": 53.0,
+      "meanOutAmount12M": 221.01,
+      "numIncTrns1M": 13.0,
+      "version": "1.0",
+      "numUniqueOutTrns3M": 6,
+      "meanAmount6M": 2.86,
+      "meanOutAmountTotal": 221.01,
+      "numOutTrns1M": 19.0,
+      "numIncTrns1W": 5.0,
+      "numTrns1W": 12,
+      "maxOutAmount1W": 400.0,
+      "maxOutAmount12M": 2599.0,
+      "numUniqueOutTrns6M": 9,
+      "sumIncAmounts3M": 10420.0,
+      "numOutTrns1W": 7.0,
+      "meanIncAmount6M": 352.65,
+      "meanOutAmount1M": 219.21,
+      "sumIncAmounts1W": 1410.0,
+      "numUniqueTrns12M": 21,
+      "numOutTrns3M": 43.0,
+      "numUniqueTrns6M": 18,
+      "meanIncAmount12M": 357.03,
+      "maxIncAmount12M": 2607.58,
+      "numUniqueIncTrns3M": 4,
+      "sumOutAmounts6M": 17274.53,
+      "sumAmounts1M": -230.0,
+      "sumAmounts6M": 358.05,
+      "maxIncAmount6M": 2607.58,
+      "numUniqueTrns1M": 5,
+      "meanIncAmount3M": 416.8,
+      "numOutTrnsTotal": 84.0,
+      "sumIncAmounts6M": 17632.58,
+      "numUniqueOutTrns1M": 2,
+      "meanIncAmountTotal": 357.03,
+      "sumOutAmounts1M": 4165.0,
+      "maxOutAmount3M": 1000.0,
+      "maxOutAmount6M": 2599.0,
+      "sumAmounts1W": 95.0,
+      "numUniqueTrnsTotal": 21,
+      "maxIncAmountTotal": 2607.58,
+      "numUniqueIncTrns6M": 9,
+      "numIncTrns6M": 50.0,
+      "sumOutAmounts1W": 1315.0,
+      "maxOutAmountTotal": 2599.0,
+      "numUniqueIncTrns12M": 9,
+      "meanAmount3M": 5.22,
+      "numUniqueIncTrnsTotal": 9,
+      "numTrns1M": 32
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+¡Enhorabuena! Tu solicitud ha sido aprobada.
+<br>
+Adjunto puedes encontrar el contrato con las condiciones que podemos ofrecer.
+<br>
+{% include "_email_p_end" %}
+
+
+{% include "_email_p_begin" %}
+Para recibir tu dinero, debes leer el contrato y aceptar las condiciones pulsando el siguiente enlace.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+
+<tr>
+    <td bgcolor="#f5f5f5">
+        <table width="536" border="0" cellspacing="0" cellpadding="0" style="margin-left: 32px; margin-right: 32px;" >
+            <tr>
+                <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-left: 15px; border-bottom: 2px solid #eaeaea; text-align:left; font-weight: bold; line-height: 1.5;">Préstamo:</td>
+                <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-right: 15px; border-bottom: 2px solid #eaeaea; text-align:right; font-weight: bold">{{application.offeredPrincipal | numberformat(currencyFormat)}} €</td>
+            </tr>
+            <tr>
+                <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-left: 15px; border-bottom: 2px solid #eaeaea; text-align:left; font-weight: bold; line-height: 1.5;">Comisión:</td>
+                <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-right: 15px; border-bottom: 2px solid #eaeaea; text-align:right; font-weight: bold">{{application.offeredInterest | numberformat(currencyFormat)}} €</td>
+            </tr>
+            <tr>
+                <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-left: 15px; border-bottom: 2px solid #eaeaea; text-align:left; font-weight: bold; line-height: 1.5;">Total a devolver:</td>
+                <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-right: 15px; border-bottom: 2px solid #eaeaea; text-align:right; font-weight: bold">{{application.offeredTotal | numberformat(currencyFormat)}} €</td>
+            </tr>
+            <tr>
+                <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-left: 15px; border-bottom: 2px solid #eaeaea; text-align:left; font-weight: bold; line-height: 1.5;">Duración:</td>
+                <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-right: 15px; border-bottom: 2px solid #eaeaea; text-align:right; font-weight: bold">{{application.offeredPeriodCount}} días</td>
+            </tr>
+            <tr>
+                <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-left: 15px; border-bottom: 2px solid #eaeaea; text-align:left; font-weight: bold; line-height: 1.5;">TIN anual:</td>
+                <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-right: 15px; border-bottom: 2px solid #eaeaea; text-align:right; font-weight: bold">{{application.nominalApr}} %</td>
+            </tr>
+            <tr>
+                <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-left: 15px; text-align:left; font-weight: bold; line-height: 1.5;">TAE:</td>
+                <td style="font-family: 'Karla', sans-serif; padding-bottom:5px; padding-top:5px; padding-right: 15px; text-align:right; font-weight: bold">{{application.effectiveApr}} %</td>
+            </tr>
+        </table>
+    </td>
+</tr>
+
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+
+{{ button(title="He leído y acepto las condiciones", url=company.webBaseUrl + "/gracias?code=" + application.longApproveCode) }}
+{% include "_email_p_end" %}
+
+{% include "_cs_email_signature" %}
+
+{% endblock %}}

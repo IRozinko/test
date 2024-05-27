@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "product": "movex_dbt",
+  "order_id": "1537873308",
+  "bank_order_id": "1537873308",
+  "date": "2018-09-25",
+  "time": "11:01:32",
+  "amount": 15500,
+  "currency": "EUR",
+  "customer_id": "1",
+  "customer_account": "ES1521047047332490142917",
+  "source_account": "ES8200810593280001203422",
+  "src_account_balance": 5228,
+  "cancelled": false,
+  "source_bank_id": 3
+}

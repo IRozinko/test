@@ -1,0 +1,27 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Recuerda que debes aceptar el préstamo para que hagamos la transferencia a tu cuenta bancaria.  
+{% include "_email_p_begin" %}
+Puedes aceptarlo desde tu <a href="{{ company.webBaseUrl }}/login" target="_blank" style="color:#00b46d;">Área de Usuario</a> en ALFA o bien enviando un SMS al {{company.incomingSmsNumber}} con la palabra ACEPTO.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+{{ button(title="Área de Usuario", url="{{ company.webBaseUrl }}/login") }}
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Si tienes cualquier duda, pregúntanosla. 
+{% include "_email_p_end" %}
+
+
+{% include "_cs_email_signature" %}
+
+{% endblock %}}

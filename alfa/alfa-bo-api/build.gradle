@@ -1,0 +1,12 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile project(":platform:backoffice:bo-api-server")
+    compile project(':platform:marketing:marketing-bo-api')
+    compile project(":spain-common:spain-asnef:spain-asnef-bo-api")
+    compile project(":third-party:webitel:webitel-bo-api")
+    compile project(":alfa:alfa-bo-model")
+    compile project(":alfa:alfa-product")
+    compile libs.springBootWeb
+    testCompile project(":platform:common:integration-test")
+}

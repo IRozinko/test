@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:InformeListaOperaciones xmlns:ns2="http://experian.servicios.CAIS.V2">
+    <ns2:IdSuscriptor>07453376</ns2:IdSuscriptor>
+    <ns2:ReferenciaConsulta>20170721161415IuiiJa</ns2:ReferenciaConsulta>
+    <ns2:Error>
+        <ns2:Codigo>0000</ns2:Codigo>
+        <ns2:Descripcion>OK</ns2:Descripcion>
+    </ns2:Error>
+    <ns2:MaximoRegistrosPagina>5000</ns2:MaximoRegistrosPagina>
+    <ns2:NumeroRegistrosDevueltos>1</ns2:NumeroRegistrosDevueltos>
+    <ns2:ExistenMas>false</ns2:ExistenMas>
+    <ns2:Documento>
+        <ns2:TipoDocumento>
+            <ns2:Codigo>01</ns2:Codigo>
+            <ns2:Descripcion>NIF</ns2:Descripcion>
+        </ns2:TipoDocumento>
+        <ns2:NumeroDocumento>77404869W</ns2:NumeroDocumento>
+        <ns2:PaisDocumento>
+            <ns2:Codigo>724</ns2:Codigo>
+            <ns2:Descripcion>ESPAÑA</ns2:Descripcion>
+        </ns2:PaisDocumento>
+    </ns2:Documento>
+    <ns2:Registros>
+        <ns2:TBloqueOperacion>
+            <ns2:IdOperacion>2041628112</ns2:IdOperacion>
+            <ns2:TipoProductoFinanciado>
+                <ns2:Codigo>26</ns2:Codigo>
+                <ns2:Descripcion>Descubierto en Cuenta Corriente</ns2:Descripcion>
+            </ns2:TipoProductoFinanciado>
+            <ns2:SituacionPago>
+                <ns2:Codigo>6</ns2:Codigo>
+                <ns2:Descripcion>Fallida</ns2:Descripcion>
+            </ns2:SituacionPago>
+            <ns2:SaldoImpagado>600.0</ns2:SaldoImpagado>
+            <ns2:TipoInterviniente>
+                <ns2:Codigo>1</ns2:Codigo>
+                <ns2:Descripcion>Titular</ns2:Descripcion>
+            </ns2:TipoInterviniente>
+            <ns2:NumeroCuotasImpagadas>1</ns2:NumeroCuotasImpagadas>
+            <ns2:ImporteCuota>0</ns2:ImporteCuota>
+            <ns2:FrecuenciaPago>
+                <ns2:Codigo>99</ns2:Codigo>
+                <ns2:Descripcion>No consta</ns2:Descripcion>
+            </ns2:FrecuenciaPago>
+            <ns2:FechaInicio>
+                <ns2:DD>23</ns2:DD>
+                <ns2:MM>02</ns2:MM>
+                <ns2:AAAA>2005</ns2:AAAA>
+            </ns2:FechaInicio>
+            <ns2:FechaFin>
+                <ns2:DD></ns2:DD>
+                <ns2:MM></ns2:MM>
+                <ns2:AAAA></ns2:AAAA>
+            </ns2:FechaFin>
+            <ns2:Informante>COOPERATIVA DE CREDI</ns2:Informante>
+        </ns2:TBloqueOperacion>
+    </ns2:Registros>
+</ns2:InformeListaOperaciones>

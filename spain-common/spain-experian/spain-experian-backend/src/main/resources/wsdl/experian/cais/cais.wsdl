@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="ServicioInformes" targetNamespace="http://experian.servicios.CAIS"
+                  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:tns="http://experian.servicios.CAIS"
+                  xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+>
+    <wsdl:types>
+        <xs:schema elementFormDefault="qualified" targetNamespace="http://experian.servicios.CAIS"
+                   xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:import namespace="http://experian.servicios.CAIS.V2"/>
+            <xs:import namespace="http://experian.servicios.CAIS.V1"/>
+            <xs:element name="GenerarInforme">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" maxOccurs="1" name="Peticion" type="tns:PeticionInforme"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="PeticionInforme">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdUsuarioServicio" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="ClaveServicio" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="TipoInforme" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Version" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Parametros" type="tns:ArrayOfTParametro"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ArrayOfTParametro">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="TParametro" nillable="true"
+                                type="tns:TParametro"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TParametro">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Nombre" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Valor" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="GenerarInformeResponse">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element minOccurs="0" maxOccurs="1" name="GenerarInformeResult" type="tns:Informe"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="Informe">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Error" type="tns:ErrorServicio"/>
+                    <xs:choice minOccurs="1" maxOccurs="1">
+                        <xs:element minOccurs="0" maxOccurs="1" ref="q1:InformeResumen"
+                                    xmlns:q1="http://experian.servicios.CAIS.V2"/>
+                        <xs:element minOccurs="0" maxOccurs="1" ref="q2:InformeListaCandidatos"
+                                    xmlns:q2="http://experian.servicios.CAIS.V2"/>
+                        <xs:element minOccurs="0" maxOccurs="1" ref="q3:InformeListaOperaciones"
+                                    xmlns:q3="http://experian.servicios.CAIS.V1"/>
+                        <xs:element minOccurs="0" maxOccurs="1" ref="q4:InformeDetalleOperaciones"
+                                    xmlns:q4="http://experian.servicios.CAIS.V1"/>
+                        <xs:element minOccurs="0" maxOccurs="1" ref="q5:InformeDetalleOperaciones"
+                                    xmlns:q5="http://experian.servicios.CAIS.V2"/>
+                        <xs:element minOccurs="0" maxOccurs="1" ref="q6:InformeHistoriaOperacion"
+                                    xmlns:q6="http://experian.servicios.CAIS.V1"/>
+                        <xs:element minOccurs="0" maxOccurs="1" ref="q7:InformeHistoriaOperacion"
+                                    xmlns:q7="http://experian.servicios.CAIS.V2"/>
+                        <xs:element minOccurs="0" maxOccurs="1" ref="q8:InformeInformacionRapida"
+                                    xmlns:q8="http://experian.servicios.CAIS.V1"/>
+                        <xs:element minOccurs="0" maxOccurs="1" ref="q9:InformeInformacionRapida"
+                                    xmlns:q9="http://experian.servicios.CAIS.V2"/>
+                        <xs:element minOccurs="0" maxOccurs="1" ref="q10:InformeListaCandidatos"
+                                    xmlns:q10="http://experian.servicios.CAIS.V1"/>
+                        <xs:element minOccurs="0" maxOccurs="1" ref="q11:InformeListaOperaciones"
+                                    xmlns:q11="http://experian.servicios.CAIS.V2"/>
+                        <xs:element minOccurs="0" maxOccurs="1" ref="q12:InformeResumen"
+                                    xmlns:q12="http://experian.servicios.CAIS.V1"/>
+                    </xs:choice>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ErrorServicio">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema elementFormDefault="qualified" targetNamespace="http://experian.servicios.CAIS.V2"
+                   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://experian.servicios.CAIS.V2">
+            <xs:element name="InformeResumen" type="tns:InformeResumen"/>
+            <xs:complexType name="InformeResumen">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdSuscriptor" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="ReferenciaConsulta" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Error" type="tns:TError"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Documento" type="tns:TDocumento"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Resumen" type="tns:TBloqueResumen"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TError">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TDocumento">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="TipoDocumento" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="NumeroDocumento" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="PaisDocumento" type="tns:TTipoCodigo"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TTipoCodigo">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TBloqueResumen">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Nombre" type="tns:TNombre"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Direccion" type="tns:TDireccion"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroTotalOperacionesImpagadas" nillable="true"
+                                type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroTotalCuotasImpagadas" nillable="true"
+                                type="xs:int"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="PeorSituacionPago" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="PeorSituacionPagoHistorica" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ImporteTotalImpagado" nillable="true"
+                                type="xs:decimal"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="MaximoImporteImpagado" nillable="true"
+                                type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaMaximoImporteImpagado" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaPeorSituaiconPagoHistorica" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaAltaOperacionMasAntigua" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaUltimaActualizacion" type="tns:TFecha"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TNombre">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Nombre1" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Nombre2" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="ApellidosRazonSocial" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TDireccion">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Direccion" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="NombreLocalidad" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="CodigoLocalidad" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Provincia" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="CodigoPostal" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TFecha">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="DD" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="MM" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="AAAA" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="InformeListaCandidatos" type="tns:InformeListaCandidatos"/>
+            <xs:complexType name="InformeListaCandidatos">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdSuscriptor" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="ReferenciaConsulta" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Error" type="tns:TError"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="MaximoRegistrosPagina" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroRegistrosDevueltos" nillable="true"
+                                type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ExistenMas" nillable="true" type="xs:boolean"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Registros" type="tns:ArrayOfTBloqueCandidato"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ArrayOfTBloqueCandidato">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="TBloqueCandidato" nillable="true"
+                                type="tns:TBloqueCandidato"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TBloqueCandidato">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Documento" type="tns:TDocumento"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Nombre" type="tns:TNombre"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Direccion" type="tns:TDireccion"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="InformeDetalleOperaciones" type="tns:InformeDetalleOperaciones"/>
+            <xs:complexType name="InformeDetalleOperaciones">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdSuscriptor" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="ReferenciaConsulta" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Error" type="tns:TError"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="MaximoRegistrosPagina" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroRegistrosDevueltos" nillable="true"
+                                type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ExistenMas" nillable="true" type="xs:boolean"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Documento" type="tns:TDocumento"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Registros" type="tns:ArrayOfTBloqueDetalleOperacion"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ArrayOfTBloqueDetalleOperacion">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="TBloqueDetalleOperacion" nillable="true"
+                                type="tns:TBloqueDetalleOperacion"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TBloqueDetalleOperacion">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdOperacion" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Nombre" type="tns:TNombre"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Direccion" type="tns:TDireccion"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaInicio" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaFin" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="TipoProductoFinanciado" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ImporteFinanciado" nillable="true" type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="SituacionPago" type="tns:ArrayOfTTipoCodigo"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="PeorSituacionPagoHistorica" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ImporteImpagadoTotal" nillable="true"
+                                type="xs:decimal"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="SaldoImpagado" nillable="true" type="xs:decimal"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroCuotasImpagadas" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ImporteCuota" nillable="true" type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FrecuenciaPago" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="TipoInterviniente" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="MaximoImporteImpagado" nillable="true"
+                                type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaMaximoImporteImpagado" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaPrimerVencimientoImpagado" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaUltimoVencimientoImpagado" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaUltimaActualizacion" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaAlta" type="tns:TFecha"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ImporteAlta" nillable="true" type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Informante" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ArrayOfTTipoCodigo">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="TTipoCodigo" nillable="true"
+                                type="tns:TTipoCodigo"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="InformeHistoriaOperacion" type="tns:InformeHistoriaOperacion"/>
+            <xs:complexType name="InformeHistoriaOperacion">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdSuscriptor" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="ReferenciaConsulta" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Error" type="tns:TError"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdOperacion" type="xs:string"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="MaximoRegistrosPagina" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroRegistrosDevueltos" nillable="true"
+                                type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ExistenMas" nillable="true" type="xs:boolean"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Documento" type="tns:TDocumento"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Registros"
+                                type="tns:ArrayOfTBloqueHistoriaOperacion"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ArrayOfTBloqueHistoriaOperacion">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="TBloqueHistoriaOperacion" nillable="true"
+                                type="tns:TBloqueHistoriaOperacion"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TBloqueHistoriaOperacion">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="SituacionPago" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ImportePendiente" nillable="true" type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Fecha" type="tns:TFecha"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroCuotasImpagadas" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="SaldoImpagado" nillable="true" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="InformeInformacionRapida" type="tns:InformeInformacionRapida"/>
+            <xs:complexType name="InformeInformacionRapida">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdSuscriptor" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="ReferenciaConsulta" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Error" type="tns:TError"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Documento" type="tns:TDocumento"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Existe" type="tns:TBloqueExisteCandidato"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TBloqueExisteCandidato">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="InformeListaOperaciones" type="tns:InformeListaOperaciones"/>
+            <xs:complexType name="InformeListaOperaciones">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdSuscriptor" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="ReferenciaConsulta" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Error" type="tns:TError"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="MaximoRegistrosPagina" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroRegistrosDevueltos" nillable="true"
+                                type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ExistenMas" nillable="true" type="xs:boolean"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Documento" type="tns:TDocumento"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Registros" type="tns:ArrayOfTBloqueOperacion"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ArrayOfTBloqueOperacion">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="TBloqueOperacion" nillable="true"
+                                type="tns:TBloqueOperacion"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TBloqueOperacion">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdOperacion" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="TipoProductoFinanciado" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="SituacionPago" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="SaldoImpagado" nillable="true" type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="TipoInterviniente" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroCuotasImpagadas" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ImporteCuota" nillable="true" type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FrecuenciaPago" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaInicio" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaFin" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Informante" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+        <xs:schema elementFormDefault="qualified" targetNamespace="http://experian.servicios.CAIS.V1"
+                   xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://experian.servicios.CAIS.V1">
+            <xs:element name="InformeListaOperaciones" type="tns:InformeListaOperaciones"/>
+            <xs:complexType name="InformeListaOperaciones">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdSuscriptor" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="ReferenciaConsulta" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Error" type="tns:TError"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="MaximoRgistrosPagina" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroRegistrosDevueltos" nillable="true"
+                                type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ExistenMas" nillable="true" type="xs:boolean"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Documento" type="tns:TDocumento"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Registros" type="tns:ArrayOfTBloqueOperacion"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TError">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TDocumento">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="TipoDocumento" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="NumeroDocumento" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="PaisDocumento" type="tns:TTipoCodigo"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TTipoCodigo">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ArrayOfTBloqueOperacion">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="TBloqueOperacion" nillable="true"
+                                type="tns:TBloqueOperacion"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TBloqueOperacion">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdOperacion" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="TipoProductoFinanciado" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="SituacionPago" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="SaldoImpagado" nillable="true" type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="TipoInterviniente" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroCuotasImpagadas" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ImporteCuota" nillable="true" type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FrecuenciaPago" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaInicio" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaFin" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Informante" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TFecha">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="DD" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="MM" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="AAAA" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="InformeDetalleOperaciones" type="tns:InformeDetalleOperaciones"/>
+            <xs:complexType name="InformeDetalleOperaciones">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdSuscriptor" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="ReferenciaConsulta" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Error" type="tns:TError"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="MaximoRegistrosPagina" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroRegistrosDevueltos" nillable="true"
+                                type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ExistenMas" nillable="true" type="xs:boolean"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Documento" type="tns:TDocumento"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Registros" type="tns:ArrayOfTBloqueDetalleOperacion"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ArrayOfTBloqueDetalleOperacion">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="TBloqueDetalleOperacion" nillable="true"
+                                type="tns:TBloqueDetalleOperacion"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TBloqueDetalleOperacion">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdOperacion" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Nombre" type="tns:TNombre"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Direccion" type="tns:TDireccion"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaInicio" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaFin" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="TipoProductoFinanciado" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ImporteFinanciado" nillable="true" type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="SituacionPago" type="tns:ArrayOfTTipoCodigo"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="PeorSituacionPagoHistorica" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ImporteImpagadoTotal" nillable="true"
+                                type="xs:decimal"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="SaldoImpagado" nillable="true" type="xs:decimal"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroCuotasImpagadas" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ImporteCuota" nillable="true" type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FrecuenciaPago" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="TipoInterviniente" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="MaximoImporteImpagado" nillable="true"
+                                type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaMaximoImporteImpagado" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaPrimerVencimientoImpagado" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaUltimoVencimientoImpagado" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaUltimaActualizacion" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaAlta" type="tns:TFecha"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ImporteAlta" nillable="true" type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Informante" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TNombre">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Nombre1" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Nombre2" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="ApellidosRazonSocial" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TDireccion">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Direccion" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="NombreLocalidad" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="CodigoLocalidad" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Provincia" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="CodigoPostal" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ArrayOfTTipoCodigo">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="TTipoCodigo" nillable="true"
+                                type="tns:TTipoCodigo"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="InformeHistoriaOperacion" type="tns:InformeHistoriaOperacion"/>
+            <xs:complexType name="InformeHistoriaOperacion">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdSuscriptor" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="ReferenciaConsulta" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Error" type="tns:TError"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdOperacion" type="xs:string"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="MaximoRegistrosPagina" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroRegistrosDevuletos" nillable="true"
+                                type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ExistenMas" nillable="true" type="xs:boolean"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Documento" type="tns:TDocumento"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Registros"
+                                type="tns:ArrayOfTBloqueHistoriaOperacion"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ArrayOfTBloqueHistoriaOperacion">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="TBloqueHistoriaOperacion" nillable="true"
+                                type="tns:TBloqueHistoriaOperacion"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TBloqueHistoriaOperacion">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="SituacionPago" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ImportePendiente" nillable="true" type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Fecha" type="tns:TFecha"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroCuotasImpagadas" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="SaldoImpagado" nillable="true" type="xs:decimal"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="InformeInformacionRapida" type="tns:InformeInformacionRapida"/>
+            <xs:complexType name="InformeInformacionRapida">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdSuscriptor" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="ReferenciaConsulta" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Error" type="tns:TError"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Documento" type="tns:TDocumento"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Existe" type="tns:TBloqueExisteCandidato"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TBloqueExisteCandidato">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Codigo" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Descripcion" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="InformeListaCandidatos" type="tns:InformeListaCandidatos"/>
+            <xs:complexType name="InformeListaCandidatos">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdSuscriptor" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="ReferenciaConsulta" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Error" type="tns:TError"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="MaximoRegistrosPagina" nillable="true" type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroRegistrosDevueltos" nillable="true"
+                                type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ExistenMas" nillable="true" type="xs:boolean"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Registros" type="tns:ArrayOfTBloqueCandidato"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="ArrayOfTBloqueCandidato">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="unbounded" name="TBloqueCandidato" nillable="true"
+                                type="tns:TBloqueCandidato"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TBloqueCandidato">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Documento" type="tns:TDocumento"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Nombre" type="tns:TNombre"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Direccion" type="tns:TDireccion"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="InformeResumen" type="tns:InformeResumen"/>
+            <xs:complexType name="InformeResumen">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="IdSuscriptor" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="ReferenciaConsulta" type="xs:string"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Error" type="tns:TError"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Documento" type="tns:TDocumento"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Resumen" type="tns:TBloqueResumen"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="TBloqueResumen">
+                <xs:sequence>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Nombre" type="tns:TNombre"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="Direccion" type="tns:TDireccion"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroTotalOperacionesImpagadas" nillable="true"
+                                type="xs:int"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="NumeroTotalCuotasImpagadas" nillable="true"
+                                type="xs:int"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="PeorSituacionPago" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="PeorSituacionPagoHistorica" type="tns:TTipoCodigo"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="ImporteTotalImpagado" nillable="true"
+                                type="xs:decimal"/>
+                    <xs:element minOccurs="1" maxOccurs="1" name="MaximoImporteImpagado" nillable="true"
+                                type="xs:decimal"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaMaximoImporteImpagado" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaPeorSituaiconPagoHistorica" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaAltaOperacionMasAntigua" type="tns:TFecha"/>
+                    <xs:element minOccurs="0" maxOccurs="1" name="FechaUltimaActualizacion" type="tns:TFecha"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="ServicioInformes_GenerarInforme_InputMessage">
+        <wsdl:part name="parameters" element="tns:GenerarInforme"/>
+    </wsdl:message>
+    <wsdl:message name="ServicioInformes_GenerarInforme_OutputMessage">
+        <wsdl:part name="parameters" element="tns:GenerarInformeResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="ServicioInformes">
+        <wsdl:operation name="GenerarInforme">
+            <wsdl:input wsaw:Action="http://experian.servicios.CAIS/ServicioInformes/GenerarInforme"
+                        message="tns:ServicioInformes_GenerarInforme_InputMessage"/>
+            <wsdl:output wsaw:Action="http://experian.servicios.CAIS/ServicioInformes/GenerarInformeResponse"
+                         message="tns:ServicioInformes_GenerarInforme_OutputMessage"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="BasicHttpBinding_ServicioInformes" type="tns:ServicioInformes">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="GenerarInforme">
+            <soap:operation soapAction="http://experian.servicios.CAIS/ServicioInformes/GenerarInforme"
+                            style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="ServicioInformes">
+        <wsdl:port name="BasicHttpBinding_ServicioInformes" binding="tns:BasicHttpBinding_ServicioInformes">
+            <soap:address location="http://10.161.91.66:8300/CaisWebService/ServicioInformes.svc"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

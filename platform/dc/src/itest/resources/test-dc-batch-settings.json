@@ -1,0 +1,71 @@
+{
+  "portfolios": [
+    {
+      "name": "Current",
+      "initialStatus": "NoStatus",
+      "statuses": [
+        {
+          "name": "NoStatus",
+          "priority": 1000
+        }
+      ],
+      "triggers": [
+        {
+          "template": "MoveToCollections"
+        }
+      ],
+      "agentActions": []
+    },
+    {
+      "name": "Collections",
+      "statuses": [
+        {
+          "name": "NoStatus",
+          "priority": 1000
+        }
+      ],
+      "triggers": [],
+      "agentActions": []
+    }
+  ],
+  "triggerTemplates": {
+    "MoveToCollections": {
+      "name": "MoveToCollections",
+      "actions": [
+        {
+          "type": "ChangeStatus",
+          "params": {
+            "status": "NoStatus"
+          }
+        },
+        {
+          "type": "ChangePortfolio",
+          "params": {
+            "portfolio": "Collections",
+            "assignmentMode": "batch",
+            "ignoreBatchOnLoanStatuses": ["RESCHEDULED"]
+          }
+        }
+      ],
+      "conditions": [
+        {
+          "type": "TotalDue",
+          "params": {
+            "amountFrom": 0.01
+          }
+        }
+      ]
+    }
+  },
+  "agingBuckets": [
+    {
+      "dpdFrom": -1000000,
+      "dpdTo": 1000000,
+      "name": "Bucket"
+    }
+  ],
+  "agentActionTemplates": {
+  },
+  "agentActionStatusTemplates": {
+  }
+}

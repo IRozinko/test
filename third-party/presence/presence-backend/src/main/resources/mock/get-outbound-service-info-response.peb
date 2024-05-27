@@ -1,0 +1,193 @@
+{
+  "Code": 0,
+  "ErrorMessage": "",
+  "Data": {
+    "General": {
+      "Id": {{ serviceId }},
+      "Name": "TEST EMISIÓN",
+      "OutboundType": 3,
+      "Status": "{{ serviceStatus }}",
+      "NoScheduleGap": 15,
+      "EnableSchedLimitDate": false,
+      "SchedulingLimitDated": "2019-03-15T00:00:00",
+      "ServiceHours": "09:00-19:00",
+      "StopReasonGroupId": 0,
+      "ResourceProfileId": 0,
+      "ServerId": 1
+    },
+    "Integration": {
+      "IntegrationType": 6,
+      "ShowContactInfo": 0,
+      "QualifContIntegration": false,
+      "IntegratedAppFile": "",
+      "EstablishedURL": "https://crm.prestoprestamos.es/#!debt/?tel=@@PHONE@@",
+      "ClosedURL": "https://crm.prestoprestamos.es/#!",
+      "ScriptId": 0,
+      "ShowQueuedCallsInfo": 1
+    },
+    "ACD": {
+      "OutboundVDN": 7199,
+      "OutboundSkill": 8199,
+      "CTILink": "",
+      "UsePrimaryIfLinkNotConn": true,
+      "EnableMaxConcCalls": false,
+      "MaxConcCalls": 0,
+      "MaxAllowedConcCalls": 0,
+      "PredictiveType": 0,
+      "PredictiveTime": 200,
+      "PredAutoInterval": 1200,
+      "ConcurrentCalls": 1,
+      "PredAutoAvailTime": 20,
+      "PredAutoMaxConcCalls": 5,
+      "EnablePredDefAuto": false,
+      "PredAutoDefContProb": 0,
+      "PredAutoDefClassTime": 0,
+      "PredAutoDefHandleTime": 0,
+      "CheckAgentAvail": false,
+      "EnableMinAgentsAvailable": false,
+      "MinAgentsAvailable": "",
+      "PreviewVDN": 7199,
+      "EnablePreviewMaxTime": true,
+      "PreviewMaxTime": 1
+    },
+    "OutboundOptions": {
+      "EnableCallCapturing": true,
+      "PreviewVDN": 7199,
+      "EnablePreviewMaxTime": true,
+      "PreviewMaxTime": 1,
+      "EnablePreviewOnAnswerMachine": false,
+      "PreviewOnAnswerMachineMaxTime": 0,
+      "EnablePreviewOnAbandoned": false,
+      "PreviewOnAbandonedMaxTime": 0,
+      "EnableAbandonedControl": false,
+      "AbandonedControlType": 0,
+      "AbandonedRecAdj": 0,
+      "AbandonedLimit": 0,
+      "EnableOutlierControl": true,
+      "OutlierSensitivity": 0
+    },
+    "CallAnalysis": {
+      "DetectAnswerMachine": false,
+      "RingsNoAnswer": 6,
+      "EnableRedirectOnAMD": false,
+      "RedirectOnAMDExtension": 0,
+      "EnableRedirectOnAMDQCode": false,
+      "RedirectOnAMDQCode": 0
+    },
+    "Maximums": {
+      "MaxTotal": 15,
+      "MaxDaily": 3,
+      "MaxBusySignal": 10,
+      "MaxNoAnswer": 6,
+      "MaxAnswerMachine": 6,
+      "MaxFax": 5,
+      "MaxInvGenReason": 5,
+      "ResetCountersOnSched": false
+    },
+    "Queues": {
+      "ServiceAgents": 0,
+      "AlternateQueues": false,
+      "AlternateInitial": 5,
+      "AlternateInvalid": 10,
+      "MinBufferInitial": 20,
+      "MaxBufferInitial": 400,
+      "MinBufferIGR": 20,
+      "MaxBufferIGR": 400,
+      "MinBufferScheduled": 20,
+      "MaxBufferScheduled": 300
+    },
+    "Schedule": {
+      "BusySignalInt": 20,
+      "NoAnswerInt": 120,
+      "AnswerMachineInt": 120,
+      "FaxInt": 60,
+      "InvGenReasonInt": 120,
+      "PhoneNotExistInt": 0,
+      "AbandonedInt": 360,
+      "ScheduledExpiration": 60,
+      "MaxScheduledRetries": 2,
+      "DefaultScheduleInt": 0,
+      "EnableAgentEditScheduledPhone": true
+    },
+    "Softphone": {
+      "EnableSoftphone": true,
+      "EnableManualACD": true,
+      "ManualACDLoadId": 1,
+      "EnableInsertOutboundRecord": true,
+      "InsertOutboundRecordLoadId": 1
+    },
+    "AlternativePhones": {
+      "EnableAltPhones": true,
+      "AltPhonesInUse": 3,
+      "EnableAgentEditAltPhones": true,
+      "EnableAgentAltPhoneStatus": false,
+      "EnableDialAllPhones": false,
+      "DialAllPhonesScheduleType": 0,
+      "DialAllPhonesSchedPhonePos": 0,
+      "DialAllPhonesSchedPhoneDesc": 0,
+      "DialAllPhonesScheduleInt": 120,
+      "PhoneDescriptions": [
+        {
+          "PhoneDescCode": 1,
+          "MaxRetries": 2,
+          "EnableCallingHours": false,
+          "CHoursMonday": "",
+          "CHoursTuesday": "",
+          "CHoursWednesday": "",
+          "CHoursThursday": "",
+          "CHoursFriday": "",
+          "CHoursSaturday": "",
+          "CHoursSunday": ""
+        }
+      ]
+    },
+    "TimeZones": {
+      "EnableTimeZone": false,
+      "EnableNPATZ": false,
+      "EnableCheckNPATZ": false,
+      "TimeZoneId": ""
+    },
+    "DoNotCallLists": {
+      "EnableCheckDNCPhones": false,
+      "EnableAgentDNCList": false,
+      "AgentDoNotCallListId": 0,
+      "DNCListIds": []
+    },
+    "Sounds": {
+      "EnableAnswerSound": false
+    },
+    "CustomFields": {
+      "EnableCustomData": true,
+      "ShowCustomData1": 2,
+      "ShowCustomData2": 2,
+      "ShowCustomData3": 2,
+      "CustomDataDesc1": "",
+      "CustomDataDesc2": "",
+      "CustomDataDesc3": ""
+    },
+    "Messaging": {
+      "EnableFindMail": false,
+      "EnableCompleteMail": false,
+      "EnableReplyMail": false,
+      "EnableSendMail": false,
+      "MailboxId": 0
+    },
+    "Recording": {
+      "EnableRecOnDemand": false,
+      "ScreenRecording": false,
+      "ScreenProfileId": 0,
+      "EnablePauseRecording": false
+    },
+    "Other": {
+      "PhonePrefix": "",
+      "MinACWTime": 0,
+      "MaxACWTime": 0,
+      "MaxACWQCode": 0,
+      "UseMaxACWQCodeIfNotQualified": false,
+      "EnableCallerId": true,
+      "CallerId": "930016522",
+      "CallerName": "",
+      "EnableCustCallHours": false
+    }
+  }
+}

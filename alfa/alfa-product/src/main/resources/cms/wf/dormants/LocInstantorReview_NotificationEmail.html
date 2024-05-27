@@ -1,0 +1,21 @@
+{% extends "_email_template" %}
+
+{% block content %}
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Te interesaba nuestra línea de crédito PRESTO, pero no has completado la solicitud… Para obtener hasta 2.000 euros, identifícate ahora con tu cuenta bancaria online. Debes ser titular de la cuenta y recibir en ella tus ingresos regulares.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+¡Ya casi has acabado! ¿Vas a dejar escapar esta oportunidad?
+{% include "_email_p_end" %}
+{% include "_email_p_end" %}{% include "_email_p_begin" %}
+{{ button(title="¡Lo quiero!", url=company.webBaseUrl + "/sl/" + specialLink.token) }}
+{% include "_email_p_end" %}
+
+{% include "_cs_email_signature" %}
+
+{% endblock %}}

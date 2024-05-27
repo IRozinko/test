@@ -1,0 +1,32 @@
+apply plugin: "com.github.bjornvester.wsdl2java"
+
+dependencies {
+    compile libs.cxf
+}
+
+ext {
+    javaGeneratedWsdlSources = file("src/main/generated-wsdl/")
+}
+
+sourceSets {
+    generatedWsdl {
+        java {
+            srcDir "${projectDir}${javaGeneratedWsdlSources}"
+        }
+    }
+}
+
+idea {
+    module {
+        sourceDirs += file(javaGeneratedWsdlSources)
+        generatedSourceDirs += file(javaGeneratedWsdlSources)
+    }
+}
+
+wsdl2java {
+    generatedSourceDir = file(javaGeneratedWsdlSources)
+}
+
+clean.doLast {
+    file(javaGeneratedWsdlSources).deleteDir()
+}

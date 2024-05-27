@@ -1,0 +1,12 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile project(":alfa:alfa-product")
+    compile project(":platform:marketing:marketing-web-api")
+    compile project(":spain-common:spain-web")
+
+    compile "org.springframework.boot:spring-boot-starter-actuator"
+
+    testCompile project(":platform:common:integration-test")
+}
+

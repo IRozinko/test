@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Privacy policy</title>
+    <style type="text/css">
+        html, body {
+            font-family: 'OpenSans-Regular', sans-serif;
+            line-height: 1.4;
+            font-size: 11px;
+        }
+
+        table {
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+
+        td {
+            vertical-align: top;
+            text-align: justify;
+            padding-left: 5px;
+            border-top: 1px solid black;
+        }
+
+        td p {
+            margin: 0;
+        }
+
+        .first-cell {
+            border-right: 1px solid black !important;
+            padding-right: 5px;
+        }
+
+        .client-data-table td {
+            border: 0;
+        }
+
+        .client-data-table {
+            border: 0;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<table class="client-data-table">
+    <tbody>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Cliente</p>
+        </td>
+        <td width="283">
+            <p>{{client.number}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Nombre</p>
+        </td>
+        <td width="283">
+            <p>{{client.firstName}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Apellidos</p>
+        </td>
+        <td width="283">
+            <p>{{client.lastName}} {{client.secondLastName}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Correo Electronico</p>
+        </td>
+        <td width="283">
+            <p>{{client.email}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Fecha y hora</p>
+        </td>
+        <td width="283">
+            <p>{{client.registeredAt | ldatetime(dateTimeFormat)}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>IP</p>
+        </td>
+        <td width="283">
+            <p>{{client.registrationIpAddress}}</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<p>
+    En la fecha y hora indicadas el usuario del Sitio Web (<a href="{{company.webSite}}">{{company.webSite}}</a>), con
+    el nombre, apellidos anteriormente referenciados, ha proporcionado sus datos a la empresa titular del sitio web, {{company.name}}, provista
+    de CIF {{company.number}} y domicilio en {{company.addressLine1}}, {{company.addressLine2}} con la finalidad de solicitar un
+    crédito.
+</p>
+<p>
+    De forma previa, el usuario ha sido informado del tratamiento de sus datos y de los derechos que puede ejercitar al
+    respecto, habiendo leído y aceptado la política de privacidad de ALFA.
+</p>
+<p>
+    Asimismo, el usuario {% if client.acceptMarketing %} SI {% else %} NO {% endif %} ha prestado consentimiento expreso
+    y revocable para el tratamiento de sus datos con fines
+    comerciales.
+</p>
+<p>
+    Este documento se ha generado de forma automática en el momento en el que el usuario ha enviado el formulario de
+    solicitud con sus datos personales, como prueba de su consentimiento para el tratamiento de datos, y será guardado
+    por la empresa en soporte duradero e inalterable para garantizar el cumplimiento de las obligaciones impuestas por
+    la normativa vigente en materia de Protección de Datos.
+</p>
+</body>
+</html>

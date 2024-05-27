@@ -1,0 +1,8 @@
+apply from: "${rootDir}/gradle/java.gradle"
+apply from: "${rootDir}/gradle/querydsl.gradle"
+
+dependencies {
+    compile project(":platform:lending:lending-core")
+
+    testCompile project(":platform:common:integration-test")
+}

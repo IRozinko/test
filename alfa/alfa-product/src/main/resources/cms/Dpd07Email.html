@@ -1,0 +1,26 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Estimado/a Sr/a. {{client.lastName}},  Deberia haber liquidado o prorrogado su préstamo hace 5 días. Debido a dicho retraso su deuda asciende a {{debt.totalDue | numberformat(currencyFormat)}}€.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Llámenos ahora al 933035223 para conocer todas las facilidades disponibles y asi regularizar la situación lo antes posible.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Podrá pagar con tarjeta con nuestros agentes en tan sólo 2 minutos de manera rápida y fácil, se actualizará el expediente en menos de 4 horas sin esperas ni retrasos bancarios.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Pero si lo prefiere puede 1- Pagar haciendo una transferencia a una de las siguientes cuentas indicando su DNI o NIE en el concepto: BANK DETAILS TABLEL o 2- Entrando en www.alfa.es/login
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Reciba un cordial saludo
+{% include "_email_p_end" %}
+{% include "_email_signature" %}
+
+{% endblock %}}

@@ -1,0 +1,68 @@
+apply from: "${rootDir}/gradle/java.gradle"
+apply from: "${rootDir}/gradle/querydsl.gradle"
+
+dependencies {
+    compile project(":platform:lending:lending-core")
+    compile project(":platform:strategy:strategy-core")
+    compile project(":platform:email-core")
+    compile project(":platform:sms-core")
+    compile project(":platform:workflow")
+    compile project(":platform:crm")
+    compile project(":platform:task")
+    compile project(":platform:cms")
+    compile project(":platform:payments")
+    compile project(":platform:security:user")
+    compile project(":platform:file-storage-core")
+    compile project(":platform:accounting")
+    compile project(":platform:risk:rule")
+    compile project(":platform:settings")
+    compile project(":platform:risk:check-list")
+    compile project(":platform:affiliate")
+    compile project(":platform:web-analytics")
+    compile project(":platform:dc")
+    compile project(":platform:admin-tools")
+    compile project(":platform:activities")
+    compile project(":platform:web")
+    compile project(":platform:common:models")
+    compile project(":platform:common:third-party")
+    compile project(":platform:scoring-values")
+    compile project(":platform:marketing:marketing-core")
+
+    compile project(":spain-common:spain-crm")
+    compile project(":spain-common:spain-dc")
+    compile project(":spain-common:spain-notification")
+    compile project(":spain-common:spain-payments")
+    compile project(":spain-common:spain-experian:spain-experian-backend")
+    compile project(":spain-common:spain-equifax:spain-equifax-backend")
+    compile project(":spain-common:spain-scoring:spain-scoring-backend")
+    compile project(":spain-common:spain-inglobaly:spain-inglobaly-backend")
+    compile project(":spain-common:spain-asnef:spain-asnef-file")
+    compile project(":spain-common:spain-crosscheck")
+    compile project(":spain-common:spain-callcenter:spain-callcenter-backend")
+    
+    compile project(":third-party:email-mandrill")
+    compile project(":third-party:geo-ip")
+    compile project(":third-party:eKomi")
+    compile project(":third-party:dowjones:dowjones-backend")
+    compile project(":third-party:viventor")
+    compile project(":third-party:instantor:instantor-backend")
+    compile project(":third-party:iovation:iovation-backend")
+    compile project(":third-party:nordigen:nordigen-backend")
+    compile project(":third-party:fintechmarket")
+    compile project(":third-party:spain-sms-altiria")
+    compile project(":third-party:spain-sms-messente")
+
+    compile project(":alfa:alfa-strategies")
+
+    compile "me.xuender:unidecode:${unidecodeVersion}"
+    compile "org.hashids:hashids:${hashidsVersion}"
+    compile "io.jsonwebtoken:jjwt:${jjwtVersion}"
+    compile "com.opencsv:opencsv:${opencsvVersion}"
+    compile libs.apachePoi
+    compile "org.apache.commons:commons-compress:${commonsCompressVersion}"
+    compile "com.jayway.jsonpath:json-path:${jsonPathVersion}"
+
+    compile("org.apache.commons:commons-lang3")
+
+    testCompile project(":platform:common:integration-test")
+}

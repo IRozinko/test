@@ -1,0 +1,31 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Estimado/a Sr./Sra. {{client.lastName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Nos comunicamos con usted para hacerle saber que su deuda será publicada en listados de morosidad en las próximas horas debido a su reiterado impago y caso omiso a facilidades y opciones de liquidación.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Una vez la publicación sea efectiva ninguna empresa asociada a AEMIP (Asociación Española de Micro Préstamos) le concederá ningún otro préstamo hasta que regularice su situación, de igual modo que pueden considerarlo otro tipo de entidades bancarias y financieras.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Pero ¿Porqué no solicita una prórroga o un plan de pagos?
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Llamándonos al 933035223 podemos estudiar su situación actual y encontrar la opción más adecuada para poder solucionar el retraso de la cancelación.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Reciba un cordial saludo
+{% include "_email_p_end" %}
+
+{% include "_email_signature" %}
+
+{% endblock %}}

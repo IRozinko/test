@@ -1,0 +1,11 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile project(":platform:cms")
+
+    compile libs.springBootWeb
+    compile libs.springBootSecurity
+    compile libs.openApi
+
+    testCompile project(":platform:common:integration-test")
+}

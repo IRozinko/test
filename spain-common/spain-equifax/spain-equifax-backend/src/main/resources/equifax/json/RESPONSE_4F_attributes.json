@@ -1,0 +1,79 @@
+{
+  "applicants": {
+    "primaryConsumer": {
+      "personalInformation": {
+        "idCountryCode": "724",
+        "idType": "ID",
+        "idCode": "00000030F",
+        "personType": "F",
+        "addresses": [
+          {
+            "postalCode": "08025"
+          }
+        ],
+        "name": [
+          {
+            "firstName": "Rik",
+            "lastName": "Ruk"
+          }
+        ]
+      },
+      "dataSourceResponses": {
+        "D360": {
+          "IDVERIFIER": {
+            "identifier": "primary",
+            "idVerifier": {}
+          }
+        },
+        "EIPG": {
+          "RISK": {
+            "identifier": "primary",
+            "idCode": "00000030F",
+            "returnCode": "000",
+            "rating": "1"
+          },
+          "SPI": {
+            "identifier": "primary",
+            "idCode": "00000030F",
+            "returnCode": "000",
+            "present": "N"
+          },
+          "SEVERITY": {
+            "identifier": "primary",
+            "idCode": "00000030F",
+            "returnCode": "000",
+            "present": "00",
+            "scoringCategory": "A",
+            "araAttributes": {
+              "totalNumberOfOperations": 1,
+              "numberOfConsumerCreditOperations": 0,
+              "numberOfMortgageOperations": 0,
+              "numberOfPersonalLoanOperations": 0,
+              "numberOfCreditCardOperations": 1,
+              "numberOfTelcoOperations": 0,
+              "totalNumberOfOtherUnpaid": 0,
+              "totalUnpaidBalance": 320.0,
+              "unpaidBalanceOwnEntity": 0.0,
+              "unpaidBalanceOfOtherEntities": 320.0,
+              "unpaidBalanceOfConsumerCredit": 0.0,
+              "unpaidBalanceOfMortgage": 0.0,
+              "unpaidBalanceOfPersonalLoan": 0.0,
+              "unpaidBalanceOfCreditCard": 320.0,
+              "unpaidBalanceOfTelco": 0.0,
+              "unpaidBalanceOfOtherProducts": 0.0,
+              "worstUnpaidBalance": 320.0,
+              "worstSituationCode": "01",
+              "numberOfDaysOfWorstSituation": 43,
+              "numberOfCreditors": 1,
+              "delincuencyDays": 986
+            }
+          }
+        }
+      }
+    }
+  },
+  "timestamp": "2020-05-14 15:03:01:056",
+  "transactionState": "COMPLETED",
+  "interactionId": "ID-01722210217-9728-1586967186751-0-53321",
+  "transactionId": 1556765
+}

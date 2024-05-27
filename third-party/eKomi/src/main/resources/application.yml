@@ -1,0 +1,6 @@
+ekomiApi:
+  id: 33450
+  key: 11e0d6f998d83648cc635e362
+  url: http://api.ekomi.de/v3/
+  version: cust-1.0.0
+  type: json

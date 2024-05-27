@@ -1,0 +1,31 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Estimado cliente,
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+¡Enhorabuena!, tu solicitud ha sido aprobada.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Después de estudiar tu caso, tenemos una buena noticia…
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Podemos prestarte lo que nos has pedido… ¡y aún más!
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Pulsa en el siguiente enlace para seleccionar la cantidad que te transferiremos y aceptar el acuerdo.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+{{ button(title="Ver condiciones disponibles", url=company.webBaseUrl + "/usuario") }}
+{% include "_email_p_end" %}
+
+{% include "_email_signature" %}
+
+{% endblock %}}

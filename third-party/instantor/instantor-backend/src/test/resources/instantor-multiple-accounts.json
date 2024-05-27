@@ -1,0 +1,320 @@
+{
+  "basicInfo": {
+    "scrapeReport": {
+      "scrapeDate": "2017-08-31T00:00:00",
+      "status": "ok",
+      "comment": "Process finished successfully",
+      "reportNumber": 0,
+      "isFinal": true
+    },
+    "bank": {
+      "country": "ES",
+      "abbreviation": "es-abanca",
+      "name": "Abanca"
+    },
+    "source": "lineofcredit.es",
+    "username": "Maci Lee",
+    "address": "PRIVATE: Krey Pike 158, 14453 Berkeley, China",
+    "phone": "PRIVATE: 555 334-5550",
+    "email": "PRIVATE: maci.lee@example.com",
+    "miscEntryList": [
+      {
+        "provider": "lineofcredit.es",
+        "key": "account",
+        "value": "7890 7890 7890 78"
+      },
+      {
+        "provider": "lineofcredit.es",
+        "key": "clientId",
+        "value": "12345678901"
+      },
+      {
+        "provider": "lineofcredit.es",
+        "key": "lastName",
+        "value": "SURNAME"
+      },
+      {
+        "provider": "lineofcredit.es",
+        "key": "firstName",
+        "value": "NAME"
+      },
+      {
+        "provider": "instantor",
+        "key": "instantor_request_id",
+        "value": "be334a49-7776-405a-b49b-a7498825c703"
+      },
+      {
+        "provider": "Abanca",
+        "key": "ID_CARD",
+        "value": "FakeID"
+      },
+      {
+        "provider": "Abanca",
+        "key": "PersonalNumber",
+        "value": "50999798"
+      },
+      {
+        "provider": "Abanca",
+        "key": "dni",
+        "value": "50999798"
+      },
+      {
+        "provider": "Abanca",
+        "key": "clientNumber",
+        "value": "FakeClientNumber"
+      },
+      {
+        "provider": "Abanca",
+        "key": "birthDate",
+        "value": "1987-08-31"
+      },
+      {
+        "provider": "Abanca",
+        "key": "name",
+        "value": "Maci Lee"
+      },
+      {
+        "provider": "Abanca",
+        "key": "address",
+        "value": "PRIVATE: Krey Pike 158, 14453 Berkeley, China"
+      },
+      {
+        "provider": "Abanca",
+        "key": "phone",
+        "value": "PRIVATE: 555 334-5550"
+      },
+      {
+        "provider": "Abanca",
+        "key": "email",
+        "value": "PRIVATE: maci.lee@example.com"
+      }
+    ]
+  },
+  "reportTime": "2017-08-31T10:36:52.123+02:00",
+  "scrapeTime": "2017-08-31T10:36:43.918+02:00",
+  "successfulLogin": true,
+  "accountNumbersForVerification": [
+    "7890 7890 7890 78"
+  ],
+  "nameForVerification": "N/A",
+  "personalNumberForVerification": "N/A",
+  "bankReport": {
+    "bank": {
+      "country": "ES",
+      "abbreviation": "es-abanca",
+      "name": "Abanca"
+    },
+    "owner": "Maci Lee",
+    "scrapeStatus": "ok",
+    "monthsAvailable": 12,
+    "numberOfAccounts": 1,
+    "accountNumbersVerified": [
+      {
+        "accountNumber": "7890 7890 7890 78",
+        "verified": false
+      }
+    ],
+    "nameVerified": null,
+    "personalNumberVerified": null,
+    "totalNumberOfTransactions": 182,
+    "averageNumberOfTransactionsMonth": 15.17,
+    "averageAmountOfIncomingTransactionsMonth": 3550.92,
+    "averageAmountOfOutgoingTransactionsMonth": -4026.25,
+    "averageMinimumBalanceMonth": 4353.25,
+    "numberOfLoans": 0,
+    "amountOfLoans": 0.00,
+    "cashFlow": [
+      {
+        "month": 0,
+        "incoming": 2655.00,
+        "outgoing": -7613.00,
+        "minBalance": -410.00,
+        "numberOfLoans": 0,
+        "amountOfLoans": 0.00
+      },
+      {
+        "month": -1,
+        "incoming": 4541.00,
+        "outgoing": -3588.00,
+        "minBalance": 2374.00,
+        "numberOfLoans": 0,
+        "amountOfLoans": 0.00
+      },
+      {
+        "month": -2,
+        "incoming": 2154.00,
+        "outgoing": -4165.00,
+        "minBalance": 3595.00,
+        "numberOfLoans": 0,
+        "amountOfLoans": 0.00
+      },
+      {
+        "month": -3,
+        "incoming": 2133.00,
+        "outgoing": -3195.00,
+        "minBalance": 5575.00,
+        "numberOfLoans": 0,
+        "amountOfLoans": 0.00
+      },
+      {
+        "month": -4,
+        "incoming": 3015.00,
+        "outgoing": -6269.00,
+        "minBalance": 6668.00,
+        "numberOfLoans": 0,
+        "amountOfLoans": 0.00
+      },
+      {
+        "month": -5,
+        "incoming": 3342.00,
+        "outgoing": -2075.00,
+        "minBalance": 8005.00,
+        "numberOfLoans": 0,
+        "amountOfLoans": 0.00
+      },
+      {
+        "month": -6,
+        "incoming": 6594.00,
+        "outgoing": -1412.00,
+        "minBalance": 3331.00,
+        "numberOfLoans": 0,
+        "amountOfLoans": 0.00
+      },
+      {
+        "month": -7,
+        "incoming": 2338.00,
+        "outgoing": -4887.00,
+        "minBalance": 3122.00,
+        "numberOfLoans": 0,
+        "amountOfLoans": 0.00
+      },
+      {
+        "month": -8,
+        "incoming": 3002.00,
+        "outgoing": -3856.00,
+        "minBalance": 5244.00,
+        "numberOfLoans": 0,
+        "amountOfLoans": 0.00
+      },
+      {
+        "month": -9,
+        "incoming": 4591.00,
+        "outgoing": -4188.00,
+        "minBalance": 5421.00,
+        "numberOfLoans": 0,
+        "amountOfLoans": 0.00
+      },
+      {
+        "month": -10,
+        "incoming": 4203.00,
+        "outgoing": -4538.00,
+        "minBalance": 4376.00,
+        "numberOfLoans": 0,
+        "amountOfLoans": 0.00
+      },
+      {
+        "month": -11,
+        "incoming": 4043.00,
+        "outgoing": -2529.00,
+        "minBalance": 4938.00,
+        "numberOfLoans": 0,
+        "amountOfLoans": 0.00
+      }
+    ]
+  },
+  "scrape": {
+    "scrapeReport": {
+      "scrapeDate": "2017-08-31T00:00:00",
+      "status": "ok",
+      "comment": "Process finished successfully",
+      "reportNumber": 0,
+      "isFinal": true
+    },
+    "bank": {
+      "country": "ES",
+      "abbreviation": "es-abanca",
+      "name": "Abanca"
+    },
+    "userDetails": {
+      "name": "Maci Lee",
+      "address": "PRIVATE: Krey Pike 158, 14453 Berkeley, China",
+      "phone": "PRIVATE: 555 334-5550",
+      "email": "PRIVATE: maci.lee@example.com"
+    },
+    "companyDetails": null,
+    "accountList": [
+      {
+        "number": "46487834985408066051",
+        "kind": "Savings",
+        "balance": -410.00,
+        "currency": "EUR",
+        "iban": "ES40464878349854 0806 6051",
+        "holderName": "Maci Lee",
+        "transactionList": [
+          {
+            "onDate": "2017-08-31T00:00:00",
+            "description": "Type: Fake account transaction; Category: Fake; Description: Fake money transfer : Medical Ltd.",
+            "amount": -929.00,
+            "balance": -410.00,
+            "params": {
+              "bankCategory": "Fake",
+              "valueDate": "2017-08-31",
+              "referenceID": "7789792975",
+              "type": "Fake account transaction",
+              "bookingDate": "2017-08-31"
+            }
+          },
+          {
+            "onDate": "2017-08-30T00:00:00",
+            "description": "Type: Fake account transaction; Category: Fake; Description: Fake money transfer : Audio.Com",
+            "amount": -480.00,
+            "balance": 519.00,
+            "params": {
+              "bankCategory": "Fake",
+              "valueDate": "2017-08-30",
+              "referenceID": "3911793117",
+              "type": "Fake account transaction",
+              "bookingDate": "2017-08-30"
+            }
+          }
+        ]
+      },
+      {
+        "number": "ES9767402039426640743765",
+        "kind": "Savings",
+        "balance": 99.00,
+        "currency": "EUR",
+        "iban": "ES97674020394266 4074 3765",
+        "holderName": "Maci Lee",
+        "transactionList": [
+          {
+            "onDate": "2017-08-31T00:00:00",
+            "description": "Type: Fake account transaction; Category: Fake; Description: Fake money transfer : Medical Ltd.",
+            "amount": -929.00,
+            "balance": -410.00,
+            "params": {
+              "bankCategory": "Fake",
+              "valueDate": "2017-08-31",
+              "referenceID": "7789792975",
+              "type": "Fake account transaction",
+              "bookingDate": "2017-08-31"
+            }
+          },
+          {
+            "onDate": "2017-08-30T00:00:00",
+            "description": "Type: Fake account transaction; Category: Fake; Description: Fake money transfer : Audio.Com",
+            "amount": -480.00,
+            "balance": 519.00,
+            "params": {
+              "bankCategory": "Fake",
+              "valueDate": "2017-08-30",
+              "referenceID": "3911793117",
+              "type": "Fake account transaction",
+              "bookingDate": "2017-08-30"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

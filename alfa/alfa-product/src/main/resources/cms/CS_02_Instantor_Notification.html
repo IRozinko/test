@@ -1,0 +1,58 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Tu solicitud caducará pronto pero aún estás <b>a tiempo de obtener tu préstamo</b>. Solo es necesario que incluyas los mismos <b>datos con los que accedes a tu cuenta bancaria a través de internet</b>. Completa el formulario para obtener hasta 800 euros rápidamente. 
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+{{ button(title="Acabar solicitud", url=company.webBaseUrl + "/login?utm_source=email&utm_medium=CRM&utm_campaign=instantn2") }}
+{% include "_email_p_begin" %}
+<ul>
+    <li>
+        <b>¿Qué datos debo introducir?</b>
+        <br>
+    </li>
+</ul>
+
+{% include "_email_p_begin" %}
+Los mismos que utilizas cuando accedes a tu cuenta bancaria por Internet para, por ejemplo, consultar tus últimos movimientos o tu saldo.
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+<ul>
+    <li>
+        <b>¿Están seguros mis datos de acceso?</b>
+    </li>
+</ul>
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Totalmente, están <b>protegidos y cifrados</b>. Así que no vamos a acceder a ellos ni almacenarlos. 
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+<ul>
+    <li>
+        <b>¿Por qué se solicitan estos datos?</b>
+    </li>
+</ul>
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Para verificar tu identidad y obtener lo necesario para concederte el préstamo. Además, así <b>recibirás el préstamo rápidamente</b> y sin tener que facilitarnos apenas documentación. 
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+¡Recuerda! Para obtener tu préstamo debes ser el titular o cotitular de la cuenta bancaria y recibir tus ingresos regulares en ella. 
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+{{ button(title="Acabar solicitud", url=company.webBaseUrl + "/login?utm_source=email&utm_medium=CRM&utm_campaign=instantn2") }}
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Muchas gracias por tu atención, estamos a tu disposición para responder cualquier duda.
+{% include "_email_p_end" %}
+
+{% include "_cs_email_signature" %}
+
+{% endblock %}}

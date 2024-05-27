@@ -1,0 +1,2673 @@
+{
+  "portfolios" : [ {
+    "name" : "Current",
+    "initialStatus" : "NoStatus",
+    "statuses" : [ {
+      "name" : "NoStatus",
+      "priority" : 1000
+    } ],
+    "triggers" : [ {
+      "template" : "RestoreCompany",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "MoveToCollections",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "MoveToEarlyCollections",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "MoveToPaid",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "IncludeInAsnef",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "name" : "SendNotification (-6 DPD)",
+      "actions" : [ {
+        "type" : "SendNotification",
+        "params" : {
+          "cmsKey" : "DC_-6dpd"
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "Dpd",
+        "params" : {
+          "dpdFrom" : -6,
+          "dpdTo" : -5
+        }
+      }, {
+        "type" : "LoanStatusDetail",
+        "params" : {
+          "statusDetail" : "ACTIVE"
+        }
+      }, {
+        "type" : "TriggerFrequency",
+        "params" : {
+          "doNotRepeatForDays" : 5
+        }
+      }, {
+        "type" : "CurrentTime",
+        "params" : {
+          "hourFrom" : 8,
+          "hourTo" : 24
+        }
+      } ]
+    }, {
+      "name" : "SendNotification (-4 DPD)",
+      "actions" : [ {
+        "type" : "SendNotification",
+        "params" : {
+          "cmsKey" : "DPD-04Notification"
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "Dpd",
+        "params" : {
+          "dpdFrom" : -4,
+          "dpdTo" : -3
+        }
+      }, {
+        "type" : "TriggerFrequency",
+        "params" : {
+          "doNotRepeatForDays" : 5
+        }
+      }, {
+        "type" : "CurrentTime",
+        "params" : {
+          "hourFrom" : 8,
+          "hourTo" : 24
+        }
+      } ]
+    }, {
+      "name" : "SendNotification (0 DPD)",
+      "actions" : [ {
+        "type" : "SendNotification",
+        "params" : {
+          "cmsKey" : "DC_00dpd"
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "Dpd",
+        "params" : {
+          "dpdFrom" : 0,
+          "dpdTo" : 1
+        }
+      }, {
+        "type" : "TriggerFrequency",
+        "params" : {
+          "doNotRepeatForDays" : 5
+        }
+      }, {
+        "type" : "CurrentTime",
+        "params" : {
+          "hourFrom" : 8,
+          "hourTo" : 24
+        }
+      } ]
+    }, {
+      "name" : "SendNotification (1 DPD)",
+      "actions" : [ {
+        "type" : "SendNotification",
+        "params" : {
+          "cmsKey" : "DC_01dpd",
+          "sendFrom" : "DEBT_COLLECTION"
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "Dpd",
+        "params" : {
+          "dpdFrom" : 1,
+          "dpdTo" : 2
+        }
+      }, {
+        "type" : "TriggerFrequency",
+        "params" : {
+          "doNotRepeatForDays" : 5
+        }
+      }, {
+        "type" : "CurrentTime",
+        "params" : {
+          "hourFrom" : 11,
+          "hourTo" : 24
+        }
+      }]
+    } ],
+    "agentActions" : [ {
+      "template" : "AddComment",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "SendNotification",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "ChangePortfolio",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    } ]
+  }, {
+    "name" : "EarlyCollections",
+    "initialStatus" : "NoStatus",
+    "statuses" : [ {
+      "name" : "NoStatus",
+      "priority" : 1000
+    } ],
+    "triggers" : [ {
+      "template" : "MoveToCurrent",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "MoveToCollections",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "MoveToPaid",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "IncludeInAsnef",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "name" : "SendNotification (1 DPD)",
+      "actions" : [ {
+        "type" : "SendNotification",
+        "params" : {
+          "cmsKey" : "DC_01dpd",
+          "sendFrom" : "DEBT_COLLECTION"
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "Dpd",
+        "params" : {
+          "dpdFrom" : 1,
+          "dpdTo" : 2
+        }
+      }, {
+        "type" : "LoanStatusDetail",
+        "params" : {
+          "statusDetail" : "ACTIVE"
+        }
+      }, {
+        "type" : "TriggerFrequency",
+        "params" : {
+          "doNotRepeatForDays" : 5
+        }
+      }, {
+        "type" : "CurrentTime",
+        "params" : {
+          "hourFrom" : 11,
+          "hourTo" : 24
+        }
+      }
+      ]
+    }, {
+      "name" : "RescheduleFailed",
+      "actions" : [ {
+        "type" : "ChangeStatus",
+        "params" : {
+          "status" : "RescheduleNonActivated"
+        }
+      }, {
+        "type" : "ChangePortfolio",
+        "params" : {
+          "portfolio" : "Collections"
+        }
+      }, {
+        "type" : "BreakRescheduling",
+        "params" : { }
+      }, {
+        "type" : "RemoveNextAction",
+        "params" : { }
+      } ],
+      "conditions" : [ {
+        "type" : "InstallmentStatusDetail",
+        "params" : {
+          "installmentSequenceFrom" : 1,
+          "installmentSequenceTo" : 1,
+          "installmentStatusDetail" : "PENDING"
+        }
+      }, {
+        "type" : "Dpd",
+        "params" : {
+          "dpdFrom" : 1,
+          "dpdTo" : 9999
+        }
+      }, {
+        "type" : "LoanStatusDetail",
+        "params" : {
+          "statusDetail" : "RESCHEDULED"
+        }
+      }, {
+        "type" : "CurrentStatus",
+        "params" : {
+          "status" : "RescheduleOffered"
+        }
+      } ]
+    } ],
+    "agentActions" : [ {
+      "template" : "OutgoingCall",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "IncomingCall",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "WhatsApp",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "IncomingEmail",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "SendNotification",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "Search",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "AccountReview",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "ChangePortfolio",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "AddComment",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    } ]
+  }, {
+    "name" : "Collections",
+    "statuses" : [ {
+      "name" : "NoStatus",
+      "priority" : 1000
+    } ],
+    "triggers" : [{
+        "template" : "AutoAssignToAgent",
+        "actions" : [ ],
+        "conditions" : [ ]
+      }, {
+      "template" : "RestoreCompany",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "MoveToPaid",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "MoveToEarlyCollections",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "MoveToCurrent",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "IncludeInAsnef",
+      "actions" : [ ],
+      "conditions" : [ ]
+    },  {
+      "name" : "SendNotification (3 DPD)",
+      "actions" : [ {
+        "type" : "SendNotification",
+        "params" : {
+          "cmsKey" : "DC_03dpd",
+          "sendFrom" : "DEBT_COLLECTION"
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "Dpd",
+        "params" : {
+          "dpdFrom" : 3,
+          "dpdTo" : 4
+        }
+      }, {
+        "type" : "LoanStatusDetail",
+        "params" : {
+          "statusDetail" : "ACTIVE"
+        }
+      }, {
+        "type" : "TriggerFrequency",
+        "params" : {
+          "doNotRepeatForDays" : 5
+        }
+      }, {
+        "type" : "CurrentTime",
+        "params" : {
+          "hourFrom" : 9,
+          "hourTo" : 24
+        }
+      }, {
+        "type" : "ExtensionNotExceeded"
+      } ]
+    }, {
+        "name" : "SendNotification extension (3 DPD)",
+        "actions" : [ {
+          "type" : "SendNotification",
+          "params" : {
+            "cmsKey" : "DC_extension_3dpd",
+            "sendFrom" : "DEBT_COLLECTION"
+          }
+        } ],
+        "conditions" : [ {
+          "type" : "Dpd",
+          "params" : {
+            "dpdFrom" : 3,
+            "dpdTo" : 4
+          }
+        }, {
+          "type" : "LoanStatusDetail",
+          "params" : {
+            "statusDetail" : "ACTIVE"
+          }
+        }, {
+          "type" : "TriggerFrequency",
+          "params" : {
+            "doNotRepeatForDays" : 5
+          }
+        }, {
+          "type" : "CurrentTime",
+          "params" : {
+            "hourFrom" : 9,
+            "hourTo" : 24
+          }
+        } , {
+          "type" : "ExtensionExceeded"
+        } ]
+      },
+      {
+        "name" : "SendNotification (7 DPD)",
+        "actions" : [ {
+          "type" : "SendNotification",
+          "params" : {
+            "cmsKey" : "DC_07dpd",
+            "sendFrom" : "DEBT_COLLECTION"
+          }
+        } ],
+        "conditions" : [ {
+          "type" : "Dpd",
+          "params" : {
+            "dpdFrom" : 7,
+            "dpdTo" : 8
+          }
+        }, {
+          "type" : "LoanStatusDetail",
+          "params" : {
+            "statusDetail" : "ACTIVE"
+          }
+        }, {
+          "type" : "TriggerFrequency",
+          "params" : {
+            "doNotRepeatForDays" : 5
+          }
+        }, {
+          "type" : "CurrentTime",
+          "params" : {
+            "hourFrom" : 9,
+            "hourTo" : 24
+          }
+        }, {
+          "type" : "ExtensionNotExceeded"
+        }  ]
+      },
+      {
+        "name" : "SendNotification extension (7 DPD)",
+        "actions" : [ {
+          "type" : "SendNotification",
+          "params" : {
+            "cmsKey" : "DC_extension_7dpd",
+            "sendFrom" : "DEBT_COLLECTION"
+          }
+        } ],
+        "conditions" : [ {
+          "type" : "Dpd",
+          "params" : {
+            "dpdFrom" : 7,
+            "dpdTo" : 8
+          }
+        }, {
+          "type" : "LoanStatusDetail",
+          "params" : {
+            "statusDetail" : "ACTIVE"
+          }
+        }, {
+          "type" : "TriggerFrequency",
+          "params" : {
+            "doNotRepeatForDays" : 5
+          }
+        }, {
+          "type" : "CurrentTime",
+          "params" : {
+            "hourFrom" : 9,
+            "hourTo" : 24
+          }
+        }, {
+          "type" : "ExtensionExceeded"
+        }  ]
+      },
+      {
+        "name" : "SendNotification (10 DPD)",
+        "actions" : [ {
+          "type" : "SendNotification",
+          "params" : {
+            "cmsKey" : "DC_10dpd",
+            "sendFrom" : "DEBT_COLLECTION"
+          }
+        } ],
+        "conditions" : [ {
+          "type" : "Dpd",
+          "params" : {
+            "dpdFrom" : 10,
+            "dpdTo" : 11
+          }
+        }, {
+          "type" : "LoanStatusDetail",
+          "params" : {
+            "statusDetail" : "ACTIVE"
+          }
+        }, {
+          "type" : "TriggerFrequency",
+          "params" : {
+            "doNotRepeatForDays" : 5
+          }
+        }, {
+          "type" : "CurrentTime",
+          "params" : {
+            "hourFrom" : 9,
+            "hourTo" : 24
+          }
+        }, {
+          "type" : "ExtensionNotExceeded"
+        }  ]
+      },
+      {
+        "name" : "SendNotification extension (10 DPD)",
+        "actions" : [ {
+          "type" : "SendNotification",
+          "params" : {
+            "cmsKey" : "DC_extension_10dpd",
+            "sendFrom" : "DEBT_COLLECTION"
+          }
+        } ],
+        "conditions" : [ {
+          "type" : "Dpd",
+          "params" : {
+            "dpdFrom" : 10,
+            "dpdTo" : 11
+          }
+        }, {
+          "type" : "LoanStatusDetail",
+          "params" : {
+            "statusDetail" : "ACTIVE"
+          }
+        }, {
+          "type" : "TriggerFrequency",
+          "params" : {
+            "doNotRepeatForDays" : 5
+          }
+        }, {
+          "type" : "CurrentTime",
+          "params" : {
+            "hourFrom" : 9,
+            "hourTo" : 24
+          }
+        }, {
+          "type" : "ExtensionExceeded"
+        }  ]
+      }, {
+        "name" : "SendNotification (17 DPD)",
+        "actions" : [ {
+          "type" : "SendNotification",
+          "params" : {
+            "cmsKey" : "DC_17dpd",
+            "sendFrom" : "DEBT_COLLECTION"
+          }
+        } ],
+        "conditions" : [ {
+          "type" : "Dpd",
+          "params" : {
+            "dpdFrom" : 17,
+            "dpdTo" : 18
+          }
+        }, {
+          "type" : "LoanStatusDetail",
+          "params" : {
+            "statusDetail" : "ACTIVE"
+          }
+        }, {
+          "type" : "TriggerFrequency",
+          "params" : {
+            "doNotRepeatForDays" : 5
+          }
+        }, {
+          "type" : "CurrentTime",
+          "params" : {
+            "hourFrom" : 9,
+            "hourTo" : 24
+          }
+        }, {
+          "type" : "ExtensionNotExceeded"
+        }  ]
+      }, {
+        "name" : "SendNotification extension (17 DPD)",
+        "actions" : [ {
+          "type" : "SendNotification",
+          "params" : {
+            "cmsKey" : "DC_extension_17dpd",
+            "sendFrom" : "DEBT_COLLECTION"
+          }
+        } ],
+        "conditions" : [ {
+          "type" : "Dpd",
+          "params" : {
+            "dpdFrom" : 17,
+            "dpdTo" : 18
+          }
+        }, {
+          "type" : "LoanStatusDetail",
+          "params" : {
+            "statusDetail" : "ACTIVE"
+          }
+        }, {
+          "type" : "TriggerFrequency",
+          "params" : {
+            "doNotRepeatForDays" : 5
+          }
+        }, {
+          "type" : "CurrentTime",
+          "params" : {
+            "hourFrom" : 9,
+            "hourTo" : 24
+          }
+        }, {
+          "type" : "ExtensionExceeded"
+        }  ]
+      }, {
+        "name" : "SendNotification (25 DPD)",
+        "actions" : [ {
+          "type" : "SendNotification",
+          "params" : {
+            "cmsKey" : "DC_25dpd",
+            "sendFrom" : "DEBT_COLLECTION"
+          }
+        } ],
+        "conditions" : [ {
+          "type" : "Dpd",
+          "params" : {
+            "dpdFrom" : 25,
+            "dpdTo" : 26
+          }
+        }, {
+          "type" : "LoanStatusDetail",
+          "params" : {
+            "statusDetail" : "ACTIVE"
+          }
+        }, {
+          "type" : "TriggerFrequency",
+          "params" : {
+            "doNotRepeatForDays" : 5
+          }
+        }, {
+          "type" : "CurrentTime",
+          "params" : {
+            "hourFrom" : 9,
+            "hourTo" : 24
+          }
+        }, {
+          "type" : "ExtensionNotExceeded"
+        }  ]
+      }, {
+        "name" : "SendNotification extension (25 DPD)",
+        "actions" : [ {
+          "type" : "SendNotification",
+          "params" : {
+            "cmsKey" : "DC_extension_25dpd",
+            "sendFrom" : "DEBT_COLLECTION"
+          }
+        } ],
+        "conditions" : [ {
+          "type" : "Dpd",
+          "params" : {
+            "dpdFrom" : 25,
+            "dpdTo" : 26
+          }
+        }, {
+          "type" : "LoanStatusDetail",
+          "params" : {
+            "statusDetail" : "ACTIVE"
+          }
+        }, {
+          "type" : "TriggerFrequency",
+          "params" : {
+            "doNotRepeatForDays" : 5
+          }
+        }, {
+          "type" : "CurrentTime",
+          "params" : {
+            "hourFrom" : 9,
+            "hourTo" : 24
+          }
+        }, {
+          "type" : "ExtensionExceeded"
+        }  ]
+      },
+      {
+        "name" : "SendNotification (35 DPD)",
+        "actions" : [ {
+          "type" : "SendNotification",
+          "params" : {
+            "cmsKey" : "DC_35dpd",
+            "sendFrom" : "PRE_LEGAL"
+          }
+        } ],
+        "conditions" : [ {
+          "type" : "Dpd",
+          "params" : {
+            "dpdFrom" : 35,
+            "dpdTo" : 36
+          }
+        }, {
+          "type" : "LoanStatusDetail",
+          "params" : {
+            "statusDetail" : "ACTIVE"
+          }
+        }, {
+          "type" : "TriggerFrequency",
+          "params" : {
+            "doNotRepeatForDays" : 5
+          }
+        }, {
+          "type" : "CurrentTime",
+          "params" : {
+            "hourFrom" : 9,
+            "hourTo" : 24
+          }
+        } , {
+          "type" : "ExtensionNotExceeded"
+        }]
+      },
+      {
+        "name" : "SendNotification extension (35 DPD)",
+        "actions" : [ {
+          "type" : "SendNotification",
+          "params" : {
+            "cmsKey" : "DC_extension_35dpd",
+            "sendFrom" : "PRE_LEGAL"
+          }
+        } ],
+        "conditions" : [ {
+          "type" : "Dpd",
+          "params" : {
+            "dpdFrom" : 35,
+            "dpdTo" : 36
+          }
+        }, {
+          "type" : "LoanStatusDetail",
+          "params" : {
+            "statusDetail" : "ACTIVE"
+          }
+        }, {
+          "type" : "TriggerFrequency",
+          "params" : {
+            "doNotRepeatForDays" : 5
+          }
+        }, {
+          "type" : "CurrentTime",
+          "params" : {
+            "hourFrom" : 9,
+            "hourTo" : 24
+          }
+        } , {
+          "type" : "ExtensionExceeded"
+        }]
+      }, {
+        "name" : "SendNotification (45 DPD)",
+        "actions" : [ {
+          "type" : "SendNotification",
+          "params" : {
+            "cmsKey" : "DC_45dpd",
+            "sendFrom" : "PRE_LEGAL"
+          }
+        } ],
+        "conditions" : [ {
+          "type" : "Dpd",
+          "params" : {
+            "dpdFrom" : 45,
+            "dpdTo" : 46
+          }
+        }, {
+          "type" : "LoanStatusDetail",
+          "params" : {
+            "statusDetail" : "ACTIVE"
+          }
+        }, {
+          "type" : "TriggerFrequency",
+          "params" : {
+            "doNotRepeatForDays" : 5
+          }
+        }, {
+          "type" : "CurrentTime",
+          "params" : {
+            "hourFrom" : 9,
+            "hourTo" : 24
+          }
+        } ]
+      }, {
+        "name" : "SendNotification (55 DPD)",
+        "actions" : [ {
+          "type" : "SendNotification",
+          "params" : {
+            "cmsKey" : "DC_55dpd",
+            "sendFrom" : "PRE_LEGAL"
+          }
+        } ],
+        "conditions" : [ {
+          "type" : "Dpd",
+          "params" : {
+            "dpdFrom" : 55,
+            "dpdTo" : 56
+          }
+        }, {
+          "type" : "LoanStatusDetail",
+          "params" : {
+            "statusDetail" : "ACTIVE"
+          }
+        }, {
+          "type" : "TriggerFrequency",
+          "params" : {
+            "doNotRepeatForDays" : 5
+          }
+        }, {
+          "type" : "CurrentTime",
+          "params" : {
+            "hourFrom" : 9,
+            "hourTo" : 24
+          }
+        } ]
+      } ,
+      {
+        "name" : "SendNotification (60 DPD)",
+        "actions" : [ {
+          "type" : "SendNotification",
+          "params" : {
+            "cmsKey" : "DC_60dpd",
+            "sendFrom" : "PRE_LEGAL"
+          }
+        } ],
+        "conditions" : [ {
+          "type" : "Dpd",
+          "params" : {
+            "dpdFrom" : 60,
+            "dpdTo" : 61
+          }
+        }, {
+          "type" : "LoanStatusDetail",
+          "params" : {
+            "statusDetail" : "ACTIVE"
+          }
+        }, {
+          "type" : "TriggerFrequency",
+          "params" : {
+            "doNotRepeatForDays" : 5
+          }
+        }, {
+          "type" : "CurrentTime",
+          "params" : {
+            "hourFrom" : 9,
+            "hourTo" : 24
+          }
+        } ]
+      },{
+      "name" : "MoveToRescheduled",
+      "actions" : [ {
+        "type" : "ChangeStatus",
+        "params" : {
+          "status" : "RescheduleOffered"
+        }
+      }, {
+        "type" : "ChangePortfolio",
+        "params" : {
+          "portfolio" : "Rescheduled",
+          "assignmentMode" : "batch"
+        }
+      }, {
+        "type" : "ShowPopup",
+        "params" : {
+          "type" : "RESCHEDULE_OFFERED"
+        }
+      }, {
+        "type" : "ExhaustPopup",
+        "params" : {
+          "type" : "DPD_NOTIFICATION"
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "LoanStatusDetail",
+        "params" : {
+          "statusDetail" : "RESCHEDULED"
+        }
+      }, {
+        "type" : "TotalDue",
+        "params" : {
+          "amountFrom" : 0.01
+        }
+      } ]
+    }  ],
+    "agentActions" : [ {
+      "template" : "OutgoingCall",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "IncomingCall",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "WhatsApp",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "IncomingEmail",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "SendNotification",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "Search",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "AccountReview",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "ChangePortfolio",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "AddComment",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    } ]
+  }, {
+    "name" : "Legal",
+    "statuses" : [ {
+      "name" : "Fraud",
+      "priority" : 0
+    }, {
+      "name" : "RecoveryClaim",
+      "priority" : 0
+    }, {
+      "name" : "Concursal",
+      "priority" : 0
+    } ],
+    "triggers" : [ {
+      "template" : "RestoreCompany",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "MoveToPaid",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "ExcludeFromAsnef",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "BlockCommunications",
+      "actions" : [ ],
+      "conditions" : [ ]
+    } ],
+    "agentActions" : [ {
+      "template" : "OutgoingCall",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "IncomingCall",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "WhatsApp",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "IncomingEmail",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "SendNotification",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "Search",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "AccountReview",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "ChangePortfolio",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "AddComment",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "LegalAction",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    } ]
+  }, {
+    "name" : "Paid",
+    "statuses" : [ {
+      "name" : "NoStatus",
+      "priority" : 1000
+    }, {
+      "name" : "RescheduledPaid",
+      "priority" : 1000
+    } ],
+    "triggers" : [ {
+      "template" : "IncludeInAsnef",
+      "actions" : [ ],
+      "conditions" : [ ]
+    } ],
+    "agentActions" : [ {
+      "template" : "AddComment",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    } ]
+  }, {
+    "name" : "Rescheduled",
+    "statuses" : [ ],
+    "triggers" : [ {
+      "template" : "MoveToRescheduledCollections",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "ExcludeFromAsnef",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "name" : "RescheduleFailed",
+      "actions" : [{
+        "type" : "ExhaustPopup",
+        "params" : {
+          "type" : "RESCHEDULE_OFFERED"
+        }
+      }, {
+        "type" : "ChangeStatus",
+        "params" : {
+          "status" : "RescheduleNonActivated"
+        }
+      }, {
+        "type" : "BreakRescheduling",
+        "params" : { }
+      }, {
+        "type" : "RemoveNextAction",
+        "params" : { }
+      }, {
+        "type" : "ChangePortfolio",
+        "params" : {
+          "portfolio" : "Collections"
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "InstallmentStatusDetail",
+        "params" : {
+          "installmentSequenceFrom" : 1,
+          "installmentSequenceTo" : 1,
+          "installmentStatusDetail" : "PENDING"
+        }
+      }, {
+        "type" : "Dpd",
+        "params" : {
+          "dpdFrom" : 1,
+          "dpdTo" : 9999
+        }
+      }, {
+        "type" : "LoanStatusDetail",
+        "params" : {
+          "statusDetail" : "RESCHEDULED"
+        }
+      }, {
+        "type" : "CurrentStatus",
+        "params" : {
+          "status" : "RescheduleOffered"
+        }
+      } ]
+    }, {
+      "name" : "Rescheduled",
+      "actions" : [ {
+        "type" : "ExhaustPopup",
+        "params" : {
+          "type" : "RESCHEDULE_OFFERED"
+        }
+      }, {
+        "type" : "ChangeStatus",
+        "params" : {
+          "status" : "RescheduleActivated"
+        }
+      }, {
+        "type" : "RemoveNextAction",
+        "params" : { }
+      }, {
+        "type" : "ExhaustPopup",
+        "params" : {
+          "type" : "DPD_NOTIFICATION"
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "InstallmentStatusDetail",
+        "params" : {
+          "installmentSequenceFrom" : 1,
+          "installmentSequenceTo" : 1,
+          "installmentStatusDetail" : "PAID"
+        }
+      }, {
+        "type" : "LoanStatusDetail",
+        "params" : {
+          "statusDetail" : "RESCHEDULED"
+        }
+      }, {
+        "type" : "CurrentStatus",
+        "params" : {
+          "status" : "RescheduleOffered"
+        }
+      } ]
+    }, {
+      "template" : "MoveToRescheduledPaid",
+      "actions" : [ ],
+      "conditions" : [ ]
+    } ],
+    "agentActions" : [ {
+      "template" : "RescheduleOutgoingCall",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "RescheduleIncomingCall",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "RescheduleWhatsApp",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "RescheduleIncomingEmail",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "RescheduleSendNotification",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "RescheduleChangePortfolio",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "RescheduleAddComment",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    } ]
+  }, {
+    "name" : "ExtensionCollections",
+    "statuses" : [ ],
+    "triggers" : [{
+      "template" : "ExcludeFromAsnef",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "ChangeCompany",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "MoveToPaid",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "MoveToCurrent",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "MoveToRescheduled",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }],
+    "agentActions" : [{
+        "template" : "OutgoingCall",
+        "bulkActions" : [ ],
+        "statuses" : [ ],
+        "resolutions" : [ ],
+        "userRoles" : [ ]
+      }, {
+        "template" : "IncomingCall",
+        "bulkActions" : [ ],
+        "statuses" : [ ],
+        "resolutions" : [ ],
+        "userRoles" : [ ]
+      }, {
+        "template" : "WhatsApp",
+        "bulkActions" : [ ],
+        "statuses" : [ ],
+        "resolutions" : [ ],
+        "userRoles" : [ ]
+      }, {
+        "template" : "IncomingEmail",
+        "bulkActions" : [ ],
+        "statuses" : [ ],
+        "resolutions" : [ ],
+        "userRoles" : [ ]
+      }, {
+        "template" : "SendNotification",
+        "bulkActions" : [ ],
+        "statuses" : [ ],
+        "resolutions" : [ ],
+        "userRoles" : [ ]
+      }, {
+        "template" : "ChangePortfolio",
+        "bulkActions" : [ ],
+        "statuses" : [ ],
+        "resolutions" : [ ],
+        "userRoles" : [ ]
+      }, {
+        "template" : "AddComment",
+        "bulkActions" : [ ],
+        "statuses" : [ ],
+        "resolutions" : [ ],
+        "userRoles" : [ ]
+      }
+    ]
+  }, {
+    "name" : "RescheduledCollections",
+    "statuses" : [ ],
+    "triggers" : [ {
+      "template" : "MoveToRescheduledPaid",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "MoveToRescheduled",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "IncludeInAsnef",
+      "actions" : [ ],
+      "conditions" : [ ]
+    } ],
+    "agentActions" : [ {
+      "template" : "OutgoingCall",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "IncomingCall",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "WhatsApp",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "IncomingEmail",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "SendNotification",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "ChangePortfolio",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    }, {
+      "template" : "AddComment",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    } ]
+  }, {
+    "name" : "Dead",
+    "statuses" : [ {
+      "name" : "NoStatus",
+      "priority" : 1000
+    } ],
+    "triggers" : [ {
+      "template" : "ExcludeFromAsnef",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "BlockCommunications",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "BlacklistDocument",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "BlacklistEmail",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "BlacklistPhone",
+      "actions" : [ ],
+      "conditions" : [ ]
+    } ],
+    "agentActions" : [ {
+      "template" : "ChangePortfolio",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    } ]
+  }, {
+    "name" : "Sold",
+    "statuses" : [ {
+      "name" : "NoStatus",
+      "priority" : 1000
+    } ],
+    "triggers" : [ {
+      "template" : "ChangeCompany",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "ExcludeFromAsnef",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "BlockCommunications",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "BlacklistDocument",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "BlacklistEmail",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "BlacklistPhone",
+      "actions" : [ ],
+      "conditions" : [ ]
+    } ],
+    "agentActions" : [ {
+      "template" : "AddComment",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    } ]
+  }, {
+    "name" : "External Collections",
+    "statuses" : [ {
+      "name" : "NoStatus",
+      "priority" : 1000
+    } ],
+    "triggers" : [ {
+      "template" : "ChangeCompany",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "MoveToPaid",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "template" : "ExcludeFromAsnef",
+      "actions" : [ ],
+      "conditions" : [ ]
+    }, {
+      "name" : "ChangeLoanStatusDetailToExternalized",
+      "actions" : [ {
+        "type" : "ChangeLoanStatusDetail",
+        "params" : {
+          "statusDetail" : "EXTERNALIZED"
+        }
+      } ],
+      "conditions" : [ ]
+    } ],
+    "agentActions" : [ ]
+  } ],
+  "triggerTemplates" : {
+    "AutoAssignToAgent" : {
+      "name" : "AutoAssignToAgent",
+      "actions" : [{
+          "type" : "AssignToAgent",
+          "params" : {
+            "agent" : "test"
+          }
+        }
+      ],
+      "conditions" : [ {
+        "type" : "LoanStatusDetail",
+        "params" : {
+          "statusDetail" : "ACTIVE"
+        }
+      }, {
+        "type" : "Dpd",
+        "params" : {
+          "dpdFrom" : 61
+        }
+      }]
+    },
+    "ChangeCompany" : {
+      "name" : "ChangeCompany",
+      "actions" : [ {
+        "type" : "SetSuspendPenalties",
+        "params" : {
+          "suspend" : true
+        }
+      }, {
+        "type" : "RemoveNextAction",
+        "params" : { }
+      } ],
+      "conditions" : [ {
+        "type" : "PenaltiesSuspended",
+        "params" : {
+          "penaltiesSuspended" : false
+        }
+      } ]
+    },
+    "RestoreCompany" : {
+      "name" : "RestoreCompany",
+      "actions" : [ {
+        "type" : "SetSuspendPenalties",
+        "params" : {
+          "suspend" : false
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "ExternalPortfolioBefore",
+        "params" : { }
+      } ]
+    },
+    "MoveToCurrent" : {
+      "name" : "MoveToCurrent",
+      "actions" : [ {
+        "type" : "ChangeStatus",
+        "params" : {
+          "status" : "NoStatus"
+        }
+      }, {
+        "type" : "ChangePortfolio",
+        "params" : {
+          "portfolio" : "Current"
+        }
+      }, {
+        "type" : "ExhaustPopup",
+        "params" : {
+          "type" : "DPD_NOTIFICATION"
+        }
+      }, {
+        "type" : "RemoveNextAction",
+        "params" : { }
+      } ],
+      "conditions" : [ {
+        "type" : "Dpd",
+        "params" : {
+          "dpdTo" : 0
+        }
+      }, {
+        "type" : "TotalDue",
+        "params" : {
+          "amountFrom" : 0.01
+        }
+      }, {
+        "type" : "NotCurrentStatus",
+        "params" : {
+          "status" : "RescheduleOffered"
+        }
+      } ]
+    },
+    "MoveToCollections" : {
+      "name" : "MoveToCollections",
+      "actions" : [ {
+        "type" : "ChangePortfolio",
+        "params" : {
+          "portfolio" : "Collections",
+          "assignmentMode" : "batch",
+          "ignoreBatchOnLoanStatuses" : [ "RESCHEDULED" ]
+        }
+      }, {
+        "type" : "ShowPopup",
+        "params" : {
+          "type" : "DPD_NOTIFICATION"
+        }
+      }, {
+        "type" : "SetNextAction",
+        "params" : {
+          "action" : "OutgoingCall"
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "Dpd",
+        "params" : {
+          "dpdFrom" : 3
+        }
+      }, {
+        "type" : "LoanStatusDetail",
+        "params" : {
+          "statusDetail" : "ACTIVE"
+        }
+      }, {
+        "type" : "TotalDue",
+        "params" : {
+          "amountFrom" : 0.01
+        }
+      } ]
+    },
+    "MoveToRescheduledCollections" : {
+      "name" : "MoveToRescheduledCollections",
+      "actions" : [ {
+        "type" : "ChangeStatus",
+        "params" : {
+          "status" : "RescheduleDelayed"
+        }
+      }, {
+        "type" : "ChangePortfolio",
+        "params" : {
+          "portfolio" : "RescheduledCollections",
+          "assignmentMode" : "batch"
+        }
+      }, {
+        "type" : "ShowPopup",
+        "params" : {
+          "type" : "DPD_NOTIFICATION"
+        }
+      }, {
+          "type" : "ExhaustPopup",
+          "params" : {
+            "type" : "RESCHEDULE_OFFERED"
+          }
+        }, {
+        "type" : "SetNextAction",
+        "params" : {
+          "action" : "OutgoingCall"
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "NotCurrentStatus",
+        "params" : {
+          "status" : "RescheduleOffered"
+        }
+      }, {
+        "type" : "LoanStatusDetail",
+        "params" : {
+          "statusDetail" : "RESCHEDULED"
+        }
+      }, {
+        "type" : "Dpd",
+        "params" : {
+          "dpdFrom" : 1
+        }
+      }, {
+        "type" : "TotalDue",
+        "params" : {
+          "amountFrom" : 0.01
+        }
+      } ]
+    },
+    "MoveToRescheduled" : {
+      "name" : "MoveToRescheduled",
+      "actions" : [ {
+        "type" : "ChangeStatus",
+        "params" : {
+          "status" : "RescheduleActivated"
+        }
+      }, {
+        "type" : "ExhaustPopup",
+        "params" : {
+          "type" : "RESCHEDULE_OFFERED"
+        }
+      }, {
+        "type" : "ChangePortfolio",
+        "params" : {
+          "portfolio" : "Rescheduled",
+          "assignmentMode" : "batch"
+        }
+      }, {
+        "type" : "ExhaustPopup",
+        "params" : {
+          "type" : "DPD_NOTIFICATION"
+        }
+      }, {
+        "type" : "ManageClientCommunications",
+        "params" : {
+          "block" : false
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "LoanStatusDetail",
+        "params" : {
+          "statusDetail" : "RESCHEDULED"
+        }
+      }, {
+        "type" : "Dpd",
+        "params" : {
+          "dpdTo" : 0
+        }
+      }, {
+        "type" : "TotalDue",
+        "params" : {
+          "amountFrom" : 0.01
+        }
+      } ]
+    },
+    "MoveToEarlyCollections" : {
+      "name" : "MoveToEarlyCollections",
+      "actions" : [ {
+        "type" : "ChangeStatus",
+        "params" : {
+          "status" : "NoStatus"
+        }
+      }, {
+        "type" : "ChangePortfolio",
+        "params" : {
+          "portfolio" : "EarlyCollections",
+          "assignmentMode" : "batch"
+        }
+      }, {
+        "type" : "ShowPopup",
+        "params" : {
+          "type" : "DPD_NOTIFICATION"
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "Dpd",
+        "params" : {
+          "dpdFrom" : 1,
+          "dpdTo" : 2
+        }
+      }, {
+        "type" : "TotalDue",
+        "params" : {
+          "amountFrom" : 0.01
+        }
+      }, {
+        "type" : "NotCurrentStatus",
+        "params" : {
+          "status" : "RescheduleOffered"
+        }
+      } ]
+    },
+    "MoveToPaid" : {
+      "name" : "MoveToPaid",
+      "actions" : [ {
+        "type" : "ChangeStatus",
+        "params" : {
+          "status" : "NoStatus"
+        }
+      }, {
+        "type" : "ChangePortfolio",
+        "params" : {
+          "portfolio" : "Paid"
+        }
+      }, {
+        "type" : "ExhaustPopup",
+        "params" : {
+          "type" : "DPD_NOTIFICATION"
+        }
+      }, {
+        "type" : "RemoveNextAction",
+        "params" : { }
+      } ],
+      "conditions" : [ {
+        "type" : "TotalOutstanding",
+        "params" : {
+          "amountTo" : 0.01
+        }
+      }, {
+        "type" : "LoanStatusDetails",
+        "params" : {
+          "statusDetails" : [ "PAID", "BROKEN_PAID", "RESCHEDULED_PAID", "LEGAL_PAID", "RENOUNCED_PAID" ]
+        }
+      } ]
+    },
+    "MoveToRescheduledPaid" : {
+      "name" : "MoveToRescheduledPaid",
+      "actions" : [ {
+        "type" : "ExhaustPopup",
+        "params" : {
+          "type" : "RESCHEDULE_OFFERED"
+        }
+      }, {
+        "type" : "ChangeStatus",
+        "params" : {
+          "status" : "RescheduledPaid"
+        }
+      }, {
+        "type" : "ChangePortfolio",
+        "params" : {
+          "portfolio" : "Paid"
+        }
+      }, {
+        "type" : "ExhaustPopup",
+        "params" : {
+          "type" : "DPD_NOTIFICATION"
+        }
+      }, {
+        "type" : "RemoveNextAction",
+        "params" : { }
+      } ],
+      "conditions" : [ {
+        "type" : "TotalOutstanding",
+        "params" : {
+          "amountTo" : 0.01
+        }
+      } ]
+    },
+    "ExcludeFromAsnef" : {
+      "name" : "ExcludeFromAsnef",
+      "actions" : [ {
+        "type" : "ManageAsnef",
+        "params" : {
+          "exclude" : true
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "AsnefStatus",
+        "params" : {
+          "excluded" : false
+        }
+      }, {
+        "type" : "MostRecentDebt",
+        "params" : { }
+      } ]
+    },
+    "IncludeInAsnef" : {
+      "name" : "IncludeInAsnef",
+      "actions" : [ {
+        "type" : "ManageAsnef",
+        "params" : {
+          "exclude" : false
+        }
+      }, {
+        "type" : "ExhaustPopup",
+        "params" : {
+          "type" : "RESCHEDULE_OFFERED"
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "AsnefStatus",
+        "params" : {
+          "excluded" : true
+        }
+      }, {
+        "type" : "MostRecentDebt",
+        "params" : { }
+      } ]
+    },
+    "BlockCommunications" : {
+      "name" : "BlockCommunications",
+      "actions" : [ {
+        "type" : "ManageClientCommunications",
+        "params" : {
+          "block" : true
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "ClientCommunicationsStatus",
+        "params" : {
+          "blocked" : false
+        }
+      } ]
+    },
+    "BlacklistDocument" : {
+      "name" : "BlacklistDocument",
+      "actions" : [ {
+        "type" : "ManageBlacklists",
+        "params" : {
+          "document" : true
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "BlacklistsStatus",
+        "params" : {
+          "document" : false
+        }
+      } ]
+    },
+    "BlacklistEmail" : {
+      "name" : "BlacklistEmail",
+      "actions" : [ {
+        "type" : "ManageBlacklists",
+        "params" : {
+          "email" : true
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "BlacklistsStatus",
+        "params" : {
+          "email" : false
+        }
+      } ]
+    },
+    "BlacklistPhone" : {
+      "name" : "BlacklistPhone",
+      "actions" : [ {
+        "type" : "ManageBlacklists",
+        "params" : {
+          "phone" : true
+        }
+      } ],
+      "conditions" : [ {
+        "type" : "BlacklistsStatus",
+        "params" : {
+          "phone" : false
+        }
+      } ]
+    }
+  },
+  "agingBuckets" : [ {
+    "dpdFrom" : -999,
+    "dpdTo" : -3,
+    "name" : "NotDelayed"
+  }, {
+    "dpdFrom" : -2,
+    "dpdTo" : 0,
+    "name" : "-2 to 0 DPD"
+  }, {
+    "dpdFrom" : 1,
+    "dpdTo" : 6,
+    "name" : "1 to 6 DPD"
+  }, {
+    "dpdFrom" : 7,
+    "dpdTo" : 30,
+    "name" : "7 to 30 DPD"
+  }, {
+    "dpdFrom" : 31,
+    "dpdTo" : 60,
+    "name" : "31 to 60 DPD"
+  }, {
+    "dpdFrom" : 61,
+    "dpdTo" : 90,
+    "name" : "61 to 90 DPD"
+  }, {
+    "dpdFrom" : 91,
+    "dpdTo" : 120,
+    "name" : "91 to 120 DPD"
+  }, {
+    "dpdFrom" : 121,
+    "dpdTo" : 1000000,
+    "name" : "121+ DPD"
+  } ],
+  "agentActionTemplates" : {
+    "OutgoingCall" : {
+      "type" : "OutgoingCall",
+      "bulkActions" : [ {
+        "type" : "LogActivity",
+        "params" : { },
+        "mandatory" : false
+      } ],
+      "statuses" : [ {
+        "template" : "Scheduled",
+        "defaultResolution" : "Answered",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Delayed",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "NoContact",
+        "defaultResolution" : "NoAnswer",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "NoAgreement",
+        "defaultResolution" : "Answered",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Negative",
+        "defaultResolution" : "Answered",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Offer",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Fraud",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Concursal",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Consumer",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "DataProtection",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "RescheduleOffered",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      } ],
+      "resolutions" : [ "NoAnswer", "Answered", "InvalidPhone", "AnsweringMachine" ],
+      "userRoles" : [ ]
+    },
+    "RescheduleOutgoingCall" : {
+      "type" : "OutgoingCall",
+      "bulkActions" : [ {
+        "type" : "LogActivity",
+        "params" : { },
+        "mandatory" : false
+      } ],
+      "statuses" : [ ],
+      "resolutions" : [ "NoAnswer", "Answered", "InvalidPhone", "AnsweringMachine" ],
+      "userRoles" : [ ]
+    },
+    "IncomingCall" : {
+      "type" : "IncomingCall",
+      "bulkActions" : [ {
+        "type" : "LogActivity",
+        "params" : { },
+        "mandatory" : false
+      } ],
+      "statuses" : [ {
+        "template" : "Scheduled",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Delayed",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "NoContact",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "NoAgreement",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Negative",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "RescheduleOffered",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Offer",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Fraud",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Concursal",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Consumer",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "DataProtection",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      } ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    },
+    "RescheduleIncomingCall" : {
+      "type" : "IncomingCall",
+      "bulkActions" : [ {
+        "type" : "LogActivity",
+        "params" : { },
+        "mandatory" : false
+      } ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    },
+    "WhatsApp" : {
+      "type" : "WhatsApp",
+      "bulkActions" : [ {
+        "type" : "LogActivity",
+        "params" : { },
+        "mandatory" : false
+      } ],
+      "statuses" : [ {
+        "template" : "Scheduled",
+        "defaultResolution" : "Answered",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Delayed",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "NoContact",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "NoAgreement",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Negative",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "RescheduleOffered",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Offer",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Fraud",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Concursal",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Consumer",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "DataProtection",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      } ],
+      "resolutions" : [ "NoAnswer", "Answered" ],
+      "userRoles" : [ ]
+    },
+    "RescheduleWhatsApp" : {
+      "type" : "WhatsApp",
+      "bulkActions" : [ {
+        "type" : "LogActivity",
+        "params" : { },
+        "mandatory" : false
+      } ],
+      "statuses" : [ ],
+      "resolutions" : [ "NoAnswer", "Answered" ],
+      "userRoles" : [ ]
+    },
+    "IncomingEmail" : {
+      "type" : "IncomingEmail",
+      "bulkActions" : [ {
+        "type" : "LogActivity",
+        "params" : { },
+        "mandatory" : false
+      } ],
+      "statuses" : [ {
+        "template" : "Scheduled",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Delayed",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "NoContact",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "NoAgreement",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Negative",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "RescheduleOffered",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Offer",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Fraud",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Concursal",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Consumer",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "DataProtection",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      } ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    },
+    "RescheduleIncomingEmail" : {
+      "type" : "IncomingEmail",
+      "bulkActions" : [ {
+        "type" : "LogActivity",
+        "params" : { },
+        "mandatory" : false
+      } ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    },
+    "LegalAction" : {
+      "type" : "LegalAction",
+      "bulkActions" : [ {
+        "type" : "LogActivity",
+        "params" : { },
+        "mandatory" : false
+      } ],
+      "statuses" : [ {
+        "template" : "Fraud",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Concursal",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "RecoveryClaim",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      } ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    },
+    "Search" : {
+      "type" : "Search",
+      "bulkActions" : [ ],
+      "statuses" : [ {
+        "template" : "Scheduled",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Delayed",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "NoContact",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "NoAgreement",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Negative",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Offer",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Fraud",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Concursal",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Consumer",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "DataProtection",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      } ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    },
+    "AddComment" : {
+      "type" : "AddComment",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    },
+    "RescheduleAddComment" : {
+      "type" : "AddComment",
+      "bulkActions" : [ ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    },
+    "AccountReview" : {
+      "type" : "AccountReview",
+      "bulkActions" : [ ],
+      "statuses" : [ {
+        "template" : "Scheduled",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Delayed",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "NoContact",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "NoAgreement",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Negative",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Offer",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Fraud",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Concursal",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "Consumer",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      }, {
+        "template" : "DataProtection",
+        "nextActions" : [ ],
+        "bulkActions" : [ ]
+      } ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    },
+    "SendNotification" : {
+      "type" : "SendNotification",
+      "bulkActions" : [ {
+        "type" : "SendSms",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification", "DC_0_Cuenta_Ingreso", "DC_0_Publicacion_ASNEF", "DC_0_Envio_Justificante", "DC_0_Aviso_Dpto_Legal", "DC_0_Ofrecimiento_Facilidades" ]
+        },
+        "mandatory" : false
+      }, {
+        "type" : "SendEmail",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification" ]
+        },
+        "mandatory" : false
+      } ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    },
+    "RescheduleSendNotification" : {
+      "type" : "SendNotification",
+      "bulkActions" : [ {
+        "type" : "SendSms",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification", "DC_0_Envio_Justificante", "DC_0_Aviso_Dpto_Legal" ]
+        },
+        "mandatory" : false
+      }, {
+        "type" : "SendEmail",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification" ]
+        },
+        "mandatory" : false
+      } ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ ]
+    },
+    "ChangePortfolio" : {
+      "type" : "ChangePortfolio",
+      "bulkActions" : [ {
+        "type" : "ChangePortfolio",
+        "params" : {
+          "portfolios" : [ "Current", "EarlyCollections", "Collections", "Legal", "Paid", "Dead", "Rescheduled", "ExtensionCollections"]
+        },
+        "mandatory" : true
+      } ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ "DC TEAMLEAD", "ADMIN", "LEGAL" ]
+    },
+    "RescheduleChangePortfolio" : {
+      "type" : "ChangePortfolio",
+      "bulkActions" : [ {
+        "type" : "ChangePortfolio",
+        "params" : {
+          "portfolios" : [ "Current", "EarlyCollections", "Collections", "Rescheduled", "RescheduledCollections", "Legal", "Paid", "Dead" ]
+        },
+        "mandatory" : true
+      } ],
+      "statuses" : [ ],
+      "resolutions" : [ ],
+      "userRoles" : [ "DC TEAMLEAD", "ADMIN", "LEGAL" ]
+    }
+  },
+  "agentActionStatusTemplates" : {
+    "RescheduleOffered" : {
+      "name" : "RescheduleOffered",
+      "nextActions" : [ ],
+      "bulkActions" : [ {
+        "type" : "Reschedule",
+        "params" : { },
+        "mandatory" : true
+      }, {
+        "type" : "RemoveNextAction",
+        "params" : { },
+        "mandatory" : true
+      } ]
+    },
+    "Scheduled" : {
+      "name" : "Scheduled",
+      "nextActions" : [ {
+        "type" : "OutgoingCall",
+        "nextActionInDays" : 6
+      } ],
+      "bulkActions" : [ {
+        "type" : "PromiseToPay",
+        "params" : {
+          "promiseDueDateInDays" : 5
+        },
+        "mandatory" : true
+      }, {
+        "type" : "SendSms",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification", "DC_0_Cuenta_Ingreso", "DC_0_Publicacion_ASNEF", "DC_0_Envio_Justificante", "DC_0_Aviso_Dpto_Legal", "DC_0_Ofrecimiento_Facilidades" ]
+        },
+        "mandatory" : false
+      }, {
+        "type" : "SendEmail",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification" ]
+        },
+        "mandatory" : false
+      } ]
+    },
+    "Delayed" : {
+      "name" : "Delayed",
+      "nextActions" : [ {
+        "type" : "OutgoingCall",
+        "nextActionInDays" : 5
+      } ],
+      "bulkActions" : [ {
+        "type" : "SendSms",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification", "DC_0_Cuenta_Ingreso", "DC_0_Publicacion_ASNEF", "DC_0_Envio_Justificante", "DC_0_Aviso_Dpto_Legal", "DC_0_Ofrecimiento_Facilidades" ]
+        },
+        "mandatory" : false
+      }, {
+        "type" : "SendEmail",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification" ]
+        },
+        "mandatory" : false
+      } ]
+    },
+    "NoContact" : {
+      "name" : "NoContact",
+      "nextActions" : [ {
+        "type" : "OutgoingCall",
+        "nextActionInDays" : 5
+      } ],
+      "bulkActions" : [ {
+        "type" : "SendSms",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification", "DC_0_Cuenta_Ingreso", "DC_0_Publicacion_ASNEF", "DC_0_Envio_Justificante", "DC_0_Aviso_Dpto_Legal", "DC_0_Ofrecimiento_Facilidades" ]
+        },
+        "mandatory" : false
+      }, {
+        "type" : "SendEmail",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification" ]
+        },
+        "mandatory" : false
+      } ]
+    },
+    "NoStatus" : {
+      "name" : "NoStatus",
+      "nextActions" : [ {
+        "type" : "OutgoingCall",
+        "nextActionInDays" : 5
+      } ],
+      "bulkActions" : [ {
+        "type" : "SendSms",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification", "DC_0_Cuenta_Ingreso", "DC_0_Publicacion_ASNEF", "DC_0_Envio_Justificante", "DC_0_Aviso_Dpto_Legal", "DC_0_Ofrecimiento_Facilidades" ]
+        },
+        "mandatory" : false
+      }, {
+        "type" : "SendEmail",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification" ]
+        },
+        "mandatory" : false
+      } ]
+    },
+    "NoAgreement" : {
+      "name" : "NoAgreement",
+      "nextActions" : [ {
+        "type" : "OutgoingCall",
+        "nextActionInDays" : 5
+      } ],
+      "bulkActions" : [ {
+        "type" : "SendSms",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification", "DC_0_Cuenta_Ingreso", "DC_0_Publicacion_ASNEF", "DC_0_Envio_Justificante", "DC_0_Aviso_Dpto_Legal", "DC_0_Ofrecimiento_Facilidades" ]
+        },
+        "mandatory" : false
+      }, {
+        "type" : "SendEmail",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification" ]
+        },
+        "mandatory" : false
+      } ]
+    },
+    "Negative" : {
+      "name" : "Negative",
+      "nextActions" : [ {
+        "type" : "OutgoingCall",
+        "nextActionInDays" : 6
+      } ],
+      "bulkActions" : [ {
+        "type" : "SendSms",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification", "DC_0_Cuenta_Ingreso", "DC_0_Publicacion_ASNEF", "DC_0_Envio_Justificante", "DC_0_Aviso_Dpto_Legal", "DC_0_Ofrecimiento_Facilidades" ]
+        },
+        "mandatory" : false
+      }, {
+        "type" : "SendEmail",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification" ]
+        },
+        "mandatory" : false
+      } ]
+    },
+    "Offer" : {
+      "name" : "Offer",
+      "nextActions" : [ {
+        "type" : "OutgoingCall",
+        "nextActionInDays" : 4
+      } ],
+      "bulkActions" : [ {
+        "type" : "SendSms",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification", "DC_0_Cuenta_Ingreso", "DC_0_Publicacion_ASNEF", "DC_0_Envio_Justificante", "DC_0_Aviso_Dpto_Legal", "DC_0_Ofrecimiento_Facilidades" ]
+        },
+        "mandatory" : false
+      }, {
+        "type" : "SendEmail",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification" ]
+        },
+        "mandatory" : false
+      } ]
+    },
+    "Fraud" : {
+      "name" : "Fraud",
+      "nextActions" : [ {
+        "type" : "OutgoingCall",
+        "nextActionInDays" : 4
+      } ],
+      "bulkActions" : [ {
+        "type" : "SendSms",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification", "DC_0_Cuenta_Ingreso", "DC_0_Publicacion_ASNEF", "DC_0_Envio_Justificante", "DC_0_Aviso_Dpto_Legal", "DC_0_Ofrecimiento_Facilidades" ]
+        },
+        "mandatory" : false
+      }, {
+        "type" : "SendEmail",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification" ]
+        },
+        "mandatory" : false
+      } ]
+    },
+    "Concursal" : {
+      "name" : "Concursal",
+      "nextActions" : [ {
+        "type" : "OutgoingCall",
+        "nextActionInDays" : 4
+      } ],
+      "bulkActions" : [ {
+        "type" : "SendSms",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification", "DC_0_Cuenta_Ingreso", "DC_0_Publicacion_ASNEF", "DC_0_Envio_Justificante", "DC_0_Aviso_Dpto_Legal", "DC_0_Ofrecimiento_Facilidades" ]
+        },
+        "mandatory" : false
+      }, {
+        "type" : "SendEmail",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification" ]
+        },
+        "mandatory" : false
+      } ]
+    },
+    "RescheduleNonActivated" : {
+      "name" : "RescheduleNonActivated",
+      "nextActions" : [ {
+        "type" : "OutgoingCall",
+        "nextActionInDays" : 4
+      } ],
+      "bulkActions" : [ {
+        "type" : "SendSms",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification", "DC_0_Cuenta_Ingreso", "DC_0_Publicacion_ASNEF", "DC_0_Envio_Justificante", "DC_0_Aviso_Dpto_Legal", "DC_0_Ofrecimiento_Facilidades" ]
+        },
+        "mandatory" : false
+      }, {
+        "type" : "SendEmail",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification" ]
+        },
+        "mandatory" : false
+      } ]
+    },
+    "Consumer" : {
+      "name" : "Consumer",
+      "nextActions" : [ {
+        "type" : "OutgoingCall",
+        "nextActionInDays" : 4
+      } ],
+      "bulkActions" : [ {
+        "type" : "SendSms",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification", "DC_0_Cuenta_Ingreso", "DC_0_Publicacion_ASNEF", "DC_0_Envio_Justificante", "DC_0_Aviso_Dpto_Legal", "DC_0_Ofrecimiento_Facilidades" ]
+        },
+        "mandatory" : false
+      }, {
+        "type" : "SendEmail",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification" ]
+        },
+        "mandatory" : false
+      } ]
+    },
+    "DataProtection" : {
+      "name" : "DataProtection",
+      "nextActions" : [ {
+        "type" : "OutgoingCall",
+        "nextActionInDays" : 4
+      } ],
+      "bulkActions" : [ {
+        "type" : "SendSms",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification", "DC_0_Cuenta_Ingreso", "DC_0_Publicacion_ASNEF", "DC_0_Envio_Justificante", "DC_0_Aviso_Dpto_Legal", "DC_0_Ofrecimiento_Facilidades" ]
+        },
+        "mandatory" : false
+      }, {
+        "type" : "SendEmail",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification" ]
+        },
+        "mandatory" : false
+      } ]
+    },
+    "RecoveryClaim" : {
+      "name" : "RecoveryClaim",
+      "nextActions" : [ {
+        "type" : "OutgoingCall",
+        "nextActionInDays" : 4
+      } ],
+      "bulkActions" : [ {
+        "type" : "SendSms",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification", "DC_0_Cuenta_Ingreso", "DC_0_Publicacion_ASNEF", "DC_0_Envio_Justificante", "DC_0_Aviso_Dpto_Legal", "DC_0_Ofrecimiento_Facilidades" ]
+        },
+        "mandatory" : false
+      }, {
+        "type" : "SendEmail",
+        "params" : {
+          "cmsKeys" : [ "DcCustomNotification" ]
+        },
+        "mandatory" : false
+      } ]
+    }
+  },
+  "companies" : {
+    "defaultOwningCompany" : "Alfa",
+    "defaultManagingCompany" : "Alfa",
+    "owningCompanies" : [ ],
+    "managingCompanies" : [ ]
+  },
+  "triggersOnVoidTransaction" : [ {
+    "template" : "MoveToEarlyCollections",
+    "actions" : [ ],
+    "conditions" : [ ]
+  }, {
+    "template" : "MoveToCollections",
+    "actions" : [ ],
+    "conditions" : [ ]
+  }, {
+    "template" : "MoveToCurrent",
+    "actions" : [ ],
+    "conditions" : [ ]
+  } ],
+  "reschedulingSettings" : {
+    "minInstallments" : 2,
+    "maxInstallments" : 4,
+    "repaymentDueDays" : 2,
+    "gracePeriodDays" : 5,
+    "holdToBreakDays" : 3,
+    "minDpd" : -365,
+    "minTotalOutstanding" : 0.00
+  },
+  "extensionSettings" : {
+    "maxPeriodDays" : 180
+  }
+}

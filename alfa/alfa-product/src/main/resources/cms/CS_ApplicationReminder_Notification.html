@@ -1,0 +1,32 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Aún estás a tiempo de recibir la cantidad que seleccionaste, solo tienes que seguir con el formulario. 
+{{ button(title="Acabar solicitud", url=company.webBaseUrl + "//login?utm_source=email&utm_medium=CRM&utm_campaign=instantn&utm_content=1
+") }}
+<br>
+<br>
+<b>
+¿No puedes seguir con tu solicitud?
+<br>
+<br>
+</b>
+
+Si no puedes pasar al siguiente paso, llámanos, podemos resolverlo: </b><a href="tel:+34{{ company.phone }}" style="color:#00b46d;">{{company.phone}}</a>.
+<br>
+<br>
+{{ button(title="Llámanos", url="tel:+34{{ company.phone }}") }}
+
+{% include "_email_p_end" %}
+
+
+{% include "_cs_email_signature" %}
+
+{% endblock %}}

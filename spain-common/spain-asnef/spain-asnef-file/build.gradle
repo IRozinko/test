@@ -1,0 +1,7 @@
+apply from: "${rootDir}/gradle/java.gradle"
+apply from: "${rootDir}/gradle/querydsl.gradle"
+
+dependencies {
+
+    compile project(":spain-common:spain-asnef:spain-asnef-backend")
+}

@@ -1,0 +1,11 @@
+apply from: "${rootDir}/gradle/java.gradle"
+apply from: "${rootDir}/gradle/querydsl.gradle"
+
+dependencies {
+    compile project(":platform:lending:lending-core")
+    compile project(":spain-common:spain-notification")
+    compile libs.csv
+    compile group: 'net.agkn', name: 'hll', version: '1.6.0'
+
+    testCompile project(":platform:common:integration-test")
+}

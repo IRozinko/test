@@ -1,0 +1,25 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Tu solicitud de préstamo caducará pronto. Evítalo enviándonos <b>fotografías de ambas caras de tu DNI/NIE</b> para obtener tu dinero extra mientras estés a tiempo. 
+<br>
+<br>
+Este es el <b>último paso</b> de la solicitud y cumples el resto de requisitos. Si todo está correcto en tu documento de identidad (se puede leer bien, no está caducado etc.), recibirás tu oferta de préstamo. 
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+{{ button(title="Subir mi DNI", url=company.webBaseUrl + "/login/") }}
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Si, por cualquier motivo, no puedes subir las fotografía de tu DNI/NIE, mándanoslas al mail: <a href="mailto:info@alfa.es" style="color:#00b46d;">info@alfa.es</a> con el asunto: “Documento”+ tu número de DNI o NIE.
+{% include "_email_p_end" %}
+{% include "_cs_email_signature" %}
+
+{% endblock %}}

@@ -1,0 +1,14 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+    compile project(":platform:common:utils")
+    compile project(":platform:common:db")
+    compile "org.quartz-scheduler:quartz"
+    compile "org.springframework:spring-context-support"
+}
+
+bootRepackage {
+    enabled = false
+}

@@ -1,0 +1,11 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+
+dependencies {
+    compile project(":platform:crm")
+    compile project(":platform:lending:lending-core")
+    compile project(":platform:workflow")
+    compile project(":platform:risk:check-list")
+
+    testCompile project(":platform:common:integration-test")
+}

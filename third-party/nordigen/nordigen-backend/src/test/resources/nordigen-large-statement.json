@@ -1,0 +1,3022 @@
+{
+  "account_list": [
+    {
+      "account_number": "ES5984249479828539118875",
+      "holder_name": "Maci Lee",
+      "bank_name": "Abanca",
+      "currency": "EUR",
+      "period_start": "2016-09-01",
+      "period_end": "2017-08-31",
+      "transaction_list": [
+        {
+          "date": "2017-08-31",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Medical Ltd.",
+          "sum": 1,
+          "category": {
+            "id": 101,
+            "title": "Other outgoing payments"
+          }
+        }
+      ]
+    },
+    {
+      "account_number": "ES5984249479828539118875",
+      "holder_name": "Maci Lee",
+      "bank_name": "Abanca",
+      "currency": "EUR",
+      "period_start": "2016-09-01",
+      "period_end": "2017-08-31",
+      "transaction_list": [
+        {
+          "date": "2017-08-31",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Medical Ltd.",
+          "sum": 2,
+          "category": {
+            "id": 101,
+            "title": "Other outgoing payments"
+          }
+        },
+        {
+          "date": "2017-08-31",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Medical Ltd.",
+          "sum": -929,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              },
+              {
+                "id": "85",
+                "title": "Other outgoing payments category"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-30",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Audio.Com",
+          "sum": -480,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-28",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : EnterprisesNet",
+          "sum": 810,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-26",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : National Tools",
+          "sum": 414,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-25",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Audio Ltd.",
+          "sum": -366,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-24",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : EnterprisesWorld",
+          "sum": -477,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-21",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Systems Mfg.",
+          "sum": 583,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-20",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Infinity Online",
+          "sum": -241,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-19",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Security Tech",
+          "sum": -671,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-16",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MegaCircuits",
+          "sum": 685,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-11",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Superior Med",
+          "sum": -284,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-09",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Media USA",
+          "sum": -892,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-07",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : SuperSystems",
+          "sum": 19,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-06",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MetroExports",
+          "sum": -901,
+          "category": {
+            "id": 45,
+            "title": "Transportation expenses",
+            "hierarchy": [
+              {
+                "id": "42",
+                "title": "Transportation"
+              },
+              {
+                "id": "45",
+                "title": "Transportation expenses"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-04",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : HealthCo",
+          "sum": 144,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-03",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MetroAudio",
+          "sum": -696,
+          "category": {
+            "id": 45,
+            "title": "Transportation expenses",
+            "hierarchy": [
+              {
+                "id": "42",
+                "title": "Transportation"
+              },
+              {
+                "id": "45",
+                "title": "Transportation expenses"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-02",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Media Mfg.",
+          "sum": -705,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-01",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : OmniData",
+          "sum": -971,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-07-31",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Superior Studios",
+          "sum": 313,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-07-30",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Union Industrial",
+          "sum": 954,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-07-28",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : OnlineWorld",
+          "sum": -730,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-07-26",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : eNetworks",
+          "sum": -862,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-07-24",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MetroExports",
+          "sum": 690,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-07-23",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Enterprises Inc.",
+          "sum": 356,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-07-22",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : StudiosCo",
+          "sum": 319,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-07-19",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Petroleum.Com",
+          "sum": 876,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-07-18",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Foods Mfg.",
+          "sum": 258,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-07-17",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : SecurityNet",
+          "sum": -815,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-07-13",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MetroStudios",
+          "sum": -72,
+          "category": {
+            "id": 45,
+            "title": "Transportation expenses",
+            "hierarchy": [
+              {
+                "id": "42",
+                "title": "Transportation"
+              },
+              {
+                "id": "45",
+                "title": "Transportation expenses"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-07-10",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : G-Materials",
+          "sum": 377,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-07-08",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Imports Inc.",
+          "sum": 398,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-07-07",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Vital Bank",
+          "sum": -459,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-07-06",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MetroPetroleum",
+          "sum": -650,
+          "category": {
+            "id": 45,
+            "title": "Transportation expenses",
+            "hierarchy": [
+              {
+                "id": "42",
+                "title": "Transportation"
+              },
+              {
+                "id": "45",
+                "title": "Transportation expenses"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-06-29",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Next Apparel",
+          "sum": -343,
+          "category": {
+            "id": 49,
+            "title": "Clothing",
+            "hierarchy": [
+              {
+                "id": "47",
+                "title": "Clothing and shoes"
+              },
+              {
+                "id": "49",
+                "title": "Clothing"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-06-27",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Audio Tech",
+          "sum": -866,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-06-25",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Green Online",
+          "sum": 398,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-06-21",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MegaAudio",
+          "sum": -712,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-06-18",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Exports One",
+          "sum": -538,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-06-14",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Studios Inc.",
+          "sum": -843,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-06-13",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Union Publishing",
+          "sum": 51,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-06-11",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : National Online",
+          "sum": 270,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-06-10",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : iNetworks",
+          "sum": 569,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-06-09",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Robotic UK",
+          "sum": -392,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-06-08",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : OmniShipping",
+          "sum": -402,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-06-07",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Green Petroleum",
+          "sum": -69,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-06-05",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Union Data",
+          "sum": 866,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-05-30",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Exports UK",
+          "sum": 31,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-05-29",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Infinity Media",
+          "sum": -937,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-05-28",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Apparel Labs",
+          "sum": -117,
+          "category": {
+            "id": 49,
+            "title": "Clothing",
+            "hierarchy": [
+              {
+                "id": "47",
+                "title": "Clothing and shoes"
+              },
+              {
+                "id": "49",
+                "title": "Clothing"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-05-27",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Publishing Tech",
+          "sum": 26,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-05-24",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Financial Tech",
+          "sum": -530,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-05-23",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : eCircuits",
+          "sum": 213,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-05-21",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Apparel One",
+          "sum": -613,
+          "category": {
+            "id": 49,
+            "title": "Clothing",
+            "hierarchy": [
+              {
+                "id": "47",
+                "title": "Clothing and shoes"
+              },
+              {
+                "id": "49",
+                "title": "Clothing"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-05-20",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Exports One",
+          "sum": 99,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-05-19",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Financial Unlimited",
+          "sum": 127,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-05-16",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Vital Energy",
+          "sum": 636,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-05-13",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Circuits USA",
+          "sum": -494,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-05-11",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Circuits UK",
+          "sum": 848,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-05-05",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Security Mfg.",
+          "sum": -441,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-05-03",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : TransMedia",
+          "sum": 153,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-05-02",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : iTools",
+          "sum": -63,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-30",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : PublishingNet",
+          "sum": -860,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-27",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Best Audio",
+          "sum": -174,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-26",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Circuits Mfg.",
+          "sum": -856,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-25",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Next Shipping",
+          "sum": -776,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-23",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : G-Health",
+          "sum": 214,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-21",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : SuperIndustrial",
+          "sum": 562,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-19",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Superior Publishing",
+          "sum": 842,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-18",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : iAudio",
+          "sum": -455,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-13",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Foods Unlimited",
+          "sum": -846,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-12",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Aerospace Unlimited",
+          "sum": -596,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-11",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : ImportsWorld",
+          "sum": 189,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-10",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : ExportsNet",
+          "sum": -242,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-09",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Info Labs",
+          "sum": -626,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-08",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Publishing Tech",
+          "sum": -290,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-05",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MotorsCo",
+          "sum": 285,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-03",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : First Enterprises",
+          "sum": 923,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-04-01",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Exports.Com",
+          "sum": -548,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-03-30",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Audio USA",
+          "sum": 42,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-03-25",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MegaApparel",
+          "sum": 50,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-03-23",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Systems Tech",
+          "sum": 970,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-03-22",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Green Nano",
+          "sum": 115,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-03-18",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MegaCircuits",
+          "sum": 337,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-03-17",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Bank UK",
+          "sum": -872,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-03-15",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : National Info",
+          "sum": -269,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-03-13",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Superior Circuits",
+          "sum": -284,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-03-11",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : SuperTools",
+          "sum": 210,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-03-10",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Pacific Energy",
+          "sum": 618,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-03-09",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Imports One",
+          "sum": 7,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-03-08",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : National Audio",
+          "sum": 993,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-03-07",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Robotic Inc.",
+          "sum": -650,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-02-28",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : BankNet",
+          "sum": 725,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-02-26",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Aerospace UK",
+          "sum": 900,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-02-24",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Tools Ltd.",
+          "sum": 475,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-02-21",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Enterprises Labs",
+          "sum": 437,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-02-20",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Systems Unlimited",
+          "sum": 847,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-02-19",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : iExports",
+          "sum": 65,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-02-17",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : National Data",
+          "sum": 307,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-02-16",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Audio Labs",
+          "sum": -451,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-02-12",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Nano USA",
+          "sum": 230,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-02-10",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Data USA",
+          "sum": 107,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-02-09",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : TransSecurity",
+          "sum": 848,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-02-07",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Foods Mfg.",
+          "sum": -535,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-02-06",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : TransNetworks",
+          "sum": -284,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-02-05",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Next Apparel",
+          "sum": 804,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-02-03",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Global Media",
+          "sum": 849,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-02-01",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : iRobotic",
+          "sum": -142,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-01-31",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Industrial.Com",
+          "sum": -325,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-01-30",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Materials Tech",
+          "sum": -639,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-01-29",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MetroCircuits",
+          "sum": 535,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-01-28",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Apparel Tech",
+          "sum": 780,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-01-25",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Imports One",
+          "sum": -310,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-01-24",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : First Biotic",
+          "sum": -624,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-01-23",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : G-Online",
+          "sum": -597,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-01-18",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : TransSolar",
+          "sum": 420,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-01-16",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Best Bank",
+          "sum": 62,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-01-14",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : ApparelNet",
+          "sum": -265,
+          "category": {
+            "id": 49,
+            "title": "Clothing",
+            "hierarchy": [
+              {
+                "id": "47",
+                "title": "Clothing and shoes"
+              },
+              {
+                "id": "49",
+                "title": "Clothing"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-01-13",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Medical USA",
+          "sum": -927,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-01-11",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Vital Data",
+          "sum": 541,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-01-08",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Media Inc.",
+          "sum": -299,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-01-04",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : HyperIndustrial",
+          "sum": -898,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-01-02",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Online Ltd.",
+          "sum": -3,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-30",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MotorsWorld",
+          "sum": -411,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-29",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Next Foods",
+          "sum": -520,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-28",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : ePetroleum",
+          "sum": 231,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-27",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Aerospace Labs",
+          "sum": -653,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-25",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Energy.Com",
+          "sum": -128,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-22",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Vital Foods",
+          "sum": 624,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-20",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MegaExports",
+          "sum": 773,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-19",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Networks Inc.",
+          "sum": -78,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-16",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : EnergyCo",
+          "sum": -210,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-12",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Pacific Data",
+          "sum": 200,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-11",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MegaTools",
+          "sum": -224,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-09",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Energy One",
+          "sum": 357,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-08",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : RoboticWorld",
+          "sum": 544,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-07",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : ShippingNet",
+          "sum": 273,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-05",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Systems UK",
+          "sum": -412,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-02",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : SecurityWorld",
+          "sum": -494,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-12-01",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Next Industrial",
+          "sum": -726,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-11-30",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Next Online",
+          "sum": -191,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-11-24",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : SuperHealth",
+          "sum": -661,
+          "category": {
+            "id": 63,
+            "title": "Health and pharmaceuticals",
+            "hierarchy": [
+              {
+                "id": "59",
+                "title": "Education, health and beauty"
+              },
+              {
+                "id": "63",
+                "title": "Health and pharmaceuticals"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-11-23",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : PetroleumWorld",
+          "sum": 251,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-11-20",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : ShippingCo",
+          "sum": -942,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-11-18",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Superior Networks",
+          "sum": 890,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-11-16",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : TransMedical",
+          "sum": 716,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-11-15",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : AudioWorld",
+          "sum": 642,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-11-14",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Industrial Mfg.",
+          "sum": 750,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-11-11",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Nano USA",
+          "sum": -680,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-11-10",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Tools Inc.",
+          "sum": -796,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-11-09",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Monolith Info",
+          "sum": 602,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-11-06",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Next Systems",
+          "sum": 71,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-11-05",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Med Unlimited",
+          "sum": 160,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-11-04",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : First Publishing",
+          "sum": 509,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-11-02",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Apparel Labs",
+          "sum": -918,
+          "category": {
+            "id": 49,
+            "title": "Clothing",
+            "hierarchy": [
+              {
+                "id": "47",
+                "title": "Clothing and shoes"
+              },
+              {
+                "id": "49",
+                "title": "Clothing"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-10-31",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Networks USA",
+          "sum": -95,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-10-28",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MetroShipping",
+          "sum": -679,
+          "category": {
+            "id": 45,
+            "title": "Transportation expenses",
+            "hierarchy": [
+              {
+                "id": "42",
+                "title": "Transportation"
+              },
+              {
+                "id": "45",
+                "title": "Transportation expenses"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-10-27",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Solar UK",
+          "sum": 354,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-10-26",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Info Labs",
+          "sum": 954,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-10-25",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : StudiosNet",
+          "sum": 252,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-10-24",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : RoboticWorld",
+          "sum": 716,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-10-20",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MetroOnline",
+          "sum": 328,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-10-17",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Systems Tech",
+          "sum": -526,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-10-15",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Best Nano",
+          "sum": 793,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-10-13",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : iSecurity",
+          "sum": -891,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-10-11",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Vital Security",
+          "sum": -995,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-10-10",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Unity Media",
+          "sum": 623,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-10-07",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Exports Tech",
+          "sum": -519,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-10-05",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : TransMedical",
+          "sum": -833,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-10-04",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Industrial One",
+          "sum": 11,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-10-02",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Superior Shipping",
+          "sum": 172,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-09-30",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Global Security",
+          "sum": -869,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-09-27",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Infinity Aerospace",
+          "sum": -157,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-09-24",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Union Imports",
+          "sum": -745,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-09-23",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Industrial Mfg.",
+          "sum": 756,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-09-19",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Enterprises Inc.",
+          "sum": 452,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-09-13",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Vital Solar",
+          "sum": -381,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-09-12",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : MegaMed",
+          "sum": -21,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-09-09",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Motors Labs",
+          "sum": 804,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-09-07",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Next Med",
+          "sum": 450,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-09-06",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : HyperStudios",
+          "sum": 699,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-09-04",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : Materials Mfg.",
+          "sum": 882,
+          "category": {
+            "id": 23,
+            "title": "Other incoming payments",
+            "hierarchy": [
+              {
+                "id": "23",
+                "title": "Other incoming payments"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2016-09-01",
+          "partner": "",
+          "info": "Type: Fake account transaction; Category: Fake; Fake money transfer : ExportsCo",
+          "sum": -356,
+          "category": {
+            "id": 84,
+            "title": "Other outgoing payments",
+            "hierarchy": [
+              {
+                "id": "84",
+                "title": "Other outgoing payments"
+              }
+            ]
+          }
+        }
+      ],
+      "red_flags": [
+        "Statement does not contain account balances"
+      ],
+      "pink_flags": [],
+      "factors": {
+        "group_food": 0.57592711160827,
+        "group_utilites": 0.55724426107968,
+        "group_loans": 0.60200005270528,
+        "group_account_usage": 0.56812789980729,
+        "group_luxury": 0.065078166344609,
+        "group_all": 0,
+        "group_transfers": 0.56816958352848,
+        "group_other": 0.48616187478613,
+        "group_health": 0.021725372100524,
+        "group_financial_behavour": 0.48894710591876,
+        "group_income": 0.47752753020745,
+        "group_cash": 0.24799310209662
+      }
+    }
+  ]
+}

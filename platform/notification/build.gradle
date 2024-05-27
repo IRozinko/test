@@ -1,0 +1,10 @@
+apply from: "${rootDir}/gradle/java.gradle"
+apply from: "${rootDir}/gradle/querydsl.gradle"
+
+dependencies {
+    compile project(":platform:common:db")
+    
+    compile project(":platform:crm")
+    compile project(":platform:email-core")
+    compile project(":platform:sms-core")
+}

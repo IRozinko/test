@@ -1,0 +1,53 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+
+Estimado/a Sr./Sra. {{client.lastName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Se realizó un acuerdo de fraccionamiento de la deuda contraida por usted con Alfa para facilitarle la liquidación de la misma. En este momento tiene pendiente el pago de una de sus cuotas de importe {{debt.totalDue | numberformat(currencyFormat)}}€..
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Debe regularizar dicha situación a la mayor brevedad posible puesto que el retraso del pago supera ya los 4 días. Si no realiza su pago en las próximas 48 horas el fraccionamiento será dehabilitado. Y esto supondrá la reclamación total de su deuda pendiente en un único pago. Regresará su expediente a las condiciones del contrato inicial.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+EVITELO:
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+1- Llamando ahora al 933035223 y pagando con tarjeta
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+2- Ingresando en cualquiera de las cuentas de Alfa, indicando su numero de DNI en el concepto:
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Bankia	                ES98 2038 9261 9960 0025 3613
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+La Caixa                ES68 2100 0844 2402 0065 7804
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Banco Sabadell	        ES25 0081 5029 1400 0245 7055
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+
+{% include "_email_p_begin" %}
+3- Entrando en www.alfa.es/login y pagando con tarjeta desde su área de usuario   <a href="http://bit.ly/2yy9Jpy" target="_blank" style="color:#00b46d;">Área de Usuario.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+    **Recuerde que su gestor personal puede informarle con más detalle si nos llama al 933035223
+    {% include "_email_p_end" %}
+    {% include "_email_p_begin" %}
+    Reciba un cordial saludo
+{% include "_email_p_end" %}
+
+{% include "_email_signature" %}
+
+{% endblock %}}

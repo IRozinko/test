@@ -1,0 +1,23 @@
+apply plugin: "io.spring.dependency-management"
+
+dependencyManagement {
+    dependencies {
+        dependency "org.hibernate:hibernate-core:${hibernateVersion}"
+        dependency "org.hibernate:hibernate-entitymanager:${hibernateVersion}"
+        dependency "org.hibernate:hibernate-java8:${hibernateVersion}"
+        dependency "org.hibernate:hibernate-envers:${hibernateVersion}"
+        dependency "org.jooq:jooq:${jooqVersion}"
+        dependency "org.jooq:jooq-codegen:${jooqVersion}"
+        dependency "org.jooq:jooq-meta:${jooqVersion}"
+        dependency "org.flywaydb:flyway-core:${flywayVersion}"
+        dependency "com.zaxxer:HikariCP:${hikariVersion}"
+        dependency "org.apache.commons:commons-lang3:${commonsLang3Version}"
+        dependency "commons-net:commons-net:${commonsNetVersion}"
+        dependency "org.spockframework:spock-core:${spockVersion}"
+        dependency "org.spockframework:spock-spring:${spockVersion}"
+    }
+    imports {
+        mavenBom "com.vaadin:vaadin-bom:${vaadinVersion}"
+        mavenBom 'io.spring.platform:platform-bom:Brussels-SR17'
+    }
+}

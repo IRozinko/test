@@ -1,0 +1,55 @@
+{
+  "interactionId": "ID-uicu1lc9a039-44705-1515982175908-1-950",
+  "applicants": {
+    "primaryConsumer": {
+      "personalInformation": {
+        "idCountryCode": "724",
+        "idType": "ID",
+        "idCode": "100P"
+      },
+      "dataSourceResponses": {
+        "EIPG": {
+          "RISK": {
+            "identifier": "primary",
+            "idCode": "100P",
+            "returnCode": "000",
+            "present": "00",
+            "araAttributes": {
+              "totalNumberOfOperations": 1,
+              "numberOfConsumerCreditOperations": 2,
+              "numberOfMortgageOperations": 3,
+              "numberOfPersonalLoanOperations": 4,
+              "numberOfCreditCardOperations": 5,
+              "numberOfTelcoOperations": 6,
+              "totalNumberOfOtherUnpaid": 7,
+              "totalUnpaidBalance": 8,
+              "unpaidBalanceOwnEntity": 9,
+              "unpaidBalanceOfOtherEntities": 10,
+              "unpaidBalanceOfConsumerCredit": 11,
+              "unpaidBalanceOfMortgage": 12,
+              "unpaidBalanceOfPersonalLoan": 13,
+              "unpaidBalanceOfCreditCard": 14,
+              "unpaidBalanceOfTelco": 15,
+              "unpaidBalanceOfOtherProducts": 16,
+              "worstUnpaidBalance": 17,
+              "worstSituationCode": "18",
+              "numberOfDaysOfWorstSituation": 19,
+              "numberOfCreditors": 20,
+              "delincuencyDays": 21
+            }
+          }
+        }
+      }
+    }
+  },
+  "errors": [
+    {
+      "code": "ICESD004",
+      "message": "Invalid id",
+      "category": "A"
+    }
+  ],
+  "transactionState": "COMPLETED",
+  "transactionId": 8524,
+  "timestamp": "2018-01-29 08:59:53:763"
+}

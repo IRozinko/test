@@ -1,0 +1,115 @@
+{
+  "topics": [
+    "Registration",
+    "Instantor",
+    "PaymentApplied",
+    "DebtCollection",
+    "Complaints",
+    "UnsubscribeFromMarketing",
+    "NullifyContract",
+    "ModifyData",
+    "DataRemoval",
+    "EarlyPayment",
+    "Renouncement",
+    "Other"
+  ],
+  "agentActions": [
+    {
+      "name": "IncomingCall",
+      "bulkActions": [
+        {
+          "type": "SendSms",
+          "params": {
+            "cmsKeys": [
+              "CustomNotification"
+            ]
+          }
+        },
+        {
+          "type": "SendEmail",
+          "params": {
+            "cmsKeys": [
+              "CustomNotification"
+            ]
+          }
+        }
+      ],
+      "resolutions": [],
+      "userRoles": []
+    },
+    {
+      "name": "OutgoingCall",
+      "bulkActions": [
+        {
+          "type": "SendSms",
+          "params": {
+            "cmsKeys": [
+              "CustomNotification"
+            ]
+          }
+        },
+        {
+          "type": "SendEmail",
+          "params": {
+            "cmsKeys": [
+              "CustomNotification"
+            ]
+          }
+        }
+      ],
+      "resolutions": [
+        "NoAnswer",
+        "Answered",
+        "InvalidPhone",
+        "AnsweringMachine"
+      ],
+      "userRoles": []
+    },
+    {
+      "name": "IncomingEmail",
+      "bulkActions": [
+        {
+          "type": "SendSms",
+          "params": {
+            "cmsKeys": [
+              "CustomNotification"
+            ]
+          }
+        },
+        {
+          "type": "SendEmail",
+          "params": {
+            "cmsKeys": [
+              "CustomNotification"
+            ]
+          }
+        }
+      ],
+      "resolutions": [],
+      "userRoles": []
+    },
+    {
+      "name": "OutgoingEmail",
+      "bulkActions": [
+        {
+          "type": "SendSms",
+          "params": {
+            "cmsKeys": [
+              "CustomNotification"
+            ]
+          }
+        },
+        {
+          "type": "SendEmail",
+          "params": {
+            "cmsKeys": [
+              "CustomNotification"
+            ]
+          }
+        }
+      ],
+      "resolutions": [],
+      "userRoles": []
+    }
+  ]
+}

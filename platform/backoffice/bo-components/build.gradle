@@ -1,0 +1,47 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+apply plugin: 'org.springframework.boot'
+apply plugin: 'name.mazgalov.vaadin.sass.compiler'
+
+def genResourceDir = 'src/generated/resources/'
+def themeDir = 'VAADIN/themes/backoffice/'
+
+dependencies {
+    compile project(":platform:backoffice:bo-db")
+    compile project(":platform:backoffice:bo-api-client")
+    compile project(":third-party:excel")
+    compile libs.cache
+    compile libs.aspectj
+
+    compile "org.apache.commons:commons-lang3"
+    compile 'com.vaadin:vaadin-spring-boot-starter'
+    compile "com.vaadin:vaadin-push"
+    compile "com.vaadin.addon:date-range-field:0.2.0"
+    compile "org.vaadin.addons:aceeditor:0.8.15"
+    compile "com.github.scribejava:scribejava-apis:3.2.0"
+    compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+
+    testCompile project(":platform:common:integration-test")
+}
+
+compileSass {
+    scssFile = file 'src/main/resources/' + themeDir + 'styles.scss'
+    cssFile = file genResourceDir + themeDir + 'styles.css'
+    vaadinThemesVersion = vaadinVersion
+    outputs.upToDateWhen { false }
+    doFirst {
+        mkdir genResourceDir + themeDir
+    }
+}
+
+bootRepackage {
+    enabled = false
+}
+
+jar {
+    from (genResourceDir) {
+        include themeDir + 'styles.css'
+    }
+}
+
+jar.dependsOn compileSass

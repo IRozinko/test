@@ -1,0 +1,167 @@
+{
+  "basicInfo": {
+    "scrapeReport": {
+      "scrapeDate": "2017-09-25T00:00:00",
+      "status": "ok",
+      "comment": "Process finished successfully",
+      "reportNumber": 0,
+      "isFinal": true
+    },
+    "bank": {
+      "country": "ES",
+      "abbreviation": "es-ingdirect",
+      "name": "ING Direct"
+    },
+    "source": "lineofcredit.es",
+    "username": "JOHN SMITH",
+    "address": "",
+    "phone": "",
+    "email": "",
+    "miscEntryList": [
+      {
+        "provider": "lineofcredit.es",
+        "key": "clientId",
+        "value": "#clientId#"
+      },
+      {
+        "provider": "instantor",
+        "key": "instantor_request_id",
+        "value": "4eeec609-3723-46b3-9a41-443847597e92"
+      },
+      {
+        "provider": "ING Direct",
+        "key": "dni",
+        "value": "48805442V"
+      },
+      {
+        "provider": "ING Direct",
+        "key": "PersonalNumber",
+        "value": "48805442V"
+      },
+      {
+        "provider": "ING Direct",
+        "key": "clientNumber",
+        "value": "6435627"
+      },
+      {
+        "provider": "ING Direct",
+        "key": "name",
+        "value": "JOHN SMITH"
+      }
+    ]
+  },
+  "reportTime": "2017-09-25T16:57:06.813+02:00",
+  "scrapeTime": "2017-09-25T16:56:00.932+02:00",
+  "successfulLogin": true,
+  "nameForVerification": "",
+  "personalNumberForVerification": "N/A",
+  "bankReport": {
+    "bank": {
+      "country": "ES",
+      "abbreviation": "es-ingdirect",
+      "name": "ING Direct"
+    },
+    "owner": "JOHN SMITH",
+    "scrapeStatus": "ok",
+    "monthsAvailable": 12,
+    "numberOfAccounts": 2,
+    "nameVerified": true,
+    "personalNumberVerified": null,
+    "totalNumberOfTransactions": 863,
+    "averageNumberOfTransactionsMonth": 71.92,
+    "averageAmountOfIncomingTransactionsMonth": 2176.38,
+    "averageAmountOfOutgoingTransactionsMonth": -2552.95,
+    "averageMinimumBalanceMonth": 105.66,
+    "numberOfLoans": 2,
+    "amountOfLoans": 3836.69,
+    "cashFlow": [
+      {
+        "month": 0,
+        "incoming": 500.01,
+        "outgoing": -2700.36,
+        "minBalance": 0.99,
+        "numberOfLoans": 1,
+        "amountOfLoans": 2198.88
+      },
+      {
+        "month": -1,
+        "incoming": 189.02,
+        "outgoing": -2432.59,
+        "minBalance": 2.46,
+        "numberOfLoans": 1,
+        "amountOfLoans": 1637.81
+      }
+    ]
+  },
+  "scrape": {
+    "scrapeReport": {
+      "scrapeDate": "2017-09-25T00:00:00",
+      "status": "ok",
+      "comment": "Process finished successfully",
+      "reportNumber": 0,
+      "isFinal": true
+    },
+    "bank": {
+      "country": "ES",
+      "abbreviation": "es-ingdirect",
+      "name": "ING Direct"
+    },
+    "userDetails": {
+      "name": "JOHN SMITH",
+      "address": "",
+      "phone": "603397804",
+      "email": ""
+    },
+    "companyDetails": null,
+    "accountList": [
+      {
+        "number": "14650150511714695458",
+        "balance": 0.0,
+        "currency": "EUR",
+        "iban": "ES43 1465 0150 51 1714695458",
+        "holderName": "JOHN SMITH",
+        "transactionList": [
+          {
+            "onDate": "2017-09-21T00:00:00",
+            "description": "Description: Transaction 1",
+            "amount": 100.00,
+            "balance": 0.0
+          },
+          {
+            "onDate": "2017-09-20T00:00:00",
+            "description": "FU CK; Description: Transaction 2",
+            "amount": 10,
+            "balance": 0.0
+          },
+          {
+            "onDate": "2017-08-21T00:00:00",
+            "description": "Description: Transaction 3",
+            "amount": 200.00,
+            "balance": 0.0
+          },
+          {
+            "onDate": "2017-08-20T00:00:00",
+            "description": "Description: Transaction 4",
+            "amount": -20.0,
+            "balance": 0.0
+          }
+        ]
+      },
+      {
+        "number": "14650150522040474778",
+        "balance": 0.0,
+        "currency": "EUR",
+        "iban": "ES15 1465 0150 52 2040474778",
+        "holderName": "JOHN SMITH",
+        "transactionList": [
+          {
+            "onDate": "2017-09-01T00:00:00",
+            "description": "Description: Intereses a su favor null",
+            "amount": 1000.00,
+            "balance": 0.0
+          }
+        ]
+      }
+    ]
+  }
+}

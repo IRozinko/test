@@ -1,0 +1,28 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Tu solicitud ha expirado al no finalizar el proceso. 
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Si aún quieres el préstamo, no te preocupes, estás a tiempo de obtenerlo. Solo has de acceder a tu Área de usuario y reactivar tu solicitud cuando quieras. 
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+<br><br>
+{{ button(title="Reactivar mi solicitud", url=company.webBaseUrl + "/login=" + application.longApproveCode) }}
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Contacta con nosotros y te resolveremos cualquier duda.
+{% include "_email_p_end" %}
+
+
+{% include "_cs_email_signature" %}
+
+{% endblock %}}

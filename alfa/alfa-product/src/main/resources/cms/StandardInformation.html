@@ -1,0 +1,362 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Standard information</title>
+    <style type="text/css">
+        html, body {
+            font-family: 'OpenSans-Regular', sans-serif;
+            line-height: 1.4;
+            font-size: 11px;
+        }
+        table {
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+        td {
+            vertical-align: top;
+            text-align: justify;
+            padding-left: 5px;
+            border-top: 1px solid black;
+        }
+        td p {
+            margin: 0;
+        }
+        .first-cell {
+            border-right: 1px solid black !important;
+            padding-right: 5px;
+        }
+        .personal-data-table td {
+            border: 0;
+        }
+        .personal-data-table {
+            border: 0;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        .section {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+<p><strong>INFORMACI&Oacute;N NORMALIZADA EUROPEA SOBRE EL CR&Eacute;DITO AL CONSUMO</strong></p>
+<p>&nbsp;</p>
+<p><strong>1.Identidad y detalles de contacto del prestamista/intermediario</strong></p>
+<table class="personal-data-table">
+    <tbody>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Prestamista</p>
+        </td>
+        <td width="283">
+            <p>{{company.name}} ({{company.number}})</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Direcci&oacute;n</p>
+        </td>
+        <td width="283">
+            <p>{{company.addressLine1}}, {{company.addressLine2}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>N&uacute;mero de tel&eacute;fono</p>
+        </td>
+        <td width="283">
+            <p>{{company.phone}}</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Correo electr&oacute;nico</p>
+        </td>
+        <td width="283">
+            <p><a href="mailto:{{company.email}}"><u>{{company.email}}</u></a></p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Direcci&oacute;n de p&aacute;gina web</p>
+        </td>
+        <td width="283">
+            <p><a href="{{company.webSite}}">{{company.webSite}}</a></p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>2. Descripción de las características principales del crédito</strong></p>
+<table>
+    <tbody>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Tipo de cr&eacute;dito</p>
+        </td>
+        <td width="283">
+            <p>Crédito al consumo</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Importe total del cr&eacute;dito</p>
+            <p>&nbsp;</p>
+        </td>
+        <td width="283">
+            <p>El límite de crédito máximo es de 800€ pero un cliente puede tener un límite de crédito más bajo que se establece sobre la base de una evaluación realizada por parte del acreedor. El límite de crédito podrá ser modificado durante la vigencia del contrato de crédito</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Condiciones que rigen las disposiciones de fondos</p>
+        </td>
+        <td width="283">
+            <p>El desembolso se hace a través de transferencia bancaria a una cuenta a nombre del cliente. El desembolso se hará tan pronto como se cumplan todas las condiciones previas (identificación del cliente y verificación cuando sea necesario), y existencia de la aceptación de las condiciones de crédito por parte del Cliente.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Duraci&oacute;n del contrato de cr&eacute;dito</p>
+        </td>
+        <td width="283">
+            <p>El acuerdo es por un tiempo máximo de 30 días. Éste podrá ser prorrogado mediante el pago de prórrogas de 7, 14, 30 y 45 días.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Los plazos y, en su caso, el orden en que se realizarán los pagos a plazos</p>
+        </td>
+        <td width="283">
+            <p>El pago se efectuará en una cuota única el día acordado en contrato (fecha de devolución del préstamo) y en caso de impago se aplicarán intereses de demora:</p>
+            {% include "_info_penalty_strategy" %}
+            <p>En el caso de pagos insuficientes, el orden de adjudicación serán los siguientes:</p>
+            <ol style="list-style-type: lower-alpha">
+                <li>intereses de demora,</li>
+                <li>comisión aplicable (interés ordinario),</li>
+                <li>importe del préstamo</li>
+                <li>cualesquiera otras cantidades debidas por el cliente</li>
+            </ol>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>La cantidad total que tendrá que pagar</p>
+        </td>
+        <td width="283">
+            <p>Si se retira la cantidad de 300€, el cliente tendrá que pagar intereses y comisiones que ascienden a 105 euros si el crédito es para 30 días. Cantidad total que pagar de 405 euros.
+                <br/>
+                Principal dispuesto más comisión de precio del servicio.</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" width="566">
+            <p class="section"><strong>3. Costes de cr&eacute;dito</strong></p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>El tipo deudor o, si procede, los diferentes tipos deudores que se aplican al contrato de crédito</p>
+        </td>
+        <td width="283">
+            <p>Comisión por precio por retirada de 300 euros de 105 euros</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Tasa Anual Equivalente</p>
+        </td>
+        <td width="283">
+            <p>3752%</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>¿Es obligatorio para obtener el crédito en sí, o en las condiciones ofrecidas?
+            <br/>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &iquest;Tomar una p&oacute;liza de seguros que garantice el cr&eacute;dito, u
+                <br/>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; otro servicio accesorio?</p>
+        </td>
+        <td width="283">
+            <br/>
+            <br/>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; NO</p>
+            <br/>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; NO</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p><strong><em>Costes relacionados</em></strong></p>
+        </td>
+        <td width="283">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Resto de gastos derivados del contrato de crédito</p>
+        </td>
+        <td width="283">
+            <p>No es aplicable</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Condiciones en las que se puede cambiar los costes antes mencionados relacionados con el contrato de crédito</p>
+        </td>
+        <td width="283">
+            <p>No se modificarán los costes antes mencionados durante la vigencia del contrato.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Costes en caso de pagos atrasados</p>
+        </td>
+        <td width="283">
+            <p>En el caso que el cliente no pague en el plazo acordado el préstamo devengará intereses de demora:</p>
+            {% include "_info_penalty_strategy" %}
+            <p>El total a devolver por parte del cliente nunca superará el 150% sobre el principal de acuerdo con las directrices establecidas en la AEMIP.</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" width="566">
+            <p class="section"><strong>4. Otros aspectos legales importantes</strong></p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Derecho de desistimiento</p>
+        </td>
+        <td width="283">
+            <p>Sí. Usted tiene derecho a desistir del contrato de crédito en el plazo de 14 días naturales, sin coste adicional, dirigiendo notificación escrita al domicilio social de la Entidad o por correo electrónico <a href="mailto:info@alfa.es">info@alfa.es</a>. Y procediendo a la devolución del capital prestado dentro de los 30 días naturales siguientes a dicha notificación.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Reembolso anticipado.</p>
+            <p>Usted tiene derecho a reembolsar anticipadamente el crédito en cualquier momento en su totalidad o parcialmente.</p>
+        </td>
+        <td width="283">
+            <p>En caso de vencimiento anticipado, sea cual fuere el motivo, el cliente deberá abonar, a requerimiento del Prestamista, el total importe del Préstamo, entendiéndose por éste el importe nominal y la Comisión del Préstamo. El prestamista podrá solicitar una compensación por el reembolso anticipado de 0.5% cuando el período de la operación sea inferior a un año, de acuerdo con la normativa de crédito al consumo.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>La consulta de una base de datos</p>
+        </td>
+        <td width="283">
+            <p>S&iacute;</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Derecho a obtener oferta vinculante del contrato de crédito de forma gratuita</p>
+        </td>
+        <td width="283">
+            <p>S&iacute;</p>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" width="566">
+            <p class="section"><strong>5. información adicional en el caso de comercialización a distancia de servicios financieros</strong></p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p><strong>a) relativa al acreedor</strong></p>
+        </td>
+        <td width="283">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Registro</p>
+        </td>
+        <td width="283">
+            <p>Registro Mercantil de BARCELONA T9380, L 6662, F 50, S 8, H V 145437, I/A 1 (4.10.11)</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Autoridad de Supervisi&oacute;n</p>
+        </td>
+        <td width="283">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p><strong>b) Relativa al contrato de cr&eacute;dito</strong></p>
+        </td>
+        <td width="283">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Ejercicio derecho desistimiento</p>
+        </td>
+        <td width="283">
+            <p>Podrá ejercitarse el derecho de desistimiento dentro del plazo de 14 días naturales desde la fecha de formalización del Contrato de crédito. Mediante correo electrónico a la dirección <a href="mailto:info@alfa.es">info@alfa.es</a></p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>La ley escogida por el acreedor como base para el establecimiento de relaciones con usted antes de la celebración del contrato de crédito</p>
+        </td>
+        <td width="283">
+            <p>Espa&ntilde;ola</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Cláusula que estipula la ley que rige, aplicable el contrato de préstamo y/o el tribunal competente</p>
+        </td>
+        <td width="283">
+            <p>Tribunales españoles. Cláusula 23 del contrato sobre la jurisdicción y ley aplicable.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Idioma</p>
+        </td>
+        <td width="283">
+            <p>Toda la documentación y las comunicaciones se proporcionarán en español.</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p><strong>(c) Relativa a Recursos</strong></p>
+        </td>
+        <td width="283">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="first-cell" width="283">
+            <p>Existencia y acceso a los procedimientos extrajudiciales de reclamación y recurso</p>
+        </td>
+        <td width="283">
+            <p>El prestatario podrá formular reclamación o queja mediante correo electrónico dirigido a <a href="mailto:info@alfa.es">info@alfa.es</a>
+            <br/>El prestamista responderá a las reclamaciones con un plazo no superior a 7 días naturales.
+            <br/>En caso de disputa las partes se someterán a los tribunales del domicilio del cliente.
+        </p>
+        </td>
+    </tr>
+    <tr>
+        <td width="283">
+            <p>&nbsp;</p>
+        </td>
+        <td width="283">
+            <p>&nbsp;</p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

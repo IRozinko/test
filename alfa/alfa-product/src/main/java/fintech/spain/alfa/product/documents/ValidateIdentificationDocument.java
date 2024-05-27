@@ -1,0 +1,11 @@
+package fintech.spain.alfa.product.documents;
+
+import lombok.Data;
+import lombok.experimental.Accessors;
+
+@Data
+@Accessors(chain = true)
+public class ValidateIdentificationDocument {
+    private Long clientId;
+    private Long identificationDocumentId;
+}

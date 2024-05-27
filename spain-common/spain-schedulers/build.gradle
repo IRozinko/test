@@ -1,0 +1,10 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile project(":platform:quartz")
+    compile project(":platform:workflow")
+    compile project(":platform:settings")
+    compile project(":platform:dc")
+
+    testCompile project(":platform:common:integration-test")
+}

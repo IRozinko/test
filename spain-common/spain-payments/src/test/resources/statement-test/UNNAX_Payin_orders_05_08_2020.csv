@@ -1,0 +1,3 @@
+"Payment Method","Date and time","Source order code","Internal code","Concept","Amount","State","Response Code","Owner","PAN","Destination account","Source account","ID Destination Bank","Destination BankName"
+"Credit Card","05/08/2020 15:17","C86507773484","","Loan repayment C8650777-001","500000","3","None - ","orders_status.Artem Tester","0004","","","",""
+""

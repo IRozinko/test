@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ns2:obtenerDomicilioNIFResponse xmlns:ns2="http://soap.ws.info.global.com/">
+    <return>
+        <domicilioActual>
+            <cpostal>36669</cpostal>
+            <direccion></direccion>
+            <nombre_via>REBON (SAN PEDRO) - PASADA, A - (DISEMINADO)</nombre_via>
+            <numero_via>6</numero_via>
+            <poblacion>MORAÑA</poblacion>
+            <provincia>PONTEVEDRA</provincia>
+            <tipo_via></tipo_via>
+        </domicilioActual>
+        <domicilioAnterior>
+            <cpostal>36669</cpostal>
+            <direccion></direccion>
+            <numero_via>6</numero_via>
+            <poblacion>MORAÑA</poblacion>
+            <provincia>PONTEVEDRA</provincia>
+            <tipo_via></tipo_via>
+        </domicilioAnterior>
+        <persona>
+            <apellido1>CALVO</apellido1>
+            <apellido2>FERNANDEZ</apellido2>
+            <fechaNacimiento>01/06/1990</fechaNacimiento>
+            <id>QDkyxcfCnTvfvhXo0OuQE4UKVD0=&#xD;
+            </id>
+            <nif>77404869W</nif>
+            <nombre>ALEJANDRO</nombre>
+            <numeroBusquedas>3</numeroBusquedas>
+            <poblacionNacimiento>MORAÑA</poblacionNacimiento>
+            <provinciaNacimiento>PONTEVEDRA</provinciaNacimiento>
+        </persona>
+    </return>
+</ns2:obtenerDomicilioNIFResponse>

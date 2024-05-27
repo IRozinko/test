@@ -1,0 +1,7 @@
+apply from: "${rootDir}/gradle/java.gradle"
+apply from: "${rootDir}/gradle/querydsl.gradle"
+
+dependencies {
+    compile libs.springBoot
+    compile libs.persistence
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Alfa S.L</title>
+    <style type="text/css">
+
+        body, table {
+            font-family: 'OpenSans-Regular', sans-serif;
+            font-size: 12px;
+            line-height: 1.4;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        table tr td {
+            width: 200px;
+        }
+
+        .bottom {
+            position: fixed;
+            bottom: 5px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .signature {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div align="center">
+    {% include "_alfa_logo" %}
+</div>
+
+<p align="right">En Barcelona, {{dates.today}}</p>
+
+
+La mercantil <b>ALFA S.L</b>, con el nombre comercial <b>ALFA</b>, con Número con CIF B-98378201 y domicilio en
+{{company.addressLine1}}, {{company.addressLine2}} representada por su Administrador único Don VLADIMIR KUDRIASHOV.
+
+
+<p align="center"><b>CERTIFICA</b></p>
+
+Que Don/ña <b>{{client.firstName}} {{client.lastName}}</b>, con DNI/NIE {{client.documentNumber}}, en virtud de las
+obligaciones de pago estipuladas en el contrato de Préstamo n º <b>{{loan.number}}</b> suscrito entre las partes en
+fecha {{loan.issueDate | ldate(dateFormat)}}, que se declaró vencido en fecha {{loan.maturityDate | ldate(dateFormat)}},
+tiene cantidades pendientes de pago con la mercantil, motivo por el que se expide <b>CERTIFICADO DE DEUDA</b> por el
+total importe de <b>{{debt.totalDue | numberformat(currencyFormat)}}</b> euros, que se desglosa en los siguientes
+conceptos:<br>
+</br>
+<table>
+
+    <tr>
+        <td>
+            Principal no amortizado
+        </td>
+        <td>
+            {{loan.principalDue | numberformat(currencyFormat)}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Comisión (interés nominal)
+        </td>
+        <td>
+            {{loan.interestDue | numberformat(currencyFormat)}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Penalización por demora
+        </td>
+        <td>
+            {{loan.penaltyDue | numberformat(currencyFormat)}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>TOTAL DEUDA</b>
+        </td>
+        <td>
+            <b>{{loan.totalDue | numberformat(currencyFormat)}}</b>
+        </td>
+    </tr>
+
+</table>
+
+
+<p>Ponemos en su conocimiento que el importe presentado en el presente certificado de saldo es vinculante a fecha <b>(DATE
+    OF PDF GENERATION)</b>, pudiendo verse incrementado dicho importe, si no es abonado a fecha de hoy, por el devengo
+    de nuevos intereses nominales y/o moratorios según lo pactado en el contrato.</p>
+
+<p>Y para que así conste, firma la presente en el lugar y fecha indicados “ut supra”.</p>
+
+<div style="display: inline-block; vertical-align: top">
+    <b>Vladimir Kudriashov</b><br/>
+    <b>Administrador Único</b>
+</div>
+<div class="signature">
+    {% include "_certificate_signature" %}
+</div>
+
+<p class="bottom"><b>ALFA S.L.U / Paseo de gracia, n º 53 1º 1ª/ 08007 Barcelona / B98378201</b></p>
+
+
+</body>
+</html>

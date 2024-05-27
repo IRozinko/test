@@ -1,0 +1,15 @@
+apply from: "${rootDir}/gradle/java.gradle"
+apply from: "${rootDir}/gradle/querydsl.gradle"
+
+dependencies {
+    compile project(":platform:common:db")
+    compile project(":platform:common:utils")
+    compile project(":platform:settings")
+    
+    compile libs.httpClient
+    compile libs.cache
+    compile libs.failsafe
+    compile "com.mitchellbosecke:pebble:2.1.0"
+
+    testCompile project(":platform:common:integration-test")
+}

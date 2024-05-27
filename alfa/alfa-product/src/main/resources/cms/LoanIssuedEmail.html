@@ -1,0 +1,19 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Estimado cliente,
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Bienvenido a la familia Alfa. Ha aceptado la oferta.
+<br>
+Pronto recibirá la transferencia en su cuenta <strong>{{client.ibanFormatted}}</strong>.
+<br>
+Si tiene cualquier duda, puede ponerse en contacto con nosotros.
+{% include "_email_p_end" %}
+
+{% include "_email_signature" %}
+
+{% endblock %}}

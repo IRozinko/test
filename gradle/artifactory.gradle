@@ -1,0 +1,15 @@
+apply plugin: "com.jfrog.artifactory"
+apply plugin: "maven-publish"
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = archivesBaseName
+            from components.java
+        }
+    }
+}
+
+artifactoryPublish {
+    publications('mavenJava')
+}

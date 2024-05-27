@@ -1,0 +1,6 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile project(":platform:backoffice:bo-components")
+    compile project(":spain-common:spain-asnef:spain-asnef-jooq")
+}

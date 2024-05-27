@@ -1,0 +1,70 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Quizás te haya sorprendido que sea necesario <b>acceder a tu cuenta bancaria</b> durante el proceso de solicitud de tu préstamo. 
+<br>
+<br>
+Termina tu solicitud a través del siguiente enlace o sigue leyendo para obtener respuestas a las preguntas que podrías estar formulándote.
+
+{% include "_email_p_begin" %}
+{{ button(title="Acabar solicitud", url=company.webBaseUrl + "/login?utm_source=email&utm_medium=CRM&utm_campaign=instantn1") }}
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+<ul>
+    <li>
+        <b>¿Qué información me estáis pidiendo?</b>
+        <br>
+    </li>
+</ul>
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Primero debes seleccionar el banco de la cuenta corriente a la que quieres que transfiramos el dinero. 
+<br>
+<br>
+A continuación, aparecerá un recuadro en el que se te solicitará el Usuario (habitualmente tu NIE o DNI) y la Contraseña. Estos <b>datos</b> son los mismos <b>que utilizas cuando accedes a tu cuenta</b> bancaria por Internet para, por ejemplo, consultar tus últimos movimientos o tu saldo. 
+<br>
+<br>
+Tu entidad bancaria te facilitó los datos de acceso y, si no recuerdas tu contraseña, tu banco o caja pondrá a tu alcance métodos para reestablecerla. 
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+<ul>
+    <li>
+        <b>¿Están mis datos seguros?</b>
+        <br>
+    </li>
+</ul>
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Desde Alfa no podremos acceder a tus datos de acceso y, aún menos, almacenarlos. Introducirás los datos en Instantor, una herramienta externa que cuenta con un sistema de <b>seguridad de última generación</b> con <b>certificados SSL de VeriSign</b>, máxima autoridad internacional en encriptación, para garantizar que no haya filtraciones.
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+<ul>
+    <li>
+        <b>¿Por qué me solicitáis esta información?</b>
+        <br>
+    </li>
+</ul>
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Queremos que recibas tu <b>préstamo lo antes posible</b> y gracias a este sistema <b>no tienes que enviarnos apenas documentación</b>. De esta forma verificas tu identidad y obtenemos lo necesario para concederte el préstamo rápidamente. ¡Así que se acabó rebuscar por toda la casa las nóminas u otros papeles!
+<br>
+<br>
+No olvides que para obtener tu préstamo debes ser el titular o cotitular de la cuenta bancaria y recibir tus ingresos regulares en ella. 
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+{{ button(title="Acabar solicitud", url=company.webBaseUrl + "/login?utm_source=email&utm_medium=CRM&utm_campaign=instantn1") }}
+{% include "_email_p_end" %}
+
+
+{% include "_cs_email_signature" %}
+
+{% endblock %}}

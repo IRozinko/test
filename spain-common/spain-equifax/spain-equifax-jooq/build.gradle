@@ -1,0 +1,8 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+
+dependencies {
+    compile project(":platform:backoffice:bo-db")
+}
+
+

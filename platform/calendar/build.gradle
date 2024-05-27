@@ -1,0 +1,10 @@
+apply from: "${rootDir}/gradle/java.gradle"
+apply from: "${rootDir}/gradle/querydsl.gradle"
+
+dependencies {
+    compile project(":platform:common:utils")
+    compile project(":platform:common:db")
+    compile libs.cache
+
+    testCompile project(":platform:common:integration-test")
+}

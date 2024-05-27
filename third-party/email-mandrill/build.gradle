@@ -1,0 +1,9 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile project(":platform:email-core")
+    compile('com.mandrillapp.wrapper.lutung:lutung:0.0.7') {
+        exclude module: 'commons-io'
+    }
+}
+

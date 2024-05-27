@@ -1,0 +1,31 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile project(":platform:backoffice:bo-api-model")
+    compile project(":third-party:excel")
+    compile project(":platform:email-core")
+    compile project(":platform:sms-core")
+    compile project(":platform:transactions")
+    compile project(":platform:lending:lending-core")
+    compile project(":platform:workflow")
+    compile project(":platform:accounting")
+    compile project(":platform:calendar")
+    compile project(":platform:crm")
+    compile project(":platform:cms")
+    compile project(":platform:task")
+    compile project(":platform:settings")
+    compile project(":platform:security:user")
+    compile project(":platform:file-storage-core")
+    compile project(":platform:risk:rule")
+    compile project(":platform:risk:check-list")
+    compile project(":platform:affiliate")
+    compile project(":platform:dc")
+    compile project(":platform:admin-tools")
+    compile project(":platform:activities")
+    compile project(":platform:quartz")
+
+    compile libs.springBootWeb
+    compile "io.jsonwebtoken:jjwt:${jjwtVersion}"
+
+    testCompile project(":platform:common:integration-test")
+}

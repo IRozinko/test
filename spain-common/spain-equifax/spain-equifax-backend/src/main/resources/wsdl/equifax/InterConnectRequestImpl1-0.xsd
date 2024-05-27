@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by EQUIFAX, INC. (EQUIFAX, INC.) -->
+<!--
+	Client:
+	Project: 
+	File: InterConnectRequestImpl1-0.xsd
+	Description: Request Implementation for a specific solution.
+	Copyright 2005, Equifax, Inc., Atlanta, GA. All Rights Reserved
+-->
+<xs:schema xmlns="http://xml.equifax.com/XMLSchema/InterConnect"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://xml.equifax.com/XMLSchema/InterConnect" elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+	<xs:include schemaLocation="InterConnectRequest2-0.xsd"/>
+	<xs:element name="InterConnectRequest" type="InterConnectRequestType"/>
+	<xs:complexType name="InterConnectRequestType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				InterConnectRequest is the root element of the request schema
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="SchemaVersion" type="RequestSchemaVersionType">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						Currently we support schema versions "1.0" and "2.0" 
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="InteractionControl" type="InteractionControlRequestType"/>
+			<xs:element name="Products" type="ProductsType" minOccurs="0"/>
+			<xs:element name="Decisioning" type="DecisioningType" minOccurs="0"/>
+			<xs:choice>
+				<xs:element name="ConsumerSubjects" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ConsumerSubject" type="ConsumerSubjectRequestType"
+								maxOccurs="10"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="BusinessSubjects" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">
+							The client‟s XML request must contain the BusinessSubjects section if the transaction is for processing a business applicant.	</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="BusinessSubject" type="BusinessSubjectRequestType"
+								maxOccurs="1"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+			<xs:element name="DataSourceRequests" type="DataSourceRequestsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						The DataSourceRequests section is intended for sending data source specific information at the transaction level. This is not subject-level information, and applies to the complete transaction request. All sections are optional. The customer?s request must contain only sections relevant for their implementation
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AdditionalInputData" type="AdditionalDataType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is for sending any custom data that applies to the complete transaction, such as data that is not specific to the subject
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ConsumerBureauPreferences" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This optional section sends bureau preferences if the preferences are different from the configured bureau order. If the XML request contains bureau preference, InterConnect overrides the default bureau access order and considers the bureau order as requested in the XML request. Bureau preferences can be used for consumer and business requests
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Bureau" type="BureauType" maxOccurs="3"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="BusinessBureauPreferences" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is meant for sending business (Commercial) bureau preferences if different from the configured bureau order. It is an optional section. If the xml request contains bureau preference than InterConnect overrides the default bureau access order and considers bureau order as requested in the XML request
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Bureau" type="BureauType" maxOccurs="3"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="RequestSchemaVersionType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="1.0"/>
+			<!-- 2.0 is the version for Mercury (5.0) release -->
+			<xs:enumeration value="2.0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ConsumerSubjectRequestType">
+		<xs:complexContent>
+			<xs:extension base="PersonSubjectRequestBasicType">
+				<xs:sequence>
+					<xs:element name="DataSourceRequests" type="ConsumerSubjectAdditionalDataType"
+						minOccurs="0"/>
+				</xs:sequence>
+				<xs:attributeGroup ref="SubjectIdentifierAttributeGroup"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="BusinessSubjectRequestType">
+		<xs:complexContent>
+			<xs:extension base="BusinessSubjectRequestBasicType">
+				<xs:sequence>
+					<xs:element name="Principals" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">
+								The Principals section is used to send principal (owner) information of a business.
+							</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:choice>
+								<xs:element name="Principal" maxOccurs="unbounded">
+									<xs:complexType>
+										<xs:complexContent>
+											<xs:extension base="PersonSubjectRequestBasicType">
+												<xs:sequence>
+												<xs:element name="DataSourceRequests"
+												type="ConsumerSubjectAdditionalDataType"
+												minOccurs="0"/>
+												</xs:sequence>
+												<xs:attributeGroup
+												ref="PrincipalIdentifierAttributeGroup"/>
+											</xs:extension>
+										</xs:complexContent>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="UKPrincipal" type="UKPrincipalType"
+									maxOccurs="unbounded"/>
+							</xs:choice>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Guarantors" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">
+								A guarantor can be a person or a business. If the guarantor is a person, send the information in PersonGuarantor. If the guarantor is a business, send the information in BusinessGuarantor.
+							</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="PersonGuarantor" minOccurs="0"
+									maxOccurs="unbounded">
+									<xs:complexType>
+										<xs:complexContent>
+											<xs:extension base="PersonSubjectRequestBasicType">
+												<xs:sequence>
+												<xs:element name="DataSourceRequests"
+												type="ConsumerSubjectAdditionalDataType"
+												minOccurs="0"/>
+												</xs:sequence>
+												<xs:attributeGroup
+												ref="GuarantorIdentifierAttributeGroup"/>
+											</xs:extension>
+										</xs:complexContent>
+									</xs:complexType>
+								</xs:element>
+								<xs:element name="BusinessGuarantor" type="BusinessGuarantorType"
+									minOccurs="0" maxOccurs="unbounded"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="Accounts" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation xml:lang="en">
+								This section currently uses UtilityAccounts for supporting The National Telecommunications Data Exchange, Inc. (NTDE) data source information. The Accounts section can be extended in the future to include any BusinessSubject related accounts such as investment or mortgage account information.
+							</xs:documentation>
+						</xs:annotation>
+						<xs:complexType>
+							<xs:sequence>
+								<xs:element name="UtilityAccount" type="UtilityAccountType"/>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+					<xs:element name="DataSourceRequests" type="BusinessSubjectAdditionalDataType"
+						minOccurs="0"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Principal">
+		<xs:complexContent>
+			<xs:extension base="PersonSubjectRequestBasicType">
+				<xs:sequence>
+					<xs:element name="DataSourceRequests" type="ConsumerSubjectAdditionalDataType"
+						minOccurs="0"/>
+				</xs:sequence>
+				<xs:attributeGroup ref="PrincipalIdentifierAttributeGroup"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="UKPrincipalType">
+		<xs:complexContent>
+			<xs:extension base="PersonSubjectRequestBasicType">
+				<xs:sequence>
+					<xs:element name="DataSourceRequests" type="ConsumerSubjectAdditionalDataType"
+						minOccurs="0"/>
+					<xs:element name="Consent" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+				<xs:attributeGroup ref="PrincipalIdentifierAttributeGroup"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<!-- additional inputs required by a transaction, delete those products you don't need -->
+	<xs:complexType name="DataSourceRequestsType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				This section consists of the information from different datasources. This input can be used to build the datatsource requests overriding the default values set in the database. Useful only when one wants to changed these values on a per transaction basis. Also this information is at transaction level i.e it is shared across multiple subjects in the request when there are more than one subject
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Joint" type="YNFlagType" default="N" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						The XML request must contain the Joint element
+						to specify whether the subjects are joint
+						applicants (spouse) or not if the request has
+						two applicants.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EndUserName" type="EndUserNameType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						The EndUserName element value is applicable to
+						all consumer credit bureaus if the
+						implementation goes to more than one credit
+						bureau. It is the name of the user who is using
+						the credit report of the consumer.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EquifaxCreditReport" type="EquifaxCreditReportAdditionalInputType"
+				minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This is used for sending configuration data
+						needed to build the Equifax credit report
+						request on a per transaction basis.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EquifaxCanadaCreditReport" type="CanadaConsumerAdditionalInputType"
+				minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is used for sending configuration
+						data required to build an Equifax Canada Credit
+						Report request. These values can be sent on a
+						per transaction basis and they can override the
+						configured values in the database
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Dtec" type="EquifaxCommonSimpleInputType" minOccurs="0"/>
+
+
+			<xs:element name="TransUnionCreditReport" type="TransunionAdditionalInputType"
+				minOccurs="0"/>
+			<xs:element name="EquifaxSmallBusiness" type="EquifaxSmallBusinessAdditionalInputType"
+				minOccurs="0"/>
+
+
+			<xs:element name="CanadaCommercial" type="CanadaCommercialAdditionalInputType"
+				minOccurs="0"/>
+			<xs:element name="EquifaxUKCpuLink" type="EquifaxUKCpuLinkAdditionalInputType"
+				minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This request provides the information for
+						address matching and consumer bureau information
+						for a consumer subject in the United Kingdom
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AccountNumberVerification"
+				type="AccountVerificationAdditionalInputType" minOccurs="0"/>
+			<xs:element name="ExperianSpain" type="ExperianSpainType" maxOccurs="1" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- delete those products you don't need -->
+	<xs:complexType name="BusinessSubjectAdditionalDataType">
+		<xs:sequence>
+			<xs:element name="Uycdi" type="EquifaxLATAMUycdiAdditionalDataType" minOccurs="0"/>
+			<xs:element name="D360" type="EquifaxSpainD360AdditionalDataType" minOccurs="0"/>
+			<xs:element name="SMEI" type="EquifaxUKSMEInsightsAdditionalDataType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- delete those products you don't need -->
+	<xs:complexType name="ConsumerSubjectAdditionalDataType">
+		<xs:annotation>
+			<xs:documentation xml:lang="en">
+				This section can be used to send the consumer subject‟s access pin to access their frozen files for different datasources as well as eid answers etc - details that are relavant to each subject for a given datasource
+			</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="EquifaxCreditReport" type="EquifaxSubjectAdditionalDataType"
+				minOccurs="0"/>
+			<xs:element name="TransUnionCreditReport" type="TransUnionSubjectAdditionalDataType"
+				minOccurs="0"/>
+			<xs:element name="EquifaxUKCpuLink" type="EquifaxUKCpuLinkAdditionalDataType"
+				minOccurs="0"/>
+			<xs:element name="AccountNumberVerification" type="EquifaxSubjectAdditionalDataType"
+				minOccurs="0"/>
+			<xs:element name="Dicom" type="DicomSubjectAdditionalDataType" minOccurs="0"/>
+			<xs:element name="Uycdi" type="EquifaxLATAMUycdiAdditionalDataType" minOccurs="0"/>
+			<xs:element name="Asnef" type="AsnefType" minOccurs="0"/>
+			<xs:element name="D360" type="EquifaxSpainD360AdditionalDataType" minOccurs="0"/>
+			<xs:element name="SPI" type="EquifaxSpainSPIAdditionalDataType" minOccurs="0"/>
+			<xs:element name="eIDCanadaVerifier" type="eIDVerifierSubjectAdditionalDataType"
+				minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

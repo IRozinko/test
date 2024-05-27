@@ -1,0 +1,10 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+
+    compile project(":platform:backoffice:bo-api-model")
+    compile project(":third-party:webitel:webitel-backend")
+
+    compile libs.springBootWeb
+    compile libs.springBootSecurity
+}

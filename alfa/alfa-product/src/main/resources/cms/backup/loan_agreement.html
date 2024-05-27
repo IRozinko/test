@@ -1,0 +1,624 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Alfa S.L</title>
+    <style type="text/css">
+
+        body {
+            font-family: 'OpenSans-Regular', sans-serif;
+            font-size: 12px;
+            line-height: 1.4;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .pt-40 {
+            padding-top: 40px;
+        }
+
+        .pt-20 {
+            padding-top: 20px;
+        }
+
+        .header {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .section .title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .sub-section-number {
+            font-weight: bold;
+        }
+
+        .definition-title {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+<div align="right">
+    {% include "_alfa_logo" %}
+</div>
+<div class="header pt-40">CONTRATO DE PRÉSTAMO</div>
+<div class="header pt-40">ALFA, S.L.</div>
+
+<p class="pt-40">
+    El presente documento tiene por objeto regular los términos y condiciones que han de regir el contrato de préstamo al consumo entre el cliente persona física (en adelante “el Cliente”) y Alfa S.L.U, mercantil que tiene como objeto social la financiación y concesión de préstamos al consumo al que resultarán de aplicación las Condiciones Particulares y Generales de la Contratación que se detallan a continuación, en adelante, conjuntamente consideradas como el “Contrato”.
+</p>
+
+<div class="section pt-40">
+    <div class="title">CONDICIONES PARTICULARES</div>
+
+    <ol style="list-style-type: lower-alpha">
+        <li><span class="definition-title">Número de contrato:</span> {{application.number}}</li>
+        <li><span class="definition-title">Formalización:</span> contratación a distancia (online), de conformidad con la Ley 22/2007, de 11 de julio, sobre comercialización a distancia de servicios financieros destinados a los consumidores y la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico.</li>
+        <li><span class="definition-title">Tipo de crédito:</span> contrato de préstamo</li>
+        <li><span class="definition-title">Prestamista:</span> {{company.name}} CIF: {{company.number}} {{company.addressLine1}}, {{company.addressLine2}}</li>
+        <li><span class="definition-title">Prestatario:</span> {{client.fullName}}
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{client.documentNumber}}
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{client.addressLine1}}
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{client.addressLine2}}
+        </li>
+        <li>&nbsp;<span class="definition-title">Importe:</span> {{application.offeredPrincipal | numberformat(currencyFormat)}}&euro;</li>
+        <li><span class="definition-title">Plazo:</span> {{application.offeredPeriodCount}} dias</li>
+        <li><span class="definition-title">Comisión del préstamo:</span> {{application.offeredInterest | numberformat(currencyFormat)}}&euro;</li>
+        <li>&nbsp;<span class="definition-title">Importe total que devolver:</span> {{application.offeredTotal | numberformat(currencyFormat)}}&euro;</li>
+        <li>&nbsp;<span class="definition-title">Fecha solicitud del préstamo:</span> {{application.offerDate | ldate(dateFormat)}}</li>
+        <li><span class="definition-title">Fecha devolución del préstamo:</span> {{application.offerMaturityDate | ldate(dateFormat)}}</li>
+        <li>&nbsp;<span class="definition-title">Tipo de interés de demora:</span>
+            {% include "_loan_agreement_penalty_strategy" %}
+        </li>
+        <li><span class="definition-title">T.A.E.:</span> {{application.effectiveApr}} %</li>
+        <li><span class="definition-title">T.I.N. anual:</span> {{application.nominalApr}} %</li>
+    </ol>
+</div>
+<div class="section pt-40">
+    <div class="title">CONDICIONES GENERALES</div>
+</div>
+<div class="section pt-40">
+    <div class="title">1. DEFINICIONES</div>
+    <p>
+    <ul>
+        <li><span class="definition-title">Área de Usuario:</span> Es la plataforma digital privada del CLIENTE en el Sitio Web de ALFA, S.L. que, tras el primer registro como solicitante de crédito, se genera automáticamente y es accesible por el cliente con su usuario y contraseña. En esta plataforma se almacenan sus datos personales, toda la información de los servicios disponibles de ALFA, S.L., así como toda la información y documentación relativa a los servicios efectivamente solicitados o contratados por el CLIENTE.</li>
+        <li><span class="definition-title">Calculadora:</span> Herramienta disponible en el Sitio Web de ALFA, S.L. y en el Área de Usuario del CLIENTE que permite cuantificar los costes del crédito.</li>
+        <li><span class="definition-title">Importe:</span> principal prestado por parte de ALFA, S.L. al CLIENTE.</li>
+        <li><span class="definition-title">Comisión:</span> el interés ordinario que se aplica sobre el principal prestado.</li>
+        <li><span class="definition-title">Cantidad Total Debida:</span> El importe total a pagar por el cliente por todos los conceptos que pueden desglosarse en importe inicial prestado, comisión,  intereses de demora, en su caso, cualquier otro importe que se haya podido devengar en virtud del preste contrato o sus posibles modificaciones.</li>
+        <li><span class="definition-title">Cliente:</span> Usuario solicitante al que, previo estudio de solvencia y de conformidad a los procesos de solicitud y se le concede el préstamo, siempre y cuando haya procedido al perfeccionamiento del contrato mediante la aceptación de las condiciones generales y particulares.</li>
+        <li><span class="definition-title">Usuario solicitante:</span> Las personas físicas entre 18 y 70 años y con capacidad de obrar suficiente para contratar y obligarse, candidatas para contratar un préstamo con ALFA.</li>
+        <li><span class="definition-title">Solicitud de préstamo:</span> Se refiere al envío del formulario que ALFA, S.L. pone a disposición del CLIENTE para poder formalizar el negocio de préstamo.</li>
+        <li><span class="definition-title">Aceptación del préstamo:</span> Confirmación expresa por parte del CLIENTE aceptando el importe que le será prestado y sus condiciones de devolución</li>
+        <li><span class="definition-title">Concesión:</span> La acción por parte de ALFA, S.L. de trasladar el importe prestado a la cuenta bancaria designada por parte del CLIENTE a tal efecto.</li>
+        <li><span class="definition-title">Cuenta Bancaria del Cliente:</span> Es la cuenta corriente titularidad del CLIENTE que mantiene operativa en cualquier entidad bancaria debidamente registrada en España, y que se consignará en el Área de Usuario del CLIENTE a los efectos de recibir las cantidades del crédito dispuestas, dentro del límite de crédito concedido, mediante transferencia bancaria.</li>
+        <li><span class="definition-title">Cuenta Bancaria de ALFA, S.L.:</span> Se refiere a cualquiera de las cuentas bancarias titularidad de ALFA, S.L., que constan indicadas en el Sitio Web www.alfa.es, así como en las facturas enviadas al cliente mensualmente, en las que deberá realizar los pagos, de conformidad el importe, plazo de devolución pactado y fecha de vencimiento.</li>
+        <li><span class="definition-title">Fecha de vencimiento:</span> Es la fecha en que el CLIENTE deberá hacer efectivo el pago del importe total a devolver a ALFA</li>
+        <li><span class="definition-title">Prórroga:</span> el CLIENTE podrá ampliar el plazo de devolución abonando una cantidad dineraria en concepto de aplazamiento.</li>
+        <li><span class="definition-title">Comisión de prórroga:</span>: Es la comisión propuesta por el prestamista y aceptada por el prestatario para posponer la fecha de vencimiento del préstamo. Esta comisión se aplica en el momento que el prestatario realiza la solicitud de una prórroga. El importe de la comisión de prórroga depende de la duración de la prórroga y dicho importe estará siempre a disposición del cliente en su Área de Usuario.</li>
+        <li><span class="definition-title">Reschedule (pago fraccionado):</span> en el supuesto de impago ALFA podrá, si el cliente cumple con los requisitos establecidos por la mercantil para ello, ofrecer un plan de pagos al cliente con el fin de facilitarle  la  devolución  del  préstamo. En caso de impago de una de las cuotas el acuerdo se dejará sin efecto y ALFA podrá reclamar la totalidad adeudada. ALFA S.L podrá ofrecer esta vía cuando considere que se reúnen las condiciones óptimas para ello, bajo ningún concepto estará obligado a ofrecer un aplazamiento.</li>
+        <li><span class="definition-title">Factura:</span> Documento que relaciona el importe a pagar/pagado con el concepto aplicado y contabilizado.</li>
+        <li><span class="definition-title">Condiciones Particulares:</span> Lista que se incluye en el encabezamiento deL contrato celebrado con el cliente y que describe las condiciones personales que se han pactado con el CLIENTE.</li>
+        <li><span class="definition-title">Parte/Partes:</span> se refiere al CLIENTE y a ALFA, S.L., de forma individual, o conjuntamente.</li>
+        <li><span class="definition-title">Sitio Web:</span> Se refiere a la página web de ALFA, S.L. (www.alfa.es) que el CLIENTE podrá utilizar para acceder a los productos y servicios de la empresa, en la que deberá registrarse para poder solicitar un préstamo y mediante la cual gestionará los servicios contratados mediante su Área de Usuario.</li>
+        <li><span class="definition-title">Tasa Anual Equivalente (TAE%):</span> Es el coste total del crédito expresado en forma de porcentaje anual del importe total del crédito. La T.A.E se ha calculado de conformidad con el Anexo I de la Ley 16/2011, de 24 de junio, de Contratos de Crédito al Consumo.</li>
+        <li><span class="definition-title">El Tipo de Interés Nominal (TIN):</span> Es el porcentaje fijo anual que se pacta como concepto de pago por el dinero prestado, de conformidad con el art. 6.e de la Ley 16/2011, de 24 de junio, de contratos de crédito al consumo.</li>
+        <li><span class="definition-title">Tercero:</span> Se refiere al particular o persona jurídica no considerada Parte de este Contrato.</li>
+    </ul>
+    </p>
+</div>
+
+<div class="section pt-40">
+    <div class="title">2. CUESTIONES PREVIAS Y REQUISITOS PARA LA CONCESIÓN DEL CRÉDITO. </div>
+    <div><span class="sub-section-number">2.1.</span> Con carácter previo a la solicitud del préstamo, el CLIENTE afirma que reúne los siguientes requisitos:
+        <p>
+        <ol style="list-style-type: lower-alpha">
+            <li>Ser persona física con plena capacidad de obrar.</li>
+            <li>Tener entre 18 y 70 años, ambos incluidos.</li>
+            <li>Ser residente legal en España, teniendo domicilio permanente en dicho estado a efectos fiscales.</li>
+            <li>Ser titular de una cuenta corriente bancaria operativa en cualquier entidad bancaria registrada en España.</li>
+            <li>Hallarse en plenas facultades mentales, intelectuales y de cognición en el momento de la solicitud del crédito.</li>
+            <li>Autorizar expresamente a ALFA para recibir de la empresa toda la información relativa a la solicitud del crédito, vía telefónica, SMS, correo postal o correo electrónico.</li>
+            <li>Autorizar expresamente a ALFA para hacer uso y ceder sus datos a terceros para poder realizar los trámites y comprobaciones necesarias en relación con su solicitud de crédito.</li>
+            <li>Ser titular de todos los datos que proporciona a ALFA para la solicitud del préstamo, respondiendo de la veracidad de sus datos de identificación, bancarios, domicilio habitual, teléfonos y correo electrónico que proporcione a la empresa para la solicitud del préstamo</li>
+        </ol>
+        </p>
+    </div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">2.2.</span> En cualquier caso, a pesar de que ALFA apruebe de forma provisional la solicitud de préstamo, la efectiva concesión de éste quedará sujeto a las siguientes circunstancias:</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">2.2.1.</span> El aseguramiento por parte de ALFA de que la información facilitada por el Cliente no es incorrecta o deficiente en ningún extremo y, por tanto, responde a lo solicitado en la concesión del préstamo. De no ser correcta o suficiente dicha información el Contrato devendrá ineficaz, pudiendo ALFA, en su caso, comunicar dicha circunstancia a las organizaciones y entidades privadas dedicadas a la prestación de servicios de información sobre solvencia patrimonial, crédito y prevención del fraude en el sistema financiero a las que ALFA se encuentre adherida y/o a las que pueda acceder en función de su objeto social.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">2.2.2.</span>  A la evaluación de la solvencia del Cliente por parte de ALFA, sobre la base de la información facilitada por el propio cliente, así como a través de la consulta de ficheros de solvencia patrimonial y crédito, y cualesquiera otros medios adecuados a tal fin. Dicha evaluación deberá realizarse siguiendo los criterios objetivos fijados al efecto por ALFA y comunicarse su resultado al Cliente en el plazo máximo de un día hábil a contar desde la realización de la solicitud del préstamo online o de la efectiva entrega de la información objeto de análisis por email.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">2.2.3.</span> A que el CLIENTE haya tenido acceso a toda la información relativa al préstamo contratado a través de su ÁREA DE USUARIO y podrá recibir toda su información necesaria, vía telefónica, por correo electrónico o a través del chat online.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">2.2.4.</span> A que el CLIENTE haya recibido la advertencia de los riesgos que puede suponer la demora en el pago, así como la posibilidad de ser incluido en ficheros de morosidad.</div>
+</div>
+<br/>
+<div class="section pt-40">
+    <div class="title">3. SOLICITUD Y CONCESIÓN DEL PRÉSTAMO. INFORMACIÓN PRECONTRACTUAL. ACEPTACIÓN DEL CLIENTE Y ENTRADA EN VIGOR DEL CONTRATO.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">3.1.</span> El sistema o proceso de solicitud y concesión del préstamo se divide en cuatro fases: (I) Solicitud, (II) Estudio de viabilidad y solvencia, (III) Oferta definitiva de ALFA, y, por último, (IV) Aceptación y perfeccionamiento del contrato.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">3.2. </span> (I) Solicitud: La solicitud de crédito será realizada a través del Sitio Web. El Cliente deberá cumplimentar los datos solicitados e indicar en la calculadora la cantidad que desea disponer y enviar la solicitud a través de la web para formalizar el contrato PRÉSTAMO. Para finalizar el proceso de Solicitud, ALFA envía al teléfono móvil facilitado por el cliente un código de verificación que deberá introducir en la página web.  Una vez realizado este acto, para la correcta verificación del solicitante a través de su teléfono móvil, se tendrá por enviada y formalizada la solicitud.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">3.3.</span> (II) Estudio de viabilidad y solvencia: Recibida la solicitud, ALFA realiza un estudio de riesgos sobre la posible concesión del préstamo y determina la idoneidad del importe máximo de concesión, en función del resultado del estudio de solvencia, que se realizará sobre la base de la información facilitada por el propio cliente, así como a través de la consulta de ficheros de solvencia patrimonial y crédito, y cualesquiera otros medios adecuados a tal fin. El resultado de dicha evaluación de solvencia se comunicará, de forma habitual, en el plazo máximo de un día hábil desde la realización de la solicitud. Excepcionalmente, por motivos técnicos o causa de fuerza mayor, la comunicación de dicha evaluación de solvencia se efectuará dentro del plazo de dos días hábiles desde la solicitud del crédito. En atención al resultado del estudio de viabilidad y solvencia, ALFA podrá rechazar de plano la solicitud, o bien podrá aceptar la concesión (por el importe solicitado por el cliente o por un importe inferior).</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">3.4.</span> (III) Oferta definitiva de ALFA: En caso de que se acepte la concesión, ALFA enviará oferta vinculante al CLIENTE por medio de correo electrónico, en el que se incluirá toda la información precontractual y la información normalizada europea sobre créditos al consumo (SECCI) de conformidad con la normativa aplicable. El Cliente manifiesta expresamente haber recibido asistencia previa a la celebración del contrato con explicaciones adecuadas e individualizadas sobre las características esenciales del préstamo que le han permitido comparar diversas ofertas existentes en el mercado y adoptar una decisión informada sobre la conveniencia de suscribir el Contrato, concluyendo que el mismo se ajusta a sus intereses, necesidades y situación financiera.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">3.5.</span> (IV)  Aceptación y perfeccionamiento del contrato: Una vez el cliente ha recibido la oferta final con toda la información esencial e información precontractual preceptiva, y en el supuesto que esté de acuerdo con las consideraciones finales, el CLIENTE debe ACEPTAR la oferta por alguno de los medios ofrecidos por ALFA, esto es, a) haciendo “click” en la casilla con la palabra ACEPTO que aparece en el propio mail enviado al cliente con la oferta o en su Área de Usuario, b) enviando un mensaje de texto, SMS, con la palabra ACEPTO. Recibida por parte de ALFA la aceptación del cliente, se enviará al CLIENTE un mail de confirmación, informándole del perfeccionamiento del contrato y de que en un plazo máximo de 24 horas ALFA hará efectiva la transferencia en favor del CLIENTE del importe de acordado, estando a su disposición en al Área de Usuario toda la documentación contractual. ALFA, S.L. se obliga a hacer la transferencia dineraria en un plazo máximo de 24 horas a excepción de que la solicitud coincida con días no laborales y festivos, que en este caso la disposición se hará en un período máximo de 48 horas; Alfa no se hace responsable de los retrasos ocasionados por la operativa bancaria y/o por cualquier circunstancia que quede excluida de su voluntad y actuación. Asimismo, se informa de que el plazo máximo de 48h
+        previsto para hacer efectiva la transferencia puede alargarse en caso de que el cliente no haga
+        entrega de la documentación identificativa requerida por ALFA en cumplimiento de la Ley
+        10/2010, de 28 de abril, de prevención del blanqueo de capitales y de la financiación del
+        terrorismo y su normativa de desarrollo.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">3.6.</span> La confirmación por parte del cliente, y por lo tanto el perfeccionamiento del contrato, significa que: I) el Cliente ha aceptado y está de acuerdo con las condiciones del Contrato de préstamo (II) presta su consentimiento para el tratamiento de sus datos personales (ver cláusula de protección de datos personales) (III) manifiesta su deseo de disponer del préstamo concedido tan pronto como sea posible. En el caso de que ALFA haya aceptado la solicitud de préstamo con la cantidad solicitada inicialmente por el cliente, y se formalice el contrato de crédito se enviará al cliente una copia del contrato a la dirección de correo electrónico que se haya proporcionado a ALFA, S.L.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">3.7.</span> En virtud de la suscripción de las presentes Condiciones Generales, el Cliente declara expresamente haber recibido por parte de ALFA, con carácter previo y con antelación suficiente a la firma del Contrato y en soporte duradero, información adecuada sobre los términos y condiciones del Contrato, sobre los gastos asociados y las consecuencias en caso de impago, de conformidad con el modelo de Información Normalizada Europea sobre el Crédito al Consumo (SECCI), previsto en el Anexo II de la Ley 16/2011, de 24 de junio de contratos de crédito al consumo, con los preceptos aplicables sobre información precontractual previstos en el apartado 3 del artículo 10 de la mismo cuerpo normativo, y en los apartados 1 y 2 del artículo 7 de la Ley 22/2007, de 11 de julio, sobre comercialización a distancia de servicios financieros destinados a los consumidores.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">3.8.</span> En el supuesto que ALFA deniegue la concesión del Préstamo al CLIENTE, el contrato se tendrá por no celebrado.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">3.9.</span> Una vez el CLIENTE haya pagado la totalidad del préstamo de acuerdo con las condiciones establecidas, el CLIENTE podrá solicitar nuevo préstamo. Mientras el contrato esté vigente el CLIENTE no podrá solicitar un nuevo préstamo.</div>
+</div>
+
+
+<div class="section pt-40">
+    <div class="title">4. DERECHO DE DESISTIMIENTO</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">4.1.</span>  El CLIENTE podrá dejar sin efecto el contrato suscrito, ejercitando el derecho de desistimiento dentro del plazo de 14 días naturales desde la fecha de formalización del Contrato de préstamo. Para ejercitar el derecho de desistimiento el CLIENTE deberá enviar una solicitud de desistimiento por correo electrónico a la dirección info@alfa.es, identificando en el asunto del correo la palabra “DESISTIMIENTO PRESTAMO”. El cuerpo del correo electrónico deberá contener: a) nombre y apellidos del cliente, b) NIF del cliente (DNI o NIE), c) número de contrato de préstamo, d) manifestación de la voluntad de desistir del contrato, y e) documento adjunto con el DNI o NIE escaneado por ambas caras.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">4.2.</span> El desistimiento no tiene ningún tipo de coste para el CLIENTE, de conformidad con la Ley de Consumidores y Usuarios. El CLIENTE únicamente deberá reintegrar a ALFA, dentro del plazo de 30 días naturales desde la solicitud de desistimiento, el principal prestado más la parte proporcional de los intereses nominales devengados hasta la fecha del efectivo pago y efectivo ejercicio del derecho de desistimiento, es decir, la fecha del reembolso del capital, de conformidad con el art. 28.2.b de la Ley de Contratos de Crédito al Consumo y el art. 11 de la Ley sobre comercialización a distancia de servicios financieros destinados a los consumidores.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">4.3.</span> Si el cliente, a pesar de haber solicitado el desistimiento dentro del plazo de 14 días desde la fecha de formalización del contrato, no reintegrara el capital y la parte proporcional de los intereses nominales dentro de los 30 días naturales se entenderá que no ha ejercitado el derecho de desistimiento y se continuará con la ejecución natural del contrato de préstamo según las disposiciones de este documento.</div>
+</div>
+
+<div class="section pt-40">
+    <div class="title">5. DURACIÓN Y RESOLUCIÓN POR REEMBOLSO ANTICIPADO</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">5.1.</span> El presente contrato tendrá la duración establecida en las condiciones particulares. En el supuesto que quiera ampliar el plazo de devolución acordado el CLIENTE deberá abonar una prórroga.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">5.2.</span> El CLIENTE podrá resolver el Contrato de préstamo en cualquier momento de la vigencia de Éste, sin estar obligado a explicar los motivos que justifiquen su decisión de extinguir el contrato, de conformidad con las siguientes disposiciones:</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">(I)</span> Para ejercer el reembolso anticipado, el CLIENTE deberá enviar un mensaje de correo electrónico a ALFA, a la dirección info@alfa.es, identificando en el asunto del correo la palabra “RESOLUCIÓN CONTRATO PRÉSTAMO”. El cuerpo del correo electrónico deberá contener: a) nombre y apellidos del cliente, b) NIF del cliente (DNI o NIE), c) número de contrato de PRÉSTAMO, d) manifestación de la voluntad de resolución anticipada del contrato, y e) documento adjunto con el DNI o NIE escaneado por ambas caras.</div>
+</div>
+<div class="section pt-20">
+    <div><span class="sub-section-number">(II)</span> (II) Una vez enviada la solicitud del rembolso anticipado, el CLIENTE deberá abonar el principal que adeude a ALFA, S.L., más la parte de los intereses nominales devengados hasta la fecha del efectivo pago.</div>
+</div>
+
+
+<div class="section pt-20">
+    <p>En el caso de que el CLIENTE reembolse anticipadamente el préstamo según lo establecido en la presente cláusula, deberá devolver el importe a ALFA, dentro de los tres día posteriores a la comunicación de reembolso anticipado, de conformidad con el apartado (II) de la cláusula anterior. </p>
+    <p>ALFA tendrá derecho a cobrar una comisión de gestión por la cancelación anticipada que será de un 0.5% del importe reembolsado anticipadamente. </p>
+</div>
+
+<div class="section pt-40">
+    <div class="title">6. PRÓRROGA</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">6.1.</span> El CLIENTE podrá ampliar el plazo de la devolución del préstamo solicitando una prórroga de vencimiento del préstamo. El plazo e importe de las prórrogas estarán siempre a disposición del CLIENTE en su Área de Usuario de manera clara y transparente. ALFA S.L podrá limitar el derecho a prorrogar el crédito según historial de pagos del cliente para evitar el sobreendeudamiento. </div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">6.2.</span> El CLIENTE podrá abonar el importe de la prórroga mediante (I) transferencia (II) ingreso en cajero o (III) con tarjeta a la cuenta de ALFA indicando siempre el objeto del pago con la palabra "prórroga” y el DNI/NIE como concepto.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">6.3.</span> Una vez abonado el importe el CLIENTE recibirá un mensaje de texto o un correo electrónico que le informará de que su préstamo ha sido ampliado y de la nueva fecha de vencimiento para el pago</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">6.4.</span> ALFA emitirá una factura en este concepto que el CLIENTE podrá ver en su Área de Usuario o en el correo electrónico aportado en el momento de la contratación.</div>
+</div>
+
+<div class="section pt-40">
+    <div class="title">7. BUEN USO DE DEL CONTRATO DE PRÉSTAMO</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">7.1.</span> El CLIENTE se compromete a hacer un uso responsable del contrato de préstamo concedido por ALFA. El CLIENTE podrá destinar el préstamo a cualquier fin legítimo. En este sentido declara y manifiesta que:</div>
+</div>
+
+<div class="section pt-20">
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sub-section-number">(I)</span> No es una Persona con Responsabilidad Pública con arreglo a la Ley de Prevención de Blanqueo de Capitales.</div>
+</div>
+
+<div class="section pt-20">
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sub-section-number">(II)</span> No ha infringido las leyes de prevención de blanqueo de capitales y no destinará los fondos del crédito al blanqueo de capitales u otra actividad delictiva.</div>
+</div>
+
+<div class="section pt-20">
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sub-section-number">(III)</span> Evitará llevar a cabo actividad alguna que pudiese implicar riesgos o problemas relacionados con el blanqueo de capitales y la financiación del terrorismo.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">7.2.</span> En cualquier caso, ALFA no se hace responsable del mal uso que eventualmente pudiera dar el CLIENTE a los importes de los que haya dispuesto en virtud de este contrato de préstamo.</div>
+</div>
+
+<div class="section pt-40">
+    <div class="title">8. COSTE DEL PRÉSTAMO</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">8.1.</span> El tipo de interés del préstamo estará indicado en las Condiciones Particulares del contrato y su cómputo también está determinado en las condiciones particulares del contrato, bajo el concepto de “comisión del préstamo”. El cálculo de la TAE corresponde al saldo teórico sin reutilización del disponible, sin promociones de pago especiales y no incluye penalizaciones por mora, periodos de carencia, cuotas reducidas. La Tasa Anual Equivalente (T.A.E.) será calculada de acuerdo con la ley de crédito al consumo.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">8.2.</span> De acuerdo con las directrices marcadas por la Asociación Española de Micropréstamos  (AEMIP),  y en caso de impago, el coste máximo del préstamo junto con los intereses de demora no superará nunca el 150% sobre principal prestado. No se incluyen en este cómputo las prórrogas que el CLIENTE pudiera contratar.</div>
+</div>
+
+<div class="section pt-40">
+    <div class="title">9. DEVOLUCIÓN DEL PRÉSTAMO.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">9.1.</span> El CLIENTE se obliga a la devolución del importe dispuesto del contrato de préstamo más los intereses pactados en la fecha de vencimiento acordada en contrato.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">9.2.</span> ALFA emitirá factura que será enviada al CLIENTE por mail, así como se encuentra en soporte duradero al Área de Usuario.</div>
+</div>
+<div class="section pt-20">
+    <div><span class="sub-section-number">9.3</span> El CLIENTE dispone de los siguientes métodos de pago:</div>
+</div>
+
+<div class="section pt-20">
+    <p>
+    <ul>
+        <li>A través de ingreso directo en cuenta o transferencia bancaria a alguna de las cuentas habilitadas por ALFA.</li>
+        <li>Mediante tarjeta de débito de cualquier entidad bancaria española excepto American Express, llamando al servicio de atención al cliente de ALFA, siempre que la tarjeta disponga de código CES (Comercio Electrónico Seguro)</li>
+        <li>A través de la plataforma virtual facilitada por ALFA en el Área de Usuario del CLIENTE siempre que la tarjeta disponga de código CES (Comercio Electrónico Seguro).</li>
+    </ul>
+    </p>
+</div>
+<div class="section pt-20">
+    <div><span class="sub-section-number">9.4.</span> EL CLIENTE podrá hacer el ingreso o transferencia a alguna de las Cuentas Bancarias titularidad de ALFA habilitadas a tal efecto. En caso de realizar el pago mediante ingreso o transferencia, el CLIENTE deberá indicar en el concepto de la transferencia el DNI o NIE del CLIENTE. Si el CLIENTE no sigue estos pasos y ALFA no puede identificar al titular del pago, el pago podrá considerarse como no recibido y el CLIENTE incurrirá en mora, a menos que pueda aportar prueba o evidencia de que el pago se realizó debidamente en la fecha de vencimiento.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">9.5.</span> En caso de que el CLENTE realice pagos insuficientes para cubrir los importes devengados, las cuantías abonadas se imputarán en el orden siguiente:</div>
+</div>
+
+<div class="section pt-20">
+    <p>
+    <ol>
+        <li>9.5.1. Intereses de demora</li>
+        <li>9.5.2. Intereses ordinarios (comúnmente conocido como comisión)</li>
+        <li>9.5.3. Importe del préstamo otorgado</li>
+        <li>9.5.4. Cualesquiera otras cantidades debidas por el cliente si procede.</li>
+    </ol>
+    </p>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">9.6</span> Llegada la fecha de devolución del Préstamo, el CLIENTE se obliga a devolver el Préstamo y a abonar la Comisión del Préstamo, de conformidad a lo establecido en este Contrato y en su caso, en la factura. En caso de que la fecha de devolución del Préstamo sea un sábado, domingo, festivo, o festividad nacional decretada por ley, el CLIENTE deberá realizar el pago el primer día hábil siguiente.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">9.7</span> En caso de cambios en la cuenta indicada por el CLIENTE, o de cualquier otra información facilitada por éste en el momento del envío de su primera Solicitud de Préstamo o en cualquier otro momento, el CLIENTE deberá comunicar dicha circunstancia a ALFA, S.L. a través de la dirección de correo electrónico  dpd@alfa.es, adjuntando copia digitalizada de su DNI/NIE y documento justificativo que acredite suficientemente el cambio informado, teniendo esta gestión el tratamiento de ejercicio del derecho de rectificación de datos personales.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">9.8</span> El CLIENTE se obliga a cumplir con las obligaciones derivadas del Contrato de Préstamo, asumiendo las consecuencias de su incumplimiento o cumplimiento defectuoso.</div>
+</div>
+
+<div class="section pt-40">
+    <div class="title">10. CONSECUENCIAS DEL IMPAGO</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">10.1.</span> En caso de que EL CLIENTE no abone el importe acordado en el día de vencimiento, el cliente entrará en situación de mora, y los importes adeudados generarán un interés acumulable de acuerdo con lo establecido en las condiciones particulares:</div>
+</div>
+
+<div class="section pt-20">
+    {% include "_loan_agreement_penalty_strategy" %}
+</div>
+
+<div class="section pt-20">
+    <p>De acuerdo con las directrices marcadas por la Asociación Española de Micropréstamos (AEMIP), y en caso de impago, el coste máximo del préstamo junto con los intereses de demora no superará nunca el 150% sobre principal prestado. No se incluyen en este cómputo las prórrogas que el CLIENTE pudiera contratar.</p>
+    <p><u>Ejemplo de Tabla de precios (sin aplicar descuentos)</u></p>
+    <p>Para un importe de 100€ prestado a 30 días</p>
+    <ul>
+        <li>Importe a devolver: 135€</li>
+        <li>Total máximo a devolver en caso de impago (150% sobre el principal): 250€</li>
+    </ul>
+    <br/>
+    <p>Para un importe de 300€ prestado a 30 días</p>
+    <ul>
+        <li>Importe a devolver: 405€</li>
+        <li>Total máximo a devolver en caso de impago (150% sobre el principal): 750€</li>
+    </ul>
+    <br/>
+    <p>Para un importe de 500€ prestado a 30 días</p>
+    <ul>
+        <li>Importe a devolver: 675€</li>
+        <li>Total máximo a devolver en caso de impago (150% sobre el principal): 1250€</li>
+    </ul>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">10.2.</span> 10.2. Si ALFA S.L lo considera, el tipo de interés de demora podrá variar según el importe del préstamo, el plazo de devolución y el estudio de solvencia previo efectuado. ALFA, S.L. siempre informará al CLIENTE de forma clara y según lo previsto en la ley. El CLIENTE deberá aceptar expresamente para poder ser formalizado el contrato.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">10.3.</span> En caso de cualquier impago, ALFA tendrá podrá a iniciar acciones de recobro, así como ceder el tratamiento de gestión de cobro a un tercero con la finalidad de hacer cumplir el contrato.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">10.4.</span> Se informa a EL CLIENTE que, en caso de impago, sus datos podrán ser incluidos en ficheros de morosidad e información sobre solvencia patrimonial y crédito.</div>
+</div>
+
+
+<div class="section pt-40">
+    <div class="title">11. RESPONSABILIDAD Y CASOS DE FUERZA MAYOR</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">11.1.</span> Las obligaciones para las partes dimanantes del presente contrato de crédito se suspenderán por el período durante el cual no puedan dar cumplimiento a las mismas debido a fuerza mayor, siempre que se cumplan los siguientes requisitos:</div>
+</div>
+
+<div class="section pt-20">
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sub-section-number">(I)</span> Que la parte imposibilitada de cumplir sus obligaciones notifique a la otra parte la existencia de la fuerza mayor.</div>
+</div>
+
+<div class="section pt-20">
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sub-section-number">(II)</span> Que intente dentro de lo posible dar cumplimiento a sus obligaciones a pesar de la concurrencia de la fuerza mayor imposibilitante.</div>
+</div>
+
+<div class="section pt-20">
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="sub-section-number">(III)</span> Que cumpla con sus obligaciones inmediatamente después de que cese la causa de fuerza mayor.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">11.2.</span> Únicamente se entenderá como fuerza mayor aquella circunstancia impredecible y fuera del control de las partes, que les impida dar cumplimiento a la obligación de forma irresistible. Por ejemplo, huelgas, desastres naturales, conflictos armados, colapso de sistema financiero, o circunstancias similares que provoquen la imposibilidad en el cumplimiento de las obligaciones derivadas del presente contrato, pero no se incluye el despido u otras condiciones que afectan a la capacidad del cliente para hacer frente a los importes adeudados.</div>
+</div>
+
+
+<div class="section pt-40">
+    <div class="title">12. ACCESO A LOS SERVICIOS Y VALIDEZ DE LAS INSTRUCCIONES DEL CLIENTE</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">12.1.</span> A través del área de usuario del sitio WEB de ALFA, el cliente podrá visualizar el contrato y todas sus facturas con los conceptos determinados de cada operación realizada. Para acceder el usuario deberá introducir, su identificador de usuario, su password, o facilitar aquellos datos de carácter personal a ALFA que requiera en cada momento y que permitan su identificación.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">12.2.</span> Las partes acuerdan que las ordenes transmitidas por vía telemática mediante el uso de las claves tienen el mismo valor que el consentimiento prestado por escrito de forma manuscrita, de acuerdo con el Art. 23 de la Ley 34/2002, de 11 de Julio, de Servicios de la Sociedad de la Información y Comercio Electrónico.</div>
+</div>
+
+<div class="section pt-40">
+    <div class="title">13. INFORMACIÓN COMERCIAL Y OFERTAS PROMOCIONALES </div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">13.1.</span> De forma ocasional, ALFA podrá ofrecer ofertas especiales o promociones al Cliente, las cuales quedarán sujetas a los términos y condiciones que en cada caso se publiquen en cumplimiento de lo dispuesto en la Ley 22/2007, de 11 de julio, sobre comercialización a distancia de servicios financieros destinados a los consumidores, en la Ley 16/2011, de 24 de junio, de contratos de crédito al consumo, y demás legislación aplicable, en particular, en materia de consumidores.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">13.2.</span> Si el cliente marca la casilla de consentimiento y no se opone por cualquier otro medio significará que ALFA tendrá derecho a tratar los datos para la realización de actividades y comunicaciones comerciales, publicitarias y promocionales mediante cualquier medio, ya sea tradicional, ya sea mediante el envío de correos electrónicos y de mensajes a través de cualquier sistema incluyendo SMS, etc.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">13.3.</span> El cliente es informado que tiene derecho a oponerse al tratamiento de sus datos con finalidades comerciales, en el momento de la introducción de sus datos en la página web.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">13.4.</span> En caso de querer ejercer el derecho a no recibir dichas comunicaciones, el cliente podrá oponerse en todo momento al envío de estas comunicaciones comerciales enviando un correo electrónico a  dpd@alfa.es, indicando su DNI/NIE y su volutnad de darse de baja de comunicaciones comerciales, de acuerdo con lo dispuesto en el Reglamento General Europeo de Protección de Datos y con el artículo 21.2 de la Ley 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico.</div>
+</div>
+
+<div class="section pt-40">
+    <div class="title">14. CONSENTIMIENTO PARA EL TRATAMIENTO DE DATOS DE CARÁCTER PERSONAL</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">14.1.</span> ALFA, S.L. informa al CLIENTE y éste da su consentimiento para que los datos que le facilite en el formulario de solicitud de Préstamo del Sitio Web sean tratados por ALFA como responsable del tratamiento, con la finalidad de control, gestión, mantenimiento y ejecución del contrato, así como el envío de información acerca de productos y servicios relativos a la solicitud del CLIENTE tanto por medios postales como electrónicos.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">14.2.</span> El cliente consiente a que ALFA pueda ceder sus datos personales a terceros con el fin de realizar averiguaciones patrimoniales, actuaciones de lucha contra el fraude y para los procesos de recuperación de deuda si fuera necesario.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">14.3.</span> El CLIENTE consiente expresamente que ALFA pueda recabar datos relativos a sus antecedentes crediticios e información relacionada con el enjuiciamiento de su solvencia económica.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">14.4.</span> El cliente consiente, de acuerdo con el Art. 20 de la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, que en caso de impago, y con los requisitos fijados en la ley, sus datos puedan ser incluidos en los ficheros de solvencia patrimonial y crédito (comúnmente conocidos como de morosidad). Por ejemplo ASNEF, del Servicio de Crédito de EQUIFAX IBERICA, S.L., con domicilio en C/ Albasanz, 16, 28037 Madrid, o el Servicio de Crédito de EXPERIAN BUREAU DE CRÉDITO S.A., con domicilio en C/ Príncipe de Vergara, 132 - 1 ª Planta, 28002 Madrid, en el Registro de Aceptaciones Impagadas (RAI), así como en cualquier otra base de datos de servicios de información sobre solvencia patrimonial y crédito.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">14.5.</span> El cliente consiente el procesamiento y la divulgación de la información contenida en el Contrato de Préstamo, por ALFA a sus empleados, así como a los proveedores de servicios o agentes con el objeto de dar cumplimiento al contrato de préstamo y para el ejercicio de los derechos y obligaciones contenidos en el mismo.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">14.6.</span> El cliente puede ejercer los derechos de acceso, rectificación, supresión y oposición al tratamiento de sus datos de carácter personal, así como revocar el consentimiento prestado para el envío de comunicaciones comerciales electrónicas, enviando un correo electrónico a la dirección dpd@alfa.es o una carta dirigida a: ALFA S.L, {{company.addressLine1}}, {{company.addressLine2}}, Barcelona, indicando en el asunto qué derecho quiere ejercer y enviando una copia digitalizada de su DNI/NIE para su correcta identificación formal. Asimismo, podrá de acuerdo con el nuevo reglamento europeo de protección de datos limitar su consentimiento y ejercer su derecho de portabilidad</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">14.7.</span> En el caso que el CLIENTE ejerza su derecho de rectificación de datos, deberá indicar el dato erróneo y la corrección que debe realizarse, acompañada de la documentación justificativa. En caso de que no acredite lo anterior, se denegará la rectificación de datos de acuerdo con lo que establece la LOPD. El responsable del tratamiento de datos es ALFA (B98378201) con domicilio en paseo de gracia 53, 1º 1ª, CP: 08007 y solo tratará estos bajo el interés legítimo en aras de dar cumplimiento a la relación contractual.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">14.8.</span> EL CLIENTE podrá presentar reclamación ante la autoridad de control competente (Agencia española de Protección de datos).</div>
+</div>
+<div class="section pt-20">
+    <div><span class="sub-section-number">14.9.</span>En la Política de Privacidad de ALFA, que el cliente ha leído y aceptado antes del envío de la solicitud del crédito y que se puede consultar en el Sitio Web, se detallan y concretan todos los aspectos relativos a los derechos y obligaciones de ambas partes en relación a la protección de datos de carácter personal de los clientes, y respecto al interés legítimo que ampara a ALFA para el tratamiento y cesión datos con motivo de las relaciones previas, coetáneas y posteriores derivadas de la celebración presente contrato.</div>
+</div>
+
+<div class="section pt-40">
+    <div class="title">15. SEGURIDAD Y CONFIDENCIALIDAD DE LOS DATOS PERSONALES</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">15.1.</span> Cualquier información sobre el CLIENTE relativa al Contrato de Préstamo será considerada de carácter privado y confidencial. ALFA únicamente facilitará información sobre el CLIENTE de conformidad con lo previsto en la legislación española, si bien el CLIENTE autoriza a que ALFA utilice dicha información si es necesario para el exacto y perfecto cumplimiento de las obligaciones dimanantes del presente contrato.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">15.2.</span> El CLIENTE se compromete a salvaguardar con la diligencia debida su información secreta de acceso (nombre de Usuario y Contraseña) de modo que no pueda ser conocida y fraudulentamente manipulada por Terceros. El CLIENTE deberá utilizar únicamente equipos y medios seguros para la comunicación y transferencia de datos con ALFA.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">15.3.</span> ALFA declara que tiene implantadas las medidas de seguridad técnicas y organizativas para garantizar la seguridad de los datos personales y evitar este tipo de datos de cualquier alteración, pérdida, tratamiento no autorizado y el acceso, teniendo en cuenta el estado de la tecnología, la naturaleza de los datos almacenados y los riesgos a los que están expuestos, ya sea como resultado de la acción humana o del medio físico o natural.</div>
+</div>
+
+<div class="section pt-40">
+    <div class="title">16. GRABACIONES</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">16.1.</span> El Cliente acepta que ALFA grabe todas las conversaciones telefónicas de voz para el cumplimiento del Contrato de préstamo con el fin de proteger los intereses legítimos del Cliente y de ALFA. Todas las conversaciones telefónicas que mantenga con los titulares, así como la comunicación de otro tipo mantenida con éstos, comprometiéndose a custodiar tal información y a guardar la más absoluta confidencialidad sobre los datos grabados, siendo sólo utilizables por ALFA para la gestión del préstamo y su cobro, siendo utilizables igualmente, en su caso, como medio de prueba en cualquier procedimiento administrativo o judicial.</div>
+</div>
+
+<div class="section pt-40">
+    <div class="title">17. RECLAMACIONES DEL CLIENTE</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">17.1.</span> El Cliente podrá formular la correspondiente reclamación o queja relativa a las acciones u omisiones de ALFA en el marco del Contrato mediante correo electrónico dirigido a la dirección info@alfa.es indicando de forma breve los detalles de su reclamación o queja y su número de cuenta. El Servicio de Atención al Cliente de ALFA acusará recibo de su reclamación o queja por correo electrónico en el plazo máximo de siete (7) días hábiles.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">17.2.</span> ALFA intentará resolver la reclamación o queja formulada por el Cliente a la mayor brevedad posible y en un plazo máximo de un mes, una vez la misma ha sido comunicada a ALFA conforme al procedimiento descrito en el párrafo anterior. Sin perjuicio de lo anterior, en caso de que ALFA necesite investigar la reclamación o queja del Cliente con mayor profundidad a fin de poder proporcionar al Cliente una respuesta completa a la misma, ALFA informará de dicha necesidad al Cliente y le mantendrá regularmente informado. Dicha investigación será llevada a cabo por un empleado de ALFA que no se haya visto envuelto directamente en el asunto objeto de la reclamación o queja. Dicho empleado enviará al Cliente una respuesta inicial tras haber puesto en conocimiento la reclamación o queja a un empleado de ALFA que cuente con la suficiente autoridad dentro de la organización de ALFA para resolver la misma (incluyendo, en caso de considerarse oportuno a discreción de ALFA, el ofrecimiento de una compensación económica).</div>
+</div>
+
+<div class="section pt-40">
+    <div class="title">18. PREVENCIÓN DEL BLANQUEO DE CAPITALES</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">18.1.</span> La legislación vigente en materia de prevención del blanqueo de capitales y de la financiación del terrorismo, obliga a ALFA a la verificación de la identidad del Cliente y de sus operaciones y actividades. Es por ello por lo que el Cliente se obliga a facilitar a ALFA, de forma veraz y completa cuanta información sea necesaria y le sea requerida a estos efectos y autoriza expresamente a ALFA a realizar las actuaciones de verificación que considere oportunas para esta finalidad.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">18.2.</span> ALFA comunicará al Servicio Ejecutivo de Prevención del Blanqueo de Capitales (SEPBLAC) cualquier hecho u operación, incluso la mera tentativa, respecto de los cuáles exista indicio o certeza de que está relacionado con el blanqueo de capitales o la financiación del terrorismo, debiendo abstenerse de ejecutar cualquier operación, si se ponen de manifiesto tales circunstancias. ALFA no será responsable ante el Cliente de los daños y perjuicios que este pueda sufrir como consecuencia del cumplimiento de dichas obligaciones.</div>
+</div>
+
+<div class="section pt-40">
+    <div class="title">19. PROPIEDAD INDUSTRIAL E INTELECTUAL</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">19.1.</span> Los derechos de propiedad intelectual e industrial sobre las creaciones, marcas, logos, y cualquier otro susceptible de protección, contenidos en la página web de ALFA corresponden en exclusiva a ALFA, S.L.U. La reproducción, distribución, comercialización o transformación no autorizadas de tales creaciones, marcas, logos, etc. constituye una infracción de los derechos de propiedad intelectual e industrial de ALFA o del titular de estos, y podrá dar lugar al ejercicio de cuantas acciones judiciales o extrajudiciales les pudieran corresponder en el ejercicio de sus derechos.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">19.2.</span> Asimismo, la información a la cual el CLIENTE puede acceder a través de la web puede estar protegida por derechos de propiedad industrial, intelectual o de otra índole. ALFA no será responsable en ningún caso y bajo ningún concepto de las infracciones de tales derechos que pueda cometer como usuario el CLIENTE.</div>
+</div>
+
+<div class="section pt-40">
+    <div class="title">20. MODIFICACIÓN DEL CONTRATO</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">20.1.</span> El contrato solamente podrá ser modificado mediante acuerdo suscrito entre las partes de acuerdo con la normativa de contratación a distancia de servicios financieros y ley de créditos al consumo.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">20.2.</span> No obstante, ALFA podrá modificar las condiciones del presente Contrato unilateralmente, si las modificaciones fuesen necesarias para adaptar el Contrato a los cambios producidos en la normativa vigente aplicable al mismo, o bien por motivos internos de desarrollo de negocio, siempre y cuando se cumplan los requisitos establecidos en el siguiente punto.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">20.3.</span> Será obligación de ALFA notificar al CLIENTE de cualquier modificación unilateral del Contrato en cualquiera de los términos anteriormente indicados, UN (1) MES antes de que dichas modificaciones entren en vigor. Dichas modificaciones entrarán automáticamente en vigor tras el transcurso de este periodo de UN (1) MES si el cliente no hubiera mostrado su disconformidad mediante comunicación por mail a info@alfa.es o mediante correo postal.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">20.4.</span> El CLIENTE tendrá derecho a no aceptar las modificaciones previstas y, por tanto, a resolver el Contrato dentro de este plazo de UN (1) MES desde la notificación de la modificación. La resolución del contrato se hará de conformidad con lo previsto en la cláusula relativa a la resolución por reembolso anticipado del crédito.</div>
+</div>
+
+<div class="section pt-40">
+    <div class="title">21. CESIÓN</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">21.1.</span> ALFA tendrá el derecho de ceder sus derechos y obligaciones en relación con el Contrato de préstamo a un tercero sin requerir el consentimiento del CLIENTE de acuerdo con la normativa del código al comercio, subrogándose el nuevo acreedor en la posición de ALFA frente al CLIENTE.  El mismo será debidamente notificado de dicha cesión. El CLIENTE no podrá ceder su posición deudora sin previo consentimiento de ALFA de forma expresa y por escrito</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">21.2.</span> ALFA podrá ceder a un Tercero el derecho a ejercitar cualquier reclamación contra el CLIENTE sin necesidad de recabar el consentimiento expreso habida cuenta que se encuentra dentro del interés legítimo de ALFA.</div>
+</div>
+
+<div class="section pt-40">
+    <div class="title">22. IDIOMA Y NOTIFICACIONES</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">22.1.</span> Todas las notificaciones relacionadas con el Contrato de préstamo intercambiadas entre las Partes se efectuarán en español.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">22.2.</span> El CLIENTE podrá utilizar cualquiera de los medios puestos a disposición de ALFA para intercambiar comunicaciones: correo postal a {{company.addressLine1}}, {{company.addressLine2}}, los teléfonos 935475888 o 900052211, mail a <a href="mailto:info@alfa.es">info@alfa.es</a> y chat online puesto a disposición del CLIENTE en el Sitio Web <a href="wwww.alfa.es">wwww.alfa.es</a>, salvo que en este contrato se prevea un procedimiento de notificación específico.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">22.3.</span> ALFA por su parte podrá comunicarse con el CLIENTE a través del domicilio, correo electrónico y teléfono/os facilitados por el propio CLIENTE mediante el formulario de solicitud del préstamo, incluyendo la posibilidad de envío de mensajes de texto (SMS) al teléfono móvil del CLIENTE, salvo que en este contrato se prevea un procedimiento de notificación específico.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">22.4.</span> A los efectos del presente Contrato, para ambas Partes se entiende que una notificación ha sido debidamente recibida en los siguientes supuestos: tras la recepción del acuse de recibo si lo hubiere; cinco (5) días naturales después de enviarla, si se remite por correo postal ordinario; o después de un (1) día natural, si se envía en formato electrónico por SMS o correo electrónico.</div>
+</div>
+
+<div class="section pt-40">
+    <div class="title">23. JURISDICCIÓN Y LEY APLICABLE </div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">23.1.</span> El Contrato de préstamo y la relación comercial entre el CLIENTE y ALFA se regirán por la ley española. El presente contrato se ajusta a las prescripciones que le son de aplicación; la Ley 16/2011, de 24 de junio, de Contratos de Crédito al Consumo, la Ley 22/2007, de 11 de julio, sobre Comercialización a Distancia de Servicios Financieros Destinados a los Consumidores, el Real Decreto Legislativo 1/2007, de 16 de noviembre, para la Defensa de los Consumidores y Usuarios y la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico, así como el resto de la legislación que pueda resultarle aplicable.</div>
+</div>
+
+<div class="section pt-20">
+    <div><span class="sub-section-number">23.2.</span> Cualquier conflicto que pudiere generarse entre las partes, será resuelto de forma amistosa. En el supuesto en el que las partes no pudiesen resolver la controversia a través de la negociación y la buena fe, las partes se someten a los tribunales del domicilio del consumidor.</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "applicants": {
+    "primaryConsumer": {
+      "personalInformation": {
+        "idCountryCode": "724",
+        "idType": "ID",
+        "idCode": "25931476B"
+      },
+      "dataSourceResponses": {
+        "EIPG": {
+          "RISK": {
+            "identifier": "primary",
+            "idCode": "25931476B",
+            "errors": [
+              {
+                "code": "COM-56",
+                "description": "Error al establecer la conexi?n con el servidor"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "timestamp": "2019-04-01 15:50:44:236",
+  "errors": [
+    {
+      "code": "ICDAS004",
+      "message": "Errors present in [EIPG] response",
+      "category": "C"
+    }
+  ],
+  "transactionState": "ERROR",
+  "interactionId": "ID-01722210249-43380-1549378432782-0-45867",
+  "transactionId": "211385"
+}

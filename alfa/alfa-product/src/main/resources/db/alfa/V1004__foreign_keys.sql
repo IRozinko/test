@@ -1,0 +1,1 @@
+ALTER TABLE crm.client_attachment ADD CONSTRAINT fk_client_attachment_transaction_id FOREIGN KEY (transaction_id) REFERENCES transaction.transaction (id); CREATE INDEX IF NOT EXISTS idx_client_attachment_transaction_id ON crm.client_attachment USING btree (transaction_id);

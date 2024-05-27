@@ -1,0 +1,14 @@
+{
+  "Code": 0,
+  "ErrorMessage": "",
+  "Data": [
+    {
+      "Code": 1,
+      "Description": "MOBILE"
+    },
+    {
+      "Code": 2,
+      "Description": "OTHER"
+    }
+  ]
+}

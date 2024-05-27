@@ -1,0 +1,14 @@
+apply from: "${rootDir}/gradle/java.gradle"
+apply from: "${rootDir}/gradle/querydsl.gradle"
+
+dependencies {
+    compile project(":platform:common:db")
+    compile project(":platform:common:utils")
+    compile project(":platform:file-storage-core")
+
+    compile "org.beanio:beanio:2.1.0"
+    compile "commons-net:commons-net"
+
+    testCompile project(":platform:common:integration-test")
+}
+

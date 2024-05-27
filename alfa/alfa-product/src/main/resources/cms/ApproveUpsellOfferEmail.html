@@ -1,0 +1,38 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Tenemos una buena noticia... ¡Podemos prestarte más!
+<br>
+Adjunto puedes encontrar el contrato con las condiciones que podemos ofrecer.
+<br>
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Para recibir tu dinero, debes leer el contrato y aceptar las condiciones pulsando el siguiente eniace:
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+
+{{ button(title="He leído y acepto las condiciones", url=company.webBaseUrl + "/gracias?code=" + application.longApproveCode) }}
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Si tienes cualquier duda, ponte en contacto con nosotros. Saludos cordiales.
+{% include "_email_p_end" %}
+
+<td style="padding:64px 32px 32px 32px;" align="left">
+    {% include "_email_contact_details" %}
+    {% include "_email_footer" %}
+</td>
+
+{% endblock %}}

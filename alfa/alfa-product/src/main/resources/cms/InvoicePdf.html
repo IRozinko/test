@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>ALFA</title>
+    <style type="text/css">
+        .label {
+            color: #00c275;
+            font-weight: bold;
+        }
+
+        html, body {
+            font-family: 'OpenSans-Regular', sans-serif;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin-top: 0;
+        }
+
+        table td {
+            font-size: 11px;
+            padding-bottom: 6px;
+            padding-top: 6px;
+        }
+
+        table.items td {
+            border-bottom: 1px solid dimgray;
+            padding: 6px 10px;
+        }
+
+        table.items tr:last-child td {
+            border-bottom: none;
+            border-top: 2px solid black;
+        }
+
+        hr {
+            border: 0;
+            background: dimgray;
+            height: 1px;
+        }
+    </style>
+</head>
+<body>
+<table style="width: 100%;">
+    <tr>
+        <td valign="bottom">
+            <p style="color: #00c275; font-size: 25px; margin-bottom: 0; text-transform: uppercase;">{{company.name}}</p>
+            <p style="color: dimgray; margin-top: 0; text-transform: uppercase;">{{company.addressLine1}}{{company.addressLine2}}</p>
+        </td>
+        <td align="right">
+            {% include "_alfa_logo" %}
+        </td>
+    </tr>
+</table>
+
+<hr/>
+
+<table style="margin-bottom: 11px; width: 100%;">
+    <tr>
+        <td><span class="label">Fecha de vencimiento:</span></td>
+        <td><span class="label">Para:</span></td>
+        <td><span class="label">Fecha factura:</span> {{clientRepayment.repaymentDate | ldate(dateFormat)}}</td>
+    </tr>
+    <tr>
+        <td>{{clientRepayment.repaymentDate | ldate(dateFormat)}}</td>
+        <td>{{client.fullName}}</td>
+        <td><span class="label">Número de factura:</span> {{loan.number}}-{{clientRepayment.transactionId}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>{{client.addressLine1}} {{client.addressLine2}}</td>
+        <td><span class="label">Contrato de préstamo:</span> {{loan.number}}</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>{{client.documentNumber}}</td>
+        <td></td>
+    </tr>
+</table>
+
+<table class="items" style="width: 100%;">
+    <tr style="background-color: #00c275; color: white;">
+        <td align="center" width="40"><strong>Cantidad</strong></td>
+        <td width="250"><strong>Descripción</strong></td>
+        <td align="right" width="100"><strong>Precio unitario</strong></td>
+        <td align="right" width="100"><strong>Total</strong></td>
+    </tr>
+    {% if clientRepayment.extensionFeePaid > 0 %}
+    <tr>
+        <td align="center">1</td>
+        <td>Prórroga de vencimiento</td>
+        <td align="right">{{clientRepayment.extensionFeePaid | numberformat(currencyFormat)}}€</td>
+        <td align="right">{{clientRepayment.extensionFeePaid | numberformat(currencyFormat)}}€</td>
+    </tr>
+    {% endif %}
+    {% if clientRepayment.penaltyPaid > 0 %}
+    <tr>
+        <td align="center">1</td>
+        <td>Penalización de acuerdo al párrafo 10.1 del contrato</td>
+        <td align="right">{{clientRepayment.penaltyPaid | numberformat(currencyFormat)}}€</td>
+        <td align="right">{{clientRepayment.penaltyPaid | numberformat(currencyFormat)}}€</td>
+    </tr>
+    {% endif %}
+    {% if clientRepayment.interestPaid > 0 or (clientRepayment.principalPaid > 0 and clientRepayment.totalPaid - clientRepayment.principalPaid == 0) %}
+    <tr>
+        <td align="center">1</td>
+        <td>Comisión de la concesión del préstamo</td>
+        <td align="right">{{clientRepayment.interestPaid | numberformat(currencyFormat)}}€</td>
+        <td align="right">{{clientRepayment.interestPaid | numberformat(currencyFormat)}}€</td>
+    </tr>
+    {% endif %}
+    {% if clientRepayment.prepaymentFeePaid > 0 %}
+    <tr>
+        <td align="center">1</td>
+        <td>Comisión por pago anticipado</td>
+        <td align="right">{{clientRepayment.prepaymentFeePaid | numberformat(currencyFormat)}}€</td>
+        <td align="right">{{clientRepayment.prepaymentFeePaid | numberformat(currencyFormat)}}€</td>
+    </tr>
+    {% endif %}
+    {% if clientRepayment.reschedulingFeePaid > 0 %}
+    <tr>
+        <td align="center">1</td>
+        <td>Comisión por pago fraccionado</td>
+        <td align="right">{{clientRepayment.reschedulingFeePaid | numberformat(currencyFormat)}}€</td>
+        <td align="right">{{clientRepayment.reschedulingFeePaid | numberformat(currencyFormat)}}€</td>
+    </tr>
+    {% endif %}
+    {% if clientRepayment.principalPaid > 0 %}
+    <tr>
+        <td align="center">1</td>
+        <td>Valor nominal del préstamo</td>
+        <td align="right">{{clientRepayment.principalPaid | numberformat(currencyFormat)}}€</td>
+        <td align="right">{{clientRepayment.principalPaid | numberformat(currencyFormat)}}€</td>
+    </tr>
+    {% endif %}
+    {% if clientRepayment.extensionFeePaid <= 0 %}
+    <tr>
+        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    {% endif %}
+    {% if clientRepayment.penaltyPaid <= 0 %}
+    <tr>
+        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    {% endif %}
+    {% if clientRepayment.interestPaid <= 0 and (clientRepayment.principalPaid <= 0 or clientRepayment.totalPaid - clientRepayment.principalPaid != 0) %}
+    <tr>
+        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    {% endif %}
+    {% if clientRepayment.prepaymentFeePaid <= 0 %}
+    <tr>
+        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    {% endif %}
+    {% if clientRepayment.principalPaid <= 0 %}
+    <tr>
+        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    {% endif %}
+    <tr>
+        <td>&nbsp;</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><strong>(Servicio exento de IVA según la ley 37/1.992 Art 20)</strong></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td align="right">BASE IMPONIBLE</td>
+        <td align="right">{{clientRepayment.totalInvoiced | numberformat(currencyFormat)}}€</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td align="right">IVA</td>
+        <td align="right">0.00€</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td align="right"><strong>TOTAL FACTURA</strong></td>
+        <td align="right"><strong>{{clientRepayment.totalInvoiced | numberformat(currencyFormat)}}€</strong></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td align="right"><strong>TOTAL PAGADO</strong></td>
+        <td align="right"><strong>{{clientRepayment.totalPaid | numberformat(currencyFormat)}}€</strong></td>
+    </tr>
+</table>
+
+<br/>
+<br/>
+<br/>
+
+<p style="text-align: center;">
+    Si has recibido esta factura por error, te rogamos nos lo indiques a través de los teléfonos de atención al cliente
+    que adjuntamos en el pie de página
+</p>
+
+<br/>
+<br/>
+<br/>
+
+<div style="text-align: center;">
+    <p><span class="label">Gracias por confiar en</span> ALFA</p>
+    <p class="label">Contacta para cualquier duda en</p>
+    <p><span class="label">Teléfono:</span> {{company.phone}}</p>
+    <p><span class="label">E-mail:</span> {{company.email}}</p>
+    <p><span class="label">Web:</span> {{company.webSite}}</p>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+<p style="color: dimgray; font-size: 8px; font-weight: 100;">
+    De conformidad con la LOPD, le informamos que sus datos forman parte de un fichero de {{company.name}} y son tratados con las Medidas de seguridad adecuadas, con la finalidad de tratar  pedidos e informarle de nuestras actividades u otras que puedan ser de su interés. Únicamente para cumplir con las obligaciones que nos permitan realizar las funciones que nos son propias, nos autoriza a la comprobación de sus datos y a cederlos a terceras entidades relacionadas. En cualquier momento puede ejercer sus derechos Arco. {{company.name}} {{company.addressLine1}} {{company.addressLine2}}, CIF: {{company.number}}, está inscrita en el Registro Mercantil de Barcelona, al tomo 42.869, folio 23, hoja número B-416.727
+</p>
+</body>
+</html>

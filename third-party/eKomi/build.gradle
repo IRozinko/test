@@ -1,0 +1,10 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile project(":platform:common:utils")
+    compile libs.retrofit
+    compile libs.springBootWeb
+    compile libs.cache
+    testCompile project(":platform:common:integration-test")
+}
+

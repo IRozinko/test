@@ -1,0 +1,26 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+<b>Selecciona tu cuenta</b> bancaria para obtener tu préstamo. ¡Ya te queda muy poco para terminar la solicitud! Hazlo a través del siguiente enlace. 
+{% include "_email_p_begin" %}
+{% include "_email_p_begin" %}
+{{ button(title="Acabar solicitud", url=company.webBaseUrl + "/login?utm_source=email&utm_medium=CRM&utm_campaign=instantr1") }}
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Te recordamos que es necesario que seas titular o cotitular de la cuenta y que recibas tus ingresos habituales en ella para que podamos ofrecerte financiación.
+<br>
+<br>
+Si experimentas cualquier dificultad o tienes dudas, contacta con nosotros en el teléfono <a href="tel:+34{{ company.phone }}" style="color:#00b46d;">{{company.phone}}</a>
+o el mail <a href="mailto:info@alfa.es" style="color:#00b46d;">info@alfa.es</a>.
+{% include "_email_p_end" %}
+
+{% include "_cs_email_signature" %}
+
+{% endblock %}}

@@ -1,0 +1,6 @@
+package fintech.spain.scoring.model;
+
+public enum ScoringModelType {
+
+    LINEAR_REGRESSION_MODEL, DEDICATED_MODEL, CREDIT_LIMIT_MODEL, FINTECH_MARKET, PTI_VALIDATION, INTEREST_RATE_MODEL
+}

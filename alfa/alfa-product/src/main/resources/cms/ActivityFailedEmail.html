@@ -1,0 +1,20 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Tu solicitud no ha podido completarse correctamente. Por favor, vuelve a intentarlo más tarde.  
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+Si no puedes terminar la solicitud de nuevo, contacta con nosotros. Disculpa las molestias.
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+{{ button(title="Volver a solicitar", url="{{ company.webBaseUrl }}/login") }}
+{% include "_email_p_end" %}
+
+{% include "_cs_email_signature" %}
+
+{% endblock %}}

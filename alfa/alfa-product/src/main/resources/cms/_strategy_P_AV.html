@@ -1,0 +1,5 @@
+<p>Alfa DPD penalty strategy</p>
+
+{% for strategy in calculationStrategy.penaltyStrategyAVProperties.strategies %}
+From {{strategy.from}} days overdue: {{strategy.rate | numberformat(currencyFormat)}}% <br></br>
+{% endfor %}

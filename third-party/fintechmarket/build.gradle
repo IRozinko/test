@@ -1,0 +1,16 @@
+apply from: "${rootDir}/gradle/java.gradle"
+apply from: "${rootDir}/gradle/querydsl.gradle"
+
+
+dependencies {
+    compile project(":platform:common:utils")
+    compile project(":platform:common:db")
+    compile project(":platform:decision-engine")
+    compile project(":platform:settings")
+    compile libs.failsafe
+    compile libs.springBootWeb
+    compile libs.springOauth
+
+
+    testCompile project(":platform:common:integration-test")
+}

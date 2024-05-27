@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Line of credit</title>
+    <style type="text/css">
+        html,
+        body {
+            font-family: "OpenSans-Regular", sans-serif;
+            line-height: 1.4;
+            font-size: 12px;
+            text-align: justify;
+        }
+        table {
+            width: 100%;
+            border: 1px solid #fff;
+            border-collapse: collapse;
+        }
+        p {
+            font-family: "OpenSans-Bold", sans-serif;
+        }
+    </style>
+</head>
+<body>
+<h3>Resumen del préstamo</h3>
+<p>{{ dates.today | ldate(dateFormat)}}</p>
+<br/>
+<table class="no-border">
+    <tr>
+        <td style="width: 50%">Nombre</td>
+        <td style="width: 50%">{{client.fullName}}</td>
+    </tr>
+    <tr>
+        <td style="width: 50%">DNI:</td>
+        <td style="width: 50%">{{client.documentNumber}}</td>
+    </tr>
+    <tr>
+        <td style="width: 50%">Teléfono:</td>
+        <td style="width: 50%">{{client.phoneNumber}}</td>
+    </tr>
+    <tr>
+        <td style="width: 50%">E-mail:</td>
+        <td style="width: 50%">{{client.email}}</td>
+    </tr>
+    <tr>
+        <td style="width: 50%">Número de cuenta:</td>
+        <td style="width: 50%">{{client.ibanFormatted}}</td>
+    </tr>
+    <tr>
+        <td style="width: 50%">Fecha de registro de la cuenta de usuario:</td>
+        <td style="width: 50%">{{application.date | ldate(dateFormat)}}</td>
+    </tr>
+    <tr>
+        <td style="width: 50%">Dirección IP de registro de cuenta de usuario:</td>
+        <td style="width: 50%">{{client.registrationIpAddress}}</td>
+    </tr>
+    <tr>
+        <td style="width: 50%">Fecha y hora de la solicitud de préstamo:</td>
+        <td style="width: 50%">{{application.date | ldate(dateFormat)}}</td>
+    </tr>
+    <tr>
+        <td style="width: 50%">Dirección IP de la solicitud de préstamo:</td>
+        <td style="width: 50%">{{client.registrationIpAddress}}</td>
+    </tr>
+    <tr>
+        <td style="width: 50%">Número de contrato:</td>
+        <td style="width: 50%">{{loan.number}}</td>
+    </tr>
+    <tr>
+        <td style="width: 50%">Número de referencia:</td>
+        <td style="width: 50%">{{loan.loanid}}</td>
+    </tr>
+    <tr>
+        <td style="width: 50%">Tipo de préstamo:</td>
+        <td style="width: 50%">paydayloan</td>
+    </tr>
+    <tr>
+        <td style="width: 50%">Fecha de vencimiento del préstamo:</td>
+        <td style="width: 50%">{{loan.maturityDate | ldate(dateFormat)}}</td>
+    </tr>
+    <tr>
+        <td style="width: 50%">Cantidad principal del préstamo:</td>
+        <td style="width: 50%">{{loan.principal | numberformat(currencyFormat)}}</td>
+    </tr>
+    <tr>
+        <td style="width: 50%">Total reembolsable:</td>
+        <td style="width: 50%">{{loan.totalOutstanding | numberformat(currencyFormat)}}</td>
+    </tr>
+</table>
+</body>
+</html>

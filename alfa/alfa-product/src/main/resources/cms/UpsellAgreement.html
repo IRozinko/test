@@ -1,0 +1,145 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Alfa S.L</title>
+    <style type="text/css">
+        body {
+            font-family: 'OpenSans-Regular', sans-serif;
+            font-size: 12px;
+            line-height: 1.4;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            margin-top: 0;
+        }
+
+        table td {
+            font-size: 11px;
+            padding-bottom: 6px;
+            padding-top: 6px;
+        }
+
+        table.items td {
+            border-bottom: 1px solid dimgray;
+            padding: 6px 10px;
+        }
+
+        table.items tr:last-child td {
+            border-bottom: none;
+            border-top: 2px solid black;
+        }
+
+        .pt-40 {
+            padding-top: 40px;
+        }
+
+        .pt-20 {
+            padding-top: 20px;
+        }
+
+        .header {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div align="right">
+    {% include "_alfa_logo" %}
+</div>
+
+<p>Ref. Contrato de Préstamo: {{upsell.loanNumber}}</p>
+<p>Fecha Modificación: {{upsell.upsell.offerDate | ldate(dateFormat)}}</p>
+
+<div class="header pt-40">ANEXO DE MODIFICACIÓN DE CONTRTO DE PRÉSTAMO</div>
+
+<p class="pt-20">De una parte, {{company.name}}, con domicilio en {{company.addressLine1}}, {{company.addressLine2}}, inscrita en el Registro Mercantil de Barcelona al tomo 42.869, folio 23, hoja B- 416.727, y con C.I.F. número {{company.number}}</p>
+
+<p class="pt-20">Y, de otra parte, D. {{client.fullName}} con NIF {{client.documentNumber}}, con domicilio en {{client.addressLine1}}, {{client.addressLine2}}.</p>
+
+<div class="header pt-20">CLÁUSULAS</div>
+
+<div class="title pt-20">PRIMERA.- AUMENTO DEL CAPITAL PRESTADO</div>
+<p>Mediante el presente Anexo las partes acuerdan un aumento del capital prestado por un <strong>importe adicional de {{upsell.upsell.offeredPrincipal | numberformat(currencyFormat)}}</strong>, de tal modo que dicho importe adicional generará sus propios intereses desde la fecha del presente acuerdo y hasta la fecha de vencimiento del contrato incial, debiendo el cliente devolver todos los importes devengados en la misma fecha de vencimiento inicialmente pactada.</p>
+<p>En base a lo anterior, <strong>las condiciones particulares del contrato de préstamo quedan modificadas en los siguientes términos:</strong></p>
+
+<table style="width: 100%;">
+    <tr style="background-color: #00c275; color: white;">
+        <td><strong>PRÉSTAMO ALFA</strong></td>
+        <td><strong>CUANTÍA</strong></td>
+        <td><strong>PLAZO</strong></td>
+        <td><strong>TIN ANUAL</strong></td>
+        <td><strong>TAE</strong></td>
+        <td><strong>COMISIÓN</strong></td>
+        <td><strong>INICIA</strong></td>
+        <td><strong>VENCIMIENTO</strong></td>
+        <td><strong>DEVOLVER</strong></td>
+    </tr>
+    <tr>
+        <td>Importe inicial</td>
+        <td>{{upsell.loan.offeredPrincipal | numberformat(currencyFormat)}}</td>
+        <td>{{upsell.loan.offeredPeriodCount}}</td>
+        <td>{{upsell.loan.nominalApr}}%</td>
+        <td>{{upsell.loan.effectiveApr}}%</td>
+        <td>{{upsell.loan.offeredInterest | numberformat(currencyFormat)}}</td>
+        <td>{{upsell.loan.offerDate | ldate(dateFormat)}}</td>
+        <td>{{upsell.loan.offerMaturityDate | ldate(dateFormat)}}</td>
+        <td>{{upsell.loan.offeredTotal | numberformat(currencyFormat)}}</td>
+    </tr>
+    <tr>
+        <td>Importe adicional</td>
+        <td>{{upsell.upsell.offeredPrincipal | numberformat(currencyFormat)}}</td>
+        <td>{{upsell.upsell.offeredPeriodCount}}</td>
+        <td>{{upsell.upsell.nominalApr}}%</td>
+        <td>{{upsell.upsell.effectiveApr}}%</td>
+        <td>{{upsell.upsell.offeredInterest | numberformat(currencyFormat)}}</td>
+        <td>{{upsell.upsell.offerDate | ldate(dateFormat)}}</td>
+        <td>{{upsell.upsell.offerMaturityDate | ldate(dateFormat)}}</td>
+        <td>{{upsell.upsell.offeredTotal | numberformat(currencyFormat)}}</td>
+    </tr>
+    <tr style="background-color: #00c275; color: white;">
+        <td><strong>Total</strong></td>
+        <td><strong>{{upsell.totalPrincipal | numberformat(currencyFormat)}}</strong></td>
+        <td><strong>{{upsell.loan.offeredPeriodCount}}</strong></td>
+        <td><strong>{{upsell.averageNominalApr}}%</strong></td>
+        <td><strong>{{upsell.averageEffectiveApr}}%</strong></td>
+        <td><strong>{{upsell.totalInterest | numberformat(currencyFormat)}}</strong></td>
+        <td><strong>{{upsell.loan.offerDate | ldate(dateFormat)}}</strong></td>
+        <td><strong>{{upsell.loan.offerMaturityDate | ldate(dateFormat)}}</strong></td>
+        <td><strong>{{upsell.grandTotal | numberformat(currencyFormat)}}</strong></td>
+    </tr>
+</table>
+
+<div class="title pt-20">SEGUNDA.- DESEMBOLSO DEL IMPORTE ADICIONAL PRESTADO.</div>
+<p>Previa aceptación por parte del CLIENTE, ALFA enviará un mail de confirmación, informando al CLIENTE del perfeccionamiento del contrato y de que en un plazo máximo de 48 horas ALFA hará efectiva la transferencia a su favor por el importe adicional prestado, estando a su disposición en al Área de Usuario toda la documentación contractual.</p>
+<p>ALFA no se hace responsable del posible retraso en la recepción por parte del CLIENTE del importe adicional como consecuencia de la operativa bancaria o de factores externos sobre los que ALFA no tiene poder de disposición.</p>
+
+<div class="title pt-20">TERCERA.- DEVOLUCIÓN. POSIBILIDAD DE PRÓRROGA. IMPAGO.</div>
+<p>El CLIENTE se obliga a reintegrar el importe total a devolver, esto es: i) inicial prestado, ii) importe adicional, iii) comisión del inicial prestado, iv) comisión del importe adicional, a la fecha de vencimiento acordada en el contrato original y que se reproduce en la cláusula 1. del presente Anexo.</p>
+<p>En caso de incumplimiento de pago a la fecha de vencimiento, los intereses de demora previstos en el contrato inicial de préstamo, serán aplicados sobre el importe total a devolver según el párrafo anterior.</p>
+<p>Las comisiones de prórroga previstas en la cláusula 6. del contrato de préstamo también serán calculadas en base al importe total a devolver.</p>
+
+<div class="title pt-20">CUARTA.- DESISTIMIENTO Y REEMBOLSO ANTICIPADO.</div>
+<p>El presente documento es una modificación que se incorporará al contrato de préstamo inicial suscrito por ambas partes de forma indivisible. Del mismo modo, los importes prestados y las comisiones devengadas serán unificadas, dando como resultado un único importe total a devolver a la fecha de vencimiento del préstamo.</p>
+<p>En caso de que el CLIENTE desee ejercitar el derecho de disistimiento de conformidad con el procedimiento estipulado en la cláusula 4.1 del contrato, se entenderá que desiste de la totalidad del Préstamo, debiendo reintegrar el importe total prestado y las comisiones devengadas, de conformidad con la cláusula 4.2 del contrato de Préstamo.</p>
+<p>El cliente podrá en cualquier momento resolver anticipadamente el contrato efectuando un reenvolso anticipado de la totalidad del préstamo, de conformidad con la cláusula 5.2 del contrato de préstamo.</p>
+
+<div class="title pt-20">QUINTA.- SUBSISTENCIA E INTEGRACIÓN DEL CONTRATO INICIAL.</div>
+<p>Las cláusulas del contrato de préstamo que no se opongan a los acuerdos adoptados por medio del presente anexo de modificación de contrato no quedarán alteradas y permanecerán en pleno vigor, especialmente las relativas a Protección de Datos y Confidencialidad.</p>
+<p>Ambas partes están conformes y aceptan las modificaciones del contrato de préstamo, por lo que las mismas pasaran a formar parte y a integrar el contenido del contrato una vez se hayan cumplido las condiciones de aceptación del CLIENTE y confirmación por parte de ALFA.</p>
+<p>El acuerdo se suscribe de forma telemática, teniendo pleno conocimiento el CLIENTE de estas nuevas condiciones, que estarán a su disposición de forma permanente en su Área de Usuario. </p>
+</body>
+</html>

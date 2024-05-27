@@ -1,0 +1,9 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile project(":platform:backoffice:bo-api-model")
+    compile project(":spain-common:spain-asnef:spain-asnef-file")
+    
+    compile libs.springBootWeb
+    compile libs.springBootSecurity
+}

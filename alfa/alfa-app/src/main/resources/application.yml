@@ -1,0 +1,83 @@
+logging:
+  level.root: WARN
+  level.fintech: INFO
+  level.org.hibernate.SQL: WARN
+  level.org.hibernate.type.descriptor.sql.BasicBinder: WARN
+  level.org.springframework.web.filter.CommonsRequestLoggingFilter: INFO
+  pattern.console: "%d{HH:mm:ss} [%thread] %-5level |%X{userId}| %logger{36} - %msg%n"
+  pattern.file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level |%X{userId}| |%X{requestId}| %logger{36} - %msg%n"
+
+spring:
+  http:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+management:
+  context-path: /management
+  address: 127.0.0.1
+  port: 8088
+  security.enabled: false
+
+endpoints:
+  enabled: false
+  health.enabled: true
+
+email:
+  from: info@alfa.es
+  provider: mock-email-provider
+
+sms:
+  provider: mock-sms-provider
+
+fileStorage:
+  provider: local-file-storage-provider
+
+webitel:
+  provider: mock-webitel-provider
+
+instantor:
+  apiKey: "LWQ0ZWo0dCM+a11QKn1COSpjOjI+M15I"
+  apiKeyBase64Encoded: true
+  simulationEnabled: true
+
+iovation:
+  provider: mock-iovation-provider
+
+nordigen:
+  provider: mock-nordigen-provider
+
+dowjones:
+  provider: mock-dowjones
+
+spain:
+  backend:
+    baseUrl: http://localhost:8080
+  equifax:
+    provider: mock-spain-equifax-provider
+  experian:
+    cais:
+      provider: mock-spain-experian-cais-provider
+  scoring:
+    provider: mock-spain-scoring-provider
+  alfa:
+    provider: mock-spain-alfa-provider
+
+
+salt.path: /salt.txt
+
+ekomiApi:
+  id: 33450
+  key: 11e0d6f998d83648cc635e362
+  url: http://api.ekomi.de/v3/
+  version: cust-1.0.0
+  type: json
+
+asnef:
+  ftp:
+    gateway: mock-ftp-gateway
+
+test:
+  api.enabled: true
+
+presence.administrator.provider: mock

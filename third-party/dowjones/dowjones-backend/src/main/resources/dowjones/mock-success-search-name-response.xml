@@ -1,0 +1,183 @@
+<!DOCTYPE search-results [
+        <!ELEMENT search-results (head|body)*>
+        <!ELEMENT head (total-hits|hits-from|hits-to|truncated|cached-results-id)*>
+        <!ELEMENT total-hits (#PCDATA)>
+        <!ELEMENT hits-from (#PCDATA)>
+        <!ELEMENT hits-to (#PCDATA)>
+        <!ELEMENT truncated (#PCDATA)>
+        <!ELEMENT cached-results-id (#PCDATA)>
+        <!ELEMENT body (match)*>
+        <!ELEMENT match (score|match-type|payload)*>
+        <!ATTLIST match
+                peid CDATA #REQUIRED
+                record-type CDATA #REQUIRED
+                revision CDATA #REQUIRED>
+        <!ELEMENT score (#PCDATA)>
+        <!ELEMENT match-type (#PCDATA)>
+        <!ATTLIST match-type
+                linguistic-variation CDATA #REQUIRED
+                non-linguistic-variation CDATA #REQUIRED
+                structural-variation CDATA #REQUIRED>
+        <!ELEMENT payload (risk-icons|primary-name|country-code|title|subsidiary|matched-name|dates-of-birth|countries|gender)*>
+        <!ELEMENT risk-icons (risk-icon)*>
+        <!ELEMENT risk-icon (#PCDATA)>
+        <!ELEMENT primary-name (#PCDATA)>
+        <!ELEMENT country-code (#PCDATA)>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT subsidiary (#PCDATA)>
+        <!ELEMENT matched-name (#PCDATA)>
+        <!ATTLIST matched-name
+                name-type CDATA #REQUIRED>
+        <!ELEMENT dates-of-birth (date-of-birth)*>
+        <!ELEMENT date-of-birth (year|month|day)*>
+        <!ELEMENT year (#PCDATA)>
+        <!ELEMENT month (#PCDATA)>
+        <!ELEMENT day (#PCDATA)>
+        <!ELEMENT countries (country)*>
+        <!ELEMENT country (country-type|country-code)*>
+        <!ELEMENT country-type (#PCDATA)>
+        <!ELEMENT gender (#PCDATA)>
+        ]>
+<search-results>
+    <head>
+        <total-hits>74</total-hits>
+        <hits-from>0</hits-from>
+        <hits-to>4</hits-to>
+        <truncated>false</truncated>
+        <cached-results-id>2c9f3649-c361-4c06-93e0-9da6706c5d28</cached-results-id>
+    </head>
+    <body>
+        <match peid="11098931" revision="2017-06-09 14:49:54.530" record-type="PERSON">
+            <score>1.0</score>
+            <match-type linguistic-variation="false" non-linguistic-variation="false" structural-variation="false">PRECISE</match-type>
+            <payload>
+                <risk-icons>
+                    <risk-icon>SAN</risk-icon>
+                </risk-icons>
+                <primary-name>Medvedev, Ablyalim Ametovich</primary-name>
+                <country-code>RUSS</country-code>
+                <title>Federal Financial Monitoring Services (Russia) Domestic Sanctions List</title>
+                <subsidiary>false</subsidiary>
+                <matched-name name-type="Primary Name">Ablyalim Ametovich Medvedev</matched-name>
+                <dates-of-birth>
+                    <date-of-birth>
+                        <year>1983</year>
+                        <month>2</month>
+                        <day>22</day>
+                    </date-of-birth>
+                </dates-of-birth>
+                <countries>
+                    <country>
+                        <country-type>Citizenship</country-type>
+                        <country-code>RUSS</country-code>
+                    </country>
+                    <country>
+                        <country-type>Resident of</country-type>
+                        <country-code>NOTK</country-code>
+                    </country>
+                </countries>
+                <gender>MALE</gender>
+            </payload>
+        </match>
+        <match peid="917033" revision="2016-01-26 15:22:30.667" record-type="PERSON">
+            <score>1.0</score>
+            <match-type linguistic-variation="false" non-linguistic-variation="false" structural-variation="false">PRECISE</match-type>
+            <payload>
+                <risk-icons>
+                    <risk-icon>RCA</risk-icon>
+                </risk-icons>
+                <primary-name>Medvedev, Aleksandr Aleksandrovich</primary-name>
+                <country-code>RUSS</country-code>
+                <title />
+                <subsidiary>false</subsidiary>
+                <matched-name name-type="Primary Name">Aleksandr Aleksandrovich Medvedev</matched-name>
+                <dates-of-birth>
+                    <date-of-birth>
+                        <year>1991</year>
+                    </date-of-birth>
+                </dates-of-birth>
+                <countries>
+                    <country>
+                        <country-type>Resident of</country-type>
+                        <country-code>RUSS</country-code>
+                    </country>
+                    <country>
+                        <country-type>Citizenship</country-type>
+                        <country-code>RUSS</country-code>
+                    </country>
+                    <country>
+                        <country-type>Jurisdiction</country-type>
+                        <country-code>RUSS</country-code>
+                    </country>
+                </countries>
+                <gender>MALE</gender>
+            </payload>
+        </match>
+        <match peid="1729749" revision="2015-10-02 14:18:05.260" record-type="PERSON">
+            <score>1.0</score>
+            <match-type linguistic-variation="false" non-linguistic-variation="false" structural-variation="false">PRECISE</match-type>
+            <payload>
+                <risk-icons>
+                    <risk-icon>PEP</risk-icon>
+                </risk-icons>
+                <primary-name>Medvedev, Aleksandr Aleksandrovich</primary-name>
+                <country-code>RUSS</country-code>
+                <title>See Previous Roles</title>
+                <subsidiary>false</subsidiary>
+                <matched-name name-type="Primary Name">Aleksandr Aleksandrovich Medvedev</matched-name>
+                <dates-of-birth>
+                    <date-of-birth>
+                        <year>1960</year>
+                        <month>7</month>
+                        <day>2</day>
+                    </date-of-birth>
+                </dates-of-birth>
+                <countries>
+                    <country>
+                        <country-type>Resident of</country-type>
+                        <country-code>RUSS</country-code>
+                    </country>
+                    <country>
+                        <country-type>Jurisdiction</country-type>
+                        <country-code>RUSS</country-code>
+                    </country>
+                    <country>
+                        <country-type>Citizenship</country-type>
+                        <country-code>RUSS</country-code>
+                    </country>
+                </countries>
+                <gender>MALE</gender>
+            </payload>
+        </match>
+        <match peid="3059369" revision="2014-02-26 10:21:54.000" record-type="PERSON">
+            <score>1.0</score>
+            <match-type linguistic-variation="false" non-linguistic-variation="false" structural-variation="false">PRECISE</match-type>
+            <payload>
+                <risk-icons>
+                    <risk-icon>PEP</risk-icon>
+                </risk-icons>
+                <primary-name>Medvedev, Aleksandr Aleksandrovich</primary-name>
+                <country-code>RUSS</country-code>
+                <title>Judge, Federal Arbitration Court</title>
+                <subsidiary>false</subsidiary>
+                <matched-name name-type="Primary Name">Aleksandr Aleksandrovich Medvedev</matched-name>
+                <dates-of-birth />
+                <countries>
+                    <country>
+                        <country-type>Citizenship</country-type>
+                        <country-code>RUSS</country-code>
+                    </country>
+                    <country>
+                        <country-type>Resident of</country-type>
+                        <country-code>RUSS</country-code>
+                    </country>
+                    <country>
+                        <country-type>Jurisdiction</country-type>
+                        <country-code>RUSS</country-code>
+                    </country>
+                </countries>
+                <gender>MALE</gender>
+            </payload>
+        </match>
+    </body>
+</search-results>

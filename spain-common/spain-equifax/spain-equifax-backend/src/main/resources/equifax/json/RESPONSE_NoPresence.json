@@ -1,0 +1,47 @@
+{
+  "interactionId": "ID-uicu1lc9a039-44705-1515982175908-1-952",
+  "applicants": {
+    "primaryConsumer": {
+      "personalInformation": {
+        "idCountryCode": "724",
+        "idType": "ID",
+        "idCode": "10X"
+      },
+      "dataSourceResponses": {
+        "EIPG": {
+          "RISK": {
+            "identifier": "primary",
+            "idCode": "10X",
+            "returnCode": "000",
+            "present": "01",
+            "araAttributes": {
+              "totalNumberOfOperations": 0,
+              "numberOfConsumerCreditOperations": 0,
+              "numberOfMortgageOperations": 0,
+              "numberOfPersonalLoanOperations": 0,
+              "numberOfCreditCardOperations": 0,
+              "numberOfTelcoOperations": 0,
+              "totalNumberOfOtherUnpaid": 0,
+              "totalUnpaidBalance": 0,
+              "unpaidBalanceOwnEntity": 0,
+              "unpaidBalanceOfOtherEntities": 0,
+              "unpaidBalanceOfConsumerCredit": 0,
+              "unpaidBalanceOfMortgage": 0,
+              "unpaidBalanceOfPersonalLoan": 0,
+              "unpaidBalanceOfCreditCard": 0,
+              "unpaidBalanceOfTelco": 0,
+              "unpaidBalanceOfOtherProducts": 0,
+              "worstUnpaidBalance": 0,
+              "numberOfDaysOfWorstSituation": 0,
+              "numberOfCreditors": 0,
+              "delincuencyDays": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "transactionState": "COMPLETED",
+  "transactionId": 8529,
+  "timestamp": "2018-01-29 09:36:29:874"
+}

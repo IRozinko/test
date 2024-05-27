@@ -1,0 +1,55 @@
+plugins {
+    id "com.github.bjornvester.wsdl2java" version "0.3" apply false
+    id "com.jfrog.artifactory" version "4.10.0" apply false
+    id "io.spring.dependency-management" version "1.0.3.RELEASE" apply false
+    id "name.mazgalov.vaadin.sass.compiler" version "0.1.1" apply false
+    id "com.devsoap.plugin.vaadin" version "1.4.1" apply false
+    id "org.springframework.boot" version "1.5.20.RELEASE" apply false
+    id "org.unbroken-dome.test-sets" version "1.2.0" apply false
+}
+
+apply from: "${rootDir}/gradle/dependencies.gradle"
+
+allprojects {
+    version = project.hasProperty('currentVersion') ? project.properties['currentVersion'] : '0.1'
+    status = 'integration'
+    group "tech.fino"
+
+    repositories {
+        jcenter()
+    }
+
+    apply plugin: 'idea'
+}
+
+subprojects {
+
+    repositories {
+        jcenter()
+        maven { url 'http://maven.vaadin.com/vaadin-addons' }
+    }
+
+    configurations {
+        // there is commons-beanutils
+        all*.exclude group: 'commons-beanutils', module: 'commons-beanutils-core'
+    }
+
+}
+
+
+defaultTasks "clean", "build"
+
+task buildCrmAlfa {
+    group = 'Project'
+    description = 'Test and assemble artifacts for Crm Alfa'
+    dependsOn ':alfa:alfa-app:build'
+    dependsOn ':alfa:alfa-bo:build'
+    dependsOn ':alfa:alfa-bo-api:build'
+    dependsOn ':alfa:alfa-bo-model:build'
+    dependsOn ':alfa:alfa-product:build'
+    dependsOn ':alfa:alfa-strategies:build'
+}
+
+allprojects {
+    task allDeps(type: DependencyReportTask) {}
+}

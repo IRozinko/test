@@ -1,0 +1,23 @@
+{
+  "count": 2,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "id": 1,
+      "client": "email",
+      "event": "fitnance_read",
+      "target": "test@mail.com",
+      "created_at": "2017-04-11T07:46:00Z",
+      "updated_at": "2017-04-11T07:46:00Z"
+    },
+    {
+      "id": 2,
+      "client": "callback",
+      "event": "fitnance_read",
+      "target": "https://www.callback.com",
+      "created_at": "2017-04-11T07:46:36Z",
+      "updated_at": "2017-04-11T07:46:36Z"
+    }
+  ]
+}

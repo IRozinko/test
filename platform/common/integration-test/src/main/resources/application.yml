@@ -1,0 +1,32 @@
+logging:
+  level.root: WARN
+  level.fintech: DEBUG
+
+spring:
+  profiles: itest
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+spain:
+  alfa:
+    parser: alfa-parser
+  backend:
+    baseUrl: http://localhost:8080
+
+db:
+  url: jdbc:postgresql://localhost:5433/itest
+  user: itest
+  password: itest
+
+unnax:
+#  mock: false
+#  apiId: pp4872
+#  apiCode: fglpvwbhgsxzbpcg
+  uri: https://integration.unnax.com
+
+presence.administrator.provider: mock

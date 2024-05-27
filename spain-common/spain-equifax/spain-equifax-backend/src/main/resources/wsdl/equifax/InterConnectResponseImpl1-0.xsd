@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2009 sp1 (http://www.altova.com) by EQUIFAX, INC. (EQUIFAX, INC.) -->
+<!--
+	File: InterConnectResponseImpl1-0.xsd
+	Description: Response Implementation for a specific solution.
+	Copyright 2005, Equifax, Inc., Atlanta, GA. All Rights Reserved
+-->
+<xs:schema xmlns="http://xml.equifax.com/XMLSchema/InterConnect"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://xml.equifax.com/XMLSchema/InterConnect" elementFormDefault="qualified"
+	attributeFormDefault="unqualified">
+	<xs:include schemaLocation="InterConnectResponse2-0.xsd"/>
+	<xs:element name="InterConnectResponse" type="InterConnectResponseType"/>
+	<xs:complexType name="InterConnectResponseType">
+		<xs:sequence>
+			<xs:element name="SchemaVersion" type="ResponseSchemaVersionType"/>
+			<xs:element name="InteractionControl" type="InteractionControlResponseType"/>
+			<xs:element name="TransactionStatus" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						TransactionStatus is the final status of the transaction processing. Transaction states can be values such as complete or duplicate.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WorkItem" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						WorkItem flag indicates that a workitem created/exists for the transaction .
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OriginalTransactionID" type="InterConnectTransactionIdType"
+				minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						OriginalTransactionID is the InterConnect transaction ID of the original transaction if the current transaction is identified as a duplicate. It is returned only when the submitted transaction is identified as duplicate.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Products" type="ProductsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						These are the products that were submitted in the input STS request
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Decisioning" type="DecisioningType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This contains the transaction level decision for the Decision section
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice minOccurs="0">
+				<xs:element name="ConsumerSubjects" type="ConsumerSubjectsType">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">
+							The ConsumerSubjects section contains specific transaction information including decision information, data source responses, criteria manager attributes and any additional custom data. The ConsumerSubjects element acts as a wrapper for all consumer subjects
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="BusinessSubjects" type="BusinessSubjectsType">
+					<xs:annotation>
+						<xs:documentation xml:lang="en">
+							If the transaction request has a business subject then the BusinessSubjects section is returned in the XML response
+						</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+			<xs:element name="Errors" type="ErrorsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						The Errors section of the InterConnectResponse returns transaction level errors. For example, if the system fails to process the transaction, or if the authentication of the XML request fails, then the error is returned in this section
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Alerts" type="AlertsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is intended to send all types of alerts to the customer
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Messages" type="MessagesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is intended to send different types of messages
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AdditionalOutputData" type="AdditionalDataType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+					This section is intended to send custom data that are not defined as an explicit element in the response schema
+				</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HtmlPrintImage" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ConsumerSubjectsType">
+		<xs:sequence>
+			<xs:element name="ConsumerSubject" type="ConsumerSubjectResponseType" maxOccurs="10"/>
+			<xs:element name="CombinedConsumerSubject" type="CombinedConsumerSubjectResponseType"
+				minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BusinessSubjectsType">
+		<xs:sequence>
+			<xs:element name="BusinessSubject" type="BusinessSubjectResponseType" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="ResponseSchemaVersionType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="1.0"/>
+			<!-- 2.0 is the version for Mercury (5.0) release -->
+			<xs:enumeration value="2.0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="ConsumerSubjectResponseType">
+		<xs:sequence>
+			<xs:element name="CustomerReferenceNumber" type="CustomerReferenceNumberType"
+				minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						The consumer subject-level customer reference number received in the XML request is returned in this element
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Decisioning" type="DecisioningWithPrescreenType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is used for sending subject level decisioning. The elements of this section are the same as the transaction level decisioning section except there is an additional PrescreenDecision section to return any prescreen decisions
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DataSourceResponses" type="ConsumerProductsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						The DataSourceReponses section contains data source responses of each consumer subject. Data sources are categorized based on the bureau name
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DataSourceAttributes" type="DataSourceAttributesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is used to return Criteria Manager calculated attributes. Multiple attributes can be returned for each bureau. These are different from the attributes that the datasources themselves return to us. The name of the data source (bureau) used to calculate the attribute is returned in the dataSourceProduct attribute of element &lt;Attributes&gt;
+						For example, if Equifax is used to calculate number of bankruptcies and the TransUnion credit report is used to calculate balance high credit, the XML response includes the following:
+						&lt;DataSourceAttributes&gt;
+						&lt;Attributes dataSourceProduct = ‘EquifaxCreditReport’&gt;
+						&lt;Attribute&gt;
+						&lt;Name&gt; Number of Bankruptcies&lt;/Name&gt;
+						&lt;Value&gt; 2&lt;/Value&gt;
+						&lt;/ Attribute&gt;
+						&lt;/Attributes&gt;
+						&lt;Attributes dataSourceProduct = ‘TransUnionCreditReport’&gt;
+						&lt;Attribute&gt;
+						&lt;Name&gt; Balance High Credit&lt;/Name&gt;
+						&lt;Value&gt; 3000 &lt;/Value&gt;
+						&lt;/ Attribute&gt;
+						&lt;/Attributes&gt;
+						&lt;/ DataSourceAttributes&gt;
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AdditionalOutputData" type="AdditionalDataType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is used to return custom data that are not defined in the XML response schema as explicit elements or attributes
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Scores" type="ScoresType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is used to return model information for the consumer subject. These are derived by Interconnect and are different from the scores returned by the datasources
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="subjectIdentifier" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="CombinedConsumerSubjectResponseType">
+		<xs:sequence>
+			<xs:element name="Decisioning" type="DecisioningWithPrescreenType" minOccurs="0"/>
+			<xs:element name="DataSourceResponses" type="ConsumerProductsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						The datasource responses will contain only the Nativetext section for the combined consumer. Inside the nativetext section, the xml contains only the information(segments) that were deduped. 
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DataSourceAttributes" type="DataSourceAttributesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is used to return Criteria Manager calculated attributes. Multiple attributes can be returned for each bureau. These are different from the attributes that the datasources themselves return to us. The name of the data source (bureau) used to calculate the attribute is returned in the dataSourceProduct attribute of element &lt;Attributes&gt;
+						For example, if Equifax is used to calculate number of bankruptcies and the TransUnion credit report is used to calculate balance high credit, the XML response includes the following:
+						&lt;DataSourceAttributes&gt;
+						&lt;Attributes dataSourceProduct = ‘EquifaxCreditReport’&gt;
+						&lt;Attribute&gt;
+						&lt;Name&gt; Number of Bankruptcies&lt;/Name&gt;
+						&lt;Value&gt; 2&lt;/Value&gt;
+						&lt;/ Attribute&gt;
+						&lt;/Attributes&gt;
+						&lt;Attributes dataSourceProduct = ‘TransUnionCreditReport’&gt;
+						&lt;Attribute&gt;
+						&lt;Name&gt; Balance High Credit&lt;/Name&gt;
+						&lt;Value&gt; 3000 &lt;/Value&gt;
+						&lt;/ Attribute&gt;
+						&lt;/Attributes&gt;
+						&lt;/ DataSourceAttributes&gt;
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AdditionalOutputData" type="AdditionalDataType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is used to return custom data that are not defined in the XML response schema as explicit elements or attributes
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Scores" type="ScoresType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+					This section is used to return model information for the consumer subject. These are derived by Interconnect and are different from the scores returned by the datasources
+				</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- delete those products you don't need -->
+	<xs:complexType name="ConsumerProductsType">
+		<xs:sequence>
+			<xs:element name="EquifaxProducts" type="EquifaxProductsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						The EquifaxProducts section returns response data from Equifax products received by the InterConnect system.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MadivaProducts" type="MadivaProductsType" minOccurs="0"/>
+			<xs:element name="ExperianProducts" type="ExperianProductsType" minOccurs="0"/>
+			<xs:element name="TransUnionProducts" type="TransUnionProductsType" minOccurs="0"/>
+			<xs:element name="IdAnalyticsProducts" type="IdAnalyticsProductsType" minOccurs="0"/>
+			<xs:element name="InstantorProducts" type="InstantorProductsType" minOccurs="0"/>
+			<xs:element name="IICServiceProducts" type="IICServiceProductsType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BusinessSubjectResponseType">
+		<xs:sequence>
+			<xs:element name="CustomerReferenceNumber" type="CustomerReferenceNumberType"
+				minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						The customer reference number for the business subject level received in the XML request is returned in this element
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Decisioning" type="DecisioningType" minOccurs="0"/>
+			<xs:element name="DataSourceResponses" type="BusinessProductsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is used for returning commercial data sources responses received for a business subject. This section contains the most commonly used and more important parsed elements of a data source response.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DataSourceAttributes" type="DataSourceAttributesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is meant for returning attributes calculated using InterConnect's Criteria Manager tool for business sujects. It is exactly same as the DataSourceAttributes section defined under ConsumerSubject.
+						The dataSourceProduct attribute of element Attributes returns the name of the data source used to derive Attribute. More than one Attribute can be returned for each dataSourceProduct (each data source).
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AdditionalOutputData" type="AdditionalDataType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section returns custom data at the business subject level, and is the same as the AdditionalOutputData section defined at the transaction and Consumer Subject level
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Scores" type="ScoresType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is used to return model information for the business subject. These are derived by Interconnect and are different from the scores returned by the datasources
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Principals" type="PrincipalsType" minOccurs="0"/>
+			<xs:element name="Guarantors" type="GuarantorsType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GuarantorsType">
+		<xs:sequence>
+			<xs:element name="PersonGuarantor" type="PersonGuarantorType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PersonGuarantorType">
+		<xs:sequence>
+			<xs:element name="Decisioning" type="DecisioningType" minOccurs="0"/>
+			<xs:element name="DataSourceResponses" type="ConsumerProductsType" minOccurs="0"/>
+			<xs:element name="DataSourceAttributes" type="DataSourceAttributesType" minOccurs="0"/>
+			<xs:element name="AdditionalOutputData" type="AdditionalDataType" minOccurs="0"/>
+			<xs:element name="Scores" type="ScoresType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is used to return model information for the principal guarantor. These are derived by Interconnect and are different from the scores returned by the datasources
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="GuarantorIdentifierAttributeGroup"/>
+	</xs:complexType>
+	<xs:complexType name="PrincipalsType">
+		<xs:sequence>
+			<xs:element name="Principal" type="PrincipalType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PrincipalType">
+		<xs:sequence>
+			<xs:element name="Decisioning" type="DecisioningType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						The Decisioning section of The Principal section is meant for returning decisioning results (if available) for the principal. Prescreen decisioning is not available for principals. The other decisioning elements are the same as the consumer subject?s Decisioning section
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DataSourceResponses" type="ConsumerProductsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						The data source responses for any principal are returned in this section
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DataSourceAttributes" type="DataSourceAttributesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						Calculated attributes for the business principal from Criteria manager are returned in this section. Attribute is minimum 1 and maximum unbounded.. Name (minimum=1, maximum=1, string1-255) and Value (minimum=1, maximum=1, xs:string) are ScorecardAttributeType elements of Attribute.Deviation is an optional element (minimum=0, maximum=1, xs:float).
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AdditionalOutputData" type="AdditionalDataType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						Custom output data for a principal is returned in this section
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Scores" type="ScoresType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation xml:lang="en">
+						This section is used to return model information for the principal. These are derived by Interconnect and are different from the scores returned by the datasources
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:attributeGroup ref="PrincipalIdentifierAttributeGroup"/>
+	</xs:complexType>
+	<!-- delete those products you don't need -->
+	<xs:complexType name="BusinessProductsType">
+		<xs:sequence>
+			<xs:element name="EquifaxProducts" type="EquifaxBusinessProductsType" minOccurs="0"/>
+			<xs:element name="DunAndBradstreetProducts" type="DunAndBradstreetProductsType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!--  here're some additional datasources for consumer or business
+			<xs:element name="Quova" type="xs:normalizedString" minOccurs="0"/>
+			<xs:element name="NADA" type="xs:normalizedString" minOccurs="0"/>
+			<xs:element name="KellyBlueBook" type="xs:normalizedString" minOccurs="0"/>
+	-->
+	<xs:complexType name="newComplexType"/>
+</xs:schema>

@@ -1,0 +1,140 @@
+{
+  "account_list": [
+    {
+      "account_number": "ES43 1465 0150 51 1714695458",
+      "holder_name": "JOHN SMITH",
+      "bank_name": "ING Direct",
+      "currency": "EUR",
+      "period_start": "2016-09-25",
+      "period_end": "2017-09-21",
+      "transaction_list": [
+        {
+          "date": "2017-09-21",
+          "partner": "",
+          "info": "Transaction 1",
+          "sum": 100,
+          "category": {
+            "id": 100,
+            "title": "Income",
+            "hierarchy": [
+              {
+                "id": "1",
+                "title": "Salary"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-09-20",
+          "partner": "",
+          "info": "Transaction 2",
+          "sum": 10,
+          "category": {
+            "id": 3,
+            "title": "Gambling",
+            "hierarchy": [
+              {
+                "id": "3",
+                "title": "Gambling"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-21",
+          "partner": "",
+          "info": "Transaction 3",
+          "sum": 200,
+          "category": {
+            "id": 100,
+            "title": "Income",
+            "hierarchy": [
+              {
+                "id": "2",
+                "title": "Salary"
+              }
+            ]
+          }
+        },
+        {
+          "date": "2017-08-20",
+          "partner": "",
+          "info": "FUCK; Transaction 4",
+          "sum": -20,
+          "category": {
+            "id": 3,
+            "title": "Gambling",
+            "hierarchy": [
+              {
+                "id": "3",
+                "title": "Gambling"
+              }
+            ]
+          }
+        }
+      ],
+      "red_flags": [
+        "Statement does not contain account balances"
+      ],
+      "pink_flags": [],
+      "factors": {
+        "group_food": 0.51901925900812,
+        "group_utilites": 0.55724426107968,
+        "group_loans": 0.60200005270528,
+        "group_account_usage": 0.33600102893245,
+        "group_luxury": 0.36839898855063,
+        "group_all": 0,
+        "group_transfers": 0.21839299415981,
+        "group_other": 0.4910198146857,
+        "group_health": 0.54256135091411,
+        "group_financial_behavour": 0.48894710591876,
+        "group_income": 0.63854695073909,
+        "group_cash": 0.24551952777248
+      }
+    },
+    {
+      "account_number": "ES15 1465 0150 52 2040474778",
+      "holder_name": "JOHN SMITH",
+      "bank_name": "ING Direct",
+      "currency": "EUR",
+      "period_start": "2016-10-01",
+      "period_end": "2017-09-01",
+      "transaction_list": [
+        {
+          "date": "2017-09-01",
+          "partner": "",
+          "info": "Intereses a su favor null",
+          "sum": 1000.00,
+          "category": {
+            "id": 100,
+            "title": "Income",
+            "hierarchy": [
+              {
+                "id": "1",
+                "title": "Salary"
+              }
+            ]
+          }
+        }
+      ],
+      "red_flags": [
+        "Statement does not contain account balances"
+      ],
+      "pink_flags": [],
+      "factors": {
+        "group_food": 0.57592711160827,
+        "group_utilites": 0.55724426107968,
+        "group_loans": 0.60200005270528,
+        "group_account_usage": 0.36791804941672,
+        "group_luxury": 0.56450499858003,
+        "group_all": 0,
+        "group_transfers": 0.60340962994756,
+        "group_other": 0.58421805691528,
+        "group_health": 0.55399612610821,
+        "group_financial_behavour": 0.48894710591876,
+        "group_income": 0.67239692036181,
+        "group_cash": 0.24799310209662
+      }
+    }
+  ]
+}

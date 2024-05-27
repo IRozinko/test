@@ -1,0 +1,42 @@
+{
+  "transactions": [
+    {
+      "date": 1515745549253,
+      "amount": 1,
+      "paymentType": "CreditCard",
+      "paymentMeanInfo": {
+        "cardNumber": "411111XXXXXX1111",
+        "cardExpireYear": "2024",
+        "cardExpireMonth": "10",
+        "cardHolderName": "John",
+        "cardBrand": "VISA",
+        "is3DSecure": false,
+        "statementDescriptor": "Internet Sales"
+      },
+      "shopper": {
+        "name": "NA",
+        "address": "NA",
+        "zipcode": "NA",
+        "city": "NA",
+        "state": "NA",
+        "countryCode": "ZZ",
+        "phone": "NA",
+        "email": "NA",
+        "ipAddress": "109.73.96.2"
+      },
+      "operation": "authorize",
+      "resultCode": "004",
+      "resultMessage": "Invalid card",
+      "status": "Not authorized",
+      "transactionID": "39720037"
+    }
+  ],
+  "status": "Not authorized",
+  "merchantToken": "vYNLqWJhvkti_IC9_nSM9A",
+  "operation": "authorize",
+  "errorCode": "004",
+  "errorMessage": "Invalid card",
+  "orderID": "#orderId#",
+  "currency": "EUR",
+  "amount": 1
+}

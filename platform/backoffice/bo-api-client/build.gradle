@@ -1,0 +1,11 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile project(":platform:backoffice:bo-api-model")
+    compile project(":platform:common:models")
+
+    compile libs.springBoot
+    compile libs.retrofit
+}
+
+

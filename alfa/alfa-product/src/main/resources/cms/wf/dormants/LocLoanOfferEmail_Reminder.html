@@ -1,0 +1,121 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Hola {{client.firstName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Recuerda que debes aceptar tu oferta para que podamos hacer la transferencia.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Tienes dos formas de aceptar la línea de crédito:
+<ul>
+    <li>
+        Enviar un <b>SMS</b> con la palabra <b>ACEPTO al {{company.incomingSmsNumber}}</b>.
+    </li>
+    <li>
+        Hacer <b>clic en el enlace</b> que encontrarás a continuación.
+    </li>
+</ul>
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+{{ button(title="He leído y acepto las condiciones", url=company.webBaseUrl + "/sl/" + specialLink.token) }}
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+<tr>
+    <td bgcolor="#edf2f4" style="padding:15px; border-top:#000000 solid 1px;">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" style="min-width:100%">
+            <tr>
+                <td align="left" width="80%"
+                    style="padding-bottom:5px; padding-top:5px; padding-right:5px;-moz-text-size-adjust:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
+                    <div class="f14" align="left"
+                         style="font-family: 'Karla', sans-serif; font-size:12px; line-height:135%;"><strong>Importe
+                        total del préstamo</strong></div>
+                </td>
+                <td align="left"
+                    style="padding-bottom:5px; padding-top:5px; padding-right:5px;-moz-text-size-adjust:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; padding-left:5px;">
+                    <div class="f14" align="left"
+                         style="font-family: 'Karla', sans-serif; font-size:12px; line-height:135%; color:#000000">
+                        <strong>{{application.creditLimit | numberformat(currencyFormat)}}€</strong></div>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"
+                    style="padding-bottom:5px; padding-top:5px; padding-right:5px;-moz-text-size-adjust:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
+                    <div class="f14" align="left"
+                         style="font-family: 'Karla', sans-serif; font-size:12px; line-height:135%;">Plazo
+                    </div>
+                </td>
+                <td align="left"
+                    style="padding-bottom:5px; padding-top:5px; padding-right:5px;-moz-text-size-adjust:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;padding-left:5px;">
+                    <div class="f14" align="left"
+                         style="font-family: 'Karla', sans-serif; font-size:12px; line-height:135%; color:#000000">
+                        Anual, renovable
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"
+                    style="padding-bottom:5px; padding-top:5px; padding-right:5px;-moz-text-size-adjust:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
+                    <div class="f14" align="left"
+                         style="font-family: 'Karla', sans-serif; font-size:12px; line-height:135%;">Fecha de
+                        vencimiento de la próxima factura
+                    </div>
+                </td>
+                <td align="left"
+                    style="padding-bottom:5px; padding-top:5px; padding-right:5px;-moz-text-size-adjust:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;padding-left:5px;">
+                    <div class="f14" align="left"
+                         style="font-family: 'Karla', sans-serif; font-size:12px; line-height:135%; color:#000000">
+                        {{application.firstInvoiceDueDate | ldate(dateFormat)}}
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"
+                    style="padding-bottom:5px; padding-top:5px; padding-right:5px;-moz-text-size-adjust:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
+                    <div class="f14" align="left"
+                         style="font-family: 'Karla', sans-serif; font-size:12px; line-height:135%;">Fecha de
+                        oferta
+                    </div>
+                </td>
+                <td align="left"
+                    style="padding-bottom:5px; padding-top:5px; padding-right:5px;-moz-text-size-adjust:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;padding-left:5px;">
+                    <div class="f14" align="left"
+                         style="font-family: 'Karla', sans-serif; font-size:12px; line-height:135%; color:#000000">
+                        {{application.offerDate | ldate(dateFormat)}}
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="left"
+                    style="padding-bottom:5px; padding-top:5px; padding-right:5px;-moz-text-size-adjust:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
+                    <div class="f14" align="left"
+                         style="font-family: 'Karla', sans-serif; font-size:12px; line-height:135%;">Prestatario
+                    </div>
+                </td>
+                <td align="left"
+                    style="padding-bottom:5px; padding-top:5px; padding-right:5px;-moz-text-size-adjust:100%; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;padding-left:5px;">
+                    <div class="f14" align="left"
+                         style="font-family: 'Karla', sans-serif; font-size:12px; line-height:135%; color:#000000">
+                        {{client.fullName}}<br/>{{client.documentNumber}}
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+{% include "_email_p_end" %}
+{% include "_email_p_begin" %}
+<p>Si no recibimos tu aceptación, la oferta se cancelará automáticamente.</p>
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Haznos llegar cualquier duda o consulta y te la responderemos encantados.
+{% include "_email_p_end" %}
+
+{% include "_email_signature" %}
+
+{% endblock %}}

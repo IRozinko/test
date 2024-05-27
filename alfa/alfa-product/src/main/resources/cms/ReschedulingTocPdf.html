@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Alfa S.L</title>
+    <style type="text/css">
+
+        body {
+            font-family: 'OpenSans-Regular', sans-serif;
+            font-size: 12px;
+            line-height: 1.4;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .pt-40 {
+            padding-top: 40px;
+        }
+
+        .pt-10 {
+            padding-top: 10px;
+        }
+
+        .pt-20 {
+            padding-top: 20px;
+        }
+
+        .header {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .section .title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .sub-section-number {
+            font-weight: bold;
+        }
+
+        .definition-title {
+            font-weight: bold;
+        }
+        .w-150 {
+            width: 150px;
+        }
+        .w-250 {
+            width: 250px;
+        }
+
+    </style>
+</head>
+<body>
+<div align="right">
+    {% include "_alfa_logo" %}
+</div>
+<div class="header pt-40">ANEXO AL CONTRATO DE PRESTAMO</div>
+<div class="header">FRACCIONAMIENTO DE PAGO</div>
+
+<p class="pt-40">
+    De una parte, ALFA, S.L., con domicilio en Barcelona, Paseo de Gracia 53, 1-1, inscrita en el Registro Mercantil
+    de Barcelona al tomo 42.869, folio 23, hoja B- 416.727, y con C.I.F. número B-98378201
+</p>
+<p class="pt-10">
+    Y,
+</p>
+<p class="pt-10">
+    De otra parte, D. {{client.fullName}} con NIF {{client.documentNumber}}, con domicilio en {{client.addressLine1}},
+    {{client.addressLine2}}.
+</p>
+<p class="pt-10">
+    Ambas partes reconocen mutua capacidad y representación para suscribir el presente documento, y a tal efecto,
+    acuerdan modificar las siguientes condiciones del contrato Nº {{loan.number}}.
+</p>
+
+<div class="header pt-40">
+    ACUERDAN
+</div>
+<p class="pt-10">
+    <b>PRIMERO.</b> - Las partes acuerdan un fraccionamiento en el pago del importe total adeudado por el CLIENTE. Al
+    haberse optado por este fraccionamiento en el pago, el CLIENTE se obliga a pagar ALFA S.L el importe del
+    principal del préstamo, todas aquellas penalizaciones y comisiones o gastos que se hayan generado hasta la fecha.
+</p>
+<p class="pt-10">
+    <b>SEGUNDO.</b> – De acuerdo con lo establecido en el contrato de préstamo, ALFA podrá aplicar una comisión por
+    fraccionamiento.
+</p>
+<p class="pt-10">
+    <b>TERCERO.</b> - Se detalla plan de pagos
+</p>
+
+<ul>
+    <li>Total, adeudado: {{loan.totalOutstanding}} €</li>
+    <li>Comisión por fraccionamiento: {{loan.feeOutstanding}} €</li>
+    <li>Cuotas de devolución: {{schedule.installments.size}}</li>
+    <li>Importe por cuota: {{loan.totalDue}} €</li>
+</ul>
+
+<p class="pt-20">
+<table>
+    <thead>
+    <tr>
+        <th class="w-150">Fecha de pago</th>
+        <th class="w-150">Importe</th>
+        <th class="w-250">Concepto de pago</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    {% for val in schedule.installments %}
+    <tr>
+        <td>{{val.dueDate | ldate(dateFormat)}}</td>
+        <td>{{val.totalScheduled}} €</td>
+        <td>
+            {{client.documentNumber}}
+            {% if val.feeScheduled > 0 %}
+            FRAC + COMISION
+            {% else %}
+            FRAC
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</p>
+
+<p class="pt-10">
+    La comisión por fraccionamiento será cobrada de forma adicional junto con la primera cuota según lo especificado
+    anteriormente.
+</p>
+<p class="pt-10">
+    <b>CUARTO.</b> - Una vez entre en vigor el presente Acuerdo de pago, el cómputo de los días de mora se suspenderá,
+    junto con todas y cada una de las acciones relativas a la reclamación de la deuda hasta la fecha de la siguiente
+    cuota de fraccionamiento.
+</p>
+<p class="pt-10">
+    <b>QUINTO.</b> - Las partes acuerdan que en el supuesto de que el prestatario dejase de pagar cualquiera de los
+    plazos convenidos en el plan de pagos, ALFA podrá resolver unilateralmente el presente acuerdo de
+    fraccionamiento, por lo que la totalidad de los pagos mensuales pendientes podrían ser reclamados íntegramente,
+    devengando además los intereses de mora desde la fecha del incumplimiento.
+</p>
+<p class="pt-10">
+    <b>SEXTO.</b> - El CLIENTE podrá asimismo resolver el contrato de forma unilateral y sin justa causa, debiendo
+    previamente a dicha resolución, realizar el pago del importe total pendiente.
+</p>
+<p class="pt-10">
+    <b>SÉPTIMO.</b> - Las cláusulas del contrato de préstamo que no se opongan a los acuerdos adoptados por medio del
+    presente anexo de modificación de contrato no quedarán alteradas y permanecerán en pleno vigor.
+</p>
+<p class="pt-10">
+    Ambas partes están conformes y aceptan las modificaciones del contrato de préstamo, por lo que las mismas pasaran a
+    formar parte y a integrar el contenido del contrato de préstamo una vez se hayan cumplido las condiciones
+    especificadas anteriormente.
+</p>
+<p class="pt-40">
+    El acuerdo se suscribe de forma telemática, teniendo pleno conocimiento el cliente de estas nuevas condiciones, que
+    serán de aplicación desde el momento en que efectúe el primer pago de acuerdo con la oferta de fraccionamiento
+    enviada al cliente.
+</p>
+
+
+</body>
+</html>

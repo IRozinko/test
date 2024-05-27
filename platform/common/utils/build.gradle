@@ -1,0 +1,16 @@
+apply from: "${rootDir}/gradle/java.gradle"
+apply from: "${rootDir}/gradle/querydsl.gradle"
+
+dependencies {
+    compile libs.springBoot
+    compile libs.retrofit
+    compile "com.querydsl:querydsl-apt"
+    compile "org.hibernate:hibernate-validator"
+    compile "commons-validator:commons-validator:1.5.1"
+    compile 'commons-io:commons-io'
+    compile "org.apache.commons:commons-lang3"
+    compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
+    compile "com.fasterxml.jackson.dataformat:jackson-dataformat-properties"
+    compile "org.hashids:hashids:${hashidsVersion}"
+    compile "org.iban4j:iban4j:${iban4jVersion}"
+}

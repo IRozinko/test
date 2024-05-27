@@ -1,0 +1,15 @@
+apply from: "${rootDir}/gradle/java.gradle"
+apply from: "${rootDir}/gradle/querydsl.gradle"
+
+dependencies {
+    compile project(":platform:common:utils")
+    compile project(":platform:common:db")
+    compile libs.springBootWeb
+
+    // Payxpert dependencies
+    compile files("libs/connect2pay-client-1.0.7.jar")
+    compile "net.sf.oval:oval:1.87"
+    compile "com.ning:async-http-client:1.9.40"
+
+    testCompile project(":platform:common:integration-test")
+}

@@ -1,0 +1,14 @@
+apply from: "${rootDir}/gradle/java.gradle"
+apply from: "${rootDir}/gradle/querydsl.gradle"
+
+dependencies {
+	compile project(":platform:common:utils")
+	compile project(":platform:common:db")
+
+	compile "com.mitchellbosecke:pebble:${pebbleVersion}"
+    compile libs.itext
+
+	testCompile libs.lombok
+	testAnnotationProcessor libs.lombok
+    testCompile project(":platform:common:integration-test")
+}

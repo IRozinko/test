@@ -1,0 +1,10 @@
+apply from: "${rootDir}/gradle/java.gradle"
+apply from: "${rootDir}/gradle/querydsl.gradle"
+
+dependencies {
+    compile project(":platform:crm")
+    compile project(":platform:dc")
+    compile project(":third-party:presence:presence-backend")
+
+    testCompile project(":platform:common:integration-test")
+}

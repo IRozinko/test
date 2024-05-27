@@ -1,0 +1,38 @@
+{% extends "_email_template" %}
+
+{% block content %}
+
+{% include "_email_p_begin" %}
+Apreciado/a {{client.lastName}},
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Nos ponemos en contacto con usted para informarle de que su préstamo vencido con ALFA de referencia {{loan.number}} y fecha de otorgación {{loan.startDate | ldate(dateFormat)}} ha sido incluido en una venta de cartera.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Pronto la compañía que comprará su deuda, le informará de los nuevos canales de comunicación y de pago, tales como números de teléfonos o mails. También le hará llegar los datos bancarios necesarios para que pueda realizar cualquier pago relativo a su deuda.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Desde ALFA ya no podemos ofrecerle información alguna relativa a su contrato: Entiéndase cualquier dato de contacto ofrecido por el cliente, importe y/o situación de su deuda. Siendo la nueva compañía quién pronto dispondrá de dicha información y la compartirá con usted en el caso de que la precise.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Para realizar el pago de su deuda deberá dirigirse a la nueva compañía, una vez la misma haya contactado con usted. Desde ALFA no podemos recibir el pago de su deuda.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Estamos a su disposición para cualquier duda.
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+Reciba un cordial saludo,
+{% include "_email_p_end" %}
+
+{% include "_email_p_begin" %}
+{% include "_email_contact_details" %}
+{% include "_email_footer" %}
+{% include "_email_p_end" %}
+
+{% endblock %}}

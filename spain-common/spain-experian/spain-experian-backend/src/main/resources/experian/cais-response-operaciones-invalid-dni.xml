@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:InformeListaOperaciones xmlns:ns2="http://experian.servicios.CAIS.V2">
+    <ns2:IdSuscriptor>07453676</ns2:IdSuscriptor>
+    <ns2:ReferenciaConsulta>201707211622492QUnfc</ns2:ReferenciaConsulta>
+    <ns2:Error>
+        <ns2:Codigo>1008</ns2:Codigo>
+        <ns2:Descripcion>Formato incorrecto del DNI/NIF/CIF en la trama de entrada</ns2:Descripcion>
+    </ns2:Error>
+    <ns2:MaximoRegistrosPagina>5000</ns2:MaximoRegistrosPagina>
+    <ns2:NumeroRegistrosDevueltos>0</ns2:NumeroRegistrosDevueltos>
+    <ns2:ExistenMas>false</ns2:ExistenMas>
+    <ns2:Documento>
+        <ns2:TipoDocumento>
+            <ns2:Codigo>01</ns2:Codigo>
+            <ns2:Descripcion>NIF</ns2:Descripcion>
+        </ns2:TipoDocumento>
+        <ns2:NumeroDocumento>51444375E123</ns2:NumeroDocumento>
+        <ns2:PaisDocumento>
+            <ns2:Codigo>724</ns2:Codigo>
+            <ns2:Descripcion>ESPAÑA</ns2:Descripcion>
+        </ns2:PaisDocumento>
+    </ns2:Documento>
+</ns2:InformeListaOperaciones>

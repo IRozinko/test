@@ -1,0 +1,1604 @@
+{
+  "portfolios": [
+    {
+      "name": "Current",
+      "initialStatus": "NoStatus",
+      "statuses": [
+        {
+          "name": "NoStatus",
+          "priority": 1000
+        }
+      ],
+      "triggers": [
+        {
+          "template": "MoveToNotInDc"
+        },
+        {
+          "template": "MoveToCollections"
+        },
+        {
+          "template": "MoveToPaid"
+        }
+      ],
+      "agentActions": []
+    },
+    {
+      "name": "NotInDc",
+      "initialStatus": "NoStatus",
+      "statuses": [
+        {
+          "name": "NoStatus",
+          "priority": 1000
+        }
+      ],
+      "triggers": [
+        {
+          "template": "MoveToPaid"
+        },
+        {
+          "template": "MoveToCurrent"
+        },
+        {
+          "template": "MoveToCollections"
+        }
+      ],
+      "agentActions": []
+    },
+    {
+      "name": "Collections",
+      "statuses": [
+        {
+          "name": "NoStatus",
+          "priority": 1000
+        }
+      ],
+      "triggers": [
+        {
+          "template": "MoveToPaid"
+        },
+        {
+          "template": "MoveToLegal"
+        },
+        {
+          "template": "MoveToCurrent"
+        },
+        {
+          "name": "SendNotification (3 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd03Notification",
+                "sendFrom": "DEBT_COLLECTION"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 3,
+                "dpdTo": 4
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (5 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd05Notification",
+                "sendFrom": "DEBT_COLLECTION"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 5,
+                "dpdTo": 6
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (6 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd06Notification",
+                "sendFrom": "DEBT_COLLECTION"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 6,
+                "dpdTo": 7
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (7 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd07Notification",
+                "sendFrom": "DEBT_COLLECTION"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 7,
+                "dpdTo": 8
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (9 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd09Notification",
+                "sendFrom": "DEBT_COLLECTION"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 9,
+                "dpdTo": 10
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (10 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd10Notification",
+                "sendFrom": "DEBT_COLLECTION"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 10,
+                "dpdTo": 11
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (13 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd13Notification",
+                "sendFrom": "DEBT_COLLECTION"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 13,
+                "dpdTo": 14
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (18 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd18Notification",
+                "sendFrom": "DEBT_COLLECTION"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 18,
+                "dpdTo": 19
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (24 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd24Notification",
+                "sendFrom": "DEBT_COLLECTION"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 24,
+                "dpdTo": 25
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (26 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd26Notification",
+                "sendFrom": "DEBT_COLLECTION"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 26,
+                "dpdTo": 27
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (31 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd31Notification",
+                "sendFrom": "PRE_LEGAL"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 31,
+                "dpdTo": 32
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (35 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd35Notification",
+                "sendFrom": "PRE_LEGAL"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 35,
+                "dpdTo": 36
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (38 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd38Notification",
+                "sendFrom": "PRE_LEGAL"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 38,
+                "dpdTo": 39
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (43 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd43Notification",
+                "sendFrom": "PRE_LEGAL"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 43,
+                "dpdTo": 44
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (50 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd50Notification",
+                "sendFrom": "PRE_LEGAL"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 50,
+                "dpdTo": 51
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (52 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd52Notification",
+                "sendFrom": "PRE_LEGAL"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 52,
+                "dpdTo": 53
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (56 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd56Notification",
+                "sendFrom": "PRE_LEGAL"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 56,
+                "dpdTo": 57
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (61 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd61Notification",
+                "sendFrom": "EXTRA_LEGAL"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 61,
+                "dpdTo": 62
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification 63 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd63Notification",
+                "sendFrom": "EXTRA_LEGAL"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 63,
+                "dpdTo": 64
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (73 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd73Notification",
+                "sendFrom": "EXTRA_LEGAL"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 73,
+                "dpdTo": 74
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (74 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd74Notification",
+                "sendFrom": "EXTRA_LEGAL"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 74,
+                "dpdTo": 75
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (81 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd81Notification",
+                "sendFrom": "EXTRA_LEGAL"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 81,
+                "dpdTo": 82
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        },
+        {
+          "name": "SendNotification (87 DPD)",
+          "actions": [
+            {
+              "type": "Noop",
+              "params": {
+                "cmsKey": "Dpd87Notification",
+                "sendFrom": "EXTRA_LEGAL"
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "Dpd",
+              "params": {
+                "dpdFrom": 87,
+                "dpdTo": 88
+              }
+            },
+            {
+              "type": "TriggerFrequency",
+              "params": {
+                "doNotRepeatForDays": 5
+              }
+            },
+            {
+              "type": "CurrentTime",
+              "params": {
+                "hourFrom": 0,
+                "hourTo": 24
+              }
+            }
+          ]
+        }
+      ],
+      "agentActions": [
+        {
+          "template": "OutgoingCall"
+        },
+        {
+          "template": "IncomingCall"
+        },
+        {
+          "template": "WhatsApp"
+        },
+        {
+          "template": "IncomingEmail"
+        },
+        {
+          "template": "Noop"
+        },
+        {
+          "template": "Search"
+        },
+        {
+          "template": "AccountReview"
+        },
+        {
+          "template": "ChangePortfolio"
+        },
+        {
+          "template": "AddComment"
+        }
+      ]
+    },
+    {
+      "name": "Legal",
+      "statuses": [
+        {
+          "name": "Archivo localización negativa"
+        },
+        {
+          "name": "Alegaciones procedimiento verbal"
+        },
+        {
+          "name": "Demanda ejecutiva"
+        },
+        {
+          "name": "Inadmisión"
+        },
+        {
+          "name": "Despacho ejecución"
+        },
+        {
+          "name": "Admisión y requerimiento"
+        },
+        {
+          "name": "Sentencia verbal"
+        },
+        {
+          "name": "Presentada demanda"
+        },
+        {
+          "name": "Demanda sellad"
+        },
+        {
+          "name": "Averiguaciones domiciliarias"
+        },
+        {
+          "name": "Alegaciones clàusulas abusivas"
+        },
+        {
+          "name": "Archivo pago voluntario"
+        },
+        {
+          "name": "Vista verbal"
+        },
+        {
+          "name": "Averiguaciones patrimoniales"
+        },
+        {
+          "name": "Archivo pago forzoso"
+        },
+        {
+          "name": "Fraud"
+        },
+        {
+          "name": "Monitorio"
+        }
+      ],
+      "triggers": [
+        {
+          "template": "MoveToPaid"
+        },
+        {
+          "template": "MoveToCollections"
+        },
+        {
+          "template": "MoveToCurrent"
+        }
+      ],
+      "agentActions": [
+        {
+          "template": "OutgoingCall"
+        },
+        {
+          "template": "IncomingCall"
+        },
+        {
+          "template": "WhatsApp"
+        },
+        {
+          "template": "IncomingEmail"
+        },
+        {
+          "template": "Noop"
+        },
+        {
+          "template": "Search"
+        },
+        {
+          "template": "AccountReview"
+        },
+        {
+          "template": "ChangePortfolio"
+        },
+        {
+          "template": "AddComment"
+        }
+      ]
+    },
+    {
+      "name": "Paid",
+      "statuses": [
+        {
+          "name": "NoStatus",
+          "priority": 1000
+        }
+      ],
+      "triggers": [
+        {
+          "template": "MoveToCurrent"
+        },
+        {
+          "template": "MoveToAlfa"
+        }
+      ],
+      "agentActions": []
+    }
+  ],
+  "triggerTemplates": {
+    "MoveToCurrent": {
+      "name": "MoveToCurrent",
+      "actions": [
+        {
+          "type": "ChangeStatus",
+          "params": {
+            "status": "NoStatus"
+          }
+        },
+        {
+          "type": "ChangePortfolio",
+          "params": {
+            "portfolio": "Current"
+          }
+        },
+        {
+          "type": "RemoveNextAction"
+        },
+        {
+          "type": "RemovePhoneRecordsFromCallList"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "Dpd",
+          "params": {
+            "dpdTo": 0
+          }
+        },
+        {
+          "type": "TotalDue",
+          "params": {
+            "amountFrom": 0.01
+          }
+        }
+      ]
+    },
+    "MoveToNotInDc": {
+      "name": "MoveToNotInDc",
+      "actions": [
+        {
+          "type": "ChangeStatus",
+          "params": {
+            "status": "NoStatus"
+          }
+        },
+        {
+          "type": "ChangePortfolio",
+          "params": {
+            "portfolio": "NotInDc"
+          }
+        },
+        {
+          "type": "RemoveNextAction"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "Dpd",
+          "params": {
+            "dpdFrom": 0,
+            "dpdTo": 3
+          }
+        },
+        {
+          "type": "TotalDue",
+          "params": {
+            "amountFrom": 0.01
+          }
+        }
+      ]
+    },
+    "MoveToCollections": {
+      "name": "MoveToCollections",
+      "actions": [
+        {
+          "type": "ChangeStatus",
+          "params": {
+            "status": "NoStatus"
+          }
+        },
+        {
+          "type": "ChangePortfolio",
+          "params": {
+            "portfolio": "Collections"
+          }
+        },
+        {
+          "type": "AddPhoneRecordToCallList"
+        },
+        {
+          "type": "RemoveNextAction"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "Dpd",
+          "params": {
+            "dpdFrom": 3,
+            "dpdTo": 90
+          }
+        },
+        {
+          "type": "TotalDue",
+          "params": {
+            "amountFrom": 0.01
+          }
+        }
+      ]
+    },
+    "MoveToLegal": {
+      "name": "MoveToLegal",
+      "actions": [
+        {
+          "type": "ChangePortfolio",
+          "params": {
+            "portfolio": "Legal"
+          }
+        },
+        {
+          "type": "ChangeStatus",
+          "params": {
+            "status": "NoStatus"
+          }
+        },
+        {
+          "type": "RemoveNextAction"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "Dpd",
+          "params": {
+            "dpdFrom": 90
+          }
+        },
+        {
+          "type": "TotalDue",
+          "params": {
+            "amountFrom": 0.01
+          }
+        }
+      ]
+    },
+    "MoveToPaid": {
+      "name": "MoveToPaid",
+      "actions": [
+        {
+          "type": "ChangeStatus",
+          "params": {
+            "status": "NoStatus"
+          }
+        },
+        {
+          "type": "ChangePortfolio",
+          "params": {
+            "portfolio": "Paid"
+          }
+        },
+        {
+          "type": "RemovePhoneRecordsFromCallList"
+        },
+        {
+          "type": "RemoveNextAction"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "TotalDue",
+          "params": {
+            "amountTo": 0.01
+          }
+        }
+      ]
+    }
+  },
+  "agingBuckets": [
+    {
+      "dpdFrom": -1000000,
+      "dpdTo": -3,
+      "name": "NotDelayed"
+    },
+    {
+      "dpdFrom": -2,
+      "dpdTo": 2,
+      "name": "-2 to 2 DPD"
+    },
+    {
+      "dpdFrom": 3,
+      "dpdTo": 30,
+      "name": "3 to 30 DPD"
+    },
+    {
+      "dpdFrom": 31,
+      "dpdTo": 60,
+      "name": "31 to 60 DPD"
+    },
+    {
+      "dpdFrom": 61,
+      "dpdTo": 90,
+      "name": "61 to 90 DPD"
+    },
+    {
+      "dpdFrom": 91,
+      "dpdTo": 120,
+      "name": "91 to 120 DPD"
+    },
+    {
+      "dpdFrom": 121,
+      "dpdTo": 1000000,
+      "name": "121+ DPD"
+    }
+  ],
+  "agentActionTemplates": {
+    "OutgoingCall": {
+      "type": "OutgoingCall",
+      "bulkActions": [
+        {
+          "type": "LogActivity",
+          "params": {},
+          "mandatory": false
+        }
+      ],
+      "statuses": [
+        {
+          "template": "Scheduled",
+          "defaultResolution": "Answered"
+        },
+        {
+          "template": "NoContact",
+          "defaultResolution": "NoAnswer"
+        },
+        {
+          "template": "NoAgreement",
+          "defaultResolution": "Answered"
+        },
+        {
+          "template": "Negative",
+          "defaultResolution": "Answered"
+        }
+      ],
+      "resolutions": [
+        "NoAnswer",
+        "Answered",
+        "InvalidPhone",
+        "AnsweringMachine"
+      ],
+      "userRoles": []
+    },
+    "IncomingCall": {
+      "type": "IncomingCall",
+      "bulkActions": [
+        {
+          "type": "LogActivity",
+          "params": {},
+          "mandatory": false
+        }
+      ],
+      "statuses": [
+        {
+          "template": "Scheduled"
+        },
+        {
+          "template": "Delayed"
+        },
+        {
+          "template": "NoContact"
+        },
+        {
+          "template": "NoAgreement"
+        },
+        {
+          "template": "Negative"
+        }
+      ],
+      "resolutions": [],
+      "userRoles": []
+    },
+    "WhatsApp": {
+      "type": "WhatsApp",
+      "bulkActions": [
+        {
+          "type": "LogActivity",
+          "params": {},
+          "mandatory": false
+        }
+      ],
+      "statuses": [
+        {
+          "template": "Scheduled",
+          "defaultResolution": "Answered"
+        },
+        {
+          "template": "Delayed"
+        },
+        {
+          "template": "NoContact"
+        },
+        {
+          "template": "NoAgreement"
+        },
+        {
+          "template": "Negative"
+        }
+      ],
+      "resolutions": [
+        "NoAnswer",
+        "Answered"
+      ],
+      "userRoles": []
+    },
+    "IncomingEmail": {
+      "type": "IncomingEmail",
+      "bulkActions": [
+        {
+          "type": "LogActivity",
+          "params": {},
+          "mandatory": false
+        }
+      ],
+      "statuses": [
+        {
+          "template": "Scheduled"
+        },
+        {
+          "template": "Delayed"
+        },
+        {
+          "template": "NoContact"
+        },
+        {
+          "template": "NoAgreement"
+        },
+        {
+          "template": "Negative"
+        }
+      ],
+      "resolutions": [],
+      "userRoles": []
+    },
+    "Search": {
+      "type": "Search",
+      "bulkActions": [],
+      "statuses": [
+        {
+          "template": "Scheduled"
+        },
+        {
+          "template": "Delayed"
+        },
+        {
+          "template": "NoContact"
+        },
+        {
+          "template": "NoAgreement"
+        },
+        {
+          "template": "Negative"
+        }
+      ],
+      "resolutions": [],
+      "userRoles": []
+    },
+    "AddComment": {
+      "type": "AddComment",
+      "bulkActions": [],
+      "statuses": [],
+      "resolutions": [],
+      "userRoles": []
+    },
+    "AccountReview": {
+      "type": "AccountReview",
+      "bulkActions": [],
+      "statuses": [
+        {
+          "template": "Scheduled"
+        },
+        {
+          "template": "Delayed"
+        },
+        {
+          "template": "NoContact"
+        },
+        {
+          "template": "NoAgreement"
+        },
+        {
+          "template": "Negative"
+        }
+      ],
+      "resolutions": [],
+      "userRoles": []
+    },
+    "Noop": {
+      "type": "Noop",
+      "bulkActions": [
+        {
+          "type": "SendSms",
+          "params": {
+            "cmsKeys": [
+              "DcCustomNotification"
+            ]
+          },
+          "mandatory": false
+        },
+        {
+          "type": "SendEmail",
+          "params": {
+            "cmsKeys": [
+              "DcCustomNotification"
+            ]
+          },
+          "mandatory": false
+        }
+      ],
+      "statuses": [],
+      "resolutions": [],
+      "userRoles": []
+    },
+    "ChangePortfolio": {
+      "type": "ChangePortfolio",
+      "bulkActions": [
+        {
+          "type": "ChangePortfolio",
+          "params": {
+            "portfolios": [
+              "Dead",
+              "Fraud",
+              "Insolvency",
+              "N/A"
+            ]
+          },
+          "mandatory": true
+        }
+      ],
+      "statuses": [],
+      "resolutions": [],
+      "userRoles": [
+        "DC_TEAM_LEAD",
+        "ADMIN"
+      ]
+    },
+    "LegalAction": {
+      "type": "LegalAction",
+      "bulkActions": [
+        {
+          "type": "LogActivity",
+          "params": {},
+          "mandatory": false
+        }
+      ],
+      "statuses": [],
+      "resolutions": [],
+      "userRoles": []
+    }
+  },
+  "agentActionStatusTemplates": {
+    "Scheduled": {
+      "name": "Scheduled",
+      "nextActions": [
+        {
+          "type": "OutgoingCall",
+          "nextActionInDays": 4
+        }
+      ],
+      "bulkActions": [
+        {
+          "type": "PromiseToPay",
+          "params": {
+            "promiseDueDateInDays": 5
+          },
+          "mandatory": true
+        },
+        {
+          "type": "SendSms",
+          "params": {
+            "cmsKeys": [
+              "DcCustomNotification"
+            ]
+          },
+          "mandatory": false
+        },
+        {
+          "type": "SendEmail",
+          "params": {
+            "cmsKeys": [
+              "DcCustomNotification"
+            ]
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    "Delayed": {
+      "name": "Delayed",
+      "nextActions": [
+        {
+          "type": "OutgoingCall",
+          "nextActionInDays": 2
+        }
+      ],
+      "bulkActions": [
+        {
+          "type": "SendSms",
+          "params": {
+            "cmsKeys": [
+              "DcCustomNotification"
+            ]
+          },
+          "mandatory": false
+        },
+        {
+          "type": "SendEmail",
+          "params": {
+            "cmsKeys": [
+              "DcCustomNotification"
+            ]
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    "NoContact": {
+      "name": "NoContact",
+      "nextActions": [
+        {
+          "type": "OutgoingCall",
+          "nextActionInDays": 2
+        }
+      ],
+      "bulkActions": [
+        {
+          "type": "SendSms",
+          "params": {
+            "cmsKeys": [
+              "DcCustomNotification"
+            ]
+          },
+          "mandatory": false
+        },
+        {
+          "type": "SendEmail",
+          "params": {
+            "cmsKeys": [
+              "DcCustomNotification"
+            ]
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    "NoAgreement": {
+      "name": "NoAgreement",
+      "nextActions": [
+        {
+          "type": "OutgoingCall",
+          "nextActionInDays": 2
+        }
+      ],
+      "bulkActions": [
+        {
+          "type": "SendSms",
+          "params": {
+            "cmsKeys": [
+              "DcCustomNotification"
+            ]
+          },
+          "mandatory": false
+        },
+        {
+          "type": "SendEmail",
+          "params": {
+            "cmsKeys": [
+              "DcCustomNotification"
+            ]
+          },
+          "mandatory": false
+        }
+      ]
+    },
+    "Negative": {
+      "name": "Negative",
+      "nextActions": [
+        {
+          "type": "OutgoingCall",
+          "nextActionInDays": 4
+        }
+      ],
+      "bulkActions": [
+        {
+          "type": "SendSms",
+          "params": {
+            "cmsKeys": [
+              "DcCustomNotification"
+            ]
+          },
+          "mandatory": false
+        },
+        {
+          "type": "SendEmail",
+          "params": {
+            "cmsKeys": [
+              "DcCustomNotification"
+            ]
+          },
+          "mandatory": false
+        }
+      ]
+    }
+  }
+}

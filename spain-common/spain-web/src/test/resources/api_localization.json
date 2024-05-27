@@ -1,0 +1,19 @@
+{
+  "NotEmpty": "Campo obligatorio",
+  "AssertTrue": "Campo obligatorio",
+  "Length": "Requerido",
+  "NotNull": "Campo obligatorio",
+  "Length.password": "Necesita ser por lo menos 6 caracteres",
+  "Length.newPassword": "Necesita ser por lo menos 6 caracteres",
+  "Email": "Correo electrónico invalido",
+  "Pattern.email": "Correo electrónico invalido",
+  "NotUnique": "Ya está registrado",
+  "NotUnique.documentNumber": "DNI/NIE ya está registrado",
+  "NotUnique.bankAccountNumber": "IBAN ya está registrado",
+  "NotUnique.email": "Email ya está registrado",
+  "NotUnique.mobilePhone": "Teléfono ya está registrado",
+  "InvalidValue": "Valor inválido",
+  "InvalidValue.email": "Email inválido",
+  "InvalidValue.code": "Código incorrecto. Te quedan {0} intentos",
+  "InvalidValue.token": "Enlace ha caducado"
+}

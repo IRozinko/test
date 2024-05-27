@@ -1,0 +1,11 @@
+apply from: "${rootDir}/gradle/java.gradle"
+
+dependencies {
+    compile project(":platform:backoffice:bo-api-model")
+    compile project(':platform:marketing:marketing-core')
+    compile project(':platform:marketing:marketing-bo-model')
+    compile project(":platform:security:user")
+
+    compile libs.springBootWeb
+    testCompile project(":platform:common:integration-test")
+}

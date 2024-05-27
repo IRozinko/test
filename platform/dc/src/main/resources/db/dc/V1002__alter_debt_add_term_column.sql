@@ -1,0 +1,2 @@
+ALTER TABLE dc.debt
+  ADD COLUMN period_count BIGINT NOT NULL DEFAULT 0;
